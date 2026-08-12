@@ -23,6 +23,7 @@
 <a class="nav-a" href="../index.html"><span class="g">◆</span> 오늘의 지도</a>
 <a class="nav-a" href="../index.html#materials"><span class="g">▤</span> 강의 자료 내려받기</a>
 <div class="nav-h">// 시작하기</div><div class="tree">
+<a class="nav-a" href="../types/index.html"><span class="g">◆</span> 여섯 가지 업무 유형</a>
 <a class="nav-a active" href="../start/prepare.html">0 · 준비물과 사전 설치</a>
 <a class="nav-a" href="../start/first-5min.html">1 · 처음 5분</a>
 <a class="nav-a" href="../start/rules.html">2 · 오후 규칙 3가지</a>
@@ -153,10 +154,9 @@
 <li>위 메뉴에서 <code>터미널 &gt; 새 터미널</code> (단축키 <kbd>Ctrl</kbd>+<kbd><code>&lt;/kbd&gt;, 맥은 &lt;kbd&gt;Cmd&lt;/kbd&gt;+&lt;kbd&gt;</code></kbd>)</li>
 <li>아래쪽에 뜬 까만 창에 아래 세 줄을 <strong>한 줄씩</strong> 입력하고 <kbd>Enter</kbd></li>
 </ol>
-<div class="highlight"><pre><span></span><code>node -v
+<pre class="highlight"><code>node -v
 python --version
-claude --version
-</code></pre></div>
+claude --version</code></pre>
 <div class="admonition success">
 <p class="admonition-title">이렇게 나오면 정상입니다</p>
 <ul>
@@ -176,8 +176,7 @@ claude --version
 <hr />
 <h2 id="3-claude-code-설치와-로그인">3. Claude Code 설치와 로그인<a class="headerlink" href="#3-claude-code-설치와-로그인" title="Permanent link">&para;</a></h2>
 <p>터미널에 아래 한 줄을 입력합니다.</p>
-<div class="highlight"><pre><span></span><code>npm install -g @anthropic-ai/claude-code
-</code></pre></div>
+<pre class="highlight"><code>npm install -g @anthropic-ai/claude-code</code></pre>
 <p>설치가 끝나면 터미널에 <code>claude</code>를 입력하고 <kbd>Enter</kbd>. 처음이면 로그인 화면이 뜹니다. 안내대로 브라우저에서 로그인하세요.</p>
 <div class="admonition success">
 <p class="admonition-title">이렇게 나오면 정상입니다</p>
@@ -256,8 +255,7 @@ claude --version
 <hr />
 <h2 id="5-디자인-스킬-미리-받아두기-실습-4에서-씁니다">5. 디자인 스킬 미리 받아두기 (실습 4에서 씁니다)<a class="headerlink" href="#5-디자인-스킬-미리-받아두기-실습-4에서-씁니다" title="Permanent link">&para;</a></h2>
 <p>실습 4에서 화면 인상을 한 줄로 갈아입히는 데 씁니다. 터미널에 아래를 입력해 설치합니다.</p>
-<div class="highlight"><pre><span></span><code>claude plugin marketplace add anthropics/skills
-</code></pre></div>
+<pre class="highlight"><code>claude plugin marketplace add anthropics/skills</code></pre>
 <p>설치되면 <code>claude</code> 안에서 <code>/minimalist-ui</code> 라고 입력했을 때 목록에 뜹니다.</p>
 <div class="admonition success">
 <p class="admonition-title">이렇게 나오면 정상입니다</p>
@@ -265,11 +263,11 @@ claude --version
 </div>
 <div class="admonition warning">
 <p class="admonition-title">안 떠도 실습은 진행됩니다</p>
-<p>실습 4 데이터 폴더에 <code>디자인_지시문/</code> 이라는 대체 파일 3장이 들어 있습니다. 스킬 대신 그 파일을 읽히면 결과가 거의 같습니다. 자세한 방법은 <a href"../lab4/step5.html">실습 4 · 5단계</a>에 있습니다.</p>
+<p>실습 4 데이터 폴더에 <code>디자인_지시문/</code> 이라는 대체 파일 3장이 들어 있습니다. 스킬 대신 그 파일을 읽히면 결과가 거의 같습니다. 자세한 방법은 <a href="../lab4/step5.html">실습 4 · 5단계</a>에 있습니다.</p>
 </div>
 <hr />
 <h2 id="6-데이터-내려받고-압축-풀기">6. 데이터 내려받고 압축 풀기<a class="headerlink" href="#6-데이터-내려받고-압축-풀기" title="Permanent link">&para;</a></h2>
-<p><a href"../index.html">홈 화면의 내려받기 표</a>에서 <strong>전체 zip</strong>을 받습니다.</p>
+<p><a href="../index.html">홈 화면의 내려받기 표</a>에서 <strong>전체 zip</strong>을 받습니다.</p>
 <p>압축을 풀 위치가 중요합니다.</p>
 <div class="admonition danger">
 <p class="admonition-title">바탕화면에 풀지 마세요</p>
@@ -298,10 +296,8 @@ claude --version
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Claude Code 패널 아래에 <code>Edit automatically</code> 라벨이 보인다</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>C:\workshop\</code> (맥은 <code>~/workshop/</code>) 안에 <code>lab1</code>~<code>lab5</code> 폴더가 있다</li>
 </ul>
-<p>여기까지 됐으면 전날 준비 끝입니다. 당일에는 <a href"first-5min.html">처음 5분</a>부터 시작합니다.</p>
-<div class="stage-nav">
-<p><strong>← 이전</strong> <a href"../index.html">홈</a> · <strong>다음 →</strong> <a href"first-5min.html">1. 처음 5분 — 폴더 열고 말 걸기</a></p>
-</div>
+<p>여기까지 됐으면 전날 준비 끝입니다. 당일에는 <a href="first-5min.html">처음 5분</a>부터 시작합니다.</p>
+
 <nav class="pager">
 <a class="prev" href="../index.html"><span class="lbl">← 이전</span><span class="ttl">오늘의 지도</span></a>
 <a class="next" href="../start/first-5min.html"><span class="lbl">다음 →</span><span class="ttl">1 · 처음 5분</span></a>

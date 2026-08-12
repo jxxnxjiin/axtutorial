@@ -205,6 +205,57 @@ section{scroll-margin-top:64px}
 .tt__gs{color:var(--muted);font-size:12px}
 .tt__row.end .tt__t,.tt__row.end .tt__d{color:var(--coral);font-weight:600}
 
+/* ---- 여섯 업무 유형 소개 페이지 ---- */
+.hero6{border:1px solid var(--line);border-radius:14px;background:
+    radial-gradient(520px 220px at 88% -20%,rgba(217,119,87,.14),transparent 60%),var(--panel);
+  padding:22px 24px;margin:6px 0 26px;position:relative;overflow:hidden}
+.hero6 .k{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.14em;color:var(--coral);text-transform:uppercase}
+.hero6 h2{font-size:23px;line-height:1.35;letter-spacing:-.02em;margin:8px 0 6px;border:none;padding:0}
+.hero6 h2 b{color:var(--coral)}
+.hero6 p{font-size:13.5px;color:var(--muted);margin:0}
+.hero6 .ghost{position:absolute;right:14px;bottom:-34px;font:800 130px/1 "JetBrains Mono",monospace;color:var(--ink);opacity:.04;pointer-events:none}
+
+/* .md table 규칙(display:block 등)을 이기려 특이도를 올린다 */
+.md table.taxo{display:table;table-layout:fixed;width:100%;border-collapse:separate;border-spacing:0;border:1px solid var(--line);border-radius:12px;overflow:hidden;margin:6px 0 30px;font-size:13px}
+.md table.taxo th,.md table.taxo td{border:none;text-align:left}
+.md table.taxo th{background:var(--bg-deep);color:var(--muted);font-family:"JetBrains Mono",monospace;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;padding:10px 12px;font-weight:700}
+.md table.taxo td{padding:11px 12px;border-top:1px solid var(--line-soft);vertical-align:middle}
+.md table.taxo tr:nth-child(even) td{background:none}
+.md table.taxo tr:hover td{background:var(--raised)}
+.md table.taxo th:nth-child(1),.md table.taxo td:nth-child(1){width:9%}
+.md table.taxo th:nth-child(2),.md table.taxo td:nth-child(2){width:23%}
+.md table.taxo th:nth-child(3),.md table.taxo td:nth-child(3){width:33%}
+.taxo .code{font-family:"JetBrains Mono",monospace;font-weight:800;font-size:15px;color:var(--ac,var(--coral))}
+.taxo .easy{font-weight:750}
+.taxo .easy small{display:block;font-weight:500;color:var(--faint);font-size:11px;letter-spacing:.02em}
+.taxo .io{font-family:"JetBrains Mono",monospace;font-size:11.5px;color:var(--ink-dim)}
+.taxo .tell{color:var(--muted);font-size:12.5px}
+
+.t6grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px;margin:6px 0 30px}
+.t6{border:1px solid var(--line);border-left:3px solid var(--ac,var(--coral));border-radius:12px;background:var(--panel);padding:16px 17px;transition:.18s;display:flex;flex-direction:column;gap:10px}
+.t6:hover{border-color:var(--ac,var(--coral));box-shadow:var(--shadow)}
+.t6 .th{display:flex;align-items:baseline;gap:9px}
+.t6 .num{font-family:"JetBrains Mono",monospace;font-weight:800;font-size:17px;color:var(--ac,var(--coral))}
+.t6 .nm{font-size:16px;font-weight:800;letter-spacing:-.01em}
+.t6 .fm{margin-left:auto;font-family:"JetBrains Mono",monospace;font-size:10.5px;color:var(--faint)}
+.t6 .io{font-family:"JetBrains Mono",monospace;font-size:11px;color:var(--ink-dim);background:var(--bg-deep);border:1px solid var(--line-soft);border-radius:7px;padding:5px 9px;align-self:flex-start}
+.t6 .io b{color:var(--ac,var(--coral));font-weight:700}
+.t6 dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:4px 10px;font-size:12.5px;line-height:1.55}
+.t6 dt{font-family:"JetBrains Mono",monospace;font-size:10px;color:var(--faint);letter-spacing:.03em;padding-top:2px;white-space:nowrap}
+.t6 dd{margin:0;color:var(--ink-dim)}
+.t6 .lab{margin-top:2px;border-top:1px dashed var(--line);padding-top:9px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.t6 .lab .tg{font-family:"JetBrains Mono",monospace;font-size:9.5px;color:var(--ac,var(--coral));border:1px solid var(--ac,var(--coral));border-radius:5px;padding:1px 6px;letter-spacing:.04em;flex:none;opacity:.85}
+.t6 .lab a{font-size:12px;font-weight:650;color:var(--ink);text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:3px;transition:.14s}
+.t6 .lab a:hover{color:var(--ac,var(--coral));text-decoration-color:var(--ac,var(--coral))}
+
+.combo{border:1px solid var(--line);border-radius:12px;background:var(--bg-deep);padding:18px 20px;margin:0 0 8px}
+.combo h3{font-size:15px;margin:0 0 8px;letter-spacing:-.01em}
+.combo p{font-size:13px;color:var(--muted);margin:0 0 12px}
+.combo .flow{font-family:"JetBrains Mono",monospace;font-size:12px;color:var(--ink-dim);display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.combo .flow b{color:var(--coral);background:var(--panel);border:1px solid var(--line);border-radius:7px;padding:4px 9px;font-weight:700}
+.combo .flow .ar{color:var(--faint)}
+@media(max-width:820px){.t6grid{grid-template-columns:1fr}.taxo .io,.taxo .tell{display:none}}
+
 /* ---- material cards ---- */
 .cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:22px}
 .card{

@@ -97,18 +97,29 @@ def rewrite_links(h):
         pre, path, anchor = m.group(1), m.group(2), m.group(3) or ''
         if path.startswith('http'):
             return m.group(0)
-        return f'{pre}"{path}.html{anchor}"'
+        return f'{pre}="{path}.html{anchor}"'
     return re.sub(r'(href|src)="(?!https?:)([^"#]+)\.md(#[^"]*)?"', repl, h)
 
-def sidebar(cur):
-    rows = ['<div class="nav-h">// 홈</div>',
-            '<a class="nav-a" href="../index.html"><span class="g">◆</span> 오늘의 지도</a>',
-            '<a class="nav-a" href="../index.html#materials"><span class="g">▤</span> 강의 자료 내려받기</a>']
+def sidebar(cur, prefix='../', home='remote'):
+    # home='local'  : 홈(index.html) 자신 → 페이지 내 앵커로 링크
+    # home='remote' : 하위 페이지 → 홈으로 돌아가는 링크
+    if home == 'local':
+        rows = ['<div class="nav-h">// 홈</div>',
+                '<a class="nav-a" href="#overview"><span class="g">◆</span> 오늘의 지도</a>',
+                '<a class="nav-a" href="#timetable"><span class="g">◷</span> 시간표</a>',
+                '<a class="nav-a" href="#materials"><span class="g">▤</span> 강의 자료 내려받기</a>']
+    else:
+        rows = ['<div class="nav-h">// 홈</div>',
+                f'<a class="nav-a" href="{prefix}index.html"><span class="g">◆</span> 오늘의 지도</a>',
+                f'<a class="nav-a" href="{prefix}index.html#materials"><span class="g">▤</span> 강의 자료 내려받기</a>']
     for sec, items in NAV:
         rows.append(f'<div class="nav-h">// {sec}</div><div class="tree">')
+        if sec == '시작하기':
+            ta = ' active' if cur == 'types/index.md' else ''
+            rows.append(f'<a class="nav-a{ta}" href="{prefix}types/index.html"><span class="g">◆</span> 여섯 가지 업무 유형</a>')
         for lbl, path in items:
             active = ' active' if path == cur else ''
-            rows.append(f'<a class="nav-a{active}" href="../{path[:-3]}.html">{_html.escape(lbl)}</a>')
+            rows.append(f'<a class="nav-a{active}" href="{prefix}{path[:-3]}.html">{_html.escape(lbl)}</a>')
         rows.append('</div>')
     return '\n'.join(rows)
 
@@ -189,6 +200,27 @@ TEMPLATE = '''<!doctype html>
 </html>
 '''
 
+# 빌드 대상이 아닌 손수 만든 정적 페이지들 — nav 블록만 NAV에서 다시 주입해 동기화.
+# (relpath, sidebar 인자) — 이 목록만 관리하면 홈/유형 페이지 nav도 단일 원본을 따른다.
+STATIC_NAV = [
+    ('index.html',       dict(cur=None,             prefix='',   home='local')),
+    ('types/index.html', dict(cur='types/index.md', prefix='../', home='remote')),
+]
+
+def inject_nav():
+    for relpath, kw in STATIC_NAV:
+        fp = os.path.join(OUT, relpath)
+        with open(fp, encoding='utf-8') as f:
+            page = f.read()
+        nav = sidebar(**kw)
+        new, cnt = re.subn(r'<nav>.*?</nav>', lambda m: f'<nav>\n{nav}\n</nav>',
+                           page, count=1, flags=re.S)
+        if cnt == 0:
+            raise SystemExit(f'✗ {relpath}: <nav>…</nav> 블록을 찾지 못함 — 수동 확인 필요')
+        with open(fp, 'w', encoding='utf-8') as f:
+            f.write(new)
+        print(f'  ↳ nav 동기화: {relpath}')
+
 def build():
     n = 0
     for idx, (lbl, path, sec) in enumerate(FLAT):
@@ -198,6 +230,8 @@ def build():
         md = md_engine()
         body = md.convert(preprocess(raw))
         body = rewrite_links(body)
+        # md 본문 끝의 손수 적은 이전/다음 블록 제거 — 아래 생성 .pager로 대체
+        body = re.sub(r'<div class="stage-nav">.*?</div>\s*', '', body, flags=re.S)
         # 제목 = 첫 h1 텍스트
         m = re.search(r'<h1[^>]*>(.*?)(<a class="headerlink".*?</a>)?</h1>', body, re.S)
         title = re.sub('<[^>]+>', '', m.group(1)).strip() if m else lbl
@@ -216,6 +250,7 @@ def build():
             f.write(page)
         n += 1
     print(f'✓ {n} pages generated')
+    inject_nav()
 
 if __name__ == '__main__':
     build()
