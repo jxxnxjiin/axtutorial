@@ -199,6 +199,11 @@ section{scroll-margin-top:64px}
 .tt__d{padding:11px 16px;font-size:13.5px;color:var(--ink-dim)}
 .tt__row.brk .tt__d{color:var(--muted)}
 .tt__row.brk .tt__t{color:var(--muted)}
+.tt__grp{display:flex;align-items:baseline;gap:10px;padding:9px 16px;background:var(--bg-deep);border-top:1px solid var(--line-soft)}
+.tt__grp:first-child{border-top:none}
+.tt__gl{color:var(--coral);font-weight:800;font-size:12px;letter-spacing:.08em}
+.tt__gs{color:var(--muted);font-size:12px}
+.tt__row.end .tt__t,.tt__row.end .tt__d{color:var(--coral);font-weight:600}
 
 /* ---- material cards ---- */
 .cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:22px}
