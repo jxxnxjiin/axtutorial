@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="ko" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>4단계. 인터넷 공고 가져와 나누기 · ax-tutor</title>
+<meta name="description" content="실습 2 · 계약·입찰 레이더 — 4단계. 인터넷 공고 가져와 나누기 · ax-tutor 실습 위키">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<div class="shell">
+  <aside class="side" id="side">
+    <div class="brand">
+      <a class="brand__row" href="../index.html" style="text-decoration:none">
+        <span class="ast mono">✻</span>
+        <div><div class="brand__name">ax<b>-</b>tutor</div></div>
+      </a>
+      <div class="brand__sub">Claude Code · 실습 위키</div>
+      <div class="session"><span class="dot"></span><span class="live">LIVE</span>
+        <span style="color:var(--muted)">강의 진행 중</span><span class="clock mono" id="clock">--:--</span></div>
+    </div>
+    <nav><div class="nav-h">// 홈</div>
+<a class="nav-a" href="../index.html"><span class="g">◆</span> 오늘의 지도</a>
+<a class="nav-a" href="../index.html#materials"><span class="g">▤</span> 강의 자료 내려받기</a>
+<div class="nav-h">// 시작하기</div><div class="tree">
+<a class="nav-a" href="../start/prepare.html">0 · 준비물과 사전 설치</a>
+<a class="nav-a" href="../start/first-5min.html">1 · 처음 5분</a>
+<a class="nav-a" href="../start/rules.html">2 · 오후 규칙 3가지</a>
+</div>
+<div class="nav-h">// 실습 1 · 물류비 마감</div><div class="tree">
+<a class="nav-a" href="../lab1/index.html">개요</a>
+<a class="nav-a" href="../lab1/step1.html">1 · 요금표를 표로</a>
+<a class="nav-a" href="../lab1/step2.html">2 · 청구서 합치기</a>
+<a class="nav-a" href="../lab1/step3.html">3 · 120건 재계산</a>
+<a class="nav-a" href="../lab1/step4.html">4 · 검증 설계·검산</a>
+<a class="nav-a" href="../lab1/extra.html">＋ 더 해보기</a>
+</div>
+<div class="nav-h">// 실습 2 · 계약·입찰 레이더</div><div class="tree">
+<a class="nav-a" href="../lab2/index.html">개요</a>
+<a class="nav-a" href="../lab2/step1.html">1 · 계약서 한 장</a>
+<a class="nav-a" href="../lab2/step2.html">2 · 열두 건으로</a>
+<a class="nav-a" href="../lab2/step3.html">3 · 회사소개 문단</a>
+<a class="nav-a active" href="../lab2/step4.html">4 · 공고 가져와 나누기</a>
+<a class="nav-a" href="../lab2/step5.html">5 · 설명서 남기기</a>
+<a class="nav-a" href="../lab2/extra.html">＋ 영문·스캔 PDF</a>
+</div>
+<div class="nav-h">// 실습 3 · 근거 붙인 보고문</div><div class="tree">
+<a class="nav-a" href="../lab3/index.html">개요</a>
+<a class="nav-a" href="../lab3/step1.html">1 · 일단 써보게</a>
+<a class="nav-a" href="../lab3/step2.html">2 · 숫자마다 출처</a>
+<a class="nav-a" href="../lab3/step3.html">3 · 숫자 5개 역추적</a>
+<a class="nav-a" href="../lab3/step4.html">4·5 · 없는 문장·톤 두 벌</a>
+<a class="nav-a" href="../lab3/extra.html">＋ 더 해보기</a>
+</div>
+<div class="nav-h">// 실습 4 · 대시보드와 디자인</div><div class="tree">
+<a class="nav-a" href="../lab4/index.html">개요</a>
+<a class="nav-a" href="../lab4/step1.html">1 · 무엇을 보여줄지</a>
+<a class="nav-a" href="../lab4/step2.html">2 · 뼈대·검산</a>
+<a class="nav-a" href="../lab4/step3.html">3 · Before 캡처</a>
+<a class="nav-a" href="../lab4/step4.html">4 · 말로 인상 바꾸기</a>
+<a class="nav-a" href="../lab4/step5.html">5 · 두 무드 비교</a>
+<a class="nav-a" href="../lab4/step6.html">6 · 다크모드·반응형</a>
+<a class="nav-a" href="../lab4/step7.html">7 · 재검산·After</a>
+<a class="nav-a" href="../lab4/stuck.html">막혔을 때 쓰는 문장</a>
+</div>
+<div class="nav-h">// 여유 실습</div><div class="tree">
+<a class="nav-a" href="../lab5/index.html">A · 회의 녹취 정리</a>
+<a class="nav-a" href="../lab5/step1.html">A-1 · 결정만 골라내기</a>
+<a class="nav-a" href="../lab5/step2.html">A-2 · 담당자·마감</a>
+<a class="nav-a" href="../lab5/step3.html">A-3 · 근거 남기기</a>
+<a class="nav-a" href="../lab6/index.html">B · 링크로 공유</a>
+</div>
+<div class="nav-h">// 도움말</div><div class="tree">
+<a class="nav-a" href="../help/errors.html">에러가 났어요</a>
+<a class="nav-a" href="../help/glossary.html">이 말이 무슨 뜻이죠</a>
+<a class="nav-a" href="../help/how-to-ask.html">AI에게 잘 시키는 법</a>
+<a class="nav-a" href="../help/prompts.html">오늘 내가 친 문장</a>
+<a class="nav-a" href="../help/next.html">강의 끝나고 뭘 해볼까</a>
+</div></nav>
+    <div class="side__foot">
+      <button class="iconbtn" id="themeBtn" title="테마 전환"><span id="themeIc">◐</span> <span id="themeLbl">light</span></button>
+      <a class="iconbtn" href="../index.html" title="홈">↖ home</a>
+    </div>
+  </aside>
+  <main class="main">
+    <div class="cmdbar mono">
+      <button class="burger" id="burger" aria-label="메뉴">≡</button>
+      <span class="path"><b>~/ax-tutor</b> <span class="full">$ cat</span> <span class="cur">lab2/step4.md</span></span>
+      <span class="caret"></span><span class="spacer"></span>
+      <span class="stat">실습 2 · 계약·입찰 레이더</span>
+    </div>
+    <div class="wrap">
+      <article class="doc md rise">
+        <div class="kicker mono"><b>//</b> 실습 2 · 계약·입찰 레이더</div>
+<h1 id="4단계-인터넷-공고-가져와-나누기">4단계. 인터넷 공고 가져와 나누기<a class="headerlink" href="#4단계-인터넷-공고-가져와-나누기" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">이 단계에서 하는 일 (약 18분)</p>
+<ul>
+<li>인터넷에 올라온 입찰 공고를 지금 가져옵니다 (4분)</li>
+<li>내가 쓴 회사소개를 기준으로 우리 일인지 나눕니다 (14분)</li>
+<li>애매한 건을 애매한 채로 남깁니다</li>
+</ul>
+</div>
+<p>여기가 이 실습의 본체입니다. 그리고 <strong>다섯 줄이 완성되는 자리</strong>입니다.</p>
+<div class="admonition info">
+<p class="admonition-title">이 단계의 결과 파일 이름과 칸 규격은 이 페이지 맨 아래에 있습니다</p>
+</div>
+<hr />
+<h2 id="1-수집--4분">(1) 수집 — 4분<a class="headerlink" href="#1-수집--4분" title="Permanent link">&para;</a></h2>
+<p>주소는 철자를 틀리면 안 되는 값이라 그대로 드립니다. <strong>여기는 조립할 것이 없습니다.</strong></p>
+<div class="admonition quote">
+<p class="admonition-title">그대로 복사해서 쓰세요</p>
+<div class="highlight"><pre><span></span><code>아래 RSS 주소에서 공고를 15건 이상 가져와서 공고명·게시일·링크를 표로 정리해줘.
+</code></pre></div>
+<ul>
+<li><PLACEHOLDER_RSS_A></li>
+<li><PLACEHOLDER_RSS_B></li>
+</ul>
+</div>
+<div class="admonition success">
+<p class="admonition-title">이렇게 나오면 정상입니다</p>
+<p>공고명·게시일·링크가 있는 표가 15행 이상 화면에 나옵니다. 링크를 눌러보면 실제 공고 페이지가 열립니다</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">인터넷이 막혔거나 주소가 응답하지 않는다면</p>
+<p><code>lab2/공고_백업/</code> 을 씁니다. 실습은 그대로 진행됩니다.</p>
+<ol>
+<li><code>서버켜기.bat</code> (맥은 <code>서버켜기.command</code>) 를 더블클릭합니다. 검은 창이 열린 채로 두세요</li>
+<li>브라우저에서 <code>http://localhost:8099/rss_A_교육기관.xml</code> 이 열리는지 확인합니다</li>
+<li>위 문장의 주소 자리에 아래 두 개를 대신 넣습니다<ul>
+<li><code>http://localhost:8099/rss_A_교육기관.xml</code></li>
+<li><code>http://localhost:8099/rss_B_지자체.xml</code></li>
+</ul>
+</li>
+</ol>
+<p>검은 창이 안 열리면 <code>공고_백업/백업_사용법.txt</code> 의 4번을 보세요.</p>
+</div>
+<hr />
+<h2 id="2-나누기--14분">(2) 나누기 — 14분<a class="headerlink" href="#2-나누기--14분" title="Permanent link">&para;</a></h2>
+<p>여기서부터 여러분 문장입니다.</p>
+<h3 id="먼저-여러분-문장으로-시켜보세요">먼저 여러분 문장으로 시켜보세요<a class="headerlink" href="#먼저-여러분-문장으로-시켜보세요" title="Permanent link">&para;</a></h3>
+<div class="admonition quote">
+<p class="admonition-title">여기에 여러분 말로 채워서 실행하세요</p>
+<p><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_</span></p>
+</div>
+<hr />
+<h3 id="나온-것을-열어봅니다">나온 것을 열어봅니다<a class="headerlink" href="#나온-것을-열어봅니다" title="Permanent link">&para;</a></h3>
+<div class="admonition example">
+<p class="admonition-title">세 가지를 세어보세요</p>
+<ul>
+<li><strong>보류가 몇 건인가요?</strong></li>
+<li><strong>옆자리의 <code>가능</code> 건수와 비교해보세요.</strong> 회사소개가 다른데 결과가 비슷하지 않나요?</li>
+<li>가장 애매했던 것 하나를 고르세요. <strong>그게 왜 그 판정이에요? 공고 본문 어디에 그렇게 적혀 있어요?</strong></li>
+</ul>
+<p>세 번째 질문에 답을 못 하면, 그게 지금 상태의 진단입니다.</p>
+</div>
+<hr />
+<details class="question">
+<summary>① 5분이 지나도 막혔다면 — 아직 펼치지 마세요</summary>
+<p>지금 결과에 <code>판단보류</code> 가 몇 건인가요? 애매한 게 정말 하나도 없었을까요?</p>
+</details>
+<details class="tip">
+<summary>② 9분이 지났다면 — 정해야 할 세 가지</summary>
+<p>정해야 할 것은 셋입니다 — <strong>애매한 건을 어떻게 둘지 / 무엇을 읽고 판단하게 할지(제목인지 본문인지) / 그걸 어떻게 표시에 남길지.</strong></p>
+<p>쓸 수 있는 라벨은 <code>가능</code> · <code>불가</code> · <code>판단보류</code> 셋뿐이고, <code>판단방식</code> 칸은 <code>읽고판단</code> · <code>단어대조</code> 둘 중 하나입니다.</p>
+<p>이 단계 결과는 <code>다음달_챙길일.xlsx</code> 의 <code>신규공고</code> 시트에 들어갑니다.</p>
+</details>
+<details class="example">
+<summary>③ 모범답안 — 잘 되는 문장은 이렇게 생겼습니다 (여러분 문장을 한 번 보내본 뒤에 여세요)</summary>
+<div class="highlight"><pre><span></span><code>내가 쓴 회사소개.md를 먼저 읽고, 위 공고들을 가능·불가·판단보류로 나눠줘.
+제목의 단어로 맞추지 말고 공고 본문 링크를 열어서 읽고 판단해줘.
+애매하면 억지로 고르지 말고 판단보류로 두고, 뭐가 애매한지 한 줄로 적어줘.
+각 건마다 본문을 읽고 판단했는지 제목 단어로 맞췄는지 판단방식 칸에 표시해줘.
+결과는 다음달_챙길일.xlsx의 신규공고 시트에 저장해줘.
+</code></pre></div>
+<p><strong>이 문장이 하는 일</strong></p>
+<table>
+<thead>
+<tr>
+<th>이 줄이</th>
+<th>없으면</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>내가 쓴 회사소개.md를 먼저 읽고</code></td>
+<td>방금 만든 파일이라 <strong>말하지 않으면 존재를 모릅니다.</strong> 일반적인 기준으로 나뉘어 옆자리와 결과가 같아집니다</td>
+</tr>
+<tr>
+<td><code>본문 링크를 열어서 읽고</code></td>
+<td>제목만 보고 나눕니다. 제목이 애매한 건이 한쪽으로 쓸려 들어가고 <strong>그게 일어났다는 것조차 안 보입니다</strong></td>
+</tr>
+<tr>
+<td><code>애매하면 판단보류로 두고 뭐가 애매한지</code></td>
+<td>전부 깔끔하게 둘로 갈립니다. 보류 0건은 잘한 게 아니라 <strong>누군가 대신 정한 것</strong>입니다</td>
+</tr>
+<tr>
+<td><code>판단방식 칸에 표시해줘</code></td>
+<td>본문을 읽었는지 제목만 봤는지 확인할 방법이 없습니다. 이 칸이 있어야 눈으로 셀 수 있습니다</td>
+</tr>
+</tbody>
+</table>
+<p><strong>한 번에 잘 됐다면</strong> — 여러분 문장에 <strong>"애매하면"</strong> 줄이 있었는지 보세요.
+<strong>아직 어긋난다면</strong> — 이 문장으로 갈아타고 검산으로 가세요. 보류 건이 생겼는지만 확인하면 됩니다. <strong>오늘은 완주가 먼저입니다.</strong></p>
+</details>
+<hr />
+<h3 id="내가-안-말한-게-뭐였을까요">내가 안 말한 게 뭐였을까요<a class="headerlink" href="#내가-안-말한-게-뭐였을까요" title="Permanent link">&para;</a></h3>
+<div class="admonition quote">
+<p class="admonition-title">이 한 줄은 복사해서 그대로 쓰세요</p>
+<div class="highlight"><pre><span></span><code>내가 이렇게 시키려고 해: (여러분이 방금 쓴 문장)
+이대로 하면 네가 임의로 정하게 되는 게 뭐야? 그것만 알려줘.
+고쳐 쓴 문장은 주지 말고, 아직 하지도 마.
+</code></pre></div>
+</div>
+<div class="admonition quote">
+<p class="admonition-title">여기가 2번 줄이 채워지는 자리입니다</p>
+<p>2번 칸: <span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>______</span></p>
+</div>
+<hr />
+<h3 id="그걸-채워서-다시-말해보세요">그걸 채워서 다시 말해보세요<a class="headerlink" href="#그걸-채워서-다시-말해보세요" title="Permanent link">&para;</a></h3>
+<div class="admonition quote">
+<p class="admonition-title">빠진 것만 덧붙여 다시 시키세요</p>
+<p><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_</span></p>
+</div>
+<hr />
+<h2 id="검산--다섯-가지">검산 — 다섯 가지<a class="headerlink" href="#검산--다섯-가지" title="Permanent link">&para;</a></h2>
+<ol>
+<li>브라우저에서 RSS 주소를 직접 열어 <strong>항목 수를 세고</strong> 결과 행 수와 비교합니다</li>
+<li><strong>링크 3개를 눌러</strong> 실제 공고 페이지가 열리는지 확인합니다</li>
+<li><code>가능</code> 으로 나온 것 5건을 직접 읽고, 내가 쓴 회사소개와 맞는지 봅니다</li>
+<li><strong><code>단어대조</code> 로 표시된 건이 몇 개인가요?</strong> 많으면 고쳐 말하기를 한 번 더 합니다</li>
+<li><code>판단보류</code> 로 남긴 것 중 하나를 골라, <strong>내가 뭘 몰라서 보류했는지</strong> 한 줄로 적습니다</li>
+</ol>
+<div class="admonition quote">
+<p class="admonition-title">여기가 마지막 줄이 채워지는 자리입니다 — 다섯 줄이 완성됩니다</p>
+<p>5번 칸: <span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>______</span></p>
+<p>("이 기관이 말하는 '운영 위탁'이 우리가 하는 유지보수랑 같은 건지 모르겠다" 수준이면 충분합니다)</p>
+</div>
+<hr />
+<h2 id="뭐가-달라졌는지-봅니다">뭐가 달라졌는지 봅니다<a class="headerlink" href="#뭐가-달라졌는지-봅니다" title="Permanent link">&para;</a></h2>
+<div class="admonition success">
+<p class="admonition-title">이렇게 나오면 정상입니다</p>
+<ul>
+<li><code>다음달_챙길일.xlsx</code> 에 <code>신규공고</code> 시트가 생겼습니다 (백업 자료로 했다면 <strong>20행</strong>, 라이브로 가져왔다면 가져온 건수만큼)</li>
+<li>라벨이 <code>가능</code> · <code>불가</code> · <code>판단보류</code> 셋 안에만 있습니다</li>
+<li><strong><code>판단보류</code> 가 한 건 이상 있습니다</strong></li>
+<li><code>판단방식</code> 칸에 <code>읽고판단</code> 이 대부분입니다</li>
+<li>링크를 눌렀을 때 실제 공고 페이지가 열립니다</li>
+</ul>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">이렇게 나왔다면</p>
+<ul>
+<li><strong>보류가 0건이다</strong> → <strong>"제목만으로는 우리 일인지 애매한 공고가 몇 건인지 세고, 그 건들의 본문에서 애매한 부분을 인용해줘"</strong></li>
+<li><code>판단방식</code> 이 전부 <code>단어대조</code> 다 → <strong>"각 공고의 본문 링크를 실제로 열어서 다시 판단하고, 판정이 바뀐 건만 알려줘"</strong></li>
+<li>옆자리와 결과가 거의 같다 → 회사소개를 안 읽힌 것입니다. <strong>"내가 쓴 회사소개.md를 읽고, 그 문서의 어느 줄을 근거로 이 판정을 했는지 건마다 적어줘"</strong></li>
+<li>링크가 안 열린다 → 백업 자료로 전환하세요. 위 (1)의 경고 상자를 보세요</li>
+<li>라벨이 <code>검토필요</code> 같은 다른 말이다 → <strong>"라벨을 가능·불가·판단보류 셋 안에서만 쓰도록 고쳐줘"</strong></li>
+</ul>
+</div>
+<details class="note">
+<summary>왜 '애매하면 어떻게 하라'를 같이 말해야 할까요</summary>
+<p>숫자를 더하고 표를 합치는 일은 규칙으로 처리하는 게 빠르고 정확합니다. 그런데 <strong>'이게 우리가 할 만한 일인가' 같은 판단은 규칙으로 접으면 망가집니다</strong> — 돌려 말한 문장, 예외적인 조건이 규칙 밖으로 새어나가기 때문입니다.</p>
+<p>계산은 규칙으로, <strong>판단은 직접 읽게</strong> 나눠서 시킵니다. 그리고 애매한 것은 애매한 채로 남기라고 말해야 남습니다.</p>
+</details>
+<hr />
+<h2 id="이-단계-결과물-규격">이 단계 결과물 규격<a class="headerlink" href="#이-단계-결과물-규격" title="Permanent link">&para;</a></h2>
+<p><code>다음달_챙길일.xlsx</code></p>
+<table>
+<thead>
+<tr>
+<th>시트</th>
+<th>칸 이름 (이 순서, 이 표기)</th>
+<th>행 수</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>신규공고</code></td>
+<td>공고명 / 게시일 / 링크 / 판정 / 이유 / 판단방식</td>
+<td>가져온 공고 건수 (백업 자료 기준 20)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>값 표기 규칙</strong></p>
+<table>
+<thead>
+<tr>
+<th>칸</th>
+<th>규칙</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>게시일</td>
+<td><code>2026-09-30</code> 한 가지 형태</td>
+</tr>
+<tr>
+<td><code>판정</code></td>
+<td><code>가능</code> / <code>불가</code> / <code>판단보류</code> — 이 셋 밖의 표현 금지</td>
+</tr>
+<tr>
+<td><code>판단방식</code></td>
+<td><code>읽고판단</code> / <code>단어대조</code> 둘 중 하나</td>
+</tr>
+<tr>
+<td><code>이유</code></td>
+<td>판정 근거를 한 줄로. <code>판단보류</code> 는 <strong>뭐가 애매한지</strong>를 적습니다</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>뭐가 달라졌는지 봅니다 — 체크포인트</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>신규공고</code> 시트가 생겼고 라벨이 셋 안에만 있다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>판단보류</code> 가 한 건 이상 있다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 링크 3개를 눌러 실제 페이지가 열리는 걸 확인했다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 목록의 2번·5번 칸을 내 말로 채워 <strong>다섯 줄을 완성했다</strong></li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">여기서 시간이 다 됐다면</p>
+<p><code>lab2/못따라왔을때/4단계결과/</code> 를 복사해 오세요. 그 결과는 같은 폴더의 <code>기준회사소개.md</code> 로 만든 것이라, 여러분 회사소개와 다르면 판정이 다른 게 정상입니다.</p>
+</div>
+<div class="stage-nav">
+<p><strong>← 이전</strong> <a href"step3.html">3단계. 우리 회사 소개 문단 직접 쓰기</a> · <strong>다음 →</strong> <a href"step5.html">5단계. 다음에도 쓰게 설명서 남기기</a></p>
+</div>
+<nav class="pager">
+<a class="prev" href="../lab2/step3.html"><span class="lbl">← 이전</span><span class="ttl">3 · 회사소개 문단</span></a>
+<a class="next" href="../lab2/step5.html"><span class="lbl">다음 →</span><span class="ttl">5 · 설명서 남기기</span></a>
+</nav>
+      </article>
+      <aside class="toc mono"><h4>On this page</h4>
+<a href="#4단계-인터넷-공고-가져와-나누기">4단계. 인터넷 공고 가져와 나누기</a>
+<a href="#1-수집--4분">(1) 수집 — 4분</a>
+<a href="#2-나누기--14분">(2) 나누기 — 14분</a>
+<a href="#먼저-여러분-문장으로-시켜보세요" class="t3">먼저 여러분 문장으로 시켜보세요</a>
+<a href="#나온-것을-열어봅니다" class="t3">나온 것을 열어봅니다</a>
+<a href="#내가-안-말한-게-뭐였을까요" class="t3">내가 안 말한 게 뭐였을까요</a>
+<a href="#그걸-채워서-다시-말해보세요" class="t3">그걸 채워서 다시 말해보세요</a>
+<a href="#검산--다섯-가지">검산 — 다섯 가지</a>
+<a href="#뭐가-달라졌는지-봅니다">뭐가 달라졌는지 봅니다</a>
+<a href="#이-단계-결과물-규격">이 단계 결과물 규격</a></aside>
+    </div>
+  </main>
+</div>
+<script src="../assets/site.js"></script>
+</body>
+</html>

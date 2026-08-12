@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="ko" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2단계. 청구서 두 장을 하나로 합치기 · ax-tutor</title>
+<meta name="description" content="실습 1 · 물류비 마감 — 2단계. 청구서 두 장을 하나로 합치기 · ax-tutor 실습 위키">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<div class="shell">
+  <aside class="side" id="side">
+    <div class="brand">
+      <a class="brand__row" href="../index.html" style="text-decoration:none">
+        <span class="ast mono">✻</span>
+        <div><div class="brand__name">ax<b>-</b>tutor</div></div>
+      </a>
+      <div class="brand__sub">Claude Code · 실습 위키</div>
+      <div class="session"><span class="dot"></span><span class="live">LIVE</span>
+        <span style="color:var(--muted)">강의 진행 중</span><span class="clock mono" id="clock">--:--</span></div>
+    </div>
+    <nav><div class="nav-h">// 홈</div>
+<a class="nav-a" href="../index.html"><span class="g">◆</span> 오늘의 지도</a>
+<a class="nav-a" href="../index.html#materials"><span class="g">▤</span> 강의 자료 내려받기</a>
+<div class="nav-h">// 시작하기</div><div class="tree">
+<a class="nav-a" href="../start/prepare.html">0 · 준비물과 사전 설치</a>
+<a class="nav-a" href="../start/first-5min.html">1 · 처음 5분</a>
+<a class="nav-a" href="../start/rules.html">2 · 오후 규칙 3가지</a>
+</div>
+<div class="nav-h">// 실습 1 · 물류비 마감</div><div class="tree">
+<a class="nav-a" href="../lab1/index.html">개요</a>
+<a class="nav-a" href="../lab1/step1.html">1 · 요금표를 표로</a>
+<a class="nav-a active" href="../lab1/step2.html">2 · 청구서 합치기</a>
+<a class="nav-a" href="../lab1/step3.html">3 · 120건 재계산</a>
+<a class="nav-a" href="../lab1/step4.html">4 · 검증 설계·검산</a>
+<a class="nav-a" href="../lab1/extra.html">＋ 더 해보기</a>
+</div>
+<div class="nav-h">// 실습 2 · 계약·입찰 레이더</div><div class="tree">
+<a class="nav-a" href="../lab2/index.html">개요</a>
+<a class="nav-a" href="../lab2/step1.html">1 · 계약서 한 장</a>
+<a class="nav-a" href="../lab2/step2.html">2 · 열두 건으로</a>
+<a class="nav-a" href="../lab2/step3.html">3 · 회사소개 문단</a>
+<a class="nav-a" href="../lab2/step4.html">4 · 공고 가져와 나누기</a>
+<a class="nav-a" href="../lab2/step5.html">5 · 설명서 남기기</a>
+<a class="nav-a" href="../lab2/extra.html">＋ 영문·스캔 PDF</a>
+</div>
+<div class="nav-h">// 실습 3 · 근거 붙인 보고문</div><div class="tree">
+<a class="nav-a" href="../lab3/index.html">개요</a>
+<a class="nav-a" href="../lab3/step1.html">1 · 일단 써보게</a>
+<a class="nav-a" href="../lab3/step2.html">2 · 숫자마다 출처</a>
+<a class="nav-a" href="../lab3/step3.html">3 · 숫자 5개 역추적</a>
+<a class="nav-a" href="../lab3/step4.html">4·5 · 없는 문장·톤 두 벌</a>
+<a class="nav-a" href="../lab3/extra.html">＋ 더 해보기</a>
+</div>
+<div class="nav-h">// 실습 4 · 대시보드와 디자인</div><div class="tree">
+<a class="nav-a" href="../lab4/index.html">개요</a>
+<a class="nav-a" href="../lab4/step1.html">1 · 무엇을 보여줄지</a>
+<a class="nav-a" href="../lab4/step2.html">2 · 뼈대·검산</a>
+<a class="nav-a" href="../lab4/step3.html">3 · Before 캡처</a>
+<a class="nav-a" href="../lab4/step4.html">4 · 말로 인상 바꾸기</a>
+<a class="nav-a" href="../lab4/step5.html">5 · 두 무드 비교</a>
+<a class="nav-a" href="../lab4/step6.html">6 · 다크모드·반응형</a>
+<a class="nav-a" href="../lab4/step7.html">7 · 재검산·After</a>
+<a class="nav-a" href="../lab4/stuck.html">막혔을 때 쓰는 문장</a>
+</div>
+<div class="nav-h">// 여유 실습</div><div class="tree">
+<a class="nav-a" href="../lab5/index.html">A · 회의 녹취 정리</a>
+<a class="nav-a" href="../lab5/step1.html">A-1 · 결정만 골라내기</a>
+<a class="nav-a" href="../lab5/step2.html">A-2 · 담당자·마감</a>
+<a class="nav-a" href="../lab5/step3.html">A-3 · 근거 남기기</a>
+<a class="nav-a" href="../lab6/index.html">B · 링크로 공유</a>
+</div>
+<div class="nav-h">// 도움말</div><div class="tree">
+<a class="nav-a" href="../help/errors.html">에러가 났어요</a>
+<a class="nav-a" href="../help/glossary.html">이 말이 무슨 뜻이죠</a>
+<a class="nav-a" href="../help/how-to-ask.html">AI에게 잘 시키는 법</a>
+<a class="nav-a" href="../help/prompts.html">오늘 내가 친 문장</a>
+<a class="nav-a" href="../help/next.html">강의 끝나고 뭘 해볼까</a>
+</div></nav>
+    <div class="side__foot">
+      <button class="iconbtn" id="themeBtn" title="테마 전환"><span id="themeIc">◐</span> <span id="themeLbl">light</span></button>
+      <a class="iconbtn" href="../index.html" title="홈">↖ home</a>
+    </div>
+  </aside>
+  <main class="main">
+    <div class="cmdbar mono">
+      <button class="burger" id="burger" aria-label="메뉴">≡</button>
+      <span class="path"><b>~/ax-tutor</b> <span class="full">$ cat</span> <span class="cur">lab1/step2.md</span></span>
+      <span class="caret"></span><span class="spacer"></span>
+      <span class="stat">실습 1 · 물류비 마감</span>
+    </div>
+    <div class="wrap">
+      <article class="doc md rise">
+        <div class="kicker mono"><b>//</b> 실습 1 · 물류비 마감</div>
+<h1 id="2단계-청구서-두-장을-하나로-합치기">2단계. 청구서 두 장을 하나로 합치기<a class="headerlink" href="#2단계-청구서-두-장을-하나로-합치기" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">이 단계에서 하는 일 (약 13분)</p>
+<ul>
+<li>서식이 다른 청구서 두 장을 하나의 표로 합칩니다</li>
+<li>우리 발송 기록과 짝을 맞춰봅니다</li>
+<li>짝이 안 맞는 건을 지우지 않고 표시로 남깁니다</li>
+</ul>
+</div>
+<p>두 회사가 보낸 청구서는 칸 이름부터 다릅니다. 한쪽은 <code>송장번호</code>, 한쪽은 <code>운송장</code>입니다. 금액을 적는 방식도 다릅니다.</p>
+<div class="admonition info">
+<p class="admonition-title">이 단계의 결과 파일 이름과 칸 규격은 이 페이지 맨 아래에 있습니다</p>
+</div>
+<hr />
+<h2 id="먼저-여러분-문장으로-시켜보세요">먼저 여러분 문장으로 시켜보세요<a class="headerlink" href="#먼저-여러분-문장으로-시켜보세요" title="Permanent link">&para;</a></h2>
+<div class="admonition quote">
+<p class="admonition-title">여기에 여러분 말로 채워서 실행하세요</p>
+<p><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_</span></p>
+</div>
+<hr />
+<h2 id="나온-것을-열어봅니다">나온 것을 열어봅니다<a class="headerlink" href="#나온-것을-열어봅니다" title="Permanent link">&para;</a></h2>
+<div class="admonition example">
+<p class="admonition-title">행 수부터 세어보세요</p>
+<ul>
+<li>지금 표가 <strong>몇 행</strong>인가요?</li>
+<li>그 숫자가 0단계에서 종이에 적은 <strong>120</strong> · <strong>118</strong> 과 어떤 관계인지 한 줄로 적어보세요</li>
+</ul>
+<p><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_</span></p>
+<p>적기 어렵다면 그게 지금 상태의 진단입니다. 아래로 내려가세요.</p>
+</div>
+<hr />
+<details class="question">
+<summary>① 4분이 지나도 막혔다면 — 아직 펼치지 마세요</summary>
+<p>지금 표에 <strong>발송내역 120건</strong>은 들어 있나요?</p>
+<blockquote>
+<p>펼치기 전에 한 번만 더 시도해보세요.</p>
+</blockquote>
+</details>
+<details class="tip">
+<summary>② 9분이 지났다면 — 정해야 할 세 가지</summary>
+<p>정해야 할 것은 셋입니다 — <strong>입력이 몇 개인지 / 한쪽에만 있는 건을 어떻게 할지 / 원본을 어떻게 할지.</strong></p>
+<p><strong>정답 행 수는 122행입니다.</strong> 왜 122인지는 여러분이 채우세요.</p>
+<p>이 단계 결과는 <code>물류비_점검표.xlsx</code> 의 <code>건별판정</code> 시트에 들어갑니다.</p>
+</details>
+<details class="example">
+<summary>③ 모범답안 — 잘 되는 문장은 이렇게 생겼습니다 (여러분 문장을 한 번 보내본 뒤에 여세요)</summary>
+<div class="highlight"><pre><span></span><code>발송내역.xlsx, 청구서_A택배.csv, 청구서_B물류.xlsx 세 개를 다 읽어서 하나의 표로 합쳐줘.
+원본 세 개는 고치지 말고 읽기만 해.
+결과는 물류비_점검표.xlsx 파일의 건별판정 시트에 새로 만들어줘.
+발송내역에 없는 송장은 발송기록없음, 청구서에 없는 발송건은 미청구라고 남겨줘.
+금액은 숫자만 쓰고, 부가세가 포함된 금액인지 아닌지는 따로 칸을 만들어 적어줘.
+다 되면 최종 행수가 몇 행인지 알려줘.
+</code></pre></div>
+<p><strong>이 문장이 하는 일</strong></p>
+<table>
+<thead>
+<tr>
+<th>이 줄이</th>
+<th>없으면</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>발송내역.xlsx, 청구서_A택배.csv, 청구서_B물류.xlsx 세 개를 다</code></td>
+<td>청구서 두 개만 합쳐 118행이 나옵니다. 우리 기록에 있는 120건과 맞춰볼 수가 없습니다</td>
+</tr>
+<tr>
+<td><code>원본 세 개는 고치지 말고 읽기만 해</code></td>
+<td>받은 청구서 파일이 정리되면서 바뀝니다. 되돌릴 방법이 없습니다</td>
+</tr>
+<tr>
+<td><code>발송기록없음 / 미청구라고 남겨줘</code></td>
+<td>짝이 안 맞는 6건이 조용히 사라집니다. <strong>사라진 건은 세어볼 수도 없습니다</strong></td>
+</tr>
+<tr>
+<td><code>최종 행수가 몇 행인지 알려줘</code></td>
+<td>"합쳤습니다"로 끝납니다. 122인지 118인지 직접 세야 합니다</td>
+</tr>
+</tbody>
+</table>
+<p><strong>한 번에 잘 됐다면</strong> — 여러분 문장과 이 답안에서 <strong>다른 곳을 한 곳만</strong> 찾아보세요. 답안이 더 나은 곳도, 여러분 문장이 더 나은 곳도 있습니다. 둘 다 있는 게 정상입니다.
+<strong>아직 어긋난다면</strong> — 이 문장으로 갈아타고 다음 단계로 가세요. <strong>오늘은 완주가 먼저입니다.</strong> 갈아탔다고 뒤처진 게 아닙니다.</p>
+</details>
+<hr />
+<h2 id="내가-안-말한-게-뭐였을까요">내가 안 말한 게 뭐였을까요<a class="headerlink" href="#내가-안-말한-게-뭐였을까요" title="Permanent link">&para;</a></h2>
+<div class="admonition quote">
+<p class="admonition-title">이 한 줄은 복사해서 그대로 쓰세요</p>
+<div class="highlight"><pre><span></span><code>내가 이렇게 시키려고 해: (여러분이 방금 쓴 문장)
+이대로 하면 네가 임의로 정하게 되는 게 뭐야? 그것만 알려줘.
+고쳐 쓴 문장은 주지 말고, 아직 하지도 마.
+</code></pre></div>
+</div>
+<p>돌아온 답에서 한 줄을 골라 목록에 적으세요.</p>
+<div class="admonition quote">
+<p class="admonition-title">여기가 두 번째 줄이 채워지는 자리입니다</p>
+<p>1번 칸: <span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>______</span></p>
+</div>
+<hr />
+<h2 id="그걸-채워서-다시-말해보세요">그걸 채워서 다시 말해보세요<a class="headerlink" href="#그걸-채워서-다시-말해보세요" title="Permanent link">&para;</a></h2>
+<div class="admonition quote">
+<p class="admonition-title">빠진 것만 덧붙여 다시 시키세요</p>
+<p><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_</span></p>
+</div>
+<hr />
+<h2 id="뭐가-달라졌는지-봅니다">뭐가 달라졌는지 봅니다<a class="headerlink" href="#뭐가-달라졌는지-봅니다" title="Permanent link">&para;</a></h2>
+<div class="admonition success">
+<p class="admonition-title">이렇게 나오면 정상입니다</p>
+<ul>
+<li><code>물류비_점검표.xlsx</code> 에 <code>건별판정</code> 시트가 생겼습니다</li>
+<li>행 수가 <strong>122행</strong>입니다</li>
+<li>청구액이 비어 있고 <code>미청구</code> 라고 적힌 행이 있습니다</li>
+<li>발송 기록이 없다고 표시된 행이 있습니다</li>
+<li>원본 세 파일은 그대로입니다 (수정 날짜가 안 바뀌었습니다)</li>
+</ul>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">이렇게 나왔다면</p>
+<ul>
+<li><strong>118행이 나왔다</strong> → 청구서 두 개만 합친 것입니다. <strong>"발송내역.xlsx도 같이 읽었는지 확인해줘. 안 읽었으면 왜 안 읽었는지 먼저 말해줘"</strong></li>
+<li><strong>116행이 나왔다</strong> → 짝이 안 맞는 건이 사라졌습니다. <strong>"양쪽 중 한쪽에만 있는 건이 몇 건인지 세어서, 지우지 말고 표시로 남겨줘"</strong></li>
+<li><strong>120행이 나왔다</strong> → 청구서에만 있는 건이 빠졌습니다. 같은 문장으로 물어보세요</li>
+<li>원본 파일 수정 날짜가 오늘로 바뀌었다 → <strong>"원본 세 파일은 건드리지 말고, 결과만 새 파일에 쓰도록 다시 해줘"</strong></li>
+<li>두 회사 금액이 그냥 한 칸에 섞여 있다 → <strong>"이 금액이 부가세가 포함된 금액인지 아닌지 칸을 따로 만들어 적어줘"</strong></li>
+</ul>
+</div>
+<details class="note">
+<summary>왜 '옆에 있는 엑셀들'이라고 하면 안 될까요</summary>
+<p>결과가 틀렸을 때 <strong>무엇을 읽었는지 확인할 방법이 없어지기 때문</strong>입니다. "옆의", "이거", "아까 그거"는 사람끼리는 통하지만, 나중에 되짚을 때는 아무것도 가리키지 않습니다.</p>
+<p>원본을 건드리지 말라는 한 줄도 같은 이유입니다. 받은 파일이 정리되면서 바뀌면, 무엇이 원래 값이었는지 확인할 방법이 사라집니다.</p>
+</details>
+<hr />
+<div class="admonition abstract">
+<p class="admonition-title">최소 코스 — 여기까지면 오늘 목표 달성입니다</p>
+<p><strong>122행</strong>이 나왔으면 이 실습의 목표는 달성입니다. 3·4단계는 거기서 더 가는 길입니다.</p>
+</div>
+<hr />
+<h2 id="이-단계-결과물-규격">이 단계 결과물 규격<a class="headerlink" href="#이-단계-결과물-규격" title="Permanent link">&para;</a></h2>
+<p><code>물류비_점검표.xlsx</code></p>
+<table>
+<thead>
+<tr>
+<th>시트</th>
+<th>칸 이름 (이 순서, 이 표기)</th>
+<th>행 수</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>건별판정</code></td>
+<td>송장번호 / 발송일 / 택배사 / 정당요금 / 청구액 / 차액 / 판정 / 근거요금구간 / 적용할증 / 적용할인</td>
+<td>122</td>
+</tr>
+</tbody>
+</table>
+<p>(<code>정당요금</code>·<code>차액</code>·<code>판정</code>·<code>근거요금구간</code>·<code>적용할증</code>·<code>적용할인</code> 칸은 3단계에서 채웁니다. 지금은 칸만 있어도 됩니다)</p>
+<p><strong>값 표기 규칙</strong></p>
+<table>
+<thead>
+<tr>
+<th>칸</th>
+<th>규칙</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>날짜</td>
+<td><code>2026-09-30</code> 한 가지 형태로 통일합니다. <code>2026. 9. 30.</code> · <code>2026년 9월 30일</code> 을 섞지 않습니다</td>
+</tr>
+<tr>
+<td>금액</td>
+<td>숫자만. 원 표시·쉼표·괄호를 쓰지 않습니다. 부가세 포함 여부는 별도 칸으로</td>
+</tr>
+<tr>
+<td><code>판정</code></td>
+<td><code>정상</code> / <code>과청구</code> / <code>과소청구</code> / <code>판정보류</code> / <code>발송기록없음</code> / <code>미청구</code> — <strong>이 여섯 개 밖의 표현을 쓰지 않습니다</strong></td>
+</tr>
+<tr>
+<td>빈칸</td>
+<td>값이 없으면 <code>0</code>이 아니라 비워두거나 위 라벨 중 하나로 표시합니다. 추측해서 채우지 않습니다</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>뭐가 달라졌는지 봅니다 — 체크포인트</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>건별판정</code> 시트가 <strong>122행</strong>이다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 122가 왜 122인지 한 줄로 적었다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 원본 세 파일이 그대로다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 목록의 1번 칸을 내 말로 채웠다</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">여기서 시간이 다 됐다면</p>
+<p><code>lab1/못따라왔을때/2단계결과/</code> 를 복사해 오세요. 3단계는 그걸로 갑니다.</p>
+</div>
+<div class="stage-nav">
+<p><strong>← 이전</strong> <a href"step1.html">1단계. 사진 속 요금표를 표로 옮기기</a> · <strong>다음 →</strong> <a href"step3.html">3단계. 120건 다시 계산하고 판정하기</a></p>
+</div>
+<nav class="pager">
+<a class="prev" href="../lab1/step1.html"><span class="lbl">← 이전</span><span class="ttl">1 · 요금표를 표로</span></a>
+<a class="next" href="../lab1/step3.html"><span class="lbl">다음 →</span><span class="ttl">3 · 120건 재계산</span></a>
+</nav>
+      </article>
+      <aside class="toc mono"><h4>On this page</h4>
+<a href="#2단계-청구서-두-장을-하나로-합치기">2단계. 청구서 두 장을 하나로 합치기</a>
+<a href="#먼저-여러분-문장으로-시켜보세요">먼저 여러분 문장으로 시켜보세요</a>
+<a href="#나온-것을-열어봅니다">나온 것을 열어봅니다</a>
+<a href="#내가-안-말한-게-뭐였을까요">내가 안 말한 게 뭐였을까요</a>
+<a href="#그걸-채워서-다시-말해보세요">그걸 채워서 다시 말해보세요</a>
+<a href="#뭐가-달라졌는지-봅니다">뭐가 달라졌는지 봅니다</a>
+<a href="#이-단계-결과물-규격">이 단계 결과물 규격</a></aside>
+    </div>
+  </main>
+</div>
+<script src="../assets/site.js"></script>
+</body>
+</html>

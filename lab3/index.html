@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="ko" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>실습 3 · 숫자마다 어디서 왔는지 붙인 보고문 쓰기 · ax-tutor</title>
+<meta name="description" content="실습 3 · 근거 붙인 보고문 — 실습 3 · 숫자마다 어디서 왔는지 붙인 보고문 쓰기 · ax-tutor 실습 위키">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<div class="shell">
+  <aside class="side" id="side">
+    <div class="brand">
+      <a class="brand__row" href="../index.html" style="text-decoration:none">
+        <span class="ast mono">✻</span>
+        <div><div class="brand__name">ax<b>-</b>tutor</div></div>
+      </a>
+      <div class="brand__sub">Claude Code · 실습 위키</div>
+      <div class="session"><span class="dot"></span><span class="live">LIVE</span>
+        <span style="color:var(--muted)">강의 진행 중</span><span class="clock mono" id="clock">--:--</span></div>
+    </div>
+    <nav><div class="nav-h">// 홈</div>
+<a class="nav-a" href="../index.html"><span class="g">◆</span> 오늘의 지도</a>
+<a class="nav-a" href="../index.html#materials"><span class="g">▤</span> 강의 자료 내려받기</a>
+<div class="nav-h">// 시작하기</div><div class="tree">
+<a class="nav-a" href="../start/prepare.html">0 · 준비물과 사전 설치</a>
+<a class="nav-a" href="../start/first-5min.html">1 · 처음 5분</a>
+<a class="nav-a" href="../start/rules.html">2 · 오후 규칙 3가지</a>
+</div>
+<div class="nav-h">// 실습 1 · 물류비 마감</div><div class="tree">
+<a class="nav-a" href="../lab1/index.html">개요</a>
+<a class="nav-a" href="../lab1/step1.html">1 · 요금표를 표로</a>
+<a class="nav-a" href="../lab1/step2.html">2 · 청구서 합치기</a>
+<a class="nav-a" href="../lab1/step3.html">3 · 120건 재계산</a>
+<a class="nav-a" href="../lab1/step4.html">4 · 검증 설계·검산</a>
+<a class="nav-a" href="../lab1/extra.html">＋ 더 해보기</a>
+</div>
+<div class="nav-h">// 실습 2 · 계약·입찰 레이더</div><div class="tree">
+<a class="nav-a" href="../lab2/index.html">개요</a>
+<a class="nav-a" href="../lab2/step1.html">1 · 계약서 한 장</a>
+<a class="nav-a" href="../lab2/step2.html">2 · 열두 건으로</a>
+<a class="nav-a" href="../lab2/step3.html">3 · 회사소개 문단</a>
+<a class="nav-a" href="../lab2/step4.html">4 · 공고 가져와 나누기</a>
+<a class="nav-a" href="../lab2/step5.html">5 · 설명서 남기기</a>
+<a class="nav-a" href="../lab2/extra.html">＋ 영문·스캔 PDF</a>
+</div>
+<div class="nav-h">// 실습 3 · 근거 붙인 보고문</div><div class="tree">
+<a class="nav-a active" href="../lab3/index.html">개요</a>
+<a class="nav-a" href="../lab3/step1.html">1 · 일단 써보게</a>
+<a class="nav-a" href="../lab3/step2.html">2 · 숫자마다 출처</a>
+<a class="nav-a" href="../lab3/step3.html">3 · 숫자 5개 역추적</a>
+<a class="nav-a" href="../lab3/step4.html">4·5 · 없는 문장·톤 두 벌</a>
+<a class="nav-a" href="../lab3/extra.html">＋ 더 해보기</a>
+</div>
+<div class="nav-h">// 실습 4 · 대시보드와 디자인</div><div class="tree">
+<a class="nav-a" href="../lab4/index.html">개요</a>
+<a class="nav-a" href="../lab4/step1.html">1 · 무엇을 보여줄지</a>
+<a class="nav-a" href="../lab4/step2.html">2 · 뼈대·검산</a>
+<a class="nav-a" href="../lab4/step3.html">3 · Before 캡처</a>
+<a class="nav-a" href="../lab4/step4.html">4 · 말로 인상 바꾸기</a>
+<a class="nav-a" href="../lab4/step5.html">5 · 두 무드 비교</a>
+<a class="nav-a" href="../lab4/step6.html">6 · 다크모드·반응형</a>
+<a class="nav-a" href="../lab4/step7.html">7 · 재검산·After</a>
+<a class="nav-a" href="../lab4/stuck.html">막혔을 때 쓰는 문장</a>
+</div>
+<div class="nav-h">// 여유 실습</div><div class="tree">
+<a class="nav-a" href="../lab5/index.html">A · 회의 녹취 정리</a>
+<a class="nav-a" href="../lab5/step1.html">A-1 · 결정만 골라내기</a>
+<a class="nav-a" href="../lab5/step2.html">A-2 · 담당자·마감</a>
+<a class="nav-a" href="../lab5/step3.html">A-3 · 근거 남기기</a>
+<a class="nav-a" href="../lab6/index.html">B · 링크로 공유</a>
+</div>
+<div class="nav-h">// 도움말</div><div class="tree">
+<a class="nav-a" href="../help/errors.html">에러가 났어요</a>
+<a class="nav-a" href="../help/glossary.html">이 말이 무슨 뜻이죠</a>
+<a class="nav-a" href="../help/how-to-ask.html">AI에게 잘 시키는 법</a>
+<a class="nav-a" href="../help/prompts.html">오늘 내가 친 문장</a>
+<a class="nav-a" href="../help/next.html">강의 끝나고 뭘 해볼까</a>
+</div></nav>
+    <div class="side__foot">
+      <button class="iconbtn" id="themeBtn" title="테마 전환"><span id="themeIc">◐</span> <span id="themeLbl">light</span></button>
+      <a class="iconbtn" href="../index.html" title="홈">↖ home</a>
+    </div>
+  </aside>
+  <main class="main">
+    <div class="cmdbar mono">
+      <button class="burger" id="burger" aria-label="메뉴">≡</button>
+      <span class="path"><b>~/ax-tutor</b> <span class="full">$ cat</span> <span class="cur">lab3/index.md</span></span>
+      <span class="caret"></span><span class="spacer"></span>
+      <span class="stat">실습 3 · 근거 붙인 보고문</span>
+    </div>
+    <div class="wrap">
+      <article class="doc md rise">
+        <div class="kicker mono"><b>//</b> 실습 3 · 근거 붙인 보고문</div>
+<h1 id="실습-3--숫자마다-어디서-왔는지-붙인-보고문-쓰기">실습 3 · 숫자마다 어디서 왔는지 붙인 보고문 쓰기<a class="headerlink" href="#실습-3--숫자마다-어디서-왔는지-붙인-보고문-쓰기" title="Permanent link">&para;</a></h1>
+<p><span class="route-badge">👥 <strong>강사와 함께 가는 최소 코스</strong> — 1 → 2 → 3단계 → 4·5단계</span>
+<span class="route-badge">🏃 <strong>혼자 더 가는 코스</strong> — 위 전부 + <a href"extra.html">더 해보기</a></span></p>
+<p><strong>한 줄 목표: 산출물은 표만이 아니다. 다만 글은 확인하기가 더 어렵다는 걸 직접 겪는다.</strong></p>
+<p>예상 소요 <strong>30분</strong>.</p>
+<hr />
+<h2 id="오늘-받은-일">오늘 받은 일<a class="headerlink" href="#오늘-받은-일" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>사수가 말합니다.</p>
+<p>"표는 잘 만들었는데, 팀장님은 엑셀 안 열어요. 두 개만 써주세요. 하나는 팀 내부에 보낼 이번 달 요약. 하나는 택배사에 보낼 이의제기 문서. <strong>다만 숫자 하나라도 틀리면 우리가 곤란해집니다.</strong>"</p>
+</blockquote>
+<hr />
+<h2 id="쓰는-재료">쓰는 재료<a class="headerlink" href="#쓰는-재료" title="Permanent link">&para;</a></h2>
+<p><strong>실습 1·2에서 여러분이 만든 파일을 씁니다.</strong></p>
+<table>
+<thead>
+<tr>
+<th>파일</th>
+<th>어디서</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>물류비_점검표.xlsx</code></td>
+<td>실습 1에서 만든 것</td>
+</tr>
+<tr>
+<td><code>다음달_챙길일.xlsx</code></td>
+<td>실습 2에서 만든 것</td>
+</tr>
+</tbody>
+</table>
+<p>앞 실습을 끝내지 못했다면 <code>lab3/</code> 폴더의 <code>샘플_점검표.xlsx</code> · <code>샘플_챙길일.xlsx</code> 를 대신 쓰세요. <strong>완주 못 한 것이 이 실습을 막지 않습니다.</strong></p>
+<hr />
+<h2 id="오늘-이-실습에서-만드는-것">오늘 이 실습에서 만드는 것<a class="headerlink" href="#오늘-이-실습에서-만드는-것" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>단계</th>
+<th>무엇</th>
+<th>분</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href"step1.html">1단계</a></td>
+<td>일단 써보게 합니다</td>
+<td>4</td>
+</tr>
+<tr>
+<td><a href"step2.html">2단계</a></td>
+<td>숫자마다 출처를 붙이게 합니다</td>
+<td>6</td>
+</tr>
+<tr>
+<td><a href"step3.html">3단계</a></td>
+<td>숫자 5개를 <strong>손으로</strong> 되짚습니다</td>
+<td>9</td>
+</tr>
+<tr>
+<td><a href"step4.html">4·5단계</a></td>
+<td>자료에 없는 문장을 잡고, 톤 두 벌을 뽑습니다</td>
+<td>11</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition abstract">
+<p class="admonition-title">최소 코스 — 여기까지면 오늘 목표 달성입니다</p>
+<p><strong>2단계에서 숫자에 출처가 붙은 보고문이 나오면</strong> 이 실습의 목표는 달성입니다.
+다만 <strong>3단계(손으로 되짚기)는 막혔더라도 반드시 하세요.</strong> 그게 이 실습의 본체입니다.</p>
+</div>
+<hr />
+<h2 id="이-실습에서는-새-줄이-안-늘어납니다">이 실습에서는 새 줄이 안 늘어납니다<a class="headerlink" href="#이-실습에서는-새-줄이-안-늘어납니다" title="Permanent link">&para;</a></h2>
+<p>다섯 줄은 실습 2에서 이미 다 찼습니다. 여기서는 <strong>표가 아닌 일</strong>에 그 다섯 줄을 처음 써봅니다.</p>
+<div class="admonition quote">
+<p class="admonition-title">내 문장에 이게 있나 (다 채워진 상태)</p>
+<ol>
+<li><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>__</span></li>
+<li><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>__</span></li>
+<li><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>__</span></li>
+<li><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>__</span></li>
+<li><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>__</span></li>
+</ol>
+</div>
+<div class="stage-nav">
+<p><strong>← 이전</strong> <a href"../lab2/extra.html">실습 2 · 더 해보기</a> · <strong>다음 →</strong> <a href"step1.html">1단계. 일단 써보게 하기</a></p>
+</div>
+<nav class="pager">
+<a class="prev" href="../lab2/extra.html"><span class="lbl">← 이전</span><span class="ttl">＋ 영문·스캔 PDF</span></a>
+<a class="next" href="../lab3/step1.html"><span class="lbl">다음 →</span><span class="ttl">1 · 일단 써보게</span></a>
+</nav>
+      </article>
+      <aside class="toc mono"><h4>On this page</h4>
+<a href="#실습-3--숫자마다-어디서-왔는지-붙인-보고문-쓰기">실습 3 · 숫자마다 어디서 왔는지 붙인 보고문 쓰기</a>
+<a href="#오늘-받은-일">오늘 받은 일</a>
+<a href="#쓰는-재료">쓰는 재료</a>
+<a href="#오늘-이-실습에서-만드는-것">오늘 이 실습에서 만드는 것</a>
+<a href="#이-실습에서는-새-줄이-안-늘어납니다">이 실습에서는 새 줄이 안 늘어납니다</a></aside>
+    </div>
+  </main>
+</div>
+<script src="../assets/site.js"></script>
+</body>
+</html>

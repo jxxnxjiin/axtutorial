@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="ko" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>1. 무엇을 보여줄지 먼저 쓰기 · ax-tutor</title>
+<meta name="description" content="실습 4 · 대시보드와 디자인 — 1. 무엇을 보여줄지 먼저 쓰기 · ax-tutor 실습 위키">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<div class="shell">
+  <aside class="side" id="side">
+    <div class="brand">
+      <a class="brand__row" href="../index.html" style="text-decoration:none">
+        <span class="ast mono">✻</span>
+        <div><div class="brand__name">ax<b>-</b>tutor</div></div>
+      </a>
+      <div class="brand__sub">Claude Code · 실습 위키</div>
+      <div class="session"><span class="dot"></span><span class="live">LIVE</span>
+        <span style="color:var(--muted)">강의 진행 중</span><span class="clock mono" id="clock">--:--</span></div>
+    </div>
+    <nav><div class="nav-h">// 홈</div>
+<a class="nav-a" href="../index.html"><span class="g">◆</span> 오늘의 지도</a>
+<a class="nav-a" href="../index.html#materials"><span class="g">▤</span> 강의 자료 내려받기</a>
+<div class="nav-h">// 시작하기</div><div class="tree">
+<a class="nav-a" href="../start/prepare.html">0 · 준비물과 사전 설치</a>
+<a class="nav-a" href="../start/first-5min.html">1 · 처음 5분</a>
+<a class="nav-a" href="../start/rules.html">2 · 오후 규칙 3가지</a>
+</div>
+<div class="nav-h">// 실습 1 · 물류비 마감</div><div class="tree">
+<a class="nav-a" href="../lab1/index.html">개요</a>
+<a class="nav-a" href="../lab1/step1.html">1 · 요금표를 표로</a>
+<a class="nav-a" href="../lab1/step2.html">2 · 청구서 합치기</a>
+<a class="nav-a" href="../lab1/step3.html">3 · 120건 재계산</a>
+<a class="nav-a" href="../lab1/step4.html">4 · 검증 설계·검산</a>
+<a class="nav-a" href="../lab1/extra.html">＋ 더 해보기</a>
+</div>
+<div class="nav-h">// 실습 2 · 계약·입찰 레이더</div><div class="tree">
+<a class="nav-a" href="../lab2/index.html">개요</a>
+<a class="nav-a" href="../lab2/step1.html">1 · 계약서 한 장</a>
+<a class="nav-a" href="../lab2/step2.html">2 · 열두 건으로</a>
+<a class="nav-a" href="../lab2/step3.html">3 · 회사소개 문단</a>
+<a class="nav-a" href="../lab2/step4.html">4 · 공고 가져와 나누기</a>
+<a class="nav-a" href="../lab2/step5.html">5 · 설명서 남기기</a>
+<a class="nav-a" href="../lab2/extra.html">＋ 영문·스캔 PDF</a>
+</div>
+<div class="nav-h">// 실습 3 · 근거 붙인 보고문</div><div class="tree">
+<a class="nav-a" href="../lab3/index.html">개요</a>
+<a class="nav-a" href="../lab3/step1.html">1 · 일단 써보게</a>
+<a class="nav-a" href="../lab3/step2.html">2 · 숫자마다 출처</a>
+<a class="nav-a" href="../lab3/step3.html">3 · 숫자 5개 역추적</a>
+<a class="nav-a" href="../lab3/step4.html">4·5 · 없는 문장·톤 두 벌</a>
+<a class="nav-a" href="../lab3/extra.html">＋ 더 해보기</a>
+</div>
+<div class="nav-h">// 실습 4 · 대시보드와 디자인</div><div class="tree">
+<a class="nav-a" href="../lab4/index.html">개요</a>
+<a class="nav-a active" href="../lab4/step1.html">1 · 무엇을 보여줄지</a>
+<a class="nav-a" href="../lab4/step2.html">2 · 뼈대·검산</a>
+<a class="nav-a" href="../lab4/step3.html">3 · Before 캡처</a>
+<a class="nav-a" href="../lab4/step4.html">4 · 말로 인상 바꾸기</a>
+<a class="nav-a" href="../lab4/step5.html">5 · 두 무드 비교</a>
+<a class="nav-a" href="../lab4/step6.html">6 · 다크모드·반응형</a>
+<a class="nav-a" href="../lab4/step7.html">7 · 재검산·After</a>
+<a class="nav-a" href="../lab4/stuck.html">막혔을 때 쓰는 문장</a>
+</div>
+<div class="nav-h">// 여유 실습</div><div class="tree">
+<a class="nav-a" href="../lab5/index.html">A · 회의 녹취 정리</a>
+<a class="nav-a" href="../lab5/step1.html">A-1 · 결정만 골라내기</a>
+<a class="nav-a" href="../lab5/step2.html">A-2 · 담당자·마감</a>
+<a class="nav-a" href="../lab5/step3.html">A-3 · 근거 남기기</a>
+<a class="nav-a" href="../lab6/index.html">B · 링크로 공유</a>
+</div>
+<div class="nav-h">// 도움말</div><div class="tree">
+<a class="nav-a" href="../help/errors.html">에러가 났어요</a>
+<a class="nav-a" href="../help/glossary.html">이 말이 무슨 뜻이죠</a>
+<a class="nav-a" href="../help/how-to-ask.html">AI에게 잘 시키는 법</a>
+<a class="nav-a" href="../help/prompts.html">오늘 내가 친 문장</a>
+<a class="nav-a" href="../help/next.html">강의 끝나고 뭘 해볼까</a>
+</div></nav>
+    <div class="side__foot">
+      <button class="iconbtn" id="themeBtn" title="테마 전환"><span id="themeIc">◐</span> <span id="themeLbl">light</span></button>
+      <a class="iconbtn" href="../index.html" title="홈">↖ home</a>
+    </div>
+  </aside>
+  <main class="main">
+    <div class="cmdbar mono">
+      <button class="burger" id="burger" aria-label="메뉴">≡</button>
+      <span class="path"><b>~/ax-tutor</b> <span class="full">$ cat</span> <span class="cur">lab4/step1.md</span></span>
+      <span class="caret"></span><span class="spacer"></span>
+      <span class="stat">실습 4 · 대시보드와 디자인</span>
+    </div>
+    <div class="wrap">
+      <article class="doc md rise">
+        <div class="kicker mono"><b>//</b> 실습 4 · 대시보드와 디자인</div>
+<h1 id="1-무엇을-보여줄지-먼저-쓰기">1. 무엇을 보여줄지 먼저 쓰기<a class="headerlink" href="#1-무엇을-보여줄지-먼저-쓰기" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">이 단계에서 하는 일 (약 10분)</p>
+<ul>
+<li>화면에 무엇이 보여야 하는지 네 줄로 적습니다</li>
+<li>색으로 구분할 기준에 <strong>숫자</strong>를 넣습니다</li>
+<li>아직 화면은 만들지 않습니다</li>
+</ul>
+</div>
+<p>빈 화면부터 만들지 않습니다. <strong>무엇을 볼지 먼저 정합니다.</strong> 화면을 만드는 일의 절반이 이 일입니다.</p>
+<hr />
+<h2 id="대시보드에_보일_것md-를-만드세요"><code>대시보드에_보일_것.md</code> 를 만드세요<a class="headerlink" href="#대시보드에_보일_것md-를-만드세요" title="Permanent link">&para;</a></h2>
+<p><code>시작폴더/</code> 안에 이 이름으로 파일을 만들고, 아래 네 줄을 여러분 손으로 채웁니다.</p>
+<div class="highlight"><pre><span></span><code>맨 위에 크게 보일 숫자 3개:  ___ / ___ / ___
+표로 보일 것:               ___
+색으로 구분할 것:           ___
+눌러서 걸러볼 것:           ___
+</code></pre></div>
+<div class="admonition example">
+<p class="admonition-title">채우기 전에 한번 보세요</p>
+<p>실습 1·2에서 만든 엑셀 두 개를 열어두고 채우면 훨씬 빠릅니다. <strong>거기 없는 숫자는 화면에도 못 올립니다.</strong></p>
+</div>
+<hr />
+<details class="question">
+<summary>① 3분이 지나도 막막하다면 — 아직 펼치지 마세요</summary>
+<p>"이 화면을 보는 사람이 <strong>30초 안에 뭘 해야 하는지</strong> 알아야 한다"면, 맨 위에 뭐가 있어야 할까요?</p>
+</details>
+<details class="tip">
+<summary>② 7분이 지났다면 — 네 줄에 각각 무엇이 들어가나</summary>
+<ul>
+<li><strong>숫자 3개</strong> — 엑셀에서 세거나 더해서 나오는 값이어야 합니다. 이름으로 적으세요</li>
+<li><strong>표</strong> — 어느 시트의 어느 칸들을 보여줄지</li>
+<li><strong>색</strong> — 무엇을 어떤 색으로 구분할지. <strong>기준에 숫자가 들어가야 합니다</strong> (예: 며칠 이내)</li>
+<li><strong>거르기</strong> — 무엇으로 걸러볼지 (예: 택배사별 / 판정별)</li>
+</ul>
+</details>
+<details class="example">
+<summary>③ 모범답안 — 채워진 견본 1장 (여러분 것을 먼저 채워본 뒤에 여세요)</summary>
+<div class="highlight"><pre><span></span><code>맨 위에 크게 보일 숫자 3개:  이번 달 과청구 총액 / 30일 내 만료 계약 수 / 판정보류 건수
+표로 보일 것:               건별판정 전체(송장번호·택배사·차액·판정) + 계약만료 전체
+색으로 구분할 것:           30일 이내 만료는 빨강 / 판정보류·문서없음은 회색 / 과청구는 주황
+눌러서 걸러볼 것:           택배사별 / 판정별
+</code></pre></div>
+<p><strong>이 견본이 하는 일</strong></p>
+<table>
+<thead>
+<tr>
+<th>이 칸이</th>
+<th>없으면</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>숫자 3개를 <strong>이름으로</strong> 적기</td>
+<td>2단계에서 아무 숫자나 위에 올라가고, 여러분은 그게 왜 싫은지 말을 못 합니다</td>
+</tr>
+<tr>
+<td>색 기준에 <strong>숫자</strong>(30일) 적기</td>
+<td>디자인을 입히는 동안 기준이 60일로 슬쩍 바뀌어도 7단계에서 못 잡습니다</td>
+</tr>
+</tbody>
+</table>
+<p><strong>한 번에 잘 됐다면</strong> — 여러분이 고른 숫자 3개와 견본의 3개가 왜 다른지 한 줄로 적어보세요. <strong>다른 게 정상입니다.</strong>
+<strong>아직 막막하다면</strong> — 이 견본을 그대로 쓰고 2단계로 가세요. 숫자 3개는 나중에 바꿔도 됩니다.</p>
+</details>
+<hr />
+<h2 id="뭐가-달라졌는지-봅니다">뭐가 달라졌는지 봅니다<a class="headerlink" href="#뭐가-달라졌는지-봅니다" title="Permanent link">&para;</a></h2>
+<div class="admonition success">
+<p class="admonition-title">이렇게 나오면 정상입니다</p>
+<ul>
+<li><code>시작폴더/</code> 에 <code>대시보드에_보일_것.md</code> 파일이 있습니다</li>
+<li>네 줄이 다 채워져 있습니다</li>
+<li><strong>색 기준에 숫자가 들어 있습니다</strong></li>
+<li>숫자 3개가 전부 엑셀에서 세거나 더해서 나오는 값입니다</li>
+</ul>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">이렇게 나왔다면</p>
+<ul>
+<li>숫자 3개가 "매출"처럼 엑셀에 없는 것이다 → 엑셀 두 개를 열어 실제로 있는 값으로 바꾸세요</li>
+<li>색 기준이 "급한 건 빨강"이다 → <strong>며칠 이내가 급한 건지</strong> 숫자를 넣으세요. 숫자가 없으면 나중에 대조할 수 없습니다</li>
+<li>파일을 AI에게 대신 써달라고 했다 → 여러분이 뭘 보고 싶은지는 AI가 모릅니다. 네 줄만 직접 쓰세요</li>
+</ul>
+</div>
+<details class="note">
+<summary>이 파일이 없으면 어떻게 되나요</summary>
+<p>AI는 아무 화면이나 만듭니다. 그리고 여러분은 그게 마음에 안 드는데 <strong>왜 그런지 말을 못 합니다.</strong></p>
+<p>7단계에서 "처음에 내가 뭐라고 했는지"와 최종 화면을 맞대보는 자리가 있습니다. 이 파일이 없으면 그 대조 자체가 성립하지 않습니다.</p>
+</details>
+<hr />
+<h2 id="이-단계-결과물-규격">이 단계 결과물 규격<a class="headerlink" href="#이-단계-결과물-규격" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>파일</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>대시보드에_보일_것.md</code></td>
+<td>네 줄. 숫자 3개는 이름으로, 색 기준에는 숫자를 넣습니다</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>뭐가 달라졌는지 봅니다 — 체크포인트</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>대시보드에_보일_것.md</code> 가 <code>시작폴더/</code> 에 있다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 네 줄이 다 채워졌다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 색 기준에 숫자가 들어 있다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 숫자 3개가 엑셀에서 나오는 값이다</li>
+</ul>
+<div class="stage-nav">
+<p><strong>← 이전</strong> <a href"index.html">실습 4 개요</a> · <strong>다음 →</strong> <a href"step2.html">2. 뼈대 만들고 검산하기</a></p>
+</div>
+<nav class="pager">
+<a class="prev" href="../lab4/index.html"><span class="lbl">← 이전</span><span class="ttl">개요</span></a>
+<a class="next" href="../lab4/step2.html"><span class="lbl">다음 →</span><span class="ttl">2 · 뼈대·검산</span></a>
+</nav>
+      </article>
+      <aside class="toc mono"><h4>On this page</h4>
+<a href="#1-무엇을-보여줄지-먼저-쓰기">1. 무엇을 보여줄지 먼저 쓰기</a>
+<a href="#대시보드에_보일_것md-를-만드세요">대시보드에_보일_것.md 를 만드세요</a>
+<a href="#뭐가-달라졌는지-봅니다">뭐가 달라졌는지 봅니다</a>
+<a href="#이-단계-결과물-규격">이 단계 결과물 규격</a></aside>
+    </div>
+  </main>
+</div>
+<script src="../assets/site.js"></script>
+</body>
+</html>

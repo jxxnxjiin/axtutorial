@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="ko" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3단계. 숫자 5개 손으로 역추적하기 · ax-tutor</title>
+<meta name="description" content="실습 3 · 근거 붙인 보고문 — 3단계. 숫자 5개 손으로 역추적하기 · ax-tutor 실습 위키">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<div class="shell">
+  <aside class="side" id="side">
+    <div class="brand">
+      <a class="brand__row" href="../index.html" style="text-decoration:none">
+        <span class="ast mono">✻</span>
+        <div><div class="brand__name">ax<b>-</b>tutor</div></div>
+      </a>
+      <div class="brand__sub">Claude Code · 실습 위키</div>
+      <div class="session"><span class="dot"></span><span class="live">LIVE</span>
+        <span style="color:var(--muted)">강의 진행 중</span><span class="clock mono" id="clock">--:--</span></div>
+    </div>
+    <nav><div class="nav-h">// 홈</div>
+<a class="nav-a" href="../index.html"><span class="g">◆</span> 오늘의 지도</a>
+<a class="nav-a" href="../index.html#materials"><span class="g">▤</span> 강의 자료 내려받기</a>
+<div class="nav-h">// 시작하기</div><div class="tree">
+<a class="nav-a" href="../start/prepare.html">0 · 준비물과 사전 설치</a>
+<a class="nav-a" href="../start/first-5min.html">1 · 처음 5분</a>
+<a class="nav-a" href="../start/rules.html">2 · 오후 규칙 3가지</a>
+</div>
+<div class="nav-h">// 실습 1 · 물류비 마감</div><div class="tree">
+<a class="nav-a" href="../lab1/index.html">개요</a>
+<a class="nav-a" href="../lab1/step1.html">1 · 요금표를 표로</a>
+<a class="nav-a" href="../lab1/step2.html">2 · 청구서 합치기</a>
+<a class="nav-a" href="../lab1/step3.html">3 · 120건 재계산</a>
+<a class="nav-a" href="../lab1/step4.html">4 · 검증 설계·검산</a>
+<a class="nav-a" href="../lab1/extra.html">＋ 더 해보기</a>
+</div>
+<div class="nav-h">// 실습 2 · 계약·입찰 레이더</div><div class="tree">
+<a class="nav-a" href="../lab2/index.html">개요</a>
+<a class="nav-a" href="../lab2/step1.html">1 · 계약서 한 장</a>
+<a class="nav-a" href="../lab2/step2.html">2 · 열두 건으로</a>
+<a class="nav-a" href="../lab2/step3.html">3 · 회사소개 문단</a>
+<a class="nav-a" href="../lab2/step4.html">4 · 공고 가져와 나누기</a>
+<a class="nav-a" href="../lab2/step5.html">5 · 설명서 남기기</a>
+<a class="nav-a" href="../lab2/extra.html">＋ 영문·스캔 PDF</a>
+</div>
+<div class="nav-h">// 실습 3 · 근거 붙인 보고문</div><div class="tree">
+<a class="nav-a" href="../lab3/index.html">개요</a>
+<a class="nav-a" href="../lab3/step1.html">1 · 일단 써보게</a>
+<a class="nav-a" href="../lab3/step2.html">2 · 숫자마다 출처</a>
+<a class="nav-a active" href="../lab3/step3.html">3 · 숫자 5개 역추적</a>
+<a class="nav-a" href="../lab3/step4.html">4·5 · 없는 문장·톤 두 벌</a>
+<a class="nav-a" href="../lab3/extra.html">＋ 더 해보기</a>
+</div>
+<div class="nav-h">// 실습 4 · 대시보드와 디자인</div><div class="tree">
+<a class="nav-a" href="../lab4/index.html">개요</a>
+<a class="nav-a" href="../lab4/step1.html">1 · 무엇을 보여줄지</a>
+<a class="nav-a" href="../lab4/step2.html">2 · 뼈대·검산</a>
+<a class="nav-a" href="../lab4/step3.html">3 · Before 캡처</a>
+<a class="nav-a" href="../lab4/step4.html">4 · 말로 인상 바꾸기</a>
+<a class="nav-a" href="../lab4/step5.html">5 · 두 무드 비교</a>
+<a class="nav-a" href="../lab4/step6.html">6 · 다크모드·반응형</a>
+<a class="nav-a" href="../lab4/step7.html">7 · 재검산·After</a>
+<a class="nav-a" href="../lab4/stuck.html">막혔을 때 쓰는 문장</a>
+</div>
+<div class="nav-h">// 여유 실습</div><div class="tree">
+<a class="nav-a" href="../lab5/index.html">A · 회의 녹취 정리</a>
+<a class="nav-a" href="../lab5/step1.html">A-1 · 결정만 골라내기</a>
+<a class="nav-a" href="../lab5/step2.html">A-2 · 담당자·마감</a>
+<a class="nav-a" href="../lab5/step3.html">A-3 · 근거 남기기</a>
+<a class="nav-a" href="../lab6/index.html">B · 링크로 공유</a>
+</div>
+<div class="nav-h">// 도움말</div><div class="tree">
+<a class="nav-a" href="../help/errors.html">에러가 났어요</a>
+<a class="nav-a" href="../help/glossary.html">이 말이 무슨 뜻이죠</a>
+<a class="nav-a" href="../help/how-to-ask.html">AI에게 잘 시키는 법</a>
+<a class="nav-a" href="../help/prompts.html">오늘 내가 친 문장</a>
+<a class="nav-a" href="../help/next.html">강의 끝나고 뭘 해볼까</a>
+</div></nav>
+    <div class="side__foot">
+      <button class="iconbtn" id="themeBtn" title="테마 전환"><span id="themeIc">◐</span> <span id="themeLbl">light</span></button>
+      <a class="iconbtn" href="../index.html" title="홈">↖ home</a>
+    </div>
+  </aside>
+  <main class="main">
+    <div class="cmdbar mono">
+      <button class="burger" id="burger" aria-label="메뉴">≡</button>
+      <span class="path"><b>~/ax-tutor</b> <span class="full">$ cat</span> <span class="cur">lab3/step3.md</span></span>
+      <span class="caret"></span><span class="spacer"></span>
+      <span class="stat">실습 3 · 근거 붙인 보고문</span>
+    </div>
+    <div class="wrap">
+      <article class="doc md rise">
+        <div class="kicker mono"><b>//</b> 실습 3 · 근거 붙인 보고문</div>
+<h1 id="3단계-숫자-5개-손으로-역추적하기">3단계. 숫자 5개 손으로 역추적하기<a class="headerlink" href="#3단계-숫자-5개-손으로-역추적하기" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">이 단계에서 하는 일 (약 9분)</p>
+<ul>
+<li>본문 숫자 5개를 골라 <strong>여러분이 직접</strong> 엑셀을 열어 확인합니다</li>
+<li>안 맞는 걸 찾습니다</li>
+<li>찾은 곳만 지정해서 고치게 합니다</li>
+</ul>
+</div>
+<p><strong>여기는 AI에게 시키지 않습니다.</strong> 엑셀을 직접 열어 눈으로 봅니다. 이 실습의 본체입니다.</p>
+<hr />
+<h2 id="손으로-되짚기">손으로 되짚기<a class="headerlink" href="#손으로-되짚기" title="Permanent link">&para;</a></h2>
+<p>보고문에서 숫자 5개를 고르세요. 각각에 대해:</p>
+<ol>
+<li>괄호 안에 적힌 <strong>파일 · 시트 · 행 번호</strong>를 봅니다</li>
+<li>그 파일을 열어 그 시트의 그 행으로 갑니다</li>
+<li><strong>값이 본문과 같은지</strong> 봅니다</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>본문의 숫자</th>
+<th>적힌 출처</th>
+<th>원본 값</th>
+<th>같은가</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><span class="blank-line">______</span></td>
+<td><span class="blank-line">______</span></td>
+<td><span class="blank-line">______</span></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td><span class="blank-line">______</span></td>
+<td><span class="blank-line">______</span></td>
+<td><span class="blank-line">______</span></td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td><span class="blank-line">______</span></td>
+<td><span class="blank-line">______</span></td>
+<td><span class="blank-line">______</span></td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td><span class="blank-line">______</span></td>
+<td><span class="blank-line">______</span></td>
+<td><span class="blank-line">______</span></td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td><span class="blank-line">______</span></td>
+<td><span class="blank-line">______</span></td>
+<td><span class="blank-line">______</span></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>보통 한두 개가 안 맞습니다.</strong> 안 맞는 걸 찾는 게 이 단계의 성과입니다.</p>
+<div class="admonition example">
+<p class="admonition-title">안 맞을 때 흔한 원인 네 가지</p>
+<ul>
+<li>반올림 차이 — 표는 원 단위인데 본문은 만 원 단위</li>
+<li>빼기로 한 건이 합계에 들어감</li>
+<li>다른 시트의 값을 가져옴</li>
+<li>두 파일이 보는 기간이 서로 다름</li>
+</ul>
+<p>어느 쪽인지 알아내는 것까지가 이 단계입니다.</p>
+</div>
+<hr />
+<h2 id="틀린-걸-찾았다면">틀린 걸 찾았다면<a class="headerlink" href="#틀린-걸-찾았다면" title="Permanent link">&para;</a></h2>
+<p>먼저 여러분 말로 고쳐보세요.</p>
+<div class="admonition quote">
+<p class="admonition-title">여기에 여러분 말로</p>
+<p><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_</span></p>
+</div>
+<hr />
+<details class="question">
+<summary>① 3분이 지나도 막혔다면 — 아직 펼치지 마세요</summary>
+<p>출처가 적힌 그 행을 실제로 열어봤나요? 열었는데 값이 다르다면, 지금 <strong>글을 고칠 차례</strong>입니다.</p>
+</details>
+<details class="tip">
+<summary>② 6분이 지났다면 — 정해야 할 두 가지</summary>
+<p>정해야 할 것은 둘입니다 — <strong>어느 문장을 고칠지 지정할지 / 나머지 문장을 건드리지 말라고 할지.</strong></p>
+<p>"전부 다시 써줘"라고 하면 방금 확인한 5개를 처음부터 다시 확인해야 합니다.</p>
+</details>
+<details class="example">
+<summary>③ 모범답안 — 잘 되는 문장은 이렇게 생겼습니다 (여러분 문장을 한 번 보내본 뒤에 여세요)</summary>
+<div class="highlight"><pre><span></span><code>본문 3번째 문단의 (그 숫자)가 (그 시트)의 값과 안 맞아.
+그 문장만 고치고 나머지 문장은 건드리지 마.
+고친 뒤에 어느 문장을 바꿨는지 알려줘.
+</code></pre></div>
+<p><strong>이 문장이 하는 일</strong></p>
+<table>
+<thead>
+<tr>
+<th>이 줄이</th>
+<th>없으면</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>그 문장만 고치고 나머지 문장은 건드리지 마</code></td>
+<td>글 전체가 다시 만들어집니다. <strong>아까 맞았던 숫자까지 같이 바뀌어</strong> 되짚기 5개를 처음부터 다시 해야 합니다</td>
+</tr>
+<tr>
+<td><code>어느 문장을 바꿨는지 알려줘</code></td>
+<td>"수정했습니다"로 끝납니다. 무엇이 바뀌었는지 글 전체를 다시 읽어야 압니다</td>
+</tr>
+</tbody>
+</table>
+<p><strong>한 번에 잘 됐다면</strong> — 여러분 문장에 <strong>"나머지는 건드리지 마"</strong> 가 있었는지 보세요.
+<strong>아직 어긋난다면</strong> — 이 문장으로 갈아타고 다음 단계로 가세요. <strong>오늘은 완주가 먼저입니다.</strong></p>
+</details>
+<hr />
+<h2 id="뭐가-달라졌는지-봅니다">뭐가 달라졌는지 봅니다<a class="headerlink" href="#뭐가-달라졌는지-봅니다" title="Permanent link">&para;</a></h2>
+<div class="admonition success">
+<p class="admonition-title">이렇게 나오면 정상입니다</p>
+<ul>
+<li>표 다섯 줄이 다 채워져 있고, 안 맞는 것이 무엇이었는지 압니다</li>
+<li>고친 뒤에 <strong>바꾼 문장이 무엇인지</strong> 돌아왔습니다</li>
+<li>고치지 않은 문장은 글자 하나 안 바뀌었습니다</li>
+</ul>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">이렇게 나왔다면</p>
+<ul>
+<li>글 전체가 다시 쓰였다 → <strong>"고치기 전 글로 되돌리고, 이번엔 그 문장 하나만 고쳐줘"</strong></li>
+<li>다섯 개 다 맞았다 → 숫자 다섯 개를 다른 것으로 바꿔 다시 해보세요. 특히 <strong>합계·평균처럼 계산이 들어간 숫자</strong>를 고르세요</li>
+<li>출처가 적힌 행에 그 숫자가 아예 없다 → 지어낸 출처입니다. <strong>"이 숫자를 뺀 문장으로 다시 써줘"</strong></li>
+</ul>
+</div>
+<details class="note">
+<summary>왜 '전부 다시 써줘'라고 하면 안 될까요</summary>
+<p>다시 쓰면 아까 맞았던 숫자까지 같이 바뀌고, <strong>그러면 방금 한 되짚기 5개를 처음부터 다시 해야 합니다.</strong></p>
+<p>실습 1의 요금표 한 칸을 고칠 때 이미 한 번 겪었습니다. 오늘 실습 4에서 한 번 더 만나게 됩니다.</p>
+</details>
+<hr />
+<p><strong>뭐가 달라졌는지 봅니다 — 체크포인트</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 숫자 5개를 <strong>엑셀을 직접 열어</strong> 확인했다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 안 맞는 걸 하나 이상 찾았다 (또는 5개를 바꿔 다시 확인했다)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 그 문장만 고치게 했고, 바꾼 문장이 무엇인지 받았다</li>
+</ul>
+<div class="stage-nav">
+<p><strong>← 이전</strong> <a href"step2.html">2단계. 숫자마다 출처 붙이기</a> · <strong>다음 →</strong> <a href"step4.html">4·5단계. 없는 문장 잡아내고 톤 두 벌 뽑기</a></p>
+</div>
+<nav class="pager">
+<a class="prev" href="../lab3/step2.html"><span class="lbl">← 이전</span><span class="ttl">2 · 숫자마다 출처</span></a>
+<a class="next" href="../lab3/step4.html"><span class="lbl">다음 →</span><span class="ttl">4·5 · 없는 문장·톤 두 벌</span></a>
+</nav>
+      </article>
+      <aside class="toc mono"><h4>On this page</h4>
+<a href="#3단계-숫자-5개-손으로-역추적하기">3단계. 숫자 5개 손으로 역추적하기</a>
+<a href="#손으로-되짚기">손으로 되짚기</a>
+<a href="#틀린-걸-찾았다면">틀린 걸 찾았다면</a>
+<a href="#뭐가-달라졌는지-봅니다">뭐가 달라졌는지 봅니다</a></aside>
+    </div>
+  </main>
+</div>
+<script src="../assets/site.js"></script>
+</body>
+</html>

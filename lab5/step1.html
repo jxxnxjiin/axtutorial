@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="ko" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>1단계. 결정만 골라내기 · ax-tutor</title>
+<meta name="description" content="여유 실습 — 1단계. 결정만 골라내기 · ax-tutor 실습 위키">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<div class="shell">
+  <aside class="side" id="side">
+    <div class="brand">
+      <a class="brand__row" href="../index.html" style="text-decoration:none">
+        <span class="ast mono">✻</span>
+        <div><div class="brand__name">ax<b>-</b>tutor</div></div>
+      </a>
+      <div class="brand__sub">Claude Code · 실습 위키</div>
+      <div class="session"><span class="dot"></span><span class="live">LIVE</span>
+        <span style="color:var(--muted)">강의 진행 중</span><span class="clock mono" id="clock">--:--</span></div>
+    </div>
+    <nav><div class="nav-h">// 홈</div>
+<a class="nav-a" href="../index.html"><span class="g">◆</span> 오늘의 지도</a>
+<a class="nav-a" href="../index.html#materials"><span class="g">▤</span> 강의 자료 내려받기</a>
+<div class="nav-h">// 시작하기</div><div class="tree">
+<a class="nav-a" href="../start/prepare.html">0 · 준비물과 사전 설치</a>
+<a class="nav-a" href="../start/first-5min.html">1 · 처음 5분</a>
+<a class="nav-a" href="../start/rules.html">2 · 오후 규칙 3가지</a>
+</div>
+<div class="nav-h">// 실습 1 · 물류비 마감</div><div class="tree">
+<a class="nav-a" href="../lab1/index.html">개요</a>
+<a class="nav-a" href="../lab1/step1.html">1 · 요금표를 표로</a>
+<a class="nav-a" href="../lab1/step2.html">2 · 청구서 합치기</a>
+<a class="nav-a" href="../lab1/step3.html">3 · 120건 재계산</a>
+<a class="nav-a" href="../lab1/step4.html">4 · 검증 설계·검산</a>
+<a class="nav-a" href="../lab1/extra.html">＋ 더 해보기</a>
+</div>
+<div class="nav-h">// 실습 2 · 계약·입찰 레이더</div><div class="tree">
+<a class="nav-a" href="../lab2/index.html">개요</a>
+<a class="nav-a" href="../lab2/step1.html">1 · 계약서 한 장</a>
+<a class="nav-a" href="../lab2/step2.html">2 · 열두 건으로</a>
+<a class="nav-a" href="../lab2/step3.html">3 · 회사소개 문단</a>
+<a class="nav-a" href="../lab2/step4.html">4 · 공고 가져와 나누기</a>
+<a class="nav-a" href="../lab2/step5.html">5 · 설명서 남기기</a>
+<a class="nav-a" href="../lab2/extra.html">＋ 영문·스캔 PDF</a>
+</div>
+<div class="nav-h">// 실습 3 · 근거 붙인 보고문</div><div class="tree">
+<a class="nav-a" href="../lab3/index.html">개요</a>
+<a class="nav-a" href="../lab3/step1.html">1 · 일단 써보게</a>
+<a class="nav-a" href="../lab3/step2.html">2 · 숫자마다 출처</a>
+<a class="nav-a" href="../lab3/step3.html">3 · 숫자 5개 역추적</a>
+<a class="nav-a" href="../lab3/step4.html">4·5 · 없는 문장·톤 두 벌</a>
+<a class="nav-a" href="../lab3/extra.html">＋ 더 해보기</a>
+</div>
+<div class="nav-h">// 실습 4 · 대시보드와 디자인</div><div class="tree">
+<a class="nav-a" href="../lab4/index.html">개요</a>
+<a class="nav-a" href="../lab4/step1.html">1 · 무엇을 보여줄지</a>
+<a class="nav-a" href="../lab4/step2.html">2 · 뼈대·검산</a>
+<a class="nav-a" href="../lab4/step3.html">3 · Before 캡처</a>
+<a class="nav-a" href="../lab4/step4.html">4 · 말로 인상 바꾸기</a>
+<a class="nav-a" href="../lab4/step5.html">5 · 두 무드 비교</a>
+<a class="nav-a" href="../lab4/step6.html">6 · 다크모드·반응형</a>
+<a class="nav-a" href="../lab4/step7.html">7 · 재검산·After</a>
+<a class="nav-a" href="../lab4/stuck.html">막혔을 때 쓰는 문장</a>
+</div>
+<div class="nav-h">// 여유 실습</div><div class="tree">
+<a class="nav-a" href="../lab5/index.html">A · 회의 녹취 정리</a>
+<a class="nav-a active" href="../lab5/step1.html">A-1 · 결정만 골라내기</a>
+<a class="nav-a" href="../lab5/step2.html">A-2 · 담당자·마감</a>
+<a class="nav-a" href="../lab5/step3.html">A-3 · 근거 남기기</a>
+<a class="nav-a" href="../lab6/index.html">B · 링크로 공유</a>
+</div>
+<div class="nav-h">// 도움말</div><div class="tree">
+<a class="nav-a" href="../help/errors.html">에러가 났어요</a>
+<a class="nav-a" href="../help/glossary.html">이 말이 무슨 뜻이죠</a>
+<a class="nav-a" href="../help/how-to-ask.html">AI에게 잘 시키는 법</a>
+<a class="nav-a" href="../help/prompts.html">오늘 내가 친 문장</a>
+<a class="nav-a" href="../help/next.html">강의 끝나고 뭘 해볼까</a>
+</div></nav>
+    <div class="side__foot">
+      <button class="iconbtn" id="themeBtn" title="테마 전환"><span id="themeIc">◐</span> <span id="themeLbl">light</span></button>
+      <a class="iconbtn" href="../index.html" title="홈">↖ home</a>
+    </div>
+  </aside>
+  <main class="main">
+    <div class="cmdbar mono">
+      <button class="burger" id="burger" aria-label="메뉴">≡</button>
+      <span class="path"><b>~/ax-tutor</b> <span class="full">$ cat</span> <span class="cur">lab5/step1.md</span></span>
+      <span class="caret"></span><span class="spacer"></span>
+      <span class="stat">여유 실습</span>
+    </div>
+    <div class="wrap">
+      <article class="doc md rise">
+        <div class="kicker mono"><b>//</b> 여유 실습</div>
+<h1 id="1단계-결정만-골라내기">1단계. 결정만 골라내기<a class="headerlink" href="#1단계-결정만-골라내기" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">이 단계에서 하는 일 (약 12분)</p>
+<ul>
+<li>오간 말 중에서 <strong>결정으로 보이는 문장</strong>만 넓게 모읍니다</li>
+<li>같은 주제에 대해 여러 번 말이 나온 것을 어떻게 볼지 규칙을 정합니다</li>
+<li>뒤집힌 결정을 지우지 않고 표시로 남깁니다</li>
+</ul>
+</div>
+<hr />
+<h2 id="먼저-여러분-문장으로-시켜보세요">먼저 여러분 문장으로 시켜보세요<a class="headerlink" href="#먼저-여러분-문장으로-시켜보세요" title="Permanent link">&para;</a></h2>
+<div class="admonition quote">
+<p class="admonition-title">여기에 여러분 말로 채워서 실행하세요</p>
+<p><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_</span></p>
+</div>
+<hr />
+<h2 id="나온-것을-열어봅니다">나온 것을 열어봅니다<a class="headerlink" href="#나온-것을-열어봅니다" title="Permanent link">&para;</a></h2>
+<div class="admonition example">
+<p class="admonition-title">녹취 파일을 직접 열어서 비교하세요</p>
+<ul>
+<li>표에 몇 줄이 나왔나요?</li>
+<li>녹취 파일을 열어 <strong>"그거 그냥 다음에 하죠"</strong> 같은 말이 표에 들어갔는지 보세요</li>
+<li>같은 주제가 <strong>여러 줄에 걸쳐</strong> 들어가 있지 않나요?</li>
+</ul>
+</div>
+<hr />
+<h2 id="뒤집힌-결정을-어떻게-볼지-정합니다">뒤집힌 결정을 어떻게 볼지 정합니다<a class="headerlink" href="#뒤집힌-결정을-어떻게-볼지-정합니다" title="Permanent link">&para;</a></h2>
+<p>3주치 회의라 앞에서 정한 것이 뒤에서 바뀐 게 있습니다. <strong>어느 쪽이 이기는지 여러분이 정합니다.</strong></p>
+<div class="admonition quote">
+<p class="admonition-title">여러분이 정해서 적으세요</p>
+<p>같은 주제에 대한 발언이 여러 개면 <span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong>____</span> 것이 이긴다.</p>
+<p>그리고 진 쪽은 <span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong>____</span> 로 표시해 남긴다.</p>
+</div>
+<p><strong>앞 결정을 지우지 않는 것이 중요합니다.</strong> 지우면 "왜 바뀌었냐"는 질문에 답할 수 없습니다.</p>
+<hr />
+<details class="question">
+<summary>① 두 번 시켜봤는데도 안 되면 — 아직 펼치지 마세요</summary>
+<p>지금 표에 <strong>잡담이 섞여</strong> 있나요? 아니면 반대로, 진짜 결정인데 빠진 게 있나요?
+녹취 파일에서 "~하기로" 라는 말이 나오는 줄을 몇 개 찾아 표와 맞대보세요.</p>
+</details>
+<details class="tip">
+<summary>② 세 번째에도 안 되면 — 정해야 할 세 가지</summary>
+<ul>
+<li><strong>무엇을 결정으로 볼지</strong> (예: 누가 무엇을 하기로 한 것)</li>
+<li><strong>같은 주제가 여러 번 나오면 어느 것이 이기는지</strong></li>
+<li><strong>진 쪽을 지울지 남길지</strong> — 남긴다면 어떤 표시로</li>
+</ul>
+<p>결과는 <code>회의_결정사항.xlsx</code> 에 넣습니다. 칸 규격은 <a href"step3.html">3단계</a> 맨 아래에 있습니다.</p>
+</details>
+<details class="example">
+<summary>③ 모범답안 — 잘 되는 문장은 이렇게 생겼습니다 (한 번 시켜본 뒤라면 언제든 여세요)</summary>
+<div class="highlight"><pre><span></span><code>주간회의_녹취_1.txt부터 3.txt까지 세 파일을 다 읽고, 결정으로 보이는 문장만 뽑아줘.
+원본 세 파일은 고치지 말고 읽기만 해.
+같은 주제에 대한 결정이 여러 번 나오면 나중 것을 살리고, 앞의 것은 지우지 말고 상태 칸에 번복됨이라고 적어줘.
+결과는 회의_결정사항.xlsx 파일에 저장해줘.
+다 되면 몇 줄을 뽑았고 그중 번복됨이 몇 줄인지 알려줘.
+</code></pre></div>
+<p><strong>이 문장이 하는 일</strong></p>
+<table>
+<thead>
+<tr>
+<th>이 줄이</th>
+<th>없으면</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>앞의 것은 지우지 말고 상태 칸에 번복됨</code></td>
+<td>바뀐 결정만 남고, <strong>왜 바뀌었는지 되짚을 방법이 없습니다</strong></td>
+</tr>
+<tr>
+<td><code>몇 줄을 뽑았고 그중 번복됨이 몇 줄인지</code></td>
+<td>"정리했습니다"로 끝납니다. 잡담이 섞였는지 셀 수가 없습니다</td>
+</tr>
+</tbody>
+</table>
+<p><strong>한 번에 잘 됐다면</strong> — 여러분 문장과 이 답안에서 <strong>다른 곳을 한 곳만</strong> 찾아보세요.
+<strong>아직 어긋난다면</strong> — 이 문장으로 갈아타고 2단계로 가세요.</p>
+</details>
+<hr />
+<h2 id="뭐가-달라졌는지-봅니다">뭐가 달라졌는지 봅니다<a class="headerlink" href="#뭐가-달라졌는지-봅니다" title="Permanent link">&para;</a></h2>
+<div class="admonition success">
+<p class="admonition-title">이렇게 나오면 정상입니다</p>
+<ul>
+<li><code>회의_결정사항.xlsx</code> 가 생겼습니다</li>
+<li>뽑힌 줄 수와 그중 <code>번복됨</code> 줄 수가 숫자로 돌아왔습니다</li>
+<li>원본 녹취 세 파일은 그대로입니다</li>
+<li>표에 잡담이 안 들어가 있습니다</li>
+</ul>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">이렇게 나왔다면</p>
+<ul>
+<li>줄이 너무 많다 (30줄 넘음) → 잡담이 섞였습니다. <strong>"결정이 아니라 그냥 오간 말인 줄을 골라서 왜 그렇게 봤는지 같이 알려줘"</strong></li>
+<li>줄이 너무 적다 (5줄 미만) → <strong>"세 파일 각각에서 몇 줄씩 뽑았는지 파일별로 알려줘"</strong></li>
+<li><code>번복됨</code> 이 하나도 없다 → <strong>"같은 주제가 여러 번 나온 게 있는지 주제별로 묶어서 보여줘"</strong></li>
+<li>원본 파일 수정 날짜가 바뀌었다 → <strong>"원본 녹취 파일은 건드리지 말고 결과만 새 파일에 써줘"</strong></li>
+</ul>
+</div>
+<hr />
+<p><strong>체크포인트</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>회의_결정사항.xlsx</code> 가 생겼다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 뽑힌 줄 수를 숫자로 받았다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 번복 처리 규칙을 내가 정해서 적었다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 원본 녹취 세 파일이 그대로다</li>
+</ul>
+<div class="stage-nav">
+<p><strong>← 이전</strong> <a href"index.html">여유 실습 A 개요</a> · <strong>다음 →</strong> <a href"step2.html">2단계. 담당자와 마감 붙이기</a></p>
+</div>
+<nav class="pager">
+<a class="prev" href="../lab5/index.html"><span class="lbl">← 이전</span><span class="ttl">A · 회의 녹취 정리</span></a>
+<a class="next" href="../lab5/step2.html"><span class="lbl">다음 →</span><span class="ttl">A-2 · 담당자·마감</span></a>
+</nav>
+      </article>
+      <aside class="toc mono"><h4>On this page</h4>
+<a href="#1단계-결정만-골라내기">1단계. 결정만 골라내기</a>
+<a href="#먼저-여러분-문장으로-시켜보세요">먼저 여러분 문장으로 시켜보세요</a>
+<a href="#나온-것을-열어봅니다">나온 것을 열어봅니다</a>
+<a href="#뒤집힌-결정을-어떻게-볼지-정합니다">뒤집힌 결정을 어떻게 볼지 정합니다</a>
+<a href="#뭐가-달라졌는지-봅니다">뭐가 달라졌는지 봅니다</a></aside>
+    </div>
+  </main>
+</div>
+<script src="../assets/site.js"></script>
+</body>
+</html>

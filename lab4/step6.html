@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="ko" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>6. 다크모드·반응형 한 마디로 켜기 · ax-tutor</title>
+<meta name="description" content="실습 4 · 대시보드와 디자인 — 6. 다크모드·반응형 한 마디로 켜기 · ax-tutor 실습 위키">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<div class="shell">
+  <aside class="side" id="side">
+    <div class="brand">
+      <a class="brand__row" href="../index.html" style="text-decoration:none">
+        <span class="ast mono">✻</span>
+        <div><div class="brand__name">ax<b>-</b>tutor</div></div>
+      </a>
+      <div class="brand__sub">Claude Code · 실습 위키</div>
+      <div class="session"><span class="dot"></span><span class="live">LIVE</span>
+        <span style="color:var(--muted)">강의 진행 중</span><span class="clock mono" id="clock">--:--</span></div>
+    </div>
+    <nav><div class="nav-h">// 홈</div>
+<a class="nav-a" href="../index.html"><span class="g">◆</span> 오늘의 지도</a>
+<a class="nav-a" href="../index.html#materials"><span class="g">▤</span> 강의 자료 내려받기</a>
+<div class="nav-h">// 시작하기</div><div class="tree">
+<a class="nav-a" href="../start/prepare.html">0 · 준비물과 사전 설치</a>
+<a class="nav-a" href="../start/first-5min.html">1 · 처음 5분</a>
+<a class="nav-a" href="../start/rules.html">2 · 오후 규칙 3가지</a>
+</div>
+<div class="nav-h">// 실습 1 · 물류비 마감</div><div class="tree">
+<a class="nav-a" href="../lab1/index.html">개요</a>
+<a class="nav-a" href="../lab1/step1.html">1 · 요금표를 표로</a>
+<a class="nav-a" href="../lab1/step2.html">2 · 청구서 합치기</a>
+<a class="nav-a" href="../lab1/step3.html">3 · 120건 재계산</a>
+<a class="nav-a" href="../lab1/step4.html">4 · 검증 설계·검산</a>
+<a class="nav-a" href="../lab1/extra.html">＋ 더 해보기</a>
+</div>
+<div class="nav-h">// 실습 2 · 계약·입찰 레이더</div><div class="tree">
+<a class="nav-a" href="../lab2/index.html">개요</a>
+<a class="nav-a" href="../lab2/step1.html">1 · 계약서 한 장</a>
+<a class="nav-a" href="../lab2/step2.html">2 · 열두 건으로</a>
+<a class="nav-a" href="../lab2/step3.html">3 · 회사소개 문단</a>
+<a class="nav-a" href="../lab2/step4.html">4 · 공고 가져와 나누기</a>
+<a class="nav-a" href="../lab2/step5.html">5 · 설명서 남기기</a>
+<a class="nav-a" href="../lab2/extra.html">＋ 영문·스캔 PDF</a>
+</div>
+<div class="nav-h">// 실습 3 · 근거 붙인 보고문</div><div class="tree">
+<a class="nav-a" href="../lab3/index.html">개요</a>
+<a class="nav-a" href="../lab3/step1.html">1 · 일단 써보게</a>
+<a class="nav-a" href="../lab3/step2.html">2 · 숫자마다 출처</a>
+<a class="nav-a" href="../lab3/step3.html">3 · 숫자 5개 역추적</a>
+<a class="nav-a" href="../lab3/step4.html">4·5 · 없는 문장·톤 두 벌</a>
+<a class="nav-a" href="../lab3/extra.html">＋ 더 해보기</a>
+</div>
+<div class="nav-h">// 실습 4 · 대시보드와 디자인</div><div class="tree">
+<a class="nav-a" href="../lab4/index.html">개요</a>
+<a class="nav-a" href="../lab4/step1.html">1 · 무엇을 보여줄지</a>
+<a class="nav-a" href="../lab4/step2.html">2 · 뼈대·검산</a>
+<a class="nav-a" href="../lab4/step3.html">3 · Before 캡처</a>
+<a class="nav-a" href="../lab4/step4.html">4 · 말로 인상 바꾸기</a>
+<a class="nav-a" href="../lab4/step5.html">5 · 두 무드 비교</a>
+<a class="nav-a active" href="../lab4/step6.html">6 · 다크모드·반응형</a>
+<a class="nav-a" href="../lab4/step7.html">7 · 재검산·After</a>
+<a class="nav-a" href="../lab4/stuck.html">막혔을 때 쓰는 문장</a>
+</div>
+<div class="nav-h">// 여유 실습</div><div class="tree">
+<a class="nav-a" href="../lab5/index.html">A · 회의 녹취 정리</a>
+<a class="nav-a" href="../lab5/step1.html">A-1 · 결정만 골라내기</a>
+<a class="nav-a" href="../lab5/step2.html">A-2 · 담당자·마감</a>
+<a class="nav-a" href="../lab5/step3.html">A-3 · 근거 남기기</a>
+<a class="nav-a" href="../lab6/index.html">B · 링크로 공유</a>
+</div>
+<div class="nav-h">// 도움말</div><div class="tree">
+<a class="nav-a" href="../help/errors.html">에러가 났어요</a>
+<a class="nav-a" href="../help/glossary.html">이 말이 무슨 뜻이죠</a>
+<a class="nav-a" href="../help/how-to-ask.html">AI에게 잘 시키는 법</a>
+<a class="nav-a" href="../help/prompts.html">오늘 내가 친 문장</a>
+<a class="nav-a" href="../help/next.html">강의 끝나고 뭘 해볼까</a>
+</div></nav>
+    <div class="side__foot">
+      <button class="iconbtn" id="themeBtn" title="테마 전환"><span id="themeIc">◐</span> <span id="themeLbl">light</span></button>
+      <a class="iconbtn" href="../index.html" title="홈">↖ home</a>
+    </div>
+  </aside>
+  <main class="main">
+    <div class="cmdbar mono">
+      <button class="burger" id="burger" aria-label="메뉴">≡</button>
+      <span class="path"><b>~/ax-tutor</b> <span class="full">$ cat</span> <span class="cur">lab4/step6.md</span></span>
+      <span class="caret"></span><span class="spacer"></span>
+      <span class="stat">실습 4 · 대시보드와 디자인</span>
+    </div>
+    <div class="wrap">
+      <article class="doc md rise">
+        <div class="kicker mono"><b>//</b> 실습 4 · 대시보드와 디자인</div>
+<h1 id="6-다크모드반응형-한-마디로-켜기">6. 다크모드·반응형 한 마디로 켜기<a class="headerlink" href="#6-다크모드반응형-한-마디로-켜기" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">이 단계에서 하는 일 (약 1분)</p>
+<ul>
+<li>고른 화면에 원하는 것 <strong>하나만</strong> 얹어봅니다</li>
+<li>한 문장이면 됩니다</li>
+</ul>
+</div>
+<p>1분짜리 단계입니다. 시간이 밀렸으면 통째로 건너뛰어도 됩니다.</p>
+<hr />
+<h2 id="하나만-골라-한-문장으로">하나만 골라 한 문장으로<a class="headerlink" href="#하나만-골라-한-문장으로" title="Permanent link">&para;</a></h2>
+<div class="admonition quote">
+<p class="admonition-title">그대로 복사해서 쓰세요 — 하나만</p>
+<p><div class="highlight"><pre><span></span><code>다크모드도 되게 해줘.
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>휴대폰 화면에서도 안 깨지게 해줘.
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>표가 길면 표 안에서만 스크롤되게 해줘.
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>/impeccable 로 버튼이랑 여백, 문구를 다듬어줘.
+</code></pre></div></p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">이렇게 나오면 정상입니다</p>
+<ul>
+<li>화면을 새로고침하면 요청한 것이 반영돼 있습니다</li>
+<li>표 행 수와 맨 위 숫자는 그대로입니다</li>
+</ul>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">이렇게 나왔다면</p>
+<ul>
+<li>화면이 깨졌다 → <strong>"방금 변경을 되돌려줘"</strong></li>
+<li>표 내용이 바뀌었다 → <strong>"숫자와 표 내용은 그대로 두고 보이는 모양만 바꾸는 걸로 다시 해줘"</strong></li>
+</ul>
+</div>
+<hr />
+<div class="admonition example">
+<p class="admonition-title">이게 어떻게 되는 건지 궁금하다면</p>
+<p><strong>그건 오늘 몰라도 됩니다.</strong> 예전엔 며칠 걸리던 것들이 지금은 한 문장이라는 것만 보시면 됩니다.</p>
+</div>
+<hr />
+<p><strong>체크포인트</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 하나를 골라 한 문장으로 시켰다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 화면을 새로고침해서 반영된 걸 확인했다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 표 행 수와 맨 위 숫자가 그대로다</li>
+</ul>
+<div class="stage-nav">
+<p><strong>← 이전</strong> <a href"step5.html">5. 스킬로 두 가지 무드 비교하기</a> · <strong>다음 →</strong> <a href"step7.html">7. 재검산하고 After 남기기</a></p>
+</div>
+<nav class="pager">
+<a class="prev" href="../lab4/step5.html"><span class="lbl">← 이전</span><span class="ttl">5 · 두 무드 비교</span></a>
+<a class="next" href="../lab4/step7.html"><span class="lbl">다음 →</span><span class="ttl">7 · 재검산·After</span></a>
+</nav>
+      </article>
+      <aside class="toc mono"><h4>On this page</h4>
+<a href="#6-다크모드반응형-한-마디로-켜기">6. 다크모드·반응형 한 마디로 켜기</a>
+<a href="#하나만-골라-한-문장으로">하나만 골라 한 문장으로</a></aside>
+    </div>
+  </main>
+</div>
+<script src="../assets/site.js"></script>
+</body>
+</html>

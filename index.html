@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="ko" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ax-tutor · 하루 실습 위키</title>
+<meta name="description" content="코딩 없이, 하루 만에 내 일을 자동화하는 AX 실무 실습 위키 — 강의 자료와 실습 가이드.">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<div class="shell">
+
+  <!-- ============ SIDEBAR ============ -->
+  <aside class="side" id="side">
+    <div class="brand">
+      <div class="brand__row">
+        <span class="ast mono">✻</span>
+        <div>
+          <div class="brand__name">ax<b>-</b>tutor</div>
+        </div>
+      </div>
+      <div class="brand__sub">Claude Code · 실습 위키</div>
+      <div class="session">
+        <span class="dot"></span><span class="live">LIVE</span>
+        <span style="color:var(--muted)">강의 진행 중</span>
+        <span class="clock mono" id="clock">--:--</span>
+      </div>
+    </div>
+
+    <nav>
+      <div class="nav-h">// 홈</div>
+      <a class="nav-a" href="#overview"><span class="g">◆</span> 오늘의 지도</a>
+      <a class="nav-a" href="#timetable"><span class="g">◷</span> 시간표</a>
+      <a class="nav-a" href="#materials"><span class="g">▤</span> 강의 자료 내려받기</a>
+      <div class="nav-h">// 시작하기</div>
+      <div class="tree">
+        <a class="nav-a" href="start/prepare.html">0 · 준비물과 사전 설치</a>
+        <a class="nav-a" href="start/first-5min.html">1 · 처음 5분</a>
+        <a class="nav-a" href="start/rules.html">2 · 오후 규칙 3가지</a>
+      </div>
+      <div class="nav-h">// 실습 1 · 물류비 마감</div>
+      <div class="tree">
+        <a class="nav-a" href="lab1/index.html">개요</a>
+        <a class="nav-a" href="lab1/step1.html">1 · 요금표를 표로</a>
+        <a class="nav-a" href="lab1/step2.html">2 · 청구서 합치기</a>
+        <a class="nav-a" href="lab1/step3.html">3 · 120건 재계산</a>
+        <a class="nav-a" href="lab1/step4.html">4 · 검증 설계·검산</a>
+        <a class="nav-a" href="lab1/extra.html">＋ 더 해보기</a>
+      </div>
+      <div class="nav-h">// 실습 2 · 계약·입찰 레이더</div>
+      <div class="tree">
+        <a class="nav-a" href="lab2/index.html">개요</a>
+        <a class="nav-a" href="lab2/step1.html">1 · 계약서 한 장</a>
+        <a class="nav-a" href="lab2/step2.html">2 · 열두 건으로</a>
+        <a class="nav-a" href="lab2/step3.html">3 · 회사소개 문단</a>
+        <a class="nav-a" href="lab2/step4.html">4 · 공고 가져와 나누기</a>
+        <a class="nav-a" href="lab2/step5.html">5 · 설명서 남기기</a>
+        <a class="nav-a" href="lab2/extra.html">＋ 영문·스캔 PDF</a>
+      </div>
+      <div class="nav-h">// 실습 3 · 근거 붙인 보고문</div>
+      <div class="tree">
+        <a class="nav-a" href="lab3/index.html">개요</a>
+        <a class="nav-a" href="lab3/step1.html">1 · 일단 써보게</a>
+        <a class="nav-a" href="lab3/step2.html">2 · 숫자마다 출처</a>
+        <a class="nav-a" href="lab3/step3.html">3 · 숫자 5개 역추적</a>
+        <a class="nav-a" href="lab3/step4.html">4·5 · 없는 문장·톤 두 벌</a>
+        <a class="nav-a" href="lab3/extra.html">＋ 더 해보기</a>
+      </div>
+      <div class="nav-h">// 실습 4 · 대시보드와 디자인</div>
+      <div class="tree">
+        <a class="nav-a" href="lab4/index.html">개요</a>
+        <a class="nav-a" href="lab4/step1.html">1 · 무엇을 보여줄지</a>
+        <a class="nav-a" href="lab4/step2.html">2 · 뼈대·검산</a>
+        <a class="nav-a" href="lab4/step3.html">3 · Before 캡처</a>
+        <a class="nav-a" href="lab4/step4.html">4 · 말로 인상 바꾸기</a>
+        <a class="nav-a" href="lab4/step5.html">5 · 두 무드 비교</a>
+        <a class="nav-a" href="lab4/step6.html">6 · 다크모드·반응형</a>
+        <a class="nav-a" href="lab4/step7.html">7 · 재검산·After</a>
+        <a class="nav-a" href="lab4/stuck.html">막혔을 때 쓰는 문장</a>
+      </div>
+      <div class="nav-h">// 여유 실습</div>
+      <div class="tree">
+        <a class="nav-a" href="lab5/index.html">A · 회의 녹취 정리</a>
+        <a class="nav-a" href="lab5/step1.html">A-1 · 결정만 골라내기</a>
+        <a class="nav-a" href="lab5/step2.html">A-2 · 담당자·마감</a>
+        <a class="nav-a" href="lab5/step3.html">A-3 · 근거 남기기</a>
+        <a class="nav-a" href="lab6/index.html">B · 링크로 공유</a>
+      </div>
+      <div class="nav-h">// 도움말</div>
+      <div class="tree">
+        <a class="nav-a" href="help/errors.html">에러가 났어요</a>
+        <a class="nav-a" href="help/glossary.html">이 말이 무슨 뜻이죠</a>
+        <a class="nav-a" href="help/how-to-ask.html">AI에게 잘 시키는 법</a>
+        <a class="nav-a" href="help/prompts.html">오늘 내가 친 문장</a>
+        <a class="nav-a" href="help/next.html">강의 끝나고 뭘 해볼까</a>
+      </div>
+    </nav>
+
+    <div class="side__foot">
+      <button class="iconbtn" id="themeBtn" title="테마 전환"><span id="themeIc">◐</span> <span id="themeLbl">light</span></button>
+      <a class="iconbtn" href="https://github.com/jxxnxjiin/axtutorial" target="_blank" rel="noopener" title="GitHub">↗ repo</a>
+    </div>
+  </aside>
+
+  <!-- ============ MAIN ============ -->
+  <main class="main">
+    <div class="cmdbar mono">
+      <button class="burger" id="burger" aria-label="메뉴">≡</button>
+      <span class="path"><b>~/ax-tutor</b> <span class="full">$ cat</span> <span class="cur">오늘의_지도.md</span></span>
+      <span class="caret"></span>
+      <span class="spacer"></span>
+      <span class="stat">8 labs · 하루 완주</span>
+    </div>
+
+    <div class="wrap">
+      <div class="doc">
+
+        <!-- ---- HERO ---- -->
+        <div class="term rise" style="animation-delay:.02s">
+          <div class="term__bar">
+            <span class="tl r"></span><span class="tl y"></span><span class="tl g"></span>
+            <span class="term__title mono">— <b>ax-tutor</b> — 하루 실습 세션 —</span>
+          </div>
+          <div class="term__body">
+            <div class="hi-ast mono">✻</div>
+            <div class="welcome mono">✻ Welcome — 오늘 하루, 코딩 없이 내 일을 자동화합니다.</div>
+            <h1 class="hero-h1">말로 시키고, 나온 파일을 <span class="c">열어서 확인</span>합니다.</h1>
+            <p class="hero-sub">입사해서 받을 만한 사무직 업무들을 노트북에게 한국어로 시켜봅니다.
+              오늘 하는 일은 <b>한국어로 말해서 시키고, 나온 결과를 열어 확인하는 것</b>이 전부입니다.</p>
+            <div class="prompt mono">
+              <span class="ps1">&gt;</span>
+              <span class="typed" id="typed" data-text="오늘 배울 것을 한 눈에 보여줘"></span><span class="caret2"></span>
+            </div>
+            <div class="hero-cta">
+              <a class="btn btn--p" href="#materials"><span class="k">▤</span> 강의 자료 받기</a>
+              <a class="btn" href="lab1/index.html"><span class="k">▷</span> 실습 1 시작하기</a>
+              <a class="btn" href="start/prepare.html"><span class="k">⚙</span> 사전 준비</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ---- OVERVIEW ---- -->
+        <section id="overview">
+          <div class="sec-h"><span class="hash mono">##</span><h2>오늘의 지도</h2><span class="note mono">4 works · 5 hours</span></div>
+          <p class="lead">여섯 가지 업무 유형(뽑기·모으기·줄이기·딱지 붙이기·쓰기·검사하기)을 실제 데이터로 하나씩 손에 익힙니다.
+            각 실습은 <b>흩어진 자료 → 한 표/한 문서 → 검산</b>의 리듬으로 흘러갑니다.</p>
+          <div class="grid4">
+            <div class="ov rise" style="animation-delay:.05s">
+              <div class="ov__n mono">WORK 01 — 물류·재고</div>
+              <div class="ov__t">숫자를 표로 뽑아 집계</div>
+              <div class="ov__d">사진·현황표처럼 구조 없던 것을 표로 옮기고, 필요한 값만 줄여 집계합니다.</div>
+              <div class="ov__out mono"><span class="lbl">out</span><code>.xlsx</code></div>
+            </div>
+            <div class="ov rise" style="animation-delay:.1s">
+              <div class="ov__n mono">WORK 02 — 취합·통합</div>
+              <div class="ov__t">흩어진 파일을 한 표로</div>
+              <div class="ov__d">채널·창구별로 나뉜 주문·견적·계약을 행을 보존하며 하나로 모읍니다.</div>
+              <div class="ov__out mono"><span class="lbl">out</span><code>주문종합.xlsx</code></div>
+            </div>
+            <div class="ov rise" style="animation-delay:.15s">
+              <div class="ov__n mono">WORK 03 — 분류·보고</div>
+              <div class="ov__t">딱지 붙이고 근거 붙여 쓰기</div>
+              <div class="ov__d">VOC를 기준표로 분류하고, 숫자마다 출처를 붙인 보고문을 씁니다.</div>
+              <div class="ov__out mono"><span class="lbl">out</span><code>점검보고.md</code></div>
+            </div>
+            <div class="ov rise" style="animation-delay:.2s">
+              <div class="ov__n mono">WORK 04 — 화면·스킬</div>
+              <div class="ov__t">대시보드와 재사용 스킬</div>
+              <div class="ov__d">내 데이터가 도는 화면을 만들고, 반복 작업을 스킬로 남겨 다음에도 씁니다.</div>
+              <div class="ov__out mono"><span class="lbl">out</span><code>dashboard.html</code> · <code>SKILL.md</code></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ---- TIMETABLE ---- -->
+        <section id="timetable">
+          <div class="sec-h"><span class="hash mono">##</span><h2>오늘 시간표</h2><span class="note mono">한 페이지 = 한 단계</span></div>
+          <div class="tt mono">
+            <div class="tt__row"><div class="tt__t">오전</div><div class="tt__d">도입 · 라이브 데모 · 환경 확인 · 첫 성공 미션</div></div>
+            <div class="tt__row"><div class="tt__t">13:00–13:10</div><div class="tt__d">오후 규칙 3가지</div></div>
+            <div class="tt__row"><div class="tt__t">13:10–14:00</div><div class="tt__d">실습 1 — 물류비 마감</div></div>
+            <div class="tt__row brk"><div class="tt__t">14:00–14:10</div><div class="tt__d">같이 되돌아보기 ①</div></div>
+            <div class="tt__row"><div class="tt__t">14:10–15:10</div><div class="tt__d">실습 2 — 계약·입찰 레이더</div></div>
+            <div class="tt__row brk"><div class="tt__t">15:10–15:20</div><div class="tt__d">휴식</div></div>
+            <div class="tt__row"><div class="tt__t">15:20–15:50</div><div class="tt__d">실습 3 — 근거 붙인 보고문</div></div>
+            <div class="tt__row"><div class="tt__t">15:50–16:53</div><div class="tt__d">실습 4 — 대시보드 + 디자인</div></div>
+            <div class="tt__row brk"><div class="tt__t">16:53–17:00</div><div class="tt__d">마무리</div></div>
+          </div>
+        </section>
+
+        <!-- ---- MATERIALS ---- -->
+        <section id="materials">
+          <div class="sec-h"><span class="hash mono">##</span><h2>강의 자료 내려받기</h2><span class="note mono">materials/</span></div>
+          <p class="lead">각 강의 카드에서 파일을 바로 내려받으세요. <b>바탕화면 말고, 한글·띄어쓰기 없는 경로</b>
+            (권장 <code style="font-family:'JetBrains Mono',monospace;color:var(--coral)">C:\workshop\</code>, 맥은 <code style="font-family:'JetBrains Mono',monospace;color:var(--coral)">~/workshop/</code>)에 모아두면 실습이 편합니다.</p>
+
+          <div class="zipall">
+            <a class="zipbtn" href="materials/zips/전체자료.zip" download><span>⤓ 전체 자료 한 번에 받기</span> <span class="sz">3.3MB</span></a>
+            <span class="hint">또는 아래에서 강별로 골라 받으세요 · 각 카드의 <b>zip</b> 버튼</span>
+          </div>
+
+          <div class="cards">
+
+            <!-- 1강 -->
+            <article class="card rise" id="g1" style="animation-delay:.04s">
+              <span class="card__ghost mono">01</span>
+              <div class="card__h"><span class="card__n mono">1강</span><span class="card__t">재고자산 현황</span>
+                <span class="tags"><i class="tag">뽑기</i><i class="tag">줄이기</i></span></div>
+              <p class="card__d">재고 현황표 하나에서 필요한 값만 뽑아 집계해 봅니다. 첫 단추.</p>
+              <div class="files">
+                <a class="zipbtn" href="materials/zips/1강.zip" download><span>⤓ 1강 전체 zip</span> <span class="sz">12KB</span></a>
+                <a class="file" href="materials/1강/재고자산_현황_실습용.xlsx" download><span class="ext ext-xlsx">xlsx</span><span class="fname">재고자산_현황_실습용.xlsx</span><span class="dl">↓</span></a>
+              </div>
+            </article>
+
+            <!-- 2강 -->
+            <article class="card rise" id="g2" style="animation-delay:.08s">
+              <span class="card__ghost mono">02</span>
+              <div class="card__h"><span class="card__n mono">2강</span><span class="card__t">주문 취합 · 계약 레이더</span>
+                <span class="tags"><i class="tag">모으기</i><i class="tag">뽑기</i></span></div>
+              <p class="card__d">창구별로 흩어진 주문을 한 표로 모으고, 계약서 PDF 8건에서 핵심을 뽑습니다.</p>
+              <div class="files">
+                <a class="zipbtn" href="materials/zips/2강.zip" download><span>⤓ 2강 전체 zip</span> <span class="sz">1.1MB</span></a>
+                <div class="sub mono">├─ 주문 (Order)</div>
+                <a class="file" href="materials/2강/1.%20Order/웹주문.xlsx" download><span class="ext ext-xlsx">xlsx</span><span class="fname">웹주문.xlsx</span><span class="dl">↓</span></a>
+                <a class="file" href="materials/2강/1.%20Order/전화주문.xlsx" download><span class="ext ext-xlsx">xlsx</span><span class="fname">전화주문.xlsx</span><span class="dl">↓</span></a>
+                <a class="file" href="materials/2강/1.%20Order/제휴주문.xlsx" download><span class="ext ext-xlsx">xlsx</span><span class="fname">제휴주문.xlsx</span><span class="dl">↓</span></a>
+                <a class="file" href="materials/2강/1.%20Order/주문종합.xlsx" download><span class="ext ext-xlsx">xlsx</span><span class="fname">주문종합.xlsx</span><span class="dl">↓</span></a>
+                <a class="file" href="materials/2강/1.%20Order/작업방법참고.xlsx" download><span class="ext ext-xlsx">xlsx</span><span class="fname">작업방법참고.xlsx</span><span class="dl">↓</span></a>
+                <div class="sub mono">└─ 계약서 (contract) · 8건</div>
+                <div class="pdfgrid">
+                  <a class="file" href="materials/2강/2.%20contract/CT-2026-001.pdf" download><span class="ext ext-pdf">pdf</span><span class="fname">CT-2026-001</span><span class="dl">↓</span></a>
+                  <a class="file" href="materials/2강/2.%20contract/CT-2026-002.pdf" download><span class="ext ext-pdf">pdf</span><span class="fname">CT-2026-002</span><span class="dl">↓</span></a>
+                  <a class="file" href="materials/2강/2.%20contract/CT-2026-003.pdf" download><span class="ext ext-pdf">pdf</span><span class="fname">CT-2026-003</span><span class="dl">↓</span></a>
+                  <a class="file" href="materials/2강/2.%20contract/CT-2026-004.pdf" download><span class="ext ext-pdf">pdf</span><span class="fname">CT-2026-004</span><span class="dl">↓</span></a>
+                  <a class="file" href="materials/2강/2.%20contract/CT-2026-005.pdf" download><span class="ext ext-pdf">pdf</span><span class="fname">CT-2026-005</span><span class="dl">↓</span></a>
+                  <a class="file" href="materials/2강/2.%20contract/CT-2026-006.pdf" download><span class="ext ext-pdf">pdf</span><span class="fname">CT-2026-006</span><span class="dl">↓</span></a>
+                  <a class="file" href="materials/2강/2.%20contract/CT-2026-007.pdf" download><span class="ext ext-pdf">pdf</span><span class="fname">CT-2026-007</span><span class="dl">↓</span></a>
+                  <a class="file" href="materials/2강/2.%20contract/CT-2026-008.pdf" download><span class="ext ext-pdf">pdf</span><span class="fname">CT-2026-008</span><span class="dl">↓</span></a>
+                </div>
+              </div>
+            </article>
+
+            <!-- 3강 -->
+            <article class="card rise" id="g3" style="animation-delay:.12s">
+              <span class="card__ghost mono">03</span>
+              <div class="card__h"><span class="card__n mono">3강</span><span class="card__t">채널별 주문 통합</span>
+                <span class="tags"><i class="tag">모으기</i><i class="tag">줄이기</i></span></div>
+              <p class="card__d">5개 채널 주문기록을 하나로 합치고, 쿠폰 성과를 집계합니다.</p>
+              <div class="files">
+                <a class="zipbtn" href="materials/zips/3강.zip" download><span>⤓ 3강 전체 zip</span> <span class="sz">880KB</span></a>
+                <a class="file" href="materials/3강/1.주문기록_11번가.xlsx" download><span class="ext ext-xlsx">xlsx</span><span class="fname">1.주문기록_11번가.xlsx</span><span class="dl">↓</span></a>
+                <a class="file" href="materials/3강/2.주문기록_네이버.xlsx" download><span class="ext ext-xlsx">xlsx</span><span class="fname">2.주문기록_네이버.xlsx</span><span class="dl">↓</span></a>
+                <a class="file" href="materials/3강/3.주문기록_이마트.xlsx" download><span class="ext ext-xlsx">xlsx</span><span class="fname">3.주문기록_이마트.xlsx</span><span class="dl">↓</span></a>
+                <a class="file" href="materials/3강/4.주문기록_지마켓.xlsx" download><span class="ext ext-xlsx">xlsx</span><span class="fname">4.주문기록_지마켓.xlsx</span><span class="dl">↓</span></a>
+                <a class="file" href="materials/3강/5.주문기록_쿠팡.xlsx" download><span class="ext ext-xlsx">xlsx</span><span class="fname">5.주문기록_쿠팡.xlsx</span><span class="dl">↓</span></a>
+                <a class="file" href="materials/3강/6.GA5_주문종합.xlsx" download><span class="ext ext-xlsx">xlsx</span><span class="fname">6.GA5_주문종합.xlsx</span><span class="dl">↓</span></a>
+                <a class="file" href="materials/3강/7.쿠폰별성과표.xlsx" download><span class="ext ext-xlsx">xlsx</span><span class="fname">7.쿠폰별성과표.xlsx</span><span class="dl">↓</span></a>
+              </div>
+            </article>
+
+            <!-- 4강 -->
+            <article class="card rise" id="g4" style="animation-delay:.16s">
+              <span class="card__ghost mono">04</span>
+              <div class="card__h"><span class="card__n mono">4강</span><span class="card__t">VOC 분류</span>
+                <span class="tags"><i class="tag">딱지 붙이기</i></span></div>
+              <p class="card__d">고객의 소리(VOC)를 분류 기준표에 따라 유형별로 나눕니다.</p>
+              <div class="files">
+                <a class="zipbtn" href="materials/zips/4강.zip" download><span>⤓ 4강 전체 zip</span> <span class="sz">310KB</span></a>
+                <a class="file" href="materials/4강/1.%20VOC원문.xlsx" download><span class="ext ext-xlsx">xlsx</span><span class="fname">1. VOC원문.xlsx</span><span class="dl">↓</span></a>
+                <a class="file" href="materials/4강/2.%20VOC_분류기준.pdf" download><span class="ext ext-pdf">pdf</span><span class="fname">2. VOC_분류기준.pdf</span><span class="dl">↓</span></a>
+                <a class="file" href="materials/4강/3.%20분류표.xlsx" download><span class="ext ext-xlsx">xlsx</span><span class="fname">3. 분류표.xlsx</span><span class="dl">↓</span></a>
+              </div>
+            </article>
+
+            <!-- 5강 -->
+            <article class="card rise" id="g5" style="animation-delay:.2s">
+              <span class="card__ghost mono">05</span>
+              <div class="card__h"><span class="card__n mono">5강</span><span class="card__t">대시보드 데이터</span>
+                <span class="tags"><i class="tag">줄이기</i><i class="tag">화면</i></span></div>
+              <p class="card__d">내 데이터가 실제로 도는 대시보드 화면을 만들 원본 데이터입니다.</p>
+              <div class="files">
+                <a class="zipbtn" href="materials/zips/5강.zip" download><span>⤓ 5강 전체 zip</span> <span class="sz">440KB</span></a>
+                <a class="file" href="materials/5강/6.GA5_주문종합.xlsx" download><span class="ext ext-xlsx">xlsx</span><span class="fname">6.GA5_주문종합.xlsx</span><span class="dl">↓</span></a>
+                <a class="file" href="materials/5강/7.쿠폰별성과표.xlsx" download><span class="ext ext-xlsx">xlsx</span><span class="fname">7.쿠폰별성과표.xlsx</span><span class="dl">↓</span></a>
+              </div>
+            </article>
+
+            <!-- 6강 -->
+            <article class="card rise" id="g6" style="animation-delay:.24s">
+              <span class="card__ghost mono">06</span>
+              <div class="card__h"><span class="card__n mono">6강</span><span class="card__t">근거 붙인 보고문</span>
+                <span class="tags"><i class="tag">쓰기</i><i class="tag">검사</i></span></div>
+              <p class="card__d">숫자마다 출처를 붙인 보고서를 씁니다. 양식과 대상 프로필이 함께 있습니다.</p>
+              <div class="files">
+                <a class="zipbtn" href="materials/zips/6강.zip" download><span>⤓ 6강 전체 zip</span> <span class="sz">440KB</span></a>
+                <a class="file" href="materials/6강/6.GA5_주문종합.xlsx" download><span class="ext ext-xlsx">xlsx</span><span class="fname">6.GA5_주문종합.xlsx</span><span class="dl">↓</span></a>
+                <a class="file" href="materials/6강/7.쿠폰별성과표.xlsx" download><span class="ext ext-xlsx">xlsx</span><span class="fname">7.쿠폰별성과표.xlsx</span><span class="dl">↓</span></a>
+                <a class="file" href="materials/6강/8.보고대상_프로필.md" download><span class="ext ext-md">md</span><span class="fname">8.보고대상_프로필.md</span><span class="dl">↓</span></a>
+                <a class="file" href="materials/6강/9.보고서_양식.md" download><span class="ext ext-md">md</span><span class="fname">9.보고서_양식.md</span><span class="dl">↓</span></a>
+              </div>
+            </article>
+
+            <!-- 7강 -->
+            <article class="card rise" id="g7" style="animation-delay:.28s">
+              <span class="card__ghost mono">07</span>
+              <div class="card__h"><span class="card__n mono">7강</span><span class="card__t">영업 제안서</span>
+                <span class="tags"><i class="tag">쓰기</i></span></div>
+              <p class="card__d">제품 사양과 고객 요구사항을 반영해 제안서 초안을 다듬습니다.</p>
+              <div class="files">
+                <a class="zipbtn" href="materials/zips/7강.zip" download><span>⤓ 7강 전체 zip</span> <span class="sz">16KB</span></a>
+                <a class="file" href="materials/7강/1.영업제안서_초안.pdf" download><span class="ext ext-pdf">pdf</span><span class="fname">1.영업제안서_초안.pdf</span><span class="dl">↓</span></a>
+                <a class="file" href="materials/7강/2.제품사양서.xlsx" download><span class="ext ext-xlsx">xlsx</span><span class="fname">2.제품사양서.xlsx</span><span class="dl">↓</span></a>
+                <a class="file" href="materials/7강/3.고객사_요구사항.pdf" download><span class="ext ext-pdf">pdf</span><span class="fname">3.고객사_요구사항.pdf</span><span class="dl">↓</span></a>
+              </div>
+            </article>
+
+            <!-- 8강 -->
+            <article class="card rise" id="g8" style="animation-delay:.32s">
+              <span class="card__ghost mono">08</span>
+              <div class="card__h"><span class="card__n mono">8강</span><span class="card__t">재사용 · 스킬화</span>
+                <span class="tags"><i class="tag">모으기</i><i class="tag">스킬</i></span></div>
+              <p class="card__d">반복 작업을 <code style="font-family:'JetBrains Mono',monospace">SKILL.md</code>로 남겨 다음에도 그대로 씁니다.</p>
+              <div class="files">
+                <a class="zipbtn" href="materials/zips/8강.zip" download><span>⤓ 8강 전체 zip</span> <span class="sz">28KB</span></a>
+                <div class="sub mono">├─ 주문통합</div>
+                <a class="file" href="materials/8강/1.주문통합/웹주문.xlsx" download><span class="ext ext-xlsx">xlsx</span><span class="fname">웹주문.xlsx</span><span class="dl">↓</span></a>
+                <a class="file" href="materials/8강/1.주문통합/전화주문.csv" download><span class="ext ext-csv">csv</span><span class="fname">전화주문.csv</span><span class="dl">↓</span></a>
+                <a class="file" href="materials/8강/1.주문통합/제휴주문.xlsx" download><span class="ext ext-xlsx">xlsx</span><span class="fname">제휴주문.xlsx</span><span class="dl">↓</span></a>
+                <a class="file" href="materials/8강/1.주문통합/주문통합_작업지침.md" download><span class="ext ext-md">md</span><span class="fname">주문통합_작업지침.md</span><span class="dl">↓</span></a>
+                <div class="sub mono">├─ 견적통합</div>
+                <a class="file" href="materials/8강/2.견적통합/견적_대성테크.csv" download><span class="ext ext-csv">csv</span><span class="fname">견적_대성테크.csv</span><span class="dl">↓</span></a>
+                <a class="file" href="materials/8강/2.견적통합/견적_유진상사.xlsx" download><span class="ext ext-xlsx">xlsx</span><span class="fname">견적_유진상사.xlsx</span><span class="dl">↓</span></a>
+                <a class="file" href="materials/8강/2.견적통합/견적_한빛산업.xlsx" download><span class="ext ext-xlsx">xlsx</span><span class="fname">견적_한빛산업.xlsx</span><span class="dl">↓</span></a>
+                <div class="sub mono">└─ 스킬 예시</div>
+                <a class="file" href="materials/8강/3.스킬예시/SKILL.md" download><span class="ext ext-md">md</span><span class="fname">SKILL.md</span><span class="dl">↓</span></a>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <!-- ---- GUIDE ---- -->
+        <section id="guide">
+          <div class="sec-h"><span class="hash mono">##</span><h2>실습 가이드</h2><span class="note mono">한 페이지 = 한 단계</span></div>
+          <p class="lead">단계별 상세 안내가 이 위키 안에 그대로 들어 있습니다. 한 페이지가 한 단계이니,
+            앞질러 가지 말고 지금 페이지 맨 아래 체크포인트를 먼저 통과하세요.</p>
+          <div class="glist">
+            <a class="gl" href="start/prepare.html">
+              <span class="gl__ic mono">0</span>
+              <div><div class="gl__t">시작하기 · 준비물과 규칙 <span class="ext-link">▷</span></div>
+                <div class="gl__d">사전 설치, 처음 5분, 오후 규칙 3가지.</div></div>
+            </a>
+            <a class="gl" href="lab1/index.html">
+              <span class="gl__ic mono">L1</span>
+              <div><div class="gl__t">실습 1 · 물류비 마감 <span class="ext-link">▷</span></div>
+                <div class="gl__d">사진 요금표를 표로 옮기고 120건을 다시 계산·판정합니다.</div></div>
+            </a>
+            <a class="gl" href="lab2/index.html">
+              <span class="gl__ic mono">L2</span>
+              <div><div class="gl__t">실습 2 · 계약·입찰 레이더 <span class="ext-link">▷</span></div>
+                <div class="gl__d">계약서 PDF와 공고를 한 표로. 회사소개·SKILL.md까지.</div></div>
+            </a>
+            <a class="gl" href="lab3/index.html">
+              <span class="gl__ic mono">L3</span>
+              <div><div class="gl__t">실습 3 · 근거 붙인 보고문 <span class="ext-link">▷</span></div>
+                <div class="gl__d">표로 글을 쓰되 숫자마다 출처를 붙이고 손으로 역추적합니다.</div></div>
+            </a>
+            <a class="gl" href="lab4/index.html">
+              <span class="gl__ic mono">L4</span>
+              <div><div class="gl__t">실습 4 · 대시보드 + 디자인 <span class="ext-link">▷</span></div>
+                <div class="gl__d">내 데이터가 도는 화면을 만들고 인상을 직접 고릅니다.</div></div>
+            </a>
+            <a class="gl" href="lab5/index.html">
+              <span class="gl__ic mono">A·B</span>
+              <div><div class="gl__t">여유 실습 A · B <span class="ext-link">▷</span></div>
+                <div class="gl__d">회의 녹취에서 결정만 뽑기 · 내 대시보드를 링크로 공유하기.</div></div>
+            </a>
+          </div>
+        </section>
+
+        <!-- ---- HELP ---- -->
+        <section id="help">
+          <div class="sec-h"><span class="hash mono">##</span><h2>막혔을 때</h2><span class="note mono">help/</span></div>
+          <div class="help-grid">
+            <a class="hcard" href="help/errors.html">
+              <div class="hcard__t mono"><span class="q">?</span> 에러가 났어요</div>
+              <div class="hcard__d">빨간 글씨가 떴을 때 제일 먼저 볼 곳.</div></a>
+            <a class="hcard" href="help/glossary.html">
+              <div class="hcard__t mono"><span class="q">?</span> 이 말이 무슨 뜻</div>
+              <div class="hcard__d">낯선 단어를 한 줄로 풀어 둔 사전.</div></a>
+            <a class="hcard" href="help/how-to-ask.html">
+              <div class="hcard__t mono"><span class="q">?</span> 잘 시키는 법</div>
+              <div class="hcard__d">AI에게 원하는 걸 정확히 시키는 요령.</div></a>
+            <a class="hcard" href="help/prompts.html">
+              <div class="hcard__t mono"><span class="q">?</span> 오늘 친 문장들</div>
+              <div class="hcard__d">수업에서 실제로 쓴 문장 모음.</div></a>
+            <a class="hcard" href="help/next.html">
+              <div class="hcard__t mono"><span class="q">?</span> 끝나고 뭘 해볼까</div>
+              <div class="hcard__d">수업 뒤 혼자 이어갈 다음 걸음.</div></a>
+            <a class="hcard" href="lab4/stuck.html">
+              <div class="hcard__t mono"><span class="q">✻</span> 막혔을 때 문장</div>
+              <div class="hcard__d">실습 4에서 막히면 그대로 쓰는 문장들.</div></a>
+          </div>
+
+          <div class="callout">
+            <span class="ic">▲</span>
+            <p><b>자료를 못 따라왔다면.</b> 완주가 먼저입니다. 막힌 단계는 뒤로 미루고 다음 실습으로 넘어가도 괜찮습니다.
+              데이터 압축을 풀 때는 <code>바탕화면</code>이 아니라 <b>한글·띄어쓰기 없는 경로</b>에 두세요.</p>
+          </div>
+        </section>
+
+        <footer>
+          <span class="ast-sm mono">✻</span> &nbsp;ax-tutor &nbsp;·&nbsp; 코딩 없이 하루로 내 일을 자동화 &nbsp;·&nbsp;
+          실습 가이드 <b>labs/</b> &nbsp;·&nbsp; 강의 자료 <b>materials/</b> &nbsp;·&nbsp; 본문 © <b>ax-wiki</b>
+        </footer>
+
+      </div>
+
+      <!-- ---- RIGHT TOC ---- -->
+      <aside class="toc mono">
+        <h4>On this page</h4>
+        <a href="#overview" data-toc="overview">오늘의 지도</a>
+        <a href="#timetable" data-toc="timetable">시간표</a>
+        <a href="#materials" data-toc="materials">강의 자료</a>
+        <a href="#guide" data-toc="guide">실습 가이드</a>
+        <a href="#help" data-toc="help">막혔을 때</a>
+      </aside>
+
+    </div>
+  </main>
+</div>
+
+<script src="assets/site.js"></script>
+</body>
+</html>

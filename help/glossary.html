@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="ko" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>이 말이 무슨 뜻이죠 · ax-tutor</title>
+<meta name="description" content="도움말 — 이 말이 무슨 뜻이죠 · ax-tutor 실습 위키">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<div class="shell">
+  <aside class="side" id="side">
+    <div class="brand">
+      <a class="brand__row" href="../index.html" style="text-decoration:none">
+        <span class="ast mono">✻</span>
+        <div><div class="brand__name">ax<b>-</b>tutor</div></div>
+      </a>
+      <div class="brand__sub">Claude Code · 실습 위키</div>
+      <div class="session"><span class="dot"></span><span class="live">LIVE</span>
+        <span style="color:var(--muted)">강의 진행 중</span><span class="clock mono" id="clock">--:--</span></div>
+    </div>
+    <nav><div class="nav-h">// 홈</div>
+<a class="nav-a" href="../index.html"><span class="g">◆</span> 오늘의 지도</a>
+<a class="nav-a" href="../index.html#materials"><span class="g">▤</span> 강의 자료 내려받기</a>
+<div class="nav-h">// 시작하기</div><div class="tree">
+<a class="nav-a" href="../start/prepare.html">0 · 준비물과 사전 설치</a>
+<a class="nav-a" href="../start/first-5min.html">1 · 처음 5분</a>
+<a class="nav-a" href="../start/rules.html">2 · 오후 규칙 3가지</a>
+</div>
+<div class="nav-h">// 실습 1 · 물류비 마감</div><div class="tree">
+<a class="nav-a" href="../lab1/index.html">개요</a>
+<a class="nav-a" href="../lab1/step1.html">1 · 요금표를 표로</a>
+<a class="nav-a" href="../lab1/step2.html">2 · 청구서 합치기</a>
+<a class="nav-a" href="../lab1/step3.html">3 · 120건 재계산</a>
+<a class="nav-a" href="../lab1/step4.html">4 · 검증 설계·검산</a>
+<a class="nav-a" href="../lab1/extra.html">＋ 더 해보기</a>
+</div>
+<div class="nav-h">// 실습 2 · 계약·입찰 레이더</div><div class="tree">
+<a class="nav-a" href="../lab2/index.html">개요</a>
+<a class="nav-a" href="../lab2/step1.html">1 · 계약서 한 장</a>
+<a class="nav-a" href="../lab2/step2.html">2 · 열두 건으로</a>
+<a class="nav-a" href="../lab2/step3.html">3 · 회사소개 문단</a>
+<a class="nav-a" href="../lab2/step4.html">4 · 공고 가져와 나누기</a>
+<a class="nav-a" href="../lab2/step5.html">5 · 설명서 남기기</a>
+<a class="nav-a" href="../lab2/extra.html">＋ 영문·스캔 PDF</a>
+</div>
+<div class="nav-h">// 실습 3 · 근거 붙인 보고문</div><div class="tree">
+<a class="nav-a" href="../lab3/index.html">개요</a>
+<a class="nav-a" href="../lab3/step1.html">1 · 일단 써보게</a>
+<a class="nav-a" href="../lab3/step2.html">2 · 숫자마다 출처</a>
+<a class="nav-a" href="../lab3/step3.html">3 · 숫자 5개 역추적</a>
+<a class="nav-a" href="../lab3/step4.html">4·5 · 없는 문장·톤 두 벌</a>
+<a class="nav-a" href="../lab3/extra.html">＋ 더 해보기</a>
+</div>
+<div class="nav-h">// 실습 4 · 대시보드와 디자인</div><div class="tree">
+<a class="nav-a" href="../lab4/index.html">개요</a>
+<a class="nav-a" href="../lab4/step1.html">1 · 무엇을 보여줄지</a>
+<a class="nav-a" href="../lab4/step2.html">2 · 뼈대·검산</a>
+<a class="nav-a" href="../lab4/step3.html">3 · Before 캡처</a>
+<a class="nav-a" href="../lab4/step4.html">4 · 말로 인상 바꾸기</a>
+<a class="nav-a" href="../lab4/step5.html">5 · 두 무드 비교</a>
+<a class="nav-a" href="../lab4/step6.html">6 · 다크모드·반응형</a>
+<a class="nav-a" href="../lab4/step7.html">7 · 재검산·After</a>
+<a class="nav-a" href="../lab4/stuck.html">막혔을 때 쓰는 문장</a>
+</div>
+<div class="nav-h">// 여유 실습</div><div class="tree">
+<a class="nav-a" href="../lab5/index.html">A · 회의 녹취 정리</a>
+<a class="nav-a" href="../lab5/step1.html">A-1 · 결정만 골라내기</a>
+<a class="nav-a" href="../lab5/step2.html">A-2 · 담당자·마감</a>
+<a class="nav-a" href="../lab5/step3.html">A-3 · 근거 남기기</a>
+<a class="nav-a" href="../lab6/index.html">B · 링크로 공유</a>
+</div>
+<div class="nav-h">// 도움말</div><div class="tree">
+<a class="nav-a" href="../help/errors.html">에러가 났어요</a>
+<a class="nav-a active" href="../help/glossary.html">이 말이 무슨 뜻이죠</a>
+<a class="nav-a" href="../help/how-to-ask.html">AI에게 잘 시키는 법</a>
+<a class="nav-a" href="../help/prompts.html">오늘 내가 친 문장</a>
+<a class="nav-a" href="../help/next.html">강의 끝나고 뭘 해볼까</a>
+</div></nav>
+    <div class="side__foot">
+      <button class="iconbtn" id="themeBtn" title="테마 전환"><span id="themeIc">◐</span> <span id="themeLbl">light</span></button>
+      <a class="iconbtn" href="../index.html" title="홈">↖ home</a>
+    </div>
+  </aside>
+  <main class="main">
+    <div class="cmdbar mono">
+      <button class="burger" id="burger" aria-label="메뉴">≡</button>
+      <span class="path"><b>~/ax-tutor</b> <span class="full">$ cat</span> <span class="cur">help/glossary.md</span></span>
+      <span class="caret"></span><span class="spacer"></span>
+      <span class="stat">도움말</span>
+    </div>
+    <div class="wrap">
+      <article class="doc md rise">
+        <div class="kicker mono"><b>//</b> 도움말</div>
+<h1 id="이-말이-무슨-뜻이죠">이 말이 무슨 뜻이죠<a class="headerlink" href="#이-말이-무슨-뜻이죠" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">이 페이지가 하는 일</p>
+<ul>
+<li>오늘 나오는 말들을 한 줄로 풀어둡니다</li>
+<li>복습용입니다. 실습 중에 여기부터 읽을 필요는 없습니다</li>
+</ul>
+</div>
+<hr />
+<h2 id="도구와-화면">도구와 화면<a class="headerlink" href="#도구와-화면" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>말</th>
+<th>한 줄 풀이</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>터미널</strong></td>
+<td>명령을 글자로 입력하는 까만 화면. VS Code 아래쪽에 열립니다</td>
+</tr>
+<tr>
+<td><strong>VS Code</strong></td>
+<td>파일을 열고 편집하는 프로그램. 오늘은 여기서 폴더를 열고 터미널을 씁니다</td>
+</tr>
+<tr>
+<td><strong>폴더 열기</strong></td>
+<td>VS Code에 "이 폴더 전체를 봐라"라고 알려주는 것. 파일 하나만 열면 옆의 파일들을 못 봅니다</td>
+</tr>
+<tr>
+<td><strong>프롬프트</strong></td>
+<td>AI에게 시킬 때 쓰는 문장</td>
+</tr>
+<tr>
+<td><strong>자동 승인</strong></td>
+<td>파일을 고칠 때마다 뜨는 확인 창을 미리 꺼두는 설정</td>
+</tr>
+<tr>
+<td><strong>스킬</strong></td>
+<td>자주 쓰는 작업 방식을 미리 담아둔 도구. <code>/</code> 로 시작하는 이름으로 부릅니다</td>
+</tr>
+<tr>
+<td><strong>브라우저</strong></td>
+<td>인터넷 화면을 보는 프로그램 (크롬·엣지·사파리 등)</td>
+</tr>
+<tr>
+<td><strong>html 파일</strong></td>
+<td>브라우저에서 열리는 화면 파일. 더블클릭하면 열립니다</td>
+</tr>
+<tr>
+<td><strong>캡처</strong></td>
+<td>지금 화면을 그림으로 저장하는 것</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="파일과-데이터">파일과 데이터<a class="headerlink" href="#파일과-데이터" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>말</th>
+<th>한 줄 풀이</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>시트</strong></td>
+<td>엑셀 파일 안의 탭 하나. 한 파일에 여러 장이 들어갑니다</td>
+</tr>
+<tr>
+<td><strong>행 / 열</strong></td>
+<td>가로 한 줄이 행, 세로 한 칸이 열</td>
+</tr>
+<tr>
+<td><strong>CSV</strong></td>
+<td>쉼표로 칸을 나눈 표 파일. 엑셀로 열립니다</td>
+</tr>
+<tr>
+<td><strong>PDF</strong></td>
+<td>인쇄용으로 굳어진 문서 파일</td>
+</tr>
+<tr>
+<td><strong>스캔된 PDF</strong></td>
+<td>종이를 사진으로 찍어 넣은 PDF. 글자를 마우스로 긁을 수 없습니다</td>
+</tr>
+<tr>
+<td><strong>RSS</strong></td>
+<td>새 글이 올라올 때마다 목록으로 내보내는 주소. 공고를 자동으로 가져올 때 씁니다</td>
+</tr>
+<tr>
+<td><strong>원본 보존</strong></td>
+<td>받은 파일을 고치지 않고 읽기만 하는 것. 결과는 새 파일에 씁니다</td>
+</tr>
+<tr>
+<td><strong>두 표를 짝지어 붙이기</strong></td>
+<td>공통된 값(예: 송장번호)을 열쇠 삼아 두 표를 한 표로 합치는 것</td>
+</tr>
+<tr>
+<td><strong>뽑아내기</strong></td>
+<td>문서나 사진에서 필요한 값만 골라내 표로 만드는 것</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="오늘-쓰는-표시들">오늘 쓰는 표시들<a class="headerlink" href="#오늘-쓰는-표시들" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>말</th>
+<th>한 줄 풀이</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>판독불가</strong></td>
+<td>글자가 확실히 안 보여서 값을 못 읽은 칸. 추측해서 채우지 않습니다</td>
+</tr>
+<tr>
+<td><strong>판정보류</strong></td>
+<td>근거가 부족해 판정을 미룬 건</td>
+</tr>
+<tr>
+<td><strong>발송기록없음</strong></td>
+<td>청구서에는 있는데 우리 기록에 없는 건</td>
+</tr>
+<tr>
+<td><strong>미청구</strong></td>
+<td>우리 기록에는 있는데 청구서에 없는 건</td>
+</tr>
+<tr>
+<td><strong>문서없음</strong></td>
+<td>대장에는 있는데 계약서 파일이 없는 건</td>
+</tr>
+<tr>
+<td><strong>판단보류</strong></td>
+<td>우리 일인지 애매해서 결정을 미룬 공고</td>
+</tr>
+<tr>
+<td><strong>번복됨</strong></td>
+<td>뒤에서 뒤집힌 앞의 결정. 지우지 않고 남깁니다</td>
+</tr>
+<tr>
+<td><strong>미정</strong></td>
+<td>아직 정해지지 않은 값</td>
+</tr>
+<tr>
+<td><strong>확인필요</strong></td>
+<td>사람이 확인해야 하는 값</td>
+</tr>
+</tbody>
+</table>
+<p><strong>전부 같은 이야기입니다</strong> — <strong>모르는 건 지어내지 말고 표시로 남긴다.</strong></p>
+<hr />
+<h2 id="자주-나오는-표현">자주 나오는 표현<a class="headerlink" href="#자주-나오는-표현" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>말</th>
+<th>한 줄 풀이</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>AI가 없는 걸 지어낸다</strong></td>
+<td>자료에 없는 값을 그럴듯하게 만들어 채우는 것. 그래서 근거를 같이 요구합니다</td>
+</tr>
+<tr>
+<td><strong>사진 속 글자 읽기</strong></td>
+<td>사진이나 스캔 문서에서 글자를 읽어내는 것</td>
+</tr>
+<tr>
+<td><strong>다음에도 쓰게 설명서로 남기기</strong></td>
+<td>오늘 한 절차를 파일로 적어두는 것. 파일 이름은 <code>SKILL.md</code></td>
+</tr>
+<tr>
+<td><strong>프로젝트 규칙 메모</strong></td>
+<td>매번 안 알려줘도 되게 규칙을 적어두는 파일</td>
+</tr>
+<tr>
+<td><strong>국소 수정</strong></td>
+<td>고칠 곳만 지정해서 고치게 하는 것. "전부 다시"라고 하지 않습니다</td>
+</tr>
+<tr>
+<td><strong>검산</strong></td>
+<td>만든 것을 <strong>바깥에 있는 것</strong>(원본 사진·PDF·시트)과 맞대보는 것</td>
+</tr>
+</tbody>
+</table>
+<div class="stage-nav">
+<p><strong>← 돌아가기</strong> <a href"../index.html">홈</a> · <a href"how-to-ask.html">AI에게 잘 시키는 법</a></p>
+</div>
+<nav class="pager">
+<a class="prev" href="../help/errors.html"><span class="lbl">← 이전</span><span class="ttl">에러가 났어요</span></a>
+<a class="next" href="../help/how-to-ask.html"><span class="lbl">다음 →</span><span class="ttl">AI에게 잘 시키는 법</span></a>
+</nav>
+      </article>
+      <aside class="toc mono"><h4>On this page</h4>
+<a href="#이-말이-무슨-뜻이죠">이 말이 무슨 뜻이죠</a>
+<a href="#도구와-화면">도구와 화면</a>
+<a href="#파일과-데이터">파일과 데이터</a>
+<a href="#오늘-쓰는-표시들">오늘 쓰는 표시들</a>
+<a href="#자주-나오는-표현">자주 나오는 표현</a></aside>
+    </div>
+  </main>
+</div>
+<script src="../assets/site.js"></script>
+</body>
+</html>

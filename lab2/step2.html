@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="ko" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2단계. 열두 건으로 늘리기 · ax-tutor</title>
+<meta name="description" content="실습 2 · 계약·입찰 레이더 — 2단계. 열두 건으로 늘리기 · ax-tutor 실습 위키">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<div class="shell">
+  <aside class="side" id="side">
+    <div class="brand">
+      <a class="brand__row" href="../index.html" style="text-decoration:none">
+        <span class="ast mono">✻</span>
+        <div><div class="brand__name">ax<b>-</b>tutor</div></div>
+      </a>
+      <div class="brand__sub">Claude Code · 실습 위키</div>
+      <div class="session"><span class="dot"></span><span class="live">LIVE</span>
+        <span style="color:var(--muted)">강의 진행 중</span><span class="clock mono" id="clock">--:--</span></div>
+    </div>
+    <nav><div class="nav-h">// 홈</div>
+<a class="nav-a" href="../index.html"><span class="g">◆</span> 오늘의 지도</a>
+<a class="nav-a" href="../index.html#materials"><span class="g">▤</span> 강의 자료 내려받기</a>
+<div class="nav-h">// 시작하기</div><div class="tree">
+<a class="nav-a" href="../start/prepare.html">0 · 준비물과 사전 설치</a>
+<a class="nav-a" href="../start/first-5min.html">1 · 처음 5분</a>
+<a class="nav-a" href="../start/rules.html">2 · 오후 규칙 3가지</a>
+</div>
+<div class="nav-h">// 실습 1 · 물류비 마감</div><div class="tree">
+<a class="nav-a" href="../lab1/index.html">개요</a>
+<a class="nav-a" href="../lab1/step1.html">1 · 요금표를 표로</a>
+<a class="nav-a" href="../lab1/step2.html">2 · 청구서 합치기</a>
+<a class="nav-a" href="../lab1/step3.html">3 · 120건 재계산</a>
+<a class="nav-a" href="../lab1/step4.html">4 · 검증 설계·검산</a>
+<a class="nav-a" href="../lab1/extra.html">＋ 더 해보기</a>
+</div>
+<div class="nav-h">// 실습 2 · 계약·입찰 레이더</div><div class="tree">
+<a class="nav-a" href="../lab2/index.html">개요</a>
+<a class="nav-a" href="../lab2/step1.html">1 · 계약서 한 장</a>
+<a class="nav-a active" href="../lab2/step2.html">2 · 열두 건으로</a>
+<a class="nav-a" href="../lab2/step3.html">3 · 회사소개 문단</a>
+<a class="nav-a" href="../lab2/step4.html">4 · 공고 가져와 나누기</a>
+<a class="nav-a" href="../lab2/step5.html">5 · 설명서 남기기</a>
+<a class="nav-a" href="../lab2/extra.html">＋ 영문·스캔 PDF</a>
+</div>
+<div class="nav-h">// 실습 3 · 근거 붙인 보고문</div><div class="tree">
+<a class="nav-a" href="../lab3/index.html">개요</a>
+<a class="nav-a" href="../lab3/step1.html">1 · 일단 써보게</a>
+<a class="nav-a" href="../lab3/step2.html">2 · 숫자마다 출처</a>
+<a class="nav-a" href="../lab3/step3.html">3 · 숫자 5개 역추적</a>
+<a class="nav-a" href="../lab3/step4.html">4·5 · 없는 문장·톤 두 벌</a>
+<a class="nav-a" href="../lab3/extra.html">＋ 더 해보기</a>
+</div>
+<div class="nav-h">// 실습 4 · 대시보드와 디자인</div><div class="tree">
+<a class="nav-a" href="../lab4/index.html">개요</a>
+<a class="nav-a" href="../lab4/step1.html">1 · 무엇을 보여줄지</a>
+<a class="nav-a" href="../lab4/step2.html">2 · 뼈대·검산</a>
+<a class="nav-a" href="../lab4/step3.html">3 · Before 캡처</a>
+<a class="nav-a" href="../lab4/step4.html">4 · 말로 인상 바꾸기</a>
+<a class="nav-a" href="../lab4/step5.html">5 · 두 무드 비교</a>
+<a class="nav-a" href="../lab4/step6.html">6 · 다크모드·반응형</a>
+<a class="nav-a" href="../lab4/step7.html">7 · 재검산·After</a>
+<a class="nav-a" href="../lab4/stuck.html">막혔을 때 쓰는 문장</a>
+</div>
+<div class="nav-h">// 여유 실습</div><div class="tree">
+<a class="nav-a" href="../lab5/index.html">A · 회의 녹취 정리</a>
+<a class="nav-a" href="../lab5/step1.html">A-1 · 결정만 골라내기</a>
+<a class="nav-a" href="../lab5/step2.html">A-2 · 담당자·마감</a>
+<a class="nav-a" href="../lab5/step3.html">A-3 · 근거 남기기</a>
+<a class="nav-a" href="../lab6/index.html">B · 링크로 공유</a>
+</div>
+<div class="nav-h">// 도움말</div><div class="tree">
+<a class="nav-a" href="../help/errors.html">에러가 났어요</a>
+<a class="nav-a" href="../help/glossary.html">이 말이 무슨 뜻이죠</a>
+<a class="nav-a" href="../help/how-to-ask.html">AI에게 잘 시키는 법</a>
+<a class="nav-a" href="../help/prompts.html">오늘 내가 친 문장</a>
+<a class="nav-a" href="../help/next.html">강의 끝나고 뭘 해볼까</a>
+</div></nav>
+    <div class="side__foot">
+      <button class="iconbtn" id="themeBtn" title="테마 전환"><span id="themeIc">◐</span> <span id="themeLbl">light</span></button>
+      <a class="iconbtn" href="../index.html" title="홈">↖ home</a>
+    </div>
+  </aside>
+  <main class="main">
+    <div class="cmdbar mono">
+      <button class="burger" id="burger" aria-label="메뉴">≡</button>
+      <span class="path"><b>~/ax-tutor</b> <span class="full">$ cat</span> <span class="cur">lab2/step2.md</span></span>
+      <span class="caret"></span><span class="spacer"></span>
+      <span class="stat">실습 2 · 계약·입찰 레이더</span>
+    </div>
+    <div class="wrap">
+      <article class="doc md rise">
+        <div class="kicker mono"><b>//</b> 실습 2 · 계약·입찰 레이더</div>
+<h1 id="2단계-열두-건으로-늘리기">2단계. 열두 건으로 늘리기<a class="headerlink" href="#2단계-열두-건으로-늘리기" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">이 단계에서 하는 일 (약 12분)</p>
+<ul>
+<li>1단계와 같은 방식을 계약서 12건 전부에 적용합니다</li>
+<li>계약대장과 맞춰 빠진 건이 없는지 확인합니다</li>
+<li>나가는 표기를 한 가지 형태로 통일합니다</li>
+</ul>
+</div>
+<div class="admonition info">
+<p class="admonition-title">이 단계의 결과 파일 이름과 칸 규격은 이 페이지 맨 아래에 있습니다</p>
+</div>
+<hr />
+<h2 id="먼저-여러분-문장으로-시켜보세요">먼저 여러분 문장으로 시켜보세요<a class="headerlink" href="#먼저-여러분-문장으로-시켜보세요" title="Permanent link">&para;</a></h2>
+<div class="admonition quote">
+<p class="admonition-title">여기에 여러분 말로 채워서 실행하세요</p>
+<p><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_</span></p>
+</div>
+<hr />
+<h2 id="나온-것을-열어봅니다">나온 것을 열어봅니다<a class="headerlink" href="#나온-것을-열어봅니다" title="Permanent link">&para;</a></h2>
+<div class="admonition example">
+<p class="admonition-title">종료일 칸을 위에서 아래로 훑어보세요</p>
+<ul>
+<li><strong>다 같은 모양인가요?</strong></li>
+<li>이 표를 날짜순으로 정렬할 수 있을까요?</li>
+<li>그리고 몇 행인가요? <code>계약대장.xlsx</code> 는 몇 행인가요?</li>
+</ul>
+</div>
+<hr />
+<details class="question">
+<summary>① 4분이 지나도 막혔다면 — 아직 펼치지 마세요</summary>
+<p>종료일 칸을 위에서 아래로 훑어보세요. 이 표를 날짜순으로 정렬할 수 있을까요?</p>
+</details>
+<details class="tip">
+<summary>② 8분이 지났다면 — 정해야 할 세 가지</summary>
+<p>정해야 할 것은 셋입니다 — <strong>결과를 어디에 넣을지 / 날짜를 어떤 모양 하나로 통일할지 / 금액을 어떻게 쓸지.</strong></p>
+<p>뒤에 다시 열 파일은 <code>다음달_챙길일.xlsx</code> 이고, 이 단계 결과는 <code>계약만료</code> 시트에 들어갑니다.
+<strong>정답 행 수는 14행입니다.</strong> PDF는 12건인데 14행인 이유는 여러분이 채우세요.</p>
+</details>
+<details class="example">
+<summary>③ 모범답안 — 잘 되는 문장은 이렇게 생겼습니다 (여러분 문장을 한 번 보내본 뒤에 여세요)</summary>
+<p>하루 중 가장 긴 7줄입니다. 한 줄에 결정이 하나씩만 들어 있습니다.</p>
+<div class="highlight"><pre><span></span><code>계약서 폴더의 PDF 전부에 1단계와 같은 방식을 적용해줘.
+몇 페이지에 있다고 위치로 찾지 말고, 문서마다 공통으로 나오는 말을 단서로 찾아줘.
+스캔된 PDF는 이미지를 읽는 방식으로 처리하고, 그래도 안 읽히면 판독불가라고 적어줘.
+종료일이 기간으로만 적힌 건 계산해서 넣되 계산한 값이라고 표시해줘.
+계약대장에는 있는데 PDF가 없는 건은 문서없음이라고 적어줘.
+결과는 다음달_챙길일.xlsx 파일의 계약만료 시트에 저장해줘.
+종료일은 2026-09-30 한 가지 형태로 통일하고 금액은 숫자만 써줘.
+</code></pre></div>
+<p><strong>이 문장이 하는 일</strong></p>
+<table>
+<thead>
+<tr>
+<th>이 줄이</th>
+<th>없으면</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>위치로 찾지 말고 공통으로 나오는 말을 단서로</code></td>
+<td>첫 PDF에서만 맞습니다. 12건 중 몇 건이 엉뚱한 값으로 채워지고, <strong>다음 달 새 PDF에는 아예 안 통합니다</strong></td>
+</tr>
+<tr>
+<td><code>종료일은 2026-09-30 한 가지 형태로</code></td>
+<td>세 가지 표기가 그대로 섞여 나옵니다. 실습 4에서 이 표를 화면에 올릴 때 <strong>정렬이 깨집니다</strong></td>
+</tr>
+<tr>
+<td><code>계산한 값이라고 표시해줘</code></td>
+<td>문서에 적힌 종료일과 계산해서 채운 종료일이 구분되지 않습니다</td>
+</tr>
+<tr>
+<td><code>PDF가 없는 건은 문서없음</code></td>
+<td>14행이어야 할 표가 12행이 됩니다. 빠진 2건은 세어보기 전엔 안 보입니다</td>
+</tr>
+</tbody>
+</table>
+<p><strong>한 번에 잘 됐다면</strong> — 여러분 문장과 이 답안에서 <strong>다른 곳을 한 곳만</strong> 찾아보세요. 특히 <strong>날짜 줄</strong>이 여러분 문장에 있었는지 보세요.
+<strong>아직 어긋난다면</strong> — 이 문장으로 갈아타고 3단계로 가세요. <strong>오늘은 완주가 먼저입니다.</strong> 여기가 이 실습의 최소 목표 지점입니다.</p>
+</details>
+<hr />
+<h2 id="그걸-채워서-다시-말해보세요">그걸 채워서 다시 말해보세요<a class="headerlink" href="#그걸-채워서-다시-말해보세요" title="Permanent link">&para;</a></h2>
+<div class="admonition quote">
+<p class="admonition-title">빠진 것만 덧붙여 다시 시키세요</p>
+<p><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_</span></p>
+</div>
+<hr />
+<h2 id="뭐가-달라졌는지-봅니다">뭐가 달라졌는지 봅니다<a class="headerlink" href="#뭐가-달라졌는지-봅니다" title="Permanent link">&para;</a></h2>
+<div class="admonition success">
+<p class="admonition-title">이렇게 나오면 정상입니다</p>
+<ul>
+<li><code>다음달_챙길일.xlsx</code> 에 <code>계약만료</code> 시트가 생겼고 <strong>14행</strong>입니다</li>
+<li>그중 2행은 <code>문서없음</code> 으로 표시돼 있습니다</li>
+<li><strong>종료일 칸에 형태가 다른 표기가 하나도 없습니다</strong></li>
+<li>기간으로만 적혀 있어 계산해서 채운 건이 계산값이라고 표시돼 있습니다</li>
+<li>금액이 없는 건은 비어 있고 사유 칸에 이유가 적혀 있습니다</li>
+</ul>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">이렇게 나왔다면</p>
+<ul>
+<li><strong>12행이 나왔다</strong> → 대장에만 있는 건이 빠졌습니다. <strong>"계약대장.xlsx와 대조해서 PDF가 없는 계약이 몇 건인지 세고, 그 건들도 행으로 남겨줘"</strong></li>
+<li><strong>13행이 나왔다</strong> → 없는 걸 하나 지운 것입니다. 같은 문장으로 물어보세요</li>
+<li>종료일 표기가 섞여 있다 → <strong>"종료일을 2026-09-30 형태 한 가지로 통일하고, 몇 건을 바꿨는지 알려줘"</strong></li>
+<li>어떤 계약의 값이 전부 비어 있다 → 사진으로 스캔된 PDF입니다. <strong>"이 PDF는 이미지로 되어 있으니 이미지를 읽는 방식으로 다시 시도하고, 그래도 안 되면 판독불가라고 적어줘"</strong></li>
+<li>영문 계약서의 값이 빠졌다 → <strong>"영문으로 된 계약서도 같은 항목을 뽑아줘. 항목 이름은 한글 그대로 써줘"</strong></li>
+</ul>
+</div>
+<details class="note">
+<summary>왜 '2페이지 표에 있어'라고 하면 안 될까요</summary>
+<p>그 PDF에서만 통하기 때문입니다. 12건은 서식이 제각각이고, <strong>다음 달에 올 새 PDF는 또 다릅니다.</strong></p>
+<p>"계약기간이나 유효기간이라는 말 주변을 보고, 표에 없으면 본문에서 '까지'라는 말 주변을 봐" 처럼 <strong>찾는 단서</strong>로 말하면 12건 전부에 통합니다.</p>
+</details>
+<details class="note">
+<summary>표기를 통일하는 비용을 왜 지금 치를까요</summary>
+<p>지금 안 정하면 그 표를 실습 3에서 다시 읽고 실습 4에서 화면에 올릴 때 <strong>정렬과 거르기가 깨지는 것으로 대가를 치릅니다.</strong> 오늘 안에 자기가 치르게 되어 있습니다.</p>
+</details>
+<hr />
+<div class="admonition abstract">
+<p class="admonition-title">최소 코스 — 여기까지면 오늘 목표 달성입니다</p>
+<p><strong><code>계약만료</code> 시트가 14행</strong>이면 이 실습의 목표는 달성입니다.</p>
+</div>
+<hr />
+<h2 id="이-단계-결과물-규격">이 단계 결과물 규격<a class="headerlink" href="#이-단계-결과물-규격" title="Permanent link">&para;</a></h2>
+<p><code>다음달_챙길일.xlsx</code></p>
+<table>
+<thead>
+<tr>
+<th>시트</th>
+<th>칸 이름 (이 순서, 이 표기)</th>
+<th>행 수</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>계약만료</code></td>
+<td>계약번호 / 계약명 / 거래처 / 시작일 / 종료일 / 계약금액 / 자동갱신 / 판정 / 잔여일수 / 사유 / 사용부서</td>
+<td>14 (<code>문서없음</code> 2건 포함)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>값 표기 규칙</strong></p>
+<table>
+<thead>
+<tr>
+<th>칸</th>
+<th>규칙</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>종료일 / 시작일</td>
+<td><code>2026-09-30</code> 한 가지 형태. 계산으로 채운 값은 별도 표시를 남깁니다</td>
+</tr>
+<tr>
+<td>계약금액</td>
+<td>숫자만. 금액이 문서에 없는 건은 <strong>비워두고 사유 칸에</strong> 적습니다</td>
+</tr>
+<tr>
+<td><code>판정</code></td>
+<td>라벨은 3단계 전에 여러분이 정합니다. 정한 집합 밖의 표현을 쓰지 않습니다</td>
+</tr>
+<tr>
+<td>빈칸</td>
+<td><code>문서없음</code> · <code>판독불가</code> 처럼 <strong>이유가 있는 빈칸은 라벨로</strong>, 정말 없는 값은 비워둡니다</td>
+</tr>
+</tbody>
+</table>
+<p>(<code>사용부서</code> 는 <code>부서별_계약담당.xlsx</code> 에 있습니다)</p>
+<hr />
+<p><strong>뭐가 달라졌는지 봅니다 — 체크포인트</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>계약만료</code> 시트가 <strong>14행</strong>이다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 종료일 칸에 다른 모양의 표기가 하나도 없다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 빈칸 2건을 골라 원본 PDF를 열어 "정말 없어서"인지 확인했다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 계산해서 채운 종료일이 표시돼 있다</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">여기서 시간이 다 됐다면</p>
+<p><code>lab2/못따라왔을때/2단계결과/</code> 를 복사해 오세요. 3단계는 그걸로 갑니다.</p>
+</div>
+<div class="stage-nav">
+<p><strong>← 이전</strong> <a href"step1.html">1단계. 계약서 한 장만 제대로</a> · <strong>다음 →</strong> <a href"step3.html">3단계. 우리 회사 소개 문단 직접 쓰기</a></p>
+</div>
+<nav class="pager">
+<a class="prev" href="../lab2/step1.html"><span class="lbl">← 이전</span><span class="ttl">1 · 계약서 한 장</span></a>
+<a class="next" href="../lab2/step3.html"><span class="lbl">다음 →</span><span class="ttl">3 · 회사소개 문단</span></a>
+</nav>
+      </article>
+      <aside class="toc mono"><h4>On this page</h4>
+<a href="#2단계-열두-건으로-늘리기">2단계. 열두 건으로 늘리기</a>
+<a href="#먼저-여러분-문장으로-시켜보세요">먼저 여러분 문장으로 시켜보세요</a>
+<a href="#나온-것을-열어봅니다">나온 것을 열어봅니다</a>
+<a href="#그걸-채워서-다시-말해보세요">그걸 채워서 다시 말해보세요</a>
+<a href="#뭐가-달라졌는지-봅니다">뭐가 달라졌는지 봅니다</a>
+<a href="#이-단계-결과물-규격">이 단계 결과물 규격</a></aside>
+    </div>
+  </main>
+</div>
+<script src="../assets/site.js"></script>
+</body>
+</html>

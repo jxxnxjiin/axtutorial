@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="ko" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2. 오후 규칙 3가지 · ax-tutor</title>
+<meta name="description" content="시작하기 — 2. 오후 규칙 3가지 · ax-tutor 실습 위키">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<div class="shell">
+  <aside class="side" id="side">
+    <div class="brand">
+      <a class="brand__row" href="../index.html" style="text-decoration:none">
+        <span class="ast mono">✻</span>
+        <div><div class="brand__name">ax<b>-</b>tutor</div></div>
+      </a>
+      <div class="brand__sub">Claude Code · 실습 위키</div>
+      <div class="session"><span class="dot"></span><span class="live">LIVE</span>
+        <span style="color:var(--muted)">강의 진행 중</span><span class="clock mono" id="clock">--:--</span></div>
+    </div>
+    <nav><div class="nav-h">// 홈</div>
+<a class="nav-a" href="../index.html"><span class="g">◆</span> 오늘의 지도</a>
+<a class="nav-a" href="../index.html#materials"><span class="g">▤</span> 강의 자료 내려받기</a>
+<div class="nav-h">// 시작하기</div><div class="tree">
+<a class="nav-a" href="../start/prepare.html">0 · 준비물과 사전 설치</a>
+<a class="nav-a" href="../start/first-5min.html">1 · 처음 5분</a>
+<a class="nav-a active" href="../start/rules.html">2 · 오후 규칙 3가지</a>
+</div>
+<div class="nav-h">// 실습 1 · 물류비 마감</div><div class="tree">
+<a class="nav-a" href="../lab1/index.html">개요</a>
+<a class="nav-a" href="../lab1/step1.html">1 · 요금표를 표로</a>
+<a class="nav-a" href="../lab1/step2.html">2 · 청구서 합치기</a>
+<a class="nav-a" href="../lab1/step3.html">3 · 120건 재계산</a>
+<a class="nav-a" href="../lab1/step4.html">4 · 검증 설계·검산</a>
+<a class="nav-a" href="../lab1/extra.html">＋ 더 해보기</a>
+</div>
+<div class="nav-h">// 실습 2 · 계약·입찰 레이더</div><div class="tree">
+<a class="nav-a" href="../lab2/index.html">개요</a>
+<a class="nav-a" href="../lab2/step1.html">1 · 계약서 한 장</a>
+<a class="nav-a" href="../lab2/step2.html">2 · 열두 건으로</a>
+<a class="nav-a" href="../lab2/step3.html">3 · 회사소개 문단</a>
+<a class="nav-a" href="../lab2/step4.html">4 · 공고 가져와 나누기</a>
+<a class="nav-a" href="../lab2/step5.html">5 · 설명서 남기기</a>
+<a class="nav-a" href="../lab2/extra.html">＋ 영문·스캔 PDF</a>
+</div>
+<div class="nav-h">// 실습 3 · 근거 붙인 보고문</div><div class="tree">
+<a class="nav-a" href="../lab3/index.html">개요</a>
+<a class="nav-a" href="../lab3/step1.html">1 · 일단 써보게</a>
+<a class="nav-a" href="../lab3/step2.html">2 · 숫자마다 출처</a>
+<a class="nav-a" href="../lab3/step3.html">3 · 숫자 5개 역추적</a>
+<a class="nav-a" href="../lab3/step4.html">4·5 · 없는 문장·톤 두 벌</a>
+<a class="nav-a" href="../lab3/extra.html">＋ 더 해보기</a>
+</div>
+<div class="nav-h">// 실습 4 · 대시보드와 디자인</div><div class="tree">
+<a class="nav-a" href="../lab4/index.html">개요</a>
+<a class="nav-a" href="../lab4/step1.html">1 · 무엇을 보여줄지</a>
+<a class="nav-a" href="../lab4/step2.html">2 · 뼈대·검산</a>
+<a class="nav-a" href="../lab4/step3.html">3 · Before 캡처</a>
+<a class="nav-a" href="../lab4/step4.html">4 · 말로 인상 바꾸기</a>
+<a class="nav-a" href="../lab4/step5.html">5 · 두 무드 비교</a>
+<a class="nav-a" href="../lab4/step6.html">6 · 다크모드·반응형</a>
+<a class="nav-a" href="../lab4/step7.html">7 · 재검산·After</a>
+<a class="nav-a" href="../lab4/stuck.html">막혔을 때 쓰는 문장</a>
+</div>
+<div class="nav-h">// 여유 실습</div><div class="tree">
+<a class="nav-a" href="../lab5/index.html">A · 회의 녹취 정리</a>
+<a class="nav-a" href="../lab5/step1.html">A-1 · 결정만 골라내기</a>
+<a class="nav-a" href="../lab5/step2.html">A-2 · 담당자·마감</a>
+<a class="nav-a" href="../lab5/step3.html">A-3 · 근거 남기기</a>
+<a class="nav-a" href="../lab6/index.html">B · 링크로 공유</a>
+</div>
+<div class="nav-h">// 도움말</div><div class="tree">
+<a class="nav-a" href="../help/errors.html">에러가 났어요</a>
+<a class="nav-a" href="../help/glossary.html">이 말이 무슨 뜻이죠</a>
+<a class="nav-a" href="../help/how-to-ask.html">AI에게 잘 시키는 법</a>
+<a class="nav-a" href="../help/prompts.html">오늘 내가 친 문장</a>
+<a class="nav-a" href="../help/next.html">강의 끝나고 뭘 해볼까</a>
+</div></nav>
+    <div class="side__foot">
+      <button class="iconbtn" id="themeBtn" title="테마 전환"><span id="themeIc">◐</span> <span id="themeLbl">light</span></button>
+      <a class="iconbtn" href="../index.html" title="홈">↖ home</a>
+    </div>
+  </aside>
+  <main class="main">
+    <div class="cmdbar mono">
+      <button class="burger" id="burger" aria-label="메뉴">≡</button>
+      <span class="path"><b>~/ax-tutor</b> <span class="full">$ cat</span> <span class="cur">start/rules.md</span></span>
+      <span class="caret"></span><span class="spacer"></span>
+      <span class="stat">시작하기</span>
+    </div>
+    <div class="wrap">
+      <article class="doc md rise">
+        <div class="kicker mono"><b>//</b> 시작하기</div>
+<h1 id="2-오후-규칙-3가지">2. 오후 규칙 3가지<a class="headerlink" href="#2-오후-규칙-3가지" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">이 단계에서 하는 일 (약 10분)</p>
+<ul>
+<li>오후 내내 지킬 규칙 세 줄을 확인합니다</li>
+<li>강사가 일부러 어긋나게 시켜보는 장면을 봅니다</li>
+<li>오늘 채워갈 빈 목록이 어디 있는지 확인합니다</li>
+</ul>
+</div>
+<hr />
+<h2 id="규칙-세-줄">규칙 세 줄<a class="headerlink" href="#규칙-세-줄" title="Permanent link">&para;</a></h2>
+<div class="admonition abstract">
+<p class="admonition-title">① 여러분 문장으로 먼저 시켜보세요</p>
+<p>오늘 이 위키에는 복사해서 붙여넣을 완성 문장이 펼쳐져 있지 않습니다. 한 줄이어도 됩니다. 짧아도 됩니다. <strong>먼저 여러분 말로 시켜보세요.</strong></p>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">② 빨간 글씨(에러)는 정상입니다</p>
+<p>그대로 복사해서 AI에게 보여주세요. 그리고 한 줄만 붙이세요 — <strong>"지금 (어느 단계)에서 (어떤 파일)을 (어떻게) 했더니 났어. 내 짐작엔 (          ) 때문인 것 같아."</strong> 짐작이 틀려도 됩니다. <strong>틀린 짐작도 단서입니다.</strong></p>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">③ 다 됐는지는 AI 말이 아니라 파일로 확인합니다</p>
+<p>"완료했습니다"는 완료가 아닙니다. 폴더에 파일이 생겼고, 열어봤고, 행 수가 맞아야 완료입니다.</p>
+</div>
+<hr />
+<h2 id="ai가-되물으면-그건-내가-안-말한-것입니다">AI가 되물으면, 그건 내가 안 말한 것입니다<a class="headerlink" href="#ai가-되물으면-그건-내가-안-말한-것입니다" title="Permanent link">&para;</a></h2>
+<p>AI가 <em>"어떤 이름으로 저장할까요?"</em> 라고 되물으면 AI가 잘못한 게 아닙니다. <strong>여러분이 안 말한 것</strong>입니다.</p>
+<p>되물은 내용을 그대로 종이에 적어두세요. 오늘 오후에 그 목록이 다섯 줄까지 늘어납니다.</p>
+<hr />
+<h2 id="오늘-채워갈-빈-목록">오늘 채워갈 빈 목록<a class="headerlink" href="#오늘-채워갈-빈-목록" title="Permanent link">&para;</a></h2>
+<p>지금은 제목만 있고 안이 비어 있습니다. 오후 내내 한 줄씩 여러분 말로 채워집니다.</p>
+<div class="admonition quote">
+<p class="admonition-title">내 문장에 이게 있나</p>
+<ol>
+<li><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_____</span></li>
+<li><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_____</span></li>
+<li><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_____</span></li>
+<li><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_____</span></li>
+<li><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_____</span></li>
+</ol>
+<p>이 목록의 본거지는 <a href"../help/how-to-ask.html">AI에게 잘 시키는 법</a> 페이지입니다. 종이에 적어도 되고, 그 페이지를 열어두고 적어도 됩니다.</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">여기를 미리 채워달라고 AI에게 시키지 마세요</p>
+<p>다섯 줄을 지금 채우면 오늘 오후에 겪을 것이 통째로 사라집니다. <strong>겪은 뒤에 적는 것이 이 목록의 전부</strong>입니다.</p>
+</div>
+<hr />
+<h2 id="접힌-상자를-여는-순서">접힌 상자를 여는 순서<a class="headerlink" href="#접힌-상자를-여는-순서" title="Permanent link">&para;</a></h2>
+<p>각 단계 페이지에는 접힌 상자가 세 개 있습니다.</p>
+<table>
+<thead>
+<tr>
+<th>상자</th>
+<th>언제 여나</th>
+<th>안에 있는 것</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>① 질문 하나</strong></td>
+<td>그 단계 예상 시간의 1/3이 지났는데 막혔을 때</td>
+<td>어디를 돌아볼지 방향 하나</td>
+</tr>
+<tr>
+<td><strong>② 정해야 할 것들</strong></td>
+<td>2/3가 지났을 때</td>
+<td>무엇을 정해야 하는지 + 이 실습에서 그 값이 뭔지</td>
+</tr>
+<tr>
+<td><strong>③ 모범답안</strong></td>
+<td><strong>여러분 문장을 한 번 보내본 뒤라면 언제든</strong></td>
+<td>잘 되는 문장 4~7줄 + 그 줄이 하는 일</td>
+</tr>
+</tbody>
+</table>
+<p>③은 시계로 잠그지 않습니다. 조건은 하나뿐입니다 — <strong>한 줄이라도 먼저 여러분 말로 보내볼 것.</strong></p>
+<p>③을 열고 갈아탄 것은 뒤처진 게 아닙니다. <strong>오늘은 완주가 먼저입니다.</strong></p>
+<hr />
+<h2 id="그래도-안-되면">그래도 안 되면<a class="headerlink" href="#그래도-안-되면" title="Permanent link">&para;</a></h2>
+<p>각 실습 데이터 폴더 안에 <strong><code>못따라왔을때/</code></strong> 가 있습니다. 그 단계까지의 결과가 완성된 채로 들어 있습니다. 복사해 오면 다음 단계부터 바로 이어서 할 수 있습니다.</p>
+<p>여는 데 이유를 대지 않아도 됩니다. 시간이 다 됐으면 그냥 여세요.</p>
+<hr />
+<p><strong>체크포인트</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 규칙 세 줄을 읽었다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 빈 목록이 어디 있는지 안다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 접힌 상자 ③을 여는 조건이 시간이 아니라는 걸 안다</li>
+</ul>
+<div class="stage-nav">
+<p><strong>← 이전</strong> <a href"first-5min.html">1. 처음 5분</a> · <strong>다음 →</strong> <a href"../lab1/index.html">실습 1 개요</a></p>
+</div>
+<nav class="pager">
+<a class="prev" href="../start/first-5min.html"><span class="lbl">← 이전</span><span class="ttl">1 · 처음 5분</span></a>
+<a class="next" href="../lab1/index.html"><span class="lbl">다음 →</span><span class="ttl">개요</span></a>
+</nav>
+      </article>
+      <aside class="toc mono"><h4>On this page</h4>
+<a href="#2-오후-규칙-3가지">2. 오후 규칙 3가지</a>
+<a href="#규칙-세-줄">규칙 세 줄</a>
+<a href="#ai가-되물으면-그건-내가-안-말한-것입니다">AI가 되물으면, 그건 내가 안 말한 것입니다</a>
+<a href="#오늘-채워갈-빈-목록">오늘 채워갈 빈 목록</a>
+<a href="#접힌-상자를-여는-순서">접힌 상자를 여는 순서</a>
+<a href="#그래도-안-되면">그래도 안 되면</a></aside>
+    </div>
+  </main>
+</div>
+<script src="../assets/site.js"></script>
+</body>
+</html>

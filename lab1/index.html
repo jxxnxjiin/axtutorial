@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="ko" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>실습 1 · 이번 달 물류비 마감 · ax-tutor</title>
+<meta name="description" content="실습 1 · 물류비 마감 — 실습 1 · 이번 달 물류비 마감 · ax-tutor 실습 위키">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<div class="shell">
+  <aside class="side" id="side">
+    <div class="brand">
+      <a class="brand__row" href="../index.html" style="text-decoration:none">
+        <span class="ast mono">✻</span>
+        <div><div class="brand__name">ax<b>-</b>tutor</div></div>
+      </a>
+      <div class="brand__sub">Claude Code · 실습 위키</div>
+      <div class="session"><span class="dot"></span><span class="live">LIVE</span>
+        <span style="color:var(--muted)">강의 진행 중</span><span class="clock mono" id="clock">--:--</span></div>
+    </div>
+    <nav><div class="nav-h">// 홈</div>
+<a class="nav-a" href="../index.html"><span class="g">◆</span> 오늘의 지도</a>
+<a class="nav-a" href="../index.html#materials"><span class="g">▤</span> 강의 자료 내려받기</a>
+<div class="nav-h">// 시작하기</div><div class="tree">
+<a class="nav-a" href="../start/prepare.html">0 · 준비물과 사전 설치</a>
+<a class="nav-a" href="../start/first-5min.html">1 · 처음 5분</a>
+<a class="nav-a" href="../start/rules.html">2 · 오후 규칙 3가지</a>
+</div>
+<div class="nav-h">// 실습 1 · 물류비 마감</div><div class="tree">
+<a class="nav-a active" href="../lab1/index.html">개요</a>
+<a class="nav-a" href="../lab1/step1.html">1 · 요금표를 표로</a>
+<a class="nav-a" href="../lab1/step2.html">2 · 청구서 합치기</a>
+<a class="nav-a" href="../lab1/step3.html">3 · 120건 재계산</a>
+<a class="nav-a" href="../lab1/step4.html">4 · 검증 설계·검산</a>
+<a class="nav-a" href="../lab1/extra.html">＋ 더 해보기</a>
+</div>
+<div class="nav-h">// 실습 2 · 계약·입찰 레이더</div><div class="tree">
+<a class="nav-a" href="../lab2/index.html">개요</a>
+<a class="nav-a" href="../lab2/step1.html">1 · 계약서 한 장</a>
+<a class="nav-a" href="../lab2/step2.html">2 · 열두 건으로</a>
+<a class="nav-a" href="../lab2/step3.html">3 · 회사소개 문단</a>
+<a class="nav-a" href="../lab2/step4.html">4 · 공고 가져와 나누기</a>
+<a class="nav-a" href="../lab2/step5.html">5 · 설명서 남기기</a>
+<a class="nav-a" href="../lab2/extra.html">＋ 영문·스캔 PDF</a>
+</div>
+<div class="nav-h">// 실습 3 · 근거 붙인 보고문</div><div class="tree">
+<a class="nav-a" href="../lab3/index.html">개요</a>
+<a class="nav-a" href="../lab3/step1.html">1 · 일단 써보게</a>
+<a class="nav-a" href="../lab3/step2.html">2 · 숫자마다 출처</a>
+<a class="nav-a" href="../lab3/step3.html">3 · 숫자 5개 역추적</a>
+<a class="nav-a" href="../lab3/step4.html">4·5 · 없는 문장·톤 두 벌</a>
+<a class="nav-a" href="../lab3/extra.html">＋ 더 해보기</a>
+</div>
+<div class="nav-h">// 실습 4 · 대시보드와 디자인</div><div class="tree">
+<a class="nav-a" href="../lab4/index.html">개요</a>
+<a class="nav-a" href="../lab4/step1.html">1 · 무엇을 보여줄지</a>
+<a class="nav-a" href="../lab4/step2.html">2 · 뼈대·검산</a>
+<a class="nav-a" href="../lab4/step3.html">3 · Before 캡처</a>
+<a class="nav-a" href="../lab4/step4.html">4 · 말로 인상 바꾸기</a>
+<a class="nav-a" href="../lab4/step5.html">5 · 두 무드 비교</a>
+<a class="nav-a" href="../lab4/step6.html">6 · 다크모드·반응형</a>
+<a class="nav-a" href="../lab4/step7.html">7 · 재검산·After</a>
+<a class="nav-a" href="../lab4/stuck.html">막혔을 때 쓰는 문장</a>
+</div>
+<div class="nav-h">// 여유 실습</div><div class="tree">
+<a class="nav-a" href="../lab5/index.html">A · 회의 녹취 정리</a>
+<a class="nav-a" href="../lab5/step1.html">A-1 · 결정만 골라내기</a>
+<a class="nav-a" href="../lab5/step2.html">A-2 · 담당자·마감</a>
+<a class="nav-a" href="../lab5/step3.html">A-3 · 근거 남기기</a>
+<a class="nav-a" href="../lab6/index.html">B · 링크로 공유</a>
+</div>
+<div class="nav-h">// 도움말</div><div class="tree">
+<a class="nav-a" href="../help/errors.html">에러가 났어요</a>
+<a class="nav-a" href="../help/glossary.html">이 말이 무슨 뜻이죠</a>
+<a class="nav-a" href="../help/how-to-ask.html">AI에게 잘 시키는 법</a>
+<a class="nav-a" href="../help/prompts.html">오늘 내가 친 문장</a>
+<a class="nav-a" href="../help/next.html">강의 끝나고 뭘 해볼까</a>
+</div></nav>
+    <div class="side__foot">
+      <button class="iconbtn" id="themeBtn" title="테마 전환"><span id="themeIc">◐</span> <span id="themeLbl">light</span></button>
+      <a class="iconbtn" href="../index.html" title="홈">↖ home</a>
+    </div>
+  </aside>
+  <main class="main">
+    <div class="cmdbar mono">
+      <button class="burger" id="burger" aria-label="메뉴">≡</button>
+      <span class="path"><b>~/ax-tutor</b> <span class="full">$ cat</span> <span class="cur">lab1/index.md</span></span>
+      <span class="caret"></span><span class="spacer"></span>
+      <span class="stat">실습 1 · 물류비 마감</span>
+    </div>
+    <div class="wrap">
+      <article class="doc md rise">
+        <div class="kicker mono"><b>//</b> 실습 1 · 물류비 마감</div>
+<h1 id="실습-1--이번-달-물류비-마감">실습 1 · 이번 달 물류비 마감<a class="headerlink" href="#실습-1--이번-달-물류비-마감" title="Permanent link">&para;</a></h1>
+<p><span class="route-badge">👥 <strong>강사와 함께 가는 최소 코스</strong> — 0단계 → 1 → 2 → 3 → 4단계</span>
+<span class="route-badge">🏃 <strong>혼자 더 가는 코스</strong> — 위 전부 + <a href"extra.html">더 해보기</a></span></p>
+<p><strong>한 줄 목표: 양식이 다른 청구서 두 장과 사진으로 찍힌 요금표를 맞대어, 청구가 맞는지 120건 전부에 대해 스스로 증명한다.</strong></p>
+<p>예상 소요 <strong>50분</strong>.</p>
+<hr />
+<h2 id="오늘-받은-일">오늘 받은 일<a class="headerlink" href="#오늘-받은-일" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>입사 3주차. 사수가 말합니다.</p>
+<p>"우리가 택배사 두 곳을 쓰는데, 이번 달 청구서가 둘 다 왔어요. 계약 요금표대로 청구된 건지 한번 봐주세요. 요금표는 담당자가 종이로 주고 간 걸 폰으로 찍어놨고, 특약 조건은 텍스트 파일로 정리해뒀어요. 아, 두 회사 청구서 양식이 완전히 달라요."</p>
+</blockquote>
+<p>택배 요금은 <strong>무게 구간과 도착 지역</strong>으로 정해집니다. 발송한 건마다 정당한 요금을 다시 계산해서 청구액과 비교하면 됩니다. 여기까지가 알아야 할 전부입니다. 회계 지식도 물류 지식도 필요 없습니다.</p>
+<hr />
+<h2 id="폴더에-있는-것-lab1">폴더에 있는 것 (<code>lab1/</code>)<a class="headerlink" href="#폴더에-있는-것-lab1" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>파일</th>
+<th>무엇</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>발송내역.xlsx</code></td>
+<td>우리가 보낸 건들의 기록</td>
+</tr>
+<tr>
+<td><code>청구서_A택배.csv</code></td>
+<td>A택배가 보내온 청구서</td>
+</tr>
+<tr>
+<td><code>청구서_B물류.xlsx</code></td>
+<td>B물류가 보내온 청구서 (<strong>A와 서식이 다릅니다</strong>)</td>
+</tr>
+<tr>
+<td><code>요금안내문/</code></td>
+<td>종이 요금표를 찍은 사진 5장</td>
+</tr>
+<tr>
+<td><code>계약특약.txt</code></td>
+<td>요금 안내문에 없는 조건들이 적힌 문서</td>
+</tr>
+<tr>
+<td><code>못따라왔을때/</code></td>
+<td>막혔을 때 여는 완제품 — <code>1단계결과/</code> <code>2단계결과/</code> <code>3단계결과/</code></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">이 실습의 결과 파일 이름과 칸 규격은 각 단계 페이지 <strong>맨 아래</strong>에 있습니다</p>
+<p>먼저 여러분 문장으로 시켜보고, 필요할 때 아래로 내려가세요.</p>
+</div>
+<hr />
+<h2 id="0단계--워밍업-2분">0단계 — 워밍업 (2분)<a class="headerlink" href="#0단계--워밍업-2분" title="Permanent link">&para;</a></h2>
+<p>여러분 말로 폴더 안을 한번 훑어보게 시켜보세요. 어떻게 말해도 됩니다.</p>
+<div class="admonition quote">
+<p class="admonition-title">여러분 문장으로 시켜보세요</p>
+<p><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_</span></p>
+<p>(예시가 아니라 <strong>빈 칸</strong>입니다. 여러분 말로 채워서 실행하세요)</p>
+</div>
+<p>그리고 <strong>두 숫자를 종이에 적어두세요.</strong></p>
+<div class="admonition abstract">
+<p class="admonition-title">종이에 적을 두 숫자</p>
+<ul>
+<li>발송내역의 건수 : <strong>120건</strong></li>
+<li>청구서 두 장의 건수 합 : <strong>118건</strong></li>
+</ul>
+</div>
+<p>두 숫자가 다릅니다. <strong>왜 다른지는 이따 2단계에서 보게 됩니다.</strong> 지금은 적어두기만 하세요.</p>
+<div class="admonition success">
+<p class="admonition-title">이렇게 나오면 정상입니다</p>
+<ul>
+<li>폴더 안 파일 목록이 화면에 나왔습니다</li>
+<li>종이(또는 메모장)에 <code>120</code> 과 <code>118</code> 두 숫자가 적혀 있습니다</li>
+</ul>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">이렇게 나왔다면</p>
+<ul>
+<li>"파일이 없다"고 한다 → 열려 있는 폴더가 <code>workshop</code>이 아닙니다. <code>파일 &gt; 폴더 열기</code>로 다시 여세요</li>
+<li>사진 5장이 안 보인다 → "요금안내문 폴더 안에 뭐가 있는지도 알려줘"라고 이어서 시켜보세요</li>
+</ul>
+</div>
+<hr />
+<h2 id="오늘-이-실습에서-만드는-것">오늘 이 실습에서 만드는 것<a class="headerlink" href="#오늘-이-실습에서-만드는-것" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>단계</th>
+<th>무엇</th>
+<th>분</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href"step1.html">1단계</a></td>
+<td>사진 5장의 요금표를 표로 옮깁니다</td>
+<td>15</td>
+</tr>
+<tr>
+<td><a href"step2.html">2단계</a></td>
+<td>청구서 두 장과 발송내역을 하나로 합칩니다</td>
+<td>13</td>
+</tr>
+<tr>
+<td><a href"step3.html">3단계</a></td>
+<td>120건을 다시 계산해 판정합니다</td>
+<td>9</td>
+</tr>
+<tr>
+<td><a href"step4.html">4단계</a></td>
+<td>확인 항목을 직접 설계해 검산합니다</td>
+<td>11</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition abstract">
+<p class="admonition-title">최소 코스 — 여기까지면 오늘 목표 달성입니다</p>
+<p><strong>2단계에서 통합 표가 122행으로 나오면</strong> 이 실습의 목표는 달성입니다. 3·4단계는 거기서 더 가는 길입니다.</p>
+</div>
+<hr />
+<h2 id="오늘-채워갈-빈-목록">오늘 채워갈 빈 목록<a class="headerlink" href="#오늘-채워갈-빈-목록" title="Permanent link">&para;</a></h2>
+<p>이 실습에서 <strong>세 줄</strong>이 채워집니다. 지금은 비어 있습니다.</p>
+<div class="admonition quote">
+<p class="admonition-title">내 문장에 이게 있나</p>
+<ol>
+<li><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>__</span></li>
+<li><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>__</span></li>
+<li><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>__</span></li>
+<li><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>__</span></li>
+<li><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>__</span></li>
+</ol>
+<p>본거지는 <a href"../help/how-to-ask.html">AI에게 잘 시키는 법</a> 입니다.</p>
+</div>
+<div class="stage-nav">
+<p><strong>← 이전</strong> <a href"../start/rules.html">2. 오후 규칙 3가지</a> · <strong>다음 →</strong> <a href"step1.html">1단계. 사진 속 요금표를 표로 옮기기</a></p>
+</div>
+<nav class="pager">
+<a class="prev" href="../start/rules.html"><span class="lbl">← 이전</span><span class="ttl">2 · 오후 규칙 3가지</span></a>
+<a class="next" href="../lab1/step1.html"><span class="lbl">다음 →</span><span class="ttl">1 · 요금표를 표로</span></a>
+</nav>
+      </article>
+      <aside class="toc mono"><h4>On this page</h4>
+<a href="#실습-1--이번-달-물류비-마감">실습 1 · 이번 달 물류비 마감</a>
+<a href="#오늘-받은-일">오늘 받은 일</a>
+<a href="#폴더에-있는-것-lab1">폴더에 있는 것 (lab1/)</a>
+<a href="#0단계--워밍업-2분">0단계 — 워밍업 (2분)</a>
+<a href="#오늘-이-실습에서-만드는-것">오늘 이 실습에서 만드는 것</a>
+<a href="#오늘-채워갈-빈-목록">오늘 채워갈 빈 목록</a></aside>
+    </div>
+  </main>
+</div>
+<script src="../assets/site.js"></script>
+</body>
+</html>

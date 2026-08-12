@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="ko" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2단계. 담당자와 마감 붙이기 · ax-tutor</title>
+<meta name="description" content="여유 실습 — 2단계. 담당자와 마감 붙이기 · ax-tutor 실습 위키">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<div class="shell">
+  <aside class="side" id="side">
+    <div class="brand">
+      <a class="brand__row" href="../index.html" style="text-decoration:none">
+        <span class="ast mono">✻</span>
+        <div><div class="brand__name">ax<b>-</b>tutor</div></div>
+      </a>
+      <div class="brand__sub">Claude Code · 실습 위키</div>
+      <div class="session"><span class="dot"></span><span class="live">LIVE</span>
+        <span style="color:var(--muted)">강의 진행 중</span><span class="clock mono" id="clock">--:--</span></div>
+    </div>
+    <nav><div class="nav-h">// 홈</div>
+<a class="nav-a" href="../index.html"><span class="g">◆</span> 오늘의 지도</a>
+<a class="nav-a" href="../index.html#materials"><span class="g">▤</span> 강의 자료 내려받기</a>
+<div class="nav-h">// 시작하기</div><div class="tree">
+<a class="nav-a" href="../start/prepare.html">0 · 준비물과 사전 설치</a>
+<a class="nav-a" href="../start/first-5min.html">1 · 처음 5분</a>
+<a class="nav-a" href="../start/rules.html">2 · 오후 규칙 3가지</a>
+</div>
+<div class="nav-h">// 실습 1 · 물류비 마감</div><div class="tree">
+<a class="nav-a" href="../lab1/index.html">개요</a>
+<a class="nav-a" href="../lab1/step1.html">1 · 요금표를 표로</a>
+<a class="nav-a" href="../lab1/step2.html">2 · 청구서 합치기</a>
+<a class="nav-a" href="../lab1/step3.html">3 · 120건 재계산</a>
+<a class="nav-a" href="../lab1/step4.html">4 · 검증 설계·검산</a>
+<a class="nav-a" href="../lab1/extra.html">＋ 더 해보기</a>
+</div>
+<div class="nav-h">// 실습 2 · 계약·입찰 레이더</div><div class="tree">
+<a class="nav-a" href="../lab2/index.html">개요</a>
+<a class="nav-a" href="../lab2/step1.html">1 · 계약서 한 장</a>
+<a class="nav-a" href="../lab2/step2.html">2 · 열두 건으로</a>
+<a class="nav-a" href="../lab2/step3.html">3 · 회사소개 문단</a>
+<a class="nav-a" href="../lab2/step4.html">4 · 공고 가져와 나누기</a>
+<a class="nav-a" href="../lab2/step5.html">5 · 설명서 남기기</a>
+<a class="nav-a" href="../lab2/extra.html">＋ 영문·스캔 PDF</a>
+</div>
+<div class="nav-h">// 실습 3 · 근거 붙인 보고문</div><div class="tree">
+<a class="nav-a" href="../lab3/index.html">개요</a>
+<a class="nav-a" href="../lab3/step1.html">1 · 일단 써보게</a>
+<a class="nav-a" href="../lab3/step2.html">2 · 숫자마다 출처</a>
+<a class="nav-a" href="../lab3/step3.html">3 · 숫자 5개 역추적</a>
+<a class="nav-a" href="../lab3/step4.html">4·5 · 없는 문장·톤 두 벌</a>
+<a class="nav-a" href="../lab3/extra.html">＋ 더 해보기</a>
+</div>
+<div class="nav-h">// 실습 4 · 대시보드와 디자인</div><div class="tree">
+<a class="nav-a" href="../lab4/index.html">개요</a>
+<a class="nav-a" href="../lab4/step1.html">1 · 무엇을 보여줄지</a>
+<a class="nav-a" href="../lab4/step2.html">2 · 뼈대·검산</a>
+<a class="nav-a" href="../lab4/step3.html">3 · Before 캡처</a>
+<a class="nav-a" href="../lab4/step4.html">4 · 말로 인상 바꾸기</a>
+<a class="nav-a" href="../lab4/step5.html">5 · 두 무드 비교</a>
+<a class="nav-a" href="../lab4/step6.html">6 · 다크모드·반응형</a>
+<a class="nav-a" href="../lab4/step7.html">7 · 재검산·After</a>
+<a class="nav-a" href="../lab4/stuck.html">막혔을 때 쓰는 문장</a>
+</div>
+<div class="nav-h">// 여유 실습</div><div class="tree">
+<a class="nav-a" href="../lab5/index.html">A · 회의 녹취 정리</a>
+<a class="nav-a" href="../lab5/step1.html">A-1 · 결정만 골라내기</a>
+<a class="nav-a active" href="../lab5/step2.html">A-2 · 담당자·마감</a>
+<a class="nav-a" href="../lab5/step3.html">A-3 · 근거 남기기</a>
+<a class="nav-a" href="../lab6/index.html">B · 링크로 공유</a>
+</div>
+<div class="nav-h">// 도움말</div><div class="tree">
+<a class="nav-a" href="../help/errors.html">에러가 났어요</a>
+<a class="nav-a" href="../help/glossary.html">이 말이 무슨 뜻이죠</a>
+<a class="nav-a" href="../help/how-to-ask.html">AI에게 잘 시키는 법</a>
+<a class="nav-a" href="../help/prompts.html">오늘 내가 친 문장</a>
+<a class="nav-a" href="../help/next.html">강의 끝나고 뭘 해볼까</a>
+</div></nav>
+    <div class="side__foot">
+      <button class="iconbtn" id="themeBtn" title="테마 전환"><span id="themeIc">◐</span> <span id="themeLbl">light</span></button>
+      <a class="iconbtn" href="../index.html" title="홈">↖ home</a>
+    </div>
+  </aside>
+  <main class="main">
+    <div class="cmdbar mono">
+      <button class="burger" id="burger" aria-label="메뉴">≡</button>
+      <span class="path"><b>~/ax-tutor</b> <span class="full">$ cat</span> <span class="cur">lab5/step2.md</span></span>
+      <span class="caret"></span><span class="spacer"></span>
+      <span class="stat">여유 실습</span>
+    </div>
+    <div class="wrap">
+      <article class="doc md rise">
+        <div class="kicker mono"><b>//</b> 여유 실습</div>
+<h1 id="2단계-담당자와-마감-붙이기">2단계. 담당자와 마감 붙이기<a class="headerlink" href="#2단계-담당자와-마감-붙이기" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">이 단계에서 하는 일 (약 12분)</p>
+<ul>
+<li>직책으로만 불린 사람을 명단과 맞춰 실명으로 연결합니다</li>
+<li>명단에 없는 이름이 나오면 추측하지 않고 표시합니다</li>
+<li>마감이 안 정해진 항목을 그대로 남깁니다</li>
+</ul>
+</div>
+<p>녹취에는 <strong>"팀장님이 봐주시기로"</strong> 처럼 직책으로만 부르는 구간이 있고, <strong>"그럼 그렇게 가시죠"</strong> 처럼 주어가 빠진 문장도 있습니다.</p>
+<hr />
+<h2 id="먼저-여러분-문장으로-시켜보세요">먼저 여러분 문장으로 시켜보세요<a class="headerlink" href="#먼저-여러분-문장으로-시켜보세요" title="Permanent link">&para;</a></h2>
+<div class="admonition quote">
+<p class="admonition-title">여기에 여러분 말로 채워서 실행하세요</p>
+<p><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_</span></p>
+</div>
+<hr />
+<h2 id="나온-것을-열어봅니다">나온 것을 열어봅니다<a class="headerlink" href="#나온-것을-열어봅니다" title="Permanent link">&para;</a></h2>
+<div class="admonition example">
+<p class="admonition-title">명단과 맞춰보세요</p>
+<p><code>참석자명단.xlsx</code> 를 열어두고 표의 담당자 칸을 훑어보세요.</p>
+<ul>
+<li><strong>명단에 없는 이름</strong>이 있나요?</li>
+<li>담당자 칸이 비어 있는 줄이 있나요? 아니면 전부 채워져 있나요?</li>
+<li>마감이 전부 채워져 있다면, 녹취에 정말 그 날짜가 나왔나요?</li>
+</ul>
+</div>
+<hr />
+<details class="question">
+<summary>① 두 번 시켜봤는데도 안 되면 — 아직 펼치지 마세요</summary>
+<p>담당자 칸이 <strong>전부</strong> 채워져 있나요? 녹취에서 담당자가 안 정해진 항목이 정말 하나도 없었을까요?</p>
+</details>
+<details class="tip">
+<summary>② 세 번째에도 안 되면 — 정해야 할 세 가지</summary>
+<ul>
+<li><strong>직책만 나온 줄을 어떻게 실명으로 바꿀지</strong> (명단과 맞추기)</li>
+<li><strong>명단에 없는 이름이 나오면 어떻게 할지</strong></li>
+<li><strong>마감이 안 정해진 항목을 어떻게 표시할지</strong></li>
+</ul>
+<p>쓸 수 있는 표시는 <code>확인필요</code> 와 <code>미정</code> 입니다.</p>
+</details>
+<details class="example">
+<summary>③ 모범답안 — 잘 되는 문장은 이렇게 생겼습니다 (한 번 시켜본 뒤라면 언제든 여세요)</summary>
+<div class="highlight"><pre><span></span><code>참석자명단.xlsx를 읽고, 직책으로만 나온 사람을 실명으로 바꿔줘.
+명단에 없는 이름이 나오면 추측하지 말고 담당자를 확인필요라고 적어줘.
+마감이 정해지지 않은 항목은 비우지 말고 미정이라고 적어줘.
+다 되면 확인필요와 미정이 각각 몇 건인지 알려줘.
+</code></pre></div>
+<p><strong>이 문장이 하는 일</strong></p>
+<table>
+<thead>
+<tr>
+<th>이 줄이</th>
+<th>없으면</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>명단에 없으면 확인필요</code></td>
+<td>비슷한 이름으로 슬쩍 바뀝니다. <strong>녹취가 잘못 적힌 건지 새 사람인지 구분이 사라집니다</strong></td>
+</tr>
+<tr>
+<td><code>마감이 없으면 미정</code></td>
+<td>그럴듯한 날짜가 채워집니다. 표를 받은 사람은 그게 회의에서 정해진 날짜인 줄 압니다</td>
+</tr>
+<tr>
+<td><code>각각 몇 건인지</code></td>
+<td>"정리했습니다"로 끝납니다. 확인해야 할 게 몇 건인지 셀 수가 없습니다</td>
+</tr>
+</tbody>
+</table>
+<p><strong>한 번에 잘 됐다면</strong> — 여러분 문장에 <strong>"추측하지 마"</strong> 에 해당하는 줄이 있었는지 보세요.
+<strong>아직 어긋난다면</strong> — 이 문장으로 갈아타고 3단계로 가세요.</p>
+</details>
+<hr />
+<h2 id="뭐가-달라졌는지-봅니다">뭐가 달라졌는지 봅니다<a class="headerlink" href="#뭐가-달라졌는지-봅니다" title="Permanent link">&para;</a></h2>
+<div class="admonition success">
+<p class="admonition-title">이렇게 나오면 정상입니다</p>
+<ul>
+<li>직책으로만 나왔던 줄에 실명이 들어가 있습니다</li>
+<li>명단에 없는 이름이 있던 줄은 <code>확인필요</code> 로 표시돼 있습니다</li>
+<li>마감이 안 정해진 줄은 <code>미정</code> 입니다</li>
+<li>두 표시의 건수가 숫자로 돌아왔습니다</li>
+</ul>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">이렇게 나왔다면</p>
+<ul>
+<li>담당자가 전부 채워져 있다 → <strong>"담당자를 어떻게 알아냈는지 줄마다 근거를 적어줘"</strong></li>
+<li>마감이 전부 채워져 있다 → <strong>"각 마감일이 녹취 어느 줄에 나왔는지 적어줘"</strong> 라고 물으면 지어낸 것이 드러납니다</li>
+<li><code>확인필요</code> 가 하나도 없다 → <strong>"참석자명단에 없는 이름이 녹취에 나오는지 이름을 전부 대조해서 알려줘"</strong></li>
+<li>실명이 명단과 미묘하게 다르다 → <strong>"담당자 이름을 참석자명단의 표기와 글자 그대로 맞춰줘"</strong></li>
+</ul>
+</div>
+<hr />
+<p><strong>체크포인트</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 직책으로만 나온 줄이 실명으로 바뀌었다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>확인필요</code> 와 <code>미정</code> 건수를 숫자로 받았다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 담당자 이름 표기가 명단과 글자 그대로 같다</li>
+</ul>
+<div class="stage-nav">
+<p><strong>← 이전</strong> <a href"step1.html">1단계. 결정만 골라내기</a> · <strong>다음 →</strong> <a href"step3.html">3단계. 근거 남기기</a></p>
+</div>
+<nav class="pager">
+<a class="prev" href="../lab5/step1.html"><span class="lbl">← 이전</span><span class="ttl">A-1 · 결정만 골라내기</span></a>
+<a class="next" href="../lab5/step3.html"><span class="lbl">다음 →</span><span class="ttl">A-3 · 근거 남기기</span></a>
+</nav>
+      </article>
+      <aside class="toc mono"><h4>On this page</h4>
+<a href="#2단계-담당자와-마감-붙이기">2단계. 담당자와 마감 붙이기</a>
+<a href="#먼저-여러분-문장으로-시켜보세요">먼저 여러분 문장으로 시켜보세요</a>
+<a href="#나온-것을-열어봅니다">나온 것을 열어봅니다</a>
+<a href="#뭐가-달라졌는지-봅니다">뭐가 달라졌는지 봅니다</a></aside>
+    </div>
+  </main>
+</div>
+<script src="../assets/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="ko" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>5. 스킬로 두 가지 무드 비교하기 · ax-tutor</title>
+<meta name="description" content="실습 4 · 대시보드와 디자인 — 5. 스킬로 두 가지 무드 비교하기 · ax-tutor 실습 위키">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<div class="shell">
+  <aside class="side" id="side">
+    <div class="brand">
+      <a class="brand__row" href="../index.html" style="text-decoration:none">
+        <span class="ast mono">✻</span>
+        <div><div class="brand__name">ax<b>-</b>tutor</div></div>
+      </a>
+      <div class="brand__sub">Claude Code · 실습 위키</div>
+      <div class="session"><span class="dot"></span><span class="live">LIVE</span>
+        <span style="color:var(--muted)">강의 진행 중</span><span class="clock mono" id="clock">--:--</span></div>
+    </div>
+    <nav><div class="nav-h">// 홈</div>
+<a class="nav-a" href="../index.html"><span class="g">◆</span> 오늘의 지도</a>
+<a class="nav-a" href="../index.html#materials"><span class="g">▤</span> 강의 자료 내려받기</a>
+<div class="nav-h">// 시작하기</div><div class="tree">
+<a class="nav-a" href="../start/prepare.html">0 · 준비물과 사전 설치</a>
+<a class="nav-a" href="../start/first-5min.html">1 · 처음 5분</a>
+<a class="nav-a" href="../start/rules.html">2 · 오후 규칙 3가지</a>
+</div>
+<div class="nav-h">// 실습 1 · 물류비 마감</div><div class="tree">
+<a class="nav-a" href="../lab1/index.html">개요</a>
+<a class="nav-a" href="../lab1/step1.html">1 · 요금표를 표로</a>
+<a class="nav-a" href="../lab1/step2.html">2 · 청구서 합치기</a>
+<a class="nav-a" href="../lab1/step3.html">3 · 120건 재계산</a>
+<a class="nav-a" href="../lab1/step4.html">4 · 검증 설계·검산</a>
+<a class="nav-a" href="../lab1/extra.html">＋ 더 해보기</a>
+</div>
+<div class="nav-h">// 실습 2 · 계약·입찰 레이더</div><div class="tree">
+<a class="nav-a" href="../lab2/index.html">개요</a>
+<a class="nav-a" href="../lab2/step1.html">1 · 계약서 한 장</a>
+<a class="nav-a" href="../lab2/step2.html">2 · 열두 건으로</a>
+<a class="nav-a" href="../lab2/step3.html">3 · 회사소개 문단</a>
+<a class="nav-a" href="../lab2/step4.html">4 · 공고 가져와 나누기</a>
+<a class="nav-a" href="../lab2/step5.html">5 · 설명서 남기기</a>
+<a class="nav-a" href="../lab2/extra.html">＋ 영문·스캔 PDF</a>
+</div>
+<div class="nav-h">// 실습 3 · 근거 붙인 보고문</div><div class="tree">
+<a class="nav-a" href="../lab3/index.html">개요</a>
+<a class="nav-a" href="../lab3/step1.html">1 · 일단 써보게</a>
+<a class="nav-a" href="../lab3/step2.html">2 · 숫자마다 출처</a>
+<a class="nav-a" href="../lab3/step3.html">3 · 숫자 5개 역추적</a>
+<a class="nav-a" href="../lab3/step4.html">4·5 · 없는 문장·톤 두 벌</a>
+<a class="nav-a" href="../lab3/extra.html">＋ 더 해보기</a>
+</div>
+<div class="nav-h">// 실습 4 · 대시보드와 디자인</div><div class="tree">
+<a class="nav-a" href="../lab4/index.html">개요</a>
+<a class="nav-a" href="../lab4/step1.html">1 · 무엇을 보여줄지</a>
+<a class="nav-a" href="../lab4/step2.html">2 · 뼈대·검산</a>
+<a class="nav-a" href="../lab4/step3.html">3 · Before 캡처</a>
+<a class="nav-a" href="../lab4/step4.html">4 · 말로 인상 바꾸기</a>
+<a class="nav-a active" href="../lab4/step5.html">5 · 두 무드 비교</a>
+<a class="nav-a" href="../lab4/step6.html">6 · 다크모드·반응형</a>
+<a class="nav-a" href="../lab4/step7.html">7 · 재검산·After</a>
+<a class="nav-a" href="../lab4/stuck.html">막혔을 때 쓰는 문장</a>
+</div>
+<div class="nav-h">// 여유 실습</div><div class="tree">
+<a class="nav-a" href="../lab5/index.html">A · 회의 녹취 정리</a>
+<a class="nav-a" href="../lab5/step1.html">A-1 · 결정만 골라내기</a>
+<a class="nav-a" href="../lab5/step2.html">A-2 · 담당자·마감</a>
+<a class="nav-a" href="../lab5/step3.html">A-3 · 근거 남기기</a>
+<a class="nav-a" href="../lab6/index.html">B · 링크로 공유</a>
+</div>
+<div class="nav-h">// 도움말</div><div class="tree">
+<a class="nav-a" href="../help/errors.html">에러가 났어요</a>
+<a class="nav-a" href="../help/glossary.html">이 말이 무슨 뜻이죠</a>
+<a class="nav-a" href="../help/how-to-ask.html">AI에게 잘 시키는 법</a>
+<a class="nav-a" href="../help/prompts.html">오늘 내가 친 문장</a>
+<a class="nav-a" href="../help/next.html">강의 끝나고 뭘 해볼까</a>
+</div></nav>
+    <div class="side__foot">
+      <button class="iconbtn" id="themeBtn" title="테마 전환"><span id="themeIc">◐</span> <span id="themeLbl">light</span></button>
+      <a class="iconbtn" href="../index.html" title="홈">↖ home</a>
+    </div>
+  </aside>
+  <main class="main">
+    <div class="cmdbar mono">
+      <button class="burger" id="burger" aria-label="메뉴">≡</button>
+      <span class="path"><b>~/ax-tutor</b> <span class="full">$ cat</span> <span class="cur">lab4/step5.md</span></span>
+      <span class="caret"></span><span class="spacer"></span>
+      <span class="stat">실습 4 · 대시보드와 디자인</span>
+    </div>
+    <div class="wrap">
+      <article class="doc md rise">
+        <div class="kicker mono"><b>//</b> 실습 4 · 대시보드와 디자인</div>
+<h1 id="5-스킬로-두-가지-무드-비교하기">5. 스킬로 두 가지 무드 비교하기<a class="headerlink" href="#5-스킬로-두-가지-무드-비교하기" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">이 단계에서 하는 일 (약 15분)</p>
+<ul>
+<li>지금 화면을 <strong>복사해서</strong> 두 벌을 만듭니다</li>
+<li>각각에 다른 도구를 적용해 인상을 갈아입힙니다</li>
+<li>두 창을 나란히 놓고 하나를 고릅니다</li>
+</ul>
+</div>
+<p>이 파트의 절정입니다. <strong>같은 데이터, 다른 인상</strong>을 눈으로 봅니다.</p>
+<hr />
+<h2 id="원본을-복사해서-각각에-적용합니다">원본을 복사해서 각각에 적용합니다<a class="headerlink" href="#원본을-복사해서-각각에-적용합니다" title="Permanent link">&para;</a></h2>
+<p>스킬 이름은 철자를 틀리면 안 되는 값이라 그대로 드립니다. <strong>복사해서 쓰세요.</strong></p>
+<div class="admonition quote">
+<p class="admonition-title">첫 번째 벌</p>
+<div class="highlight"><pre><span></span><code>지금 화면을 dashboard_A.html로 복사한 다음, 그 복사본에 /minimalist-ui 를 적용해줘.
+숫자와 표 내용은 바꾸지 말고 보이는 모양만 바꿔줘.
+</code></pre></div>
+</div>
+<div class="admonition quote">
+<p class="admonition-title">두 번째 벌</p>
+<div class="highlight"><pre><span></span><code>이번엔 원본을 dashboard_B.html로 복사하고, 그 복사본에 /industrial-brutalist-ui 를 적용해줘. 조건은 같아.
+</code></pre></div>
+</div>
+<p><strong>원본을 복사해서 각각에 적용하는 게 핵심입니다.</strong> 나란히 비교하려면 파일이 두 개여야 하고, 원본이 남아 있어야 되돌릴 수 있습니다.</p>
+<hr />
+<h2 id="고를-수-있는-도구-네-개">고를 수 있는 도구 네 개<a class="headerlink" href="#고를-수-있는-도구-네-개" title="Permanent link">&para;</a></h2>
+<p>두 개를 골라 쓰세요.</p>
+<table>
+<thead>
+<tr>
+<th>이름</th>
+<th>어떤 느낌</th>
+<th>어울리는 경우</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/minimalist-ui</code></td>
+<td>잡지 같은 편집 느낌. 흰 여백이 많고 색은 절제</td>
+<td><strong>기본 추천.</strong> 대부분의 업무 화면에 안전하게 어울림</td>
+</tr>
+<tr>
+<td><code>/industrial-brutalist-ui</code></td>
+<td>설계도·관제실 느낌. 굵은 격자와 극단적인 글자 크기 대비</td>
+<td>변화가 가장 극적. 취향이 갈림</td>
+</tr>
+<tr>
+<td><code>/high-end-visual-design</code></td>
+<td>값비싼 브랜드 사이트 느낌. 그림자·간격·움직임까지</td>
+<td>인상이 가장 셈. 시간이 조금 더 걸림</td>
+</tr>
+<tr>
+<td><code>/redesign-existing-projects</code></td>
+<td>지금 화면을 <strong>안 깨뜨리고</strong> 고급스럽게</td>
+<td><strong>안전 선택.</strong> 기능이 살아 있어야 할 때</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">스킬 이름이 인식되지 않는다면</p>
+<p><code>lab4/디자인_지시문/</code> 폴더에 대체 파일 3장이 들어 있습니다. 결과 품질이 거의 같습니다.</p>
+<div class="highlight"><pre><span></span><code>디자인_지시문/편집형_잡지느낌.md를 읽고 그 규칙대로 이 화면을 다시 만들어줘.
+숫자와 표 내용은 바꾸지 마.
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>파일</th>
+<th>대신하는 것</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>편집형_잡지느낌.md</code></td>
+<td><code>/minimalist-ui</code></td>
+</tr>
+<tr>
+<td><code>관제실_설계도느낌.md</code></td>
+<td><code>/industrial-brutalist-ui</code></td>
+</tr>
+<tr>
+<td><code>고급스러운_느낌.md</code></td>
+<td><code>/high-end-visual-design</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr />
+<h2 id="두-창을-나란히-놓고-봅니다-3분">두 창을 나란히 놓고 봅니다 (3분)<a class="headerlink" href="#두-창을-나란히-놓고-봅니다-3분" title="Permanent link">&para;</a></h2>
+<p><code>dashboard_A.html</code> 과 <code>dashboard_B.html</code> 을 각각 더블클릭해 <strong>창 두 개를 나란히</strong> 띄우세요.</p>
+<div class="admonition example">
+<p class="admonition-title">세 가지만 물어보세요</p>
+<ul>
+<li>제일 먼저 눈에 들어오는 게 뭐예요?</li>
+<li><strong>급한 계약이 급해 보여요?</strong></li>
+<li>팀장님한테 보낸다면 어느 쪽?</li>
+</ul>
+</div>
+<p><strong>둘 다 괜찮아서 못 고르겠다면</strong> 기준은 하나입니다.</p>
+<blockquote>
+<p><strong>이 화면을 보는 사람이 30초 안에 뭘 해야 하는지 알 수 있는 쪽.</strong></p>
+</blockquote>
+<p>예쁜 쪽이 아니라 <strong>급한 게 급해 보이는 쪽</strong>입니다.</p>
+<hr />
+<h2 id="뭐가-달라졌는지-봅니다">뭐가 달라졌는지 봅니다<a class="headerlink" href="#뭐가-달라졌는지-봅니다" title="Permanent link">&para;</a></h2>
+<div class="admonition success">
+<p class="admonition-title">이렇게 나오면 정상입니다</p>
+<ul>
+<li><code>dashboard_A.html</code> 과 <code>dashboard_B.html</code> 이 둘 다 있습니다</li>
+<li>원본 <code>dashboard.html</code> 도 그대로 있습니다</li>
+<li>두 화면의 인상이 확실히 다릅니다</li>
+<li><strong>두 화면의 표 행 수가 서로 같고, 엑셀과도 같습니다</strong></li>
+</ul>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">이렇게 나왔다면</p>
+<ul>
+<li>원본이 덮였다 → <strong>"원본 dashboard.html을 디자인 적용 전 상태로 되돌려줘"</strong></li>
+<li>한쪽 표가 짧아졌다 → <strong>"이 화면의 표 행 수를 세서 알려주고, 빠진 행이 있으면 다시 넣어줘"</strong></li>
+<li>스킬이 실행은 됐는데 화면이 안 열린다 → <strong>"화면이 안 열려. 지금 뭘 해야 볼 수 있는지 순서대로 알려줘"</strong></li>
+<li>시간이 빠듯하다 → 한 벌만 만들어도 됩니다. <strong>하나라도 갈아입혀 보는 것이 이 단계의 목적</strong>입니다</li>
+</ul>
+</div>
+<details class="note">
+<summary>스킬이 담고 있는 게 뭔가요</summary>
+<p>취향이 아니라 <strong>금지 목록</strong>입니다. "기본 글꼴 쓰지 마라, 기본 그림자 쓰지 마라" 같은 것들이요.</p>
+<p>궁금하면 <code>디자인_지시문/</code> 의 md 파일 하나를 열어보세요. 인상의 마지막 차이를 만드는 게 뭔지 20초면 보입니다.</p>
+</details>
+<hr />
+<h2 id="이-단계-결과물-규격">이 단계 결과물 규격<a class="headerlink" href="#이-단계-결과물-규격" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>파일</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>dashboard_A.html</code></td>
+<td>첫 번째 무드</td>
+</tr>
+<tr>
+<td><code>dashboard_B.html</code></td>
+<td>두 번째 무드</td>
+</tr>
+<tr>
+<td><code>dashboard.html</code></td>
+<td>원본. 디자인 적용 전 상태로 남아 있어야 합니다</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>체크포인트</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>dashboard_A.html</code> 과 <code>dashboard_B.html</code> 이 둘 다 있다 (또는 시간상 한 벌)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 원본 <code>dashboard.html</code> 이 그대로다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 두 창을 나란히 놓고 봤다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 하나를 골랐고, 왜 골랐는지 한 줄로 말할 수 있다</li>
+</ul>
+<div class="stage-nav">
+<p><strong>← 이전</strong> <a href"step4.html">4. 말만 바꿔서 인상 바꾸기</a> · <strong>다음 →</strong> <a href"step6.html">6. 다크모드·반응형 한 마디로 켜기</a></p>
+</div>
+<nav class="pager">
+<a class="prev" href="../lab4/step4.html"><span class="lbl">← 이전</span><span class="ttl">4 · 말로 인상 바꾸기</span></a>
+<a class="next" href="../lab4/step6.html"><span class="lbl">다음 →</span><span class="ttl">6 · 다크모드·반응형</span></a>
+</nav>
+      </article>
+      <aside class="toc mono"><h4>On this page</h4>
+<a href="#5-스킬로-두-가지-무드-비교하기">5. 스킬로 두 가지 무드 비교하기</a>
+<a href="#원본을-복사해서-각각에-적용합니다">원본을 복사해서 각각에 적용합니다</a>
+<a href="#고를-수-있는-도구-네-개">고를 수 있는 도구 네 개</a>
+<a href="#두-창을-나란히-놓고-봅니다-3분">두 창을 나란히 놓고 봅니다 (3분)</a>
+<a href="#뭐가-달라졌는지-봅니다">뭐가 달라졌는지 봅니다</a>
+<a href="#이-단계-결과물-규격">이 단계 결과물 규격</a></aside>
+    </div>
+  </main>
+</div>
+<script src="../assets/site.js"></script>
+</body>
+</html>

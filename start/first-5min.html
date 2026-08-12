@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="ko" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>1. 처음 5분 — 폴더 열고 말 걸기 · ax-tutor</title>
+<meta name="description" content="시작하기 — 1. 처음 5분 — 폴더 열고 말 걸기 · ax-tutor 실습 위키">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<div class="shell">
+  <aside class="side" id="side">
+    <div class="brand">
+      <a class="brand__row" href="../index.html" style="text-decoration:none">
+        <span class="ast mono">✻</span>
+        <div><div class="brand__name">ax<b>-</b>tutor</div></div>
+      </a>
+      <div class="brand__sub">Claude Code · 실습 위키</div>
+      <div class="session"><span class="dot"></span><span class="live">LIVE</span>
+        <span style="color:var(--muted)">강의 진행 중</span><span class="clock mono" id="clock">--:--</span></div>
+    </div>
+    <nav><div class="nav-h">// 홈</div>
+<a class="nav-a" href="../index.html"><span class="g">◆</span> 오늘의 지도</a>
+<a class="nav-a" href="../index.html#materials"><span class="g">▤</span> 강의 자료 내려받기</a>
+<div class="nav-h">// 시작하기</div><div class="tree">
+<a class="nav-a" href="../start/prepare.html">0 · 준비물과 사전 설치</a>
+<a class="nav-a active" href="../start/first-5min.html">1 · 처음 5분</a>
+<a class="nav-a" href="../start/rules.html">2 · 오후 규칙 3가지</a>
+</div>
+<div class="nav-h">// 실습 1 · 물류비 마감</div><div class="tree">
+<a class="nav-a" href="../lab1/index.html">개요</a>
+<a class="nav-a" href="../lab1/step1.html">1 · 요금표를 표로</a>
+<a class="nav-a" href="../lab1/step2.html">2 · 청구서 합치기</a>
+<a class="nav-a" href="../lab1/step3.html">3 · 120건 재계산</a>
+<a class="nav-a" href="../lab1/step4.html">4 · 검증 설계·검산</a>
+<a class="nav-a" href="../lab1/extra.html">＋ 더 해보기</a>
+</div>
+<div class="nav-h">// 실습 2 · 계약·입찰 레이더</div><div class="tree">
+<a class="nav-a" href="../lab2/index.html">개요</a>
+<a class="nav-a" href="../lab2/step1.html">1 · 계약서 한 장</a>
+<a class="nav-a" href="../lab2/step2.html">2 · 열두 건으로</a>
+<a class="nav-a" href="../lab2/step3.html">3 · 회사소개 문단</a>
+<a class="nav-a" href="../lab2/step4.html">4 · 공고 가져와 나누기</a>
+<a class="nav-a" href="../lab2/step5.html">5 · 설명서 남기기</a>
+<a class="nav-a" href="../lab2/extra.html">＋ 영문·스캔 PDF</a>
+</div>
+<div class="nav-h">// 실습 3 · 근거 붙인 보고문</div><div class="tree">
+<a class="nav-a" href="../lab3/index.html">개요</a>
+<a class="nav-a" href="../lab3/step1.html">1 · 일단 써보게</a>
+<a class="nav-a" href="../lab3/step2.html">2 · 숫자마다 출처</a>
+<a class="nav-a" href="../lab3/step3.html">3 · 숫자 5개 역추적</a>
+<a class="nav-a" href="../lab3/step4.html">4·5 · 없는 문장·톤 두 벌</a>
+<a class="nav-a" href="../lab3/extra.html">＋ 더 해보기</a>
+</div>
+<div class="nav-h">// 실습 4 · 대시보드와 디자인</div><div class="tree">
+<a class="nav-a" href="../lab4/index.html">개요</a>
+<a class="nav-a" href="../lab4/step1.html">1 · 무엇을 보여줄지</a>
+<a class="nav-a" href="../lab4/step2.html">2 · 뼈대·검산</a>
+<a class="nav-a" href="../lab4/step3.html">3 · Before 캡처</a>
+<a class="nav-a" href="../lab4/step4.html">4 · 말로 인상 바꾸기</a>
+<a class="nav-a" href="../lab4/step5.html">5 · 두 무드 비교</a>
+<a class="nav-a" href="../lab4/step6.html">6 · 다크모드·반응형</a>
+<a class="nav-a" href="../lab4/step7.html">7 · 재검산·After</a>
+<a class="nav-a" href="../lab4/stuck.html">막혔을 때 쓰는 문장</a>
+</div>
+<div class="nav-h">// 여유 실습</div><div class="tree">
+<a class="nav-a" href="../lab5/index.html">A · 회의 녹취 정리</a>
+<a class="nav-a" href="../lab5/step1.html">A-1 · 결정만 골라내기</a>
+<a class="nav-a" href="../lab5/step2.html">A-2 · 담당자·마감</a>
+<a class="nav-a" href="../lab5/step3.html">A-3 · 근거 남기기</a>
+<a class="nav-a" href="../lab6/index.html">B · 링크로 공유</a>
+</div>
+<div class="nav-h">// 도움말</div><div class="tree">
+<a class="nav-a" href="../help/errors.html">에러가 났어요</a>
+<a class="nav-a" href="../help/glossary.html">이 말이 무슨 뜻이죠</a>
+<a class="nav-a" href="../help/how-to-ask.html">AI에게 잘 시키는 법</a>
+<a class="nav-a" href="../help/prompts.html">오늘 내가 친 문장</a>
+<a class="nav-a" href="../help/next.html">강의 끝나고 뭘 해볼까</a>
+</div></nav>
+    <div class="side__foot">
+      <button class="iconbtn" id="themeBtn" title="테마 전환"><span id="themeIc">◐</span> <span id="themeLbl">light</span></button>
+      <a class="iconbtn" href="../index.html" title="홈">↖ home</a>
+    </div>
+  </aside>
+  <main class="main">
+    <div class="cmdbar mono">
+      <button class="burger" id="burger" aria-label="메뉴">≡</button>
+      <span class="path"><b>~/ax-tutor</b> <span class="full">$ cat</span> <span class="cur">start/first-5min.md</span></span>
+      <span class="caret"></span><span class="spacer"></span>
+      <span class="stat">시작하기</span>
+    </div>
+    <div class="wrap">
+      <article class="doc md rise">
+        <div class="kicker mono"><b>//</b> 시작하기</div>
+<h1 id="1-처음-5분--폴더-열고-말-걸기">1. 처음 5분 — 폴더 열고 말 걸기<a class="headerlink" href="#1-처음-5분--폴더-열고-말-걸기" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">이 단계에서 하는 일 (약 5분)</p>
+<ul>
+<li>실습 폴더를 VS Code로 엽니다</li>
+<li>폴더 아래쪽에서 터미널(까만 화면)을 엽니다</li>
+<li>첫 문장을 걸어보고, 답이 오는 걸 확인합니다</li>
+</ul>
+</div>
+<p>여기는 전원이 통과해야 다음으로 넘어가는 자리입니다. 어려운 건 없습니다. <strong>화면 네 개가 순서대로 보이면 통과</strong>입니다.</p>
+<hr />
+<h2 id="①-폴더-열기">① 폴더 열기<a class="headerlink" href="#①-폴더-열기" title="Permanent link">&para;</a></h2>
+<p>VS Code를 실행하고, 위 메뉴에서 <strong><code>파일 &gt; 폴더 열기</code></strong> 를 눌러 압축을 푼 <code>workshop</code> 폴더를 고릅니다.</p>
+<div class="admonition danger">
+<p class="admonition-title"><code>파일 열기</code>가 아니라 <code>폴더 열기</code>입니다</p>
+<p>가장 흔한 실수입니다. 파일 하나만 열면 AI가 옆에 있는 다른 파일들을 보지 못합니다.</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">이렇게 나오면 정상입니다</p>
+<p>왼쪽 목록에 <code>lab1</code> <code>lab2</code> <code>lab3</code> <code>lab4</code> <code>lab5</code> 다섯 폴더가 보입니다</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">이렇게 나왔다면</p>
+<ul>
+<li>왼쪽에 파일 하나만 보인다 → <code>파일 &gt; 폴더 열기</code>로 다시 하세요</li>
+<li>폴더가 안 보인다 → 압축을 푼 위치를 다시 확인하세요. <code>C:\workshop\</code> 또는 <code>~/workshop/</code> 입니다</li>
+</ul>
+</div>
+<hr />
+<h2 id="②-터미널-열기">② 터미널 열기<a class="headerlink" href="#②-터미널-열기" title="Permanent link">&para;</a></h2>
+<p><kbd>Ctrl</kbd>+<kbd><code>&lt;/kbd&gt; (맥은 &lt;kbd&gt;Cmd&lt;/kbd&gt;+&lt;kbd&gt;</code></kbd>) 를 누릅니다. 위 메뉴의 <code>터미널 &gt; 새 터미널</code> 도 같습니다.</p>
+<div class="admonition success">
+<p class="admonition-title">이렇게 나오면 정상입니다</p>
+<p>아래쪽에 까만 창이 뜨고, 그 안에 적힌 경로가 <strong><code>workshop</code>으로 끝납니다</strong></p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">이렇게 나왔다면</p>
+<ul>
+<li>경로 끝이 <code>workshop</code>이 아니다 → ①에서 다른 폴더를 열었습니다. <code>파일 &gt; 폴더 열기</code>로 다시</li>
+<li>까만 창이 안 보인다 → 위 메뉴 <code>보기 &gt; 터미널</code></li>
+</ul>
+</div>
+<hr />
+<h2 id="③-말-걸기">③ 말 걸기<a class="headerlink" href="#③-말-걸기" title="Permanent link">&para;</a></h2>
+<p>까만 창에 <code>claude</code> 를 입력하고 <kbd>Enter</kbd>. 입력줄이 뜨면 아무 말이나 걸어봅니다.</p>
+<div class="admonition quote">
+<p class="admonition-title">여러분 말로 한 줄만 걸어보세요</p>
+<p>(예: 지금 열려 있는 폴더 이름이 뭐야?)</p>
+<p>여기에 정답은 없습니다. <strong>말이 통한다는 것만 확인하는 자리</strong>입니다.</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">이렇게 나오면 정상입니다</p>
+<p>폴더 이름을 맞게 답합니다</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">이렇게 나왔다면</p>
+<ul>
+<li>로그인 화면이 뜬다 → 조교를 부르세요. 예비 계정이 있습니다</li>
+<li><code>command not found</code> → VS Code를 완전히 껐다 켠 뒤 다시 시도하세요</li>
+</ul>
+</div>
+<hr />
+<h2 id="④-첫-성공-미션">④ 첫 성공 미션<a class="headerlink" href="#④-첫-성공-미션" title="Permanent link">&para;</a></h2>
+<p>아래 한 줄을 그대로 복사해 넣으세요. <strong>오늘 하루 중 완성 문장을 그대로 복사하는 몇 안 되는 자리입니다.</strong></p>
+<div class="highlight"><pre><span></span><code>이 폴더 안에 어떤 파일이 몇 개 있는지 표로 정리해서 알려줘.
+</code></pre></div>
+<div class="admonition success">
+<p class="admonition-title">이렇게 나오면 정상입니다</p>
+<p>폴더별 파일 개수가 적힌 표가 화면에 나옵니다. <code>lab1</code> 안에 파일과 폴더가 여러 개 있다고 답합니다</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">이렇게 나왔다면</p>
+<ul>
+<li>"폴더가 비어 있다"고 한다 → 열려 있는 폴더가 <code>workshop</code>이 아닙니다. ①로 돌아가세요</li>
+<li>한참 답이 없다 → 1분 정도는 정상입니다. 3분이 지나도 답이 없으면 <kbd>Ctrl</kbd>+<kbd>C</kbd> 로 멈추고 다시 시도하세요</li>
+</ul>
+</div>
+<hr />
+<p><strong>뭐가 달라졌는지 봅니다 — 체크포인트</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 왼쪽에 <code>lab1</code>~<code>lab5</code> 다섯 폴더가 보인다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 터미널 경로 끝이 <code>workshop</code> 이다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> AI가 폴더 이름을 맞게 답했다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 파일 개수 표가 화면에 나왔다</li>
+</ul>
+<p>여기까지 됐으면 오후 실습을 시작할 수 있습니다.</p>
+<div class="stage-nav">
+<p><strong>← 이전</strong> <a href"prepare.html">0. 준비물과 사전 설치</a> · <strong>다음 →</strong> <a href"rules.html">2. 오후 규칙 3가지</a></p>
+</div>
+<nav class="pager">
+<a class="prev" href="../start/prepare.html"><span class="lbl">← 이전</span><span class="ttl">0 · 준비물과 사전 설치</span></a>
+<a class="next" href="../start/rules.html"><span class="lbl">다음 →</span><span class="ttl">2 · 오후 규칙 3가지</span></a>
+</nav>
+      </article>
+      <aside class="toc mono"><h4>On this page</h4>
+<a href="#1-처음-5분--폴더-열고-말-걸기">1. 처음 5분 — 폴더 열고 말 걸기</a>
+<a href="#①-폴더-열기">① 폴더 열기</a>
+<a href="#②-터미널-열기">② 터미널 열기</a>
+<a href="#③-말-걸기">③ 말 걸기</a>
+<a href="#④-첫-성공-미션">④ 첫 성공 미션</a></aside>
+    </div>
+  </main>
+</div>
+<script src="../assets/site.js"></script>
+</body>
+</html>
