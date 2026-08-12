@@ -141,7 +141,7 @@ def pager(idx):
     return '\n'.join(parts)
 
 TEMPLATE = '''<!doctype html>
-<html lang="ko" data-theme="dark">
+<html lang="ko" data-theme="light">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
