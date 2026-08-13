@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>1단계. 계약서 한 장만 제대로 · ax-tutor</title>
-<meta name="description" content="실습 2 · 계약·입찰 레이더 — 1단계. 계약서 한 장만 제대로 · ax-tutor 실습 위키">
+<title>1단계 · 계약종합 만들기 · ax-tutor</title>
+<meta name="description" content="실습 2 · 계약서에서 계약종합 만들기 — 1단계 · 계약종합 만들기 · ax-tutor 실습 위키">
 <link rel="stylesheet" href="../assets/site.css">
 </head>
 <body>
@@ -20,7 +20,6 @@
         <span style="color:var(--muted)">강의 진행 중</span><span class="clock mono" id="clock">--:--</span></div>
     </div>
     <nav><div class="nav-h">// 홈</div>
-<a class="nav-a" href="../index.html"><span class="g">◆</span> 오늘의 지도</a>
 <a class="nav-a" href="../index.html#materials"><span class="g">▤</span> 강의 자료 내려받기</a>
 <div class="nav-h">// 시작하기</div><div class="tree">
 <a class="nav-a" href="../types/index.html"><span class="g">◆</span> 여섯 가지 업무 유형</a>
@@ -34,16 +33,11 @@
 <a class="nav-a" href="../lab1/step2.html">2 · 청구서 합치기</a>
 <a class="nav-a" href="../lab1/step3.html">3 · 120건 재계산</a>
 <a class="nav-a" href="../lab1/step4.html">4 · 검증 설계·검산</a>
-<a class="nav-a" href="../lab1/extra.html">＋ 더 해보기</a>
 </div>
-<div class="nav-h">// 실습 2 · 계약·입찰 레이더</div><div class="tree">
+<div class="nav-h">// 실습 2 · 계약서에서 계약종합 만들기</div><div class="tree">
 <a class="nav-a" href="../lab2/index.html">개요</a>
-<a class="nav-a active" href="../lab2/step1.html">1 · 계약서 한 장</a>
-<a class="nav-a" href="../lab2/step2.html">2 · 열두 건으로</a>
-<a class="nav-a" href="../lab2/step3.html">3 · 회사소개 문단</a>
-<a class="nav-a" href="../lab2/step4.html">4 · 공고 가져와 나누기</a>
-<a class="nav-a" href="../lab2/step5.html">5 · 설명서 남기기</a>
-<a class="nav-a" href="../lab2/extra.html">＋ 영문·스캔 PDF</a>
+<a class="nav-a active" href="../lab2/step1.html">1 · 계약종합 만들기</a>
+<a class="nav-a" href="../lab2/step2.html">2 · 원본 대조·검산</a>
 </div>
 <div class="nav-h">// 실습 3 · 근거 붙인 보고문</div><div class="tree">
 <a class="nav-a" href="../lab3/index.html">개요</a>
@@ -51,7 +45,6 @@
 <a class="nav-a" href="../lab3/step2.html">2 · 숫자마다 출처</a>
 <a class="nav-a" href="../lab3/step3.html">3 · 숫자 5개 역추적</a>
 <a class="nav-a" href="../lab3/step4.html">4·5 · 없는 문장·톤 두 벌</a>
-<a class="nav-a" href="../lab3/extra.html">＋ 더 해보기</a>
 </div>
 <div class="nav-h">// 실습 4 · 대시보드와 디자인</div><div class="tree">
 <a class="nav-a" href="../lab4/index.html">개요</a>
@@ -63,13 +56,6 @@
 <a class="nav-a" href="../lab4/step6.html">6 · 다크모드·반응형</a>
 <a class="nav-a" href="../lab4/step7.html">7 · 재검산·After</a>
 <a class="nav-a" href="../lab4/stuck.html">막혔을 때 쓰는 문장</a>
-</div>
-<div class="nav-h">// 여유 실습</div><div class="tree">
-<a class="nav-a" href="../lab5/index.html">A · 회의 녹취 정리</a>
-<a class="nav-a" href="../lab5/step1.html">A-1 · 결정만 골라내기</a>
-<a class="nav-a" href="../lab5/step2.html">A-2 · 담당자·마감</a>
-<a class="nav-a" href="../lab5/step3.html">A-3 · 근거 남기기</a>
-<a class="nav-a" href="../lab6/index.html">B · 링크로 공유</a>
 </div>
 <div class="nav-h">// 도움말</div><div class="tree">
 <a class="nav-a" href="../help/errors.html">에러가 났어요</a>
@@ -88,170 +74,60 @@
       <button class="burger" id="burger" aria-label="메뉴">≡</button>
       <span class="path"><b>~/ax-tutor</b> <span class="full">$ cat</span> <span class="cur">lab2/step1.md</span></span>
       <span class="caret"></span><span class="spacer"></span>
-      <span class="stat">실습 2 · 계약·입찰 레이더</span>
+      <span class="stat">실습 2 · 계약서에서 계약종합 만들기</span>
     </div>
     <div class="wrap">
       <article class="doc md rise">
-        <div class="kicker mono"><b>//</b> 실습 2 · 계약·입찰 레이더</div>
-<h1 id="1단계-계약서-한-장만-제대로">1단계. 계약서 한 장만 제대로<a class="headerlink" href="#1단계-계약서-한-장만-제대로" title="Permanent link">&para;</a></h1>
-<div class="admonition abstract">
-<p class="admonition-title">이 단계에서 하는 일 (약 10분)</p>
-<ul>
-<li>계약서 PDF <strong>한 건만</strong> 골라 7개 항목을 뽑습니다</li>
-<li>뽑은 값을 원본 PDF와 눈으로 대조합니다</li>
-<li>12건으로 늘리기 전에 형식을 먼저 확정합니다</li>
-</ul>
-</div>
-<p>12건을 한 번에 시키면 어디서 틀렸는지 찾는 데 더 오래 걸립니다. <strong>한 건으로 형식을 확정하고 나서 늘립니다.</strong></p>
-<div class="admonition info">
-<p class="admonition-title">이 단계의 결과 규격은 이 페이지 맨 아래에 있습니다</p>
-</div>
-<hr />
-<h2 id="뽑을-항목-일곱-개">뽑을 항목 일곱 개<a class="headerlink" href="#뽑을-항목-일곱-개" title="Permanent link">&para;</a></h2>
-<p>이건 받는 쪽이 정한 규격이라 그대로 씁니다.</p>
+        <div class="kicker mono"><b>//</b> 실습 2 · 계약서에서 계약종합 만들기</div>
+<h1 id="1단계--계약종합-만들기">1단계 · 계약종합 만들기<a class="headerlink" href="#1단계--계약종합-만들기" title="Permanent link">&para;</a></h1>
+<p>계약서 8건에서 아래 6개 항목을 뽑아 한 표(<code>계약종합</code> 엑셀)로 만듭니다. 한 계약이 한 줄입니다.</p>
+<h2 id="뽑을-항목-여섯-개">뽑을 항목 여섯 개<a class="headerlink" href="#뽑을-항목-여섯-개" title="Permanent link">&para;</a></h2>
 <blockquote>
-<p>계약번호 / 계약명 / 거래처 / 시작일 / 종료일 / 계약금액 / 자동갱신 여부</p>
+<p>계약번호 / 계약명 / 상대방 / 계약기간 / 금액 / 자동갱신 여부</p>
 </blockquote>
-<p><strong>어떻게 시킬지는 여러분이 씁니다.</strong></p>
 <hr />
-<h2 id="먼저-여러분-문장으로-시켜보세요">먼저 여러분 문장으로 시켜보세요<a class="headerlink" href="#먼저-여러분-문장으로-시켜보세요" title="Permanent link">&para;</a></h2>
-<div class="admonition quote">
-<p class="admonition-title">여기에 여러분 말로 채워서 실행하세요</p>
-<p><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_</span></p>
-</div>
-<hr />
-<h2 id="나온-것을-열어봅니다">나온 것을 열어봅니다<a class="headerlink" href="#나온-것을-열어봅니다" title="Permanent link">&para;</a></h2>
-<div class="admonition example">
-<p class="admonition-title">PDF를 직접 열어 대조하세요</p>
-<p>표가 나왔을 겁니다. 이제 <strong><code>계약서/</code> 폴더에서 그 PDF를 직접 열어</strong> 값을 하나씩 맞춰보세요.</p>
-<ul>
-<li>표에 <strong>빈칸이 몇 개</strong>인가요?</li>
-<li>원본 PDF에는 그 항목이 다 적혀 있던가요?</li>
-</ul>
-<p>틀린 걸 찾는 것이 이 단계의 성과입니다.</p>
-</div>
-<hr />
-<details class="question">
-<summary>① 3분이 지나도 막혔다면 — 아직 펼치지 마세요</summary>
-<p>표에 빈칸이 몇 개예요? 원본 PDF에는 다 적혀 있던가요?</p>
-</details>
-<details class="tip">
-<summary>② 7분이 지났다면 — 정해야 할 것 하나</summary>
-<p>정해야 할 것은 하나입니다 — <strong>문서에 없는 항목을 어떻게 할지.</strong></p>
-<p>그리고 12건으로 늘렸을 때 대조가 가능하려면, 값 말고 <strong>하나를 더</strong> 받아야 합니다.</p>
-</details>
-<details class="example">
-<summary>③ 모범답안 — 잘 되는 문장은 이렇게 생겼습니다 (여러분 문장을 한 번 보내본 뒤에 여세요)</summary>
-<pre class="highlight"><code>계약서 폴더의 PDF 한 건만 읽고 위 7개 항목을 표로 정리해줘.
-문서에 없는 항목은 비워두고 추측해서 채우지 마.
-항목마다 문서의 어느 부분에서 찾았는지 한 줄로 같이 적어줘.</code></pre>
-<p><strong>이 문장이 하는 일</strong></p>
-<table>
-<thead>
-<tr>
-<th>이 줄이</th>
-<th>없으면</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>없는 항목은 비워두고 추측하지 마</code></td>
-<td>7칸이 전부 채워집니다. <strong>비어야 맞는 칸이 그럴듯한 값으로 덮여</strong> 틀린 걸 찾을 수 없습니다</td>
-</tr>
-<tr>
-<td><code>어느 부분에서 찾았는지 한 줄로</code></td>
-<td>PDF를 열어 대조할 때 어디를 봐야 할지 모릅니다. 12건으로 늘리면 대조가 아예 불가능해집니다</td>
-</tr>
-</tbody>
-</table>
-<p><strong>한 번에 잘 됐다면</strong> — 여러분 문장과 이 답안에서 <strong>다른 곳을 한 곳만</strong> 찾아보세요. 답안이 더 나은 곳도, 여러분 문장이 더 나은 곳도 있습니다. 둘 다 있는 게 정상입니다.
-<strong>아직 어긋난다면</strong> — 이 문장으로 갈아타고 다음 단계로 가세요. <strong>오늘은 완주가 먼저입니다.</strong> 갈아탔다고 뒤처진 게 아닙니다.</p>
-</details>
-<hr />
-<h2 id="그걸-채워서-다시-말해보세요">그걸 채워서 다시 말해보세요<a class="headerlink" href="#그걸-채워서-다시-말해보세요" title="Permanent link">&para;</a></h2>
-<div class="admonition quote">
-<p class="admonition-title">빠진 것만 덧붙여 다시 시키세요</p>
-<p><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_</span></p>
-</div>
-<hr />
-<h2 id="뭐가-달라졌는지-봅니다">뭐가 달라졌는지 봅니다<a class="headerlink" href="#뭐가-달라졌는지-봅니다" title="Permanent link">&para;</a></h2>
-<div class="admonition success">
-<p class="admonition-title">이렇게 나오면 정상입니다</p>
-<ul>
-<li>7개 항목이 표로 나왔고, <strong>어디서 찾았는지</strong>가 항목마다 한 줄씩 붙어 있습니다</li>
-<li>문서에 없는 항목은 채워지지 않고 비어 있습니다</li>
-<li>PDF를 열어 대조했을 때 값이 원본과 같습니다</li>
-</ul>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">이렇게 나왔다면</p>
-<ul>
-<li>7칸이 전부 채워졌는데 PDF에는 없는 값이 있다 → <strong>"이 항목이 문서 어디에 적혀 있는지 그 부분을 그대로 인용해줘"</strong> 라고 물어보세요. 인용을 못 하면 지어낸 값입니다</li>
-<li>자동갱신 여부가 단정적으로 적혀 있다 → <strong>"자동갱신이라고 판단한 근거 문장을 원문 그대로 보여줘"</strong></li>
-<li>금액이 숫자로 적혀 있는데 PDF에는 금액 대신 다른 문구가 있다 → <strong>"문서에 금액이 숫자로 안 적혀 있으면 비우고, 대신 뭐라고 적혀 있는지 알려줘"</strong></li>
-<li>PDF를 못 읽는다고 한다 → 그 파일은 사진으로 스캔된 것입니다. <strong>"이 PDF는 이미지로 되어 있으니 이미지를 읽는 방식으로 다시 해줘"</strong></li>
-</ul>
-</div>
-<details class="note">
-<summary>왜 '없으면 비워둬'라고 말해야 할까요</summary>
-<p>말하지 않으면 빈칸을 남기지 않는 쪽으로 기울기 때문입니다. 그러면 <strong>비어야 맞는 칸이 그럴듯한 값으로 덮여</strong>, 틀린 걸 찾을 방법 자체가 사라집니다.</p>
-<p>문서에 없는 것은 없다고 말하라고 시켜야 빈칸이 남습니다.</p>
-</details>
-<hr />
-<h2 id="이-단계-결과물-규격">이 단계 결과물 규격<a class="headerlink" href="#이-단계-결과물-규격" title="Permanent link">&para;</a></h2>
-<p>이 단계는 화면에 표만 나와도 됩니다. 파일로 저장하는 것은 2단계입니다.</p>
-<table>
-<thead>
-<tr>
-<th>항목</th>
-<th>표기</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>시작일 / 종료일</td>
-<td><code>2026-09-30</code> 한 가지 형태</td>
-</tr>
-<tr>
-<td>계약금액</td>
-<td>숫자만. 원 표시·쉼표·괄호 금지. 금액이 없는 건은 비워둡니다</td>
-</tr>
-<tr>
-<td>자동갱신</td>
-<td>문서에 근거가 있을 때만 적습니다</td>
-</tr>
-<tr>
-<td>어디서 찾았는지</td>
-<td>항목마다 한 줄</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<p><strong>뭐가 달라졌는지 봅니다 — 체크포인트</strong></p>
+<h2 id="직접-시켜보세요">직접 시켜보세요<a class="headerlink" href="#직접-시켜보세요" title="Permanent link">&para;</a></h2>
+<p>여러분 문장으로 AI에게 시킵니다. 아래 두 체크리스트를 먼저 읽고, 빠진 규칙이 없도록 프롬프트에 담으세요.</p>
+<h2 id="프롬프트에-꼭-담을-것-">프롬프트에 꼭 담을 것 ✅<a class="headerlink" href="#프롬프트에-꼭-담을-것-" title="Permanent link">&para;</a></h2>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 7개 항목이 표로 나왔다</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 항목마다 "어디서 찾았는지"가 붙어 있다</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> PDF를 직접 열어 값을 대조했다</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 빈칸이 있다면 원본에도 정말 없는지 확인했다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 뽑을 <strong>6개 항목을 그대로 지정</strong> (계약번호·계약명·상대방·계약기간·금액·자동갱신 여부)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>안 적힌 항목은 지어내지 말고 비워둘 것</strong></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>금액 조항이 없으면 0이 아니라 빈칸</strong>으로 둘 것</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 폴더의 계약서 <strong>8건을 모두</strong> 읽어 한 계약당 한 줄로 정리</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 결과를 <strong><code>계약종합</code> 엑셀 파일</strong>로 저장</li>
 </ul>
-<div class="admonition info">
-<p class="admonition-title">여기서 시간이 다 됐다면</p>
-<p><code>lab2/못따라왔을때/1단계결과/</code> 를 여세요. 2단계는 그걸로 갑니다.</p>
+<h2 id="이런-건-빼세요-">이런 건 빼세요 ❌<a class="headerlink" href="#이런-건-빼세요-" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> "알아서 잘 정리해줘"처럼 <strong>규칙 없는 지시</strong> (없는 값이 채워집니다)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 빈칸을 <code>0</code>으로 채우기 (금액 0원과 "금액 모름"은 다른 사건)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 항목을 마음대로 더하거나 바꾸기</li>
+</ul>
+<hr />
+<h2 id="실행-예시">실행 예시<a class="headerlink" href="#실행-예시" title="Permanent link">&para;</a></h2>
+<div class="admonition example">
+<p class="admonition-title">이렇게 나오면 됩니다</p>
+<p><img alt="계약종합 8행이 만들어지고, 금액이 없는 계약 한 건이 빈칸으로 남은 결과 화면" src="../images/lab2/step1-result.png" /></p>
 </div>
-
+<hr />
+<h2 id="체크포인트">체크포인트<a class="headerlink" href="#체크포인트" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 계약종합이 <strong>8행</strong>(계약 8건)으로 나왔다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>금액이 없는 계약이 빈칸</strong>으로 남아 있다 (0이 아님)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 6개 항목이 모두 채워졌고, 없는 값을 지어내지 않았다</li>
+</ul>
 <nav class="pager">
 <a class="prev" href="../lab2/index.html"><span class="lbl">← 이전</span><span class="ttl">개요</span></a>
-<a class="next" href="../lab2/step2.html"><span class="lbl">다음 →</span><span class="ttl">2 · 열두 건으로</span></a>
+<a class="next" href="../lab2/step2.html"><span class="lbl">다음 →</span><span class="ttl">2 · 원본 대조·검산</span></a>
 </nav>
       </article>
       <aside class="toc mono"><h4>On this page</h4>
-<a href="#1단계-계약서-한-장만-제대로">1단계. 계약서 한 장만 제대로</a>
-<a href="#뽑을-항목-일곱-개">뽑을 항목 일곱 개</a>
-<a href="#먼저-여러분-문장으로-시켜보세요">먼저 여러분 문장으로 시켜보세요</a>
-<a href="#나온-것을-열어봅니다">나온 것을 열어봅니다</a>
-<a href="#그걸-채워서-다시-말해보세요">그걸 채워서 다시 말해보세요</a>
-<a href="#뭐가-달라졌는지-봅니다">뭐가 달라졌는지 봅니다</a>
-<a href="#이-단계-결과물-규격">이 단계 결과물 규격</a></aside>
+<a href="#1단계--계약종합-만들기">1단계 · 계약종합 만들기</a>
+<a href="#뽑을-항목-여섯-개">뽑을 항목 여섯 개</a>
+<a href="#직접-시켜보세요">직접 시켜보세요</a>
+<a href="#프롬프트에-꼭-담을-것-">프롬프트에 꼭 담을 것 ✅</a>
+<a href="#이런-건-빼세요-">이런 건 빼세요 ❌</a>
+<a href="#실행-예시">실행 예시</a>
+<a href="#체크포인트">체크포인트</a></aside>
     </div>
   </main>
 </div>

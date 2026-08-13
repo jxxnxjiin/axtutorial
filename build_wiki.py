@@ -22,16 +22,11 @@ NAV = [
         ('2 · 청구서 합치기', 'lab1/step2.md'),
         ('3 · 120건 재계산', 'lab1/step3.md'),
         ('4 · 검증 설계·검산', 'lab1/step4.md'),
-        ('＋ 더 해보기', 'lab1/extra.md'),
     ]),
-    ('실습 2 · 계약·입찰 레이더', [
+    ('실습 2 · 계약서에서 계약종합 만들기', [
         ('개요', 'lab2/index.md'),
-        ('1 · 계약서 한 장', 'lab2/step1.md'),
-        ('2 · 열두 건으로', 'lab2/step2.md'),
-        ('3 · 회사소개 문단', 'lab2/step3.md'),
-        ('4 · 공고 가져와 나누기', 'lab2/step4.md'),
-        ('5 · 설명서 남기기', 'lab2/step5.md'),
-        ('＋ 영문·스캔 PDF', 'lab2/extra.md'),
+        ('1 · 계약종합 만들기', 'lab2/step1.md'),
+        ('2 · 원본 대조·검산', 'lab2/step2.md'),
     ]),
     ('실습 3 · 근거 붙인 보고문', [
         ('개요', 'lab3/index.md'),
@@ -39,7 +34,6 @@ NAV = [
         ('2 · 숫자마다 출처', 'lab3/step2.md'),
         ('3 · 숫자 5개 역추적', 'lab3/step3.md'),
         ('4·5 · 없는 문장·톤 두 벌', 'lab3/step4.md'),
-        ('＋ 더 해보기', 'lab3/extra.md'),
     ]),
     ('실습 4 · 대시보드와 디자인', [
         ('개요', 'lab4/index.md'),
@@ -51,13 +45,6 @@ NAV = [
         ('6 · 다크모드·반응형', 'lab4/step6.md'),
         ('7 · 재검산·After', 'lab4/step7.md'),
         ('막혔을 때 쓰는 문장', 'lab4/stuck.md'),
-    ]),
-    ('여유 실습', [
-        ('A · 회의 녹취 정리', 'lab5/index.md'),
-        ('A-1 · 결정만 골라내기', 'lab5/step1.md'),
-        ('A-2 · 담당자·마감', 'lab5/step2.md'),
-        ('A-3 · 근거 남기기', 'lab5/step3.md'),
-        ('B · 링크로 공유', 'lab6/index.md'),
     ]),
     ('도움말', [
         ('에러가 났어요', 'help/errors.md'),
@@ -105,12 +92,10 @@ def sidebar(cur, prefix='../', home='remote'):
     # home='remote' : 하위 페이지 → 홈으로 돌아가는 링크
     if home == 'local':
         rows = ['<div class="nav-h">// 홈</div>',
-                '<a class="nav-a" href="#overview"><span class="g">◆</span> 오늘의 지도</a>',
                 '<a class="nav-a" href="#timetable"><span class="g">◷</span> 시간표</a>',
                 '<a class="nav-a" href="#materials"><span class="g">▤</span> 강의 자료 내려받기</a>']
     else:
         rows = ['<div class="nav-h">// 홈</div>',
-                f'<a class="nav-a" href="{prefix}index.html"><span class="g">◆</span> 오늘의 지도</a>',
                 f'<a class="nav-a" href="{prefix}index.html#materials"><span class="g">▤</span> 강의 자료 내려받기</a>']
     for sec, items in NAV:
         rows.append(f'<div class="nav-h">// {sec}</div><div class="tree">')
@@ -141,7 +126,7 @@ def toc_html(tokens):
 def pager(idx):
     parts = ['<nav class="pager">']
     if idx == 0:
-        prev = ('오늘의 지도', '../index.html')
+        prev = ('시간표', '../index.html')
     else:
         l, p, _ = FLAT[idx-1]; prev = (l, f'../{p[:-3]}.html')
     parts.append(f'<a class="prev" href="{prev[1]}"><span class="lbl">← 이전</span><span class="ttl">{_html.escape(prev[0])}</span></a>')
@@ -252,5 +237,41 @@ def build():
     print(f'✓ {n} pages generated')
     inject_nav()
 
+def prune():
+    # 더 이상 md와 연결되지 않는 .html 삭제.
+    # keep = FLAT(빌드 산출물) ∪ STATIC_NAV(손수 만든 정적 페이지). 그 외 .html은 stale로 간주.
+    # 섹션을 통째로 NAV에서 빼도(lab5/lab6 등) 걸리도록 OUT 전체를 스캔하되,
+    # 콘텐츠가 아닌 자원 폴더(assets/images/materials)는 건너뛴다.
+    keep  = {os.path.normpath(os.path.join(OUT, p[:-3] + '.html')) for _, p, _ in FLAT}
+    keep |= {os.path.normpath(os.path.join(OUT, rel)) for rel, _ in STATIC_NAV}
+    SKIP = {'__pycache__', 'assets', 'images', 'materials', '.git'}
+    removed = 0
+    for root, dirs, files in os.walk(OUT):
+        dirs[:] = [d for d in dirs if d not in SKIP]
+        for name in files:
+            if not name.endswith('.html'):
+                continue
+            fp = os.path.normpath(os.path.join(root, name))
+            if fp not in keep:
+                os.remove(fp)
+                print(f'  ✗ 삭제(연결 끊긴 HTML): {os.path.relpath(fp, OUT)}')
+                removed += 1
+    # 삭제로 비게 된 폴더 정리 (자원 폴더·루트는 제외)
+    for root, _, _ in os.walk(OUT, topdown=False):
+        rel = os.path.relpath(root, OUT)
+        if rel == '.' or set(rel.split(os.sep)) & SKIP:
+            continue
+        if not os.listdir(root):
+            os.rmdir(root)
+            print(f'  ✗ 빈 폴더 삭제: {rel}')
+    print(f'✓ {removed} stale page(s) removed' if removed else '✓ stale 페이지 없음')
+
 if __name__ == '__main__':
+    import argparse
+    ap = argparse.ArgumentParser(description='ax-tutor 위키 빌더')
+    ap.add_argument('--prune', action='store_true',
+                    help='빌드 후 FLAT(NAV)에 없는 연결 끊긴 .html 페이지를 삭제')
+    args = ap.parse_args()
     build()
+    if args.prune:
+        prune()
