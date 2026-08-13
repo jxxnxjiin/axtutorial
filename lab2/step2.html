@@ -110,6 +110,18 @@
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 그냥 <strong>"맞아?"</strong> 라고만 묻기 (AI는 "맞다"고 답하기 쉽습니다)</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 표본 <strong>한두 건만</strong> 보고 넘어가기 (틀린 건 안 본 곳에 숨어 있습니다)</li>
 </ul>
+<h2 id="모범-프롬프트">모범 프롬프트<a class="headerlink" href="#모범-프롬프트" title="Permanent link">&para;</a></h2>
+<p>여러분 문장을 먼저 보낸 뒤에 열어보세요.</p>
+<details class="example">
+<summary>이렇게 물어볼 수 있습니다</summary>
+<div class="highlight"><pre><span></span><code>계약종합.xlsx를 계약서 원본 8건과 대조해서 스스로 검산해줘.
+1) 각 칸의 값을 원문에서 근거 문장으로 찾을 수 없는 칸을 전부 정리해줘.
+2) 금액 조항이 없던 계약의 금액 칸이 빈칸인지, 0이나 임의 숫자로 채워지지 않았는지 확인해줘.
+3) CT-2026-004(재계약 필요 → 자동갱신 아니오), CT-2026-005(해지 통보 없으면 자동연장 → 예)의
+   자동갱신 여부가 근거대로 맞는지 원문과 대조해줘.
+맞다고 단정하지 말고, 어긋난 칸은 계약번호로 짚어줘.
+</code></pre></div>
+</details>
 <h2 id="실행-예시">실행 예시<a class="headerlink" href="#실행-예시" title="Permanent link">&para;</a></h2>
 <div class="admonition example">
 <p class="admonition-title">다음과 같이 물어볼 수 있습니다</p>
@@ -134,6 +146,7 @@
 <a href="#직접-시켜보세요">직접 시켜보세요</a>
 <a href="#검증에-포함해볼-것-">검증에 포함해볼 것 ✅</a>
 <a href="#이런-건-빼세요-">이런 건 빼세요 ❌</a>
+<a href="#모범-프롬프트">모범 프롬프트</a>
 <a href="#실행-예시">실행 예시</a>
 <a href="#체크포인트">체크포인트</a></aside>
     </div>
