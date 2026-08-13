@@ -4,59 +4,32 @@
 """
 import os, re, html as _html
 import markdown
+import yaml
 from pymdownx.slugs import slugify
 
-SRC = os.path.join(os.path.dirname(__file__), '..', 'ax-wiki', 'docs')
+SRC = os.path.join(os.path.dirname(__file__), 'docs')
 OUT = os.path.dirname(__file__)
 
-# 사이드바 = 모든 페이지 공통. (섹션제목, [(짧은라벨, md경로)]) — mkdocs.yml nav를 옮김.
-NAV = [
-    ('시작하기', [
-        ('0 · 준비물과 사전 설치', 'start/prepare.md'),
-        ('1 · 처음 5분', 'start/first-5min.md'),
-        ('2 · 오후 규칙 3가지', 'start/rules.md'),
-    ]),
-    ('실습 1 · 물류비 마감', [
-        ('개요', 'lab1/index.md'),
-        ('1 · 요금표를 표로', 'lab1/step1.md'),
-        ('2 · 청구서 합치기', 'lab1/step2.md'),
-        ('3 · 120건 재계산', 'lab1/step3.md'),
-        ('4 · 검증 설계·검산', 'lab1/step4.md'),
-    ]),
-    ('실습 2 · 계약서에서 계약종합 만들기', [
-        ('개요', 'lab2/index.md'),
-        ('1 · 계약종합 만들기', 'lab2/step1.md'),
-        ('2 · 원본 대조·검산', 'lab2/step2.md'),
-    ]),
-    ('실습 3 · 근거 붙인 보고문', [
-        ('개요', 'lab3/index.md'),
-        ('1 · 일단 써보게', 'lab3/step1.md'),
-        ('2 · 숫자마다 출처', 'lab3/step2.md'),
-        ('3 · 숫자 5개 역추적', 'lab3/step3.md'),
-        ('4·5 · 없는 문장·톤 두 벌', 'lab3/step4.md'),
-    ]),
-    ('실습 4 · 대시보드와 디자인', [
-        ('개요', 'lab4/index.md'),
-        ('1 · 무엇을 보여줄지', 'lab4/step1.md'),
-        ('2 · 뼈대·검산', 'lab4/step2.md'),
-        ('3 · Before 캡처', 'lab4/step3.md'),
-        ('4 · 말로 인상 바꾸기', 'lab4/step4.md'),
-        ('5 · 두 무드 비교', 'lab4/step5.md'),
-        ('6 · 다크모드·반응형', 'lab4/step6.md'),
-        ('7 · 재검산·After', 'lab4/step7.md'),
-        ('막혔을 때 쓰는 문장', 'lab4/stuck.md'),
-    ]),
-    ('도움말', [
-        ('에러가 났어요', 'help/errors.md'),
-        ('이 말이 무슨 뜻이죠', 'help/glossary.md'),
-        ('AI에게 잘 시키는 법', 'help/how-to-ask.md'),
-        ('오늘 내가 친 문장', 'help/prompts.md'),
-        ('강의 끝나고 뭘 해볼까', 'help/next.md'),
-    ]),
-]
+# 사이드바 구조 = 단일 소스 nav.yml. (스키마 설명은 nav.yml 주석 참고)
+with open(os.path.join(os.path.dirname(__file__), 'nav.yml'), encoding='utf-8') as _f:
+    NAV_TREE = yaml.safe_load(_f)['nav']
 
-# 이전/다음용 평탄 목록 (섹션명도 함께)
-FLAT = [(lbl, path, sec) for sec, items in NAV for lbl, path in items]
+def rel_prefix(path):
+    # 출력 HTML 위치의 깊이만큼 '../' — 자산/링크 상대경로를 자동 계산(폴더 중첩 허용).
+    return '../' * path.count('/')
+
+def _flatten(nodes, section=None):
+    # 트리를 (라벨, 경로, 최상위섹션) 리프 목록으로. group 은 최상위 섹션명만 물려준다.
+    out = []
+    for node in nodes:
+        if 'group' in node:
+            out += _flatten(node['children'], section or node['group'])
+        else:
+            out.append((node['label'], node['path'], section))
+    return out
+
+# 이전/다음·빌드 대상 = md 가 실제로 있는 리프만. (types/index.md 처럼 소스 없는 정적 링크는 제외)
+FLAT = [(l, p, s) for l, p, s in _flatten(NAV_TREE) if os.path.exists(os.path.join(SRC, p))]
 
 ICONS = {':material-run-fast:': '🏃', ':material-account-group:': '👥'}
 
@@ -87,6 +60,21 @@ def rewrite_links(h):
         return f'{pre}="{path}.html{anchor}"'
     return re.sub(r'(href|src)="(?!https?:)([^"#]+)\.md(#[^"]*)?"', repl, h)
 
+def _render_nodes(nodes, cur, prefix):
+    # nav 트리를 사이드바 HTML 행들로. group → 헤더+.tree(중첩 시 CSS가 자동 들여쓰기).
+    rows = []
+    for node in nodes:
+        if 'group' in node:
+            rows.append(f'<div class="nav-h">// {node["group"]}</div><div class="tree">')
+            rows += _render_nodes(node['children'], cur, prefix)
+            rows.append('</div>')
+        else:
+            active = ' active' if node['path'] == cur else ''
+            icon = f'<span class="g">{node["icon"]}</span> ' if node.get('icon') else ''
+            href = f'{prefix}{node["path"][:-3]}.html'
+            rows.append(f'<a class="nav-a{active}" href="{href}">{icon}{_html.escape(node["label"])}</a>')
+    return rows
+
 def sidebar(cur, prefix='../', home='remote'):
     # home='local'  : 홈(index.html) 자신 → 페이지 내 앵커로 링크
     # home='remote' : 하위 페이지 → 홈으로 돌아가는 링크
@@ -97,15 +85,7 @@ def sidebar(cur, prefix='../', home='remote'):
     else:
         rows = ['<div class="nav-h">// 홈</div>',
                 f'<a class="nav-a" href="{prefix}index.html#materials"><span class="g">▤</span> 강의 자료 내려받기</a>']
-    for sec, items in NAV:
-        rows.append(f'<div class="nav-h">// {sec}</div><div class="tree">')
-        if sec == '시작하기':
-            ta = ' active' if cur == 'types/index.md' else ''
-            rows.append(f'<a class="nav-a{ta}" href="{prefix}types/index.html"><span class="g">◆</span> 여섯 가지 업무 유형</a>')
-        for lbl, path in items:
-            active = ' active' if path == cur else ''
-            rows.append(f'<a class="nav-a{active}" href="{prefix}{path[:-3]}.html">{_html.escape(lbl)}</a>')
-        rows.append('</div>')
+    rows += _render_nodes(NAV_TREE, cur, prefix)
     return '\n'.join(rows)
 
 def toc_html(tokens):
@@ -124,15 +104,16 @@ def toc_html(tokens):
     return '<h4>On this page</h4>\n' + '\n'.join(links)
 
 def pager(idx):
+    pfx = rel_prefix(FLAT[idx][1])   # 현재 페이지 깊이 기준 상대경로
     parts = ['<nav class="pager">']
     if idx == 0:
-        prev = ('시간표', '../index.html')
+        prev = ('시간표', f'{pfx}index.html')
     else:
-        l, p, _ = FLAT[idx-1]; prev = (l, f'../{p[:-3]}.html')
+        l, p, _ = FLAT[idx-1]; prev = (l, f'{pfx}{p[:-3]}.html')
     parts.append(f'<a class="prev" href="{prev[1]}"><span class="lbl">← 이전</span><span class="ttl">{_html.escape(prev[0])}</span></a>')
     if idx < len(FLAT)-1:
         l, p, _ = FLAT[idx+1]
-        parts.append(f'<a class="next" href="../{p[:-3]}.html"><span class="lbl">다음 →</span><span class="ttl">{_html.escape(l)}</span></a>')
+        parts.append(f'<a class="next" href="{pfx}{p[:-3]}.html"><span class="lbl">다음 →</span><span class="ttl">{_html.escape(l)}</span></a>')
     parts.append('</nav>')
     return '\n'.join(parts)
 
@@ -143,13 +124,13 @@ TEMPLATE = '''<!doctype html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>%%TITLE%% · ax-tutor</title>
 <meta name="description" content="%%DESC%%">
-<link rel="stylesheet" href="../assets/site.css">
+<link rel="stylesheet" href="%%PREFIX%%assets/site.css">
 </head>
 <body>
 <div class="shell">
   <aside class="side" id="side">
     <div class="brand">
-      <a class="brand__row" href="../index.html" style="text-decoration:none">
+      <a class="brand__row" href="%%PREFIX%%index.html" style="text-decoration:none">
         <span class="ast mono">✻</span>
         <div><div class="brand__name">ax<b>-</b>tutor</div></div>
       </a>
@@ -160,7 +141,7 @@ TEMPLATE = '''<!doctype html>
     <nav>%%SIDEBAR%%</nav>
     <div class="side__foot">
       <button class="iconbtn" id="themeBtn" title="테마 전환"><span id="themeIc">◐</span> <span id="themeLbl">light</span></button>
-      <a class="iconbtn" href="../index.html" title="홈">↖ home</a>
+      <a class="iconbtn" href="%%PREFIX%%index.html" title="홈">↖ home</a>
     </div>
   </aside>
   <main class="main">
@@ -180,7 +161,7 @@ TEMPLATE = '''<!doctype html>
     </div>
   </main>
 </div>
-<script src="../assets/site.js"></script>
+<script src="%%PREFIX%%assets/site.js"></script>
 </body>
 </html>
 '''
@@ -220,15 +201,17 @@ def build():
         # 제목 = 첫 h1 텍스트
         m = re.search(r'<h1[^>]*>(.*?)(<a class="headerlink".*?</a>)?</h1>', body, re.S)
         title = re.sub('<[^>]+>', '', m.group(1)).strip() if m else lbl
+        pfx = rel_prefix(path)
         page = (TEMPLATE
                 .replace('%%TITLE%%', _html.escape(title))
                 .replace('%%DESC%%', _html.escape(f'{sec} — {title} · ax-tutor 실습 위키'))
-                .replace('%%SIDEBAR%%', sidebar(path))
+                .replace('%%SIDEBAR%%', sidebar(path, pfx))
                 .replace('%%PATH%%', _html.escape(path))
                 .replace('%%SECTION%%', _html.escape(sec))
                 .replace('%%CONTENT%%', body)
                 .replace('%%PAGER%%', pager(idx))
-                .replace('%%TOC%%', toc_html(md.toc_tokens)))
+                .replace('%%TOC%%', toc_html(md.toc_tokens))
+                .replace('%%PREFIX%%', pfx))
         dst = os.path.join(OUT, path[:-3] + '.html')
         os.makedirs(os.path.dirname(dst), exist_ok=True)
         with open(dst, 'w', encoding='utf-8') as f:

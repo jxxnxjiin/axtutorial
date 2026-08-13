@@ -21,33 +21,37 @@
     </div>
     <nav><div class="nav-h">// 홈</div>
 <a class="nav-a" href="../index.html#materials"><span class="g">▤</span> 강의 자료 내려받기</a>
+<div class="nav-h">// 개발 환경 세팅</div><div class="tree">
+<a class="nav-a" href="../start/setup/index.html"><span class="g">◆</span> 환경 세팅 개요</a>
+<a class="nav-a" href="../start/setup/vscode.html">1. VS Code 설치</a>
+<a class="nav-a" href="../start/setup/python.html">2. Python 설치</a>
+<a class="nav-a" href="../start/setup/nodejs.html">3. Node.js 설치</a>
+<a class="nav-a" href="../start/setup/agent.html">4. AI 에이전트 설치</a>
+</div>
 <div class="nav-h">// 시작하기</div><div class="tree">
 <a class="nav-a" href="../types/index.html"><span class="g">◆</span> 여섯 가지 업무 유형</a>
-<a class="nav-a" href="../start/prepare.html">0 · 준비물과 사전 설치</a>
-<a class="nav-a" href="../start/first-5min.html">1 · 처음 5분</a>
-<a class="nav-a" href="../start/rules.html">2 · 오후 규칙 3가지</a>
 </div>
 <div class="nav-h">// 실습 1 · 물류비 마감</div><div class="tree">
-<a class="nav-a" href="../lab1/index.html">개요</a>
+<a class="nav-a" href="../lab1/index.html"><span class="g">◆</span> 개요</a>
 <a class="nav-a" href="../lab1/step1.html">1 · 요금표를 표로</a>
 <a class="nav-a" href="../lab1/step2.html">2 · 청구서 합치기</a>
 <a class="nav-a" href="../lab1/step3.html">3 · 120건 재계산</a>
 <a class="nav-a" href="../lab1/step4.html">4 · 검증 설계·검산</a>
 </div>
 <div class="nav-h">// 실습 2 · 계약서에서 계약종합 만들기</div><div class="tree">
-<a class="nav-a" href="../lab2/index.html">개요</a>
+<a class="nav-a" href="../lab2/index.html"><span class="g">◆</span> 개요</a>
 <a class="nav-a" href="../lab2/step1.html">1 · 계약종합 만들기</a>
 <a class="nav-a" href="../lab2/step2.html">2 · 원본 대조·검산</a>
 </div>
 <div class="nav-h">// 실습 3 · 근거 붙인 보고문</div><div class="tree">
-<a class="nav-a" href="../lab3/index.html">개요</a>
+<a class="nav-a" href="../lab3/index.html"><span class="g">◆</span> 개요</a>
 <a class="nav-a" href="../lab3/step1.html">1 · 일단 써보게</a>
 <a class="nav-a" href="../lab3/step2.html">2 · 숫자마다 출처</a>
 <a class="nav-a" href="../lab3/step3.html">3 · 숫자 5개 역추적</a>
 <a class="nav-a" href="../lab3/step4.html">4·5 · 없는 문장·톤 두 벌</a>
 </div>
 <div class="nav-h">// 실습 4 · 대시보드와 디자인</div><div class="tree">
-<a class="nav-a" href="../lab4/index.html">개요</a>
+<a class="nav-a" href="../lab4/index.html"><span class="g">◆</span> 개요</a>
 <a class="nav-a active" href="../lab4/step1.html">1 · 무엇을 보여줄지</a>
 <a class="nav-a" href="../lab4/step2.html">2 · 뼈대·검산</a>
 <a class="nav-a" href="../lab4/step3.html">3 · Before 캡처</a>
@@ -92,11 +96,10 @@
 <hr />
 <h2 id="대시보드에_보일_것md-를-만드세요"><code>대시보드에_보일_것.md</code> 를 만드세요<a class="headerlink" href="#대시보드에_보일_것md-를-만드세요" title="Permanent link">&para;</a></h2>
 <p><code>시작폴더/</code> 안에 이 이름으로 파일을 만들고, 아래 네 줄을 여러분 손으로 채웁니다.</p>
-<div class="highlight"><pre><span></span><code>맨 위에 크게 보일 숫자 3개:  ___ / ___ / ___
+<pre class="highlight"><code>맨 위에 크게 보일 숫자 3개:  ___ / ___ / ___
 표로 보일 것:               ___
 색으로 구분할 것:           ___
-눌러서 걸러볼 것:           ___
-</code></pre></div>
+눌러서 걸러볼 것:           ___</code></pre>
 <div class="admonition example">
 <p class="admonition-title">채우기 전에 한번 보세요</p>
 <p>실습 1·2에서 만든 엑셀 두 개를 열어두고 채우면 훨씬 빠릅니다. <strong>거기 없는 숫자는 화면에도 못 올립니다.</strong></p>
@@ -117,11 +120,10 @@
 </details>
 <details class="example">
 <summary>③ 모범답안 — 채워진 견본 1장 (여러분 것을 먼저 채워본 뒤에 여세요)</summary>
-<div class="highlight"><pre><span></span><code>맨 위에 크게 보일 숫자 3개:  이번 달 과청구 총액 / 30일 내 만료 계약 수 / 판정보류 건수
+<pre class="highlight"><code>맨 위에 크게 보일 숫자 3개:  이번 달 과청구 총액 / 30일 내 만료 계약 수 / 판정보류 건수
 표로 보일 것:               건별판정 전체(송장번호·택배사·차액·판정) + 계약만료 전체
 색으로 구분할 것:           30일 이내 만료는 빨강 / 판정보류·문서없음은 회색 / 과청구는 주황
-눌러서 걸러볼 것:           택배사별 / 판정별
-</code></pre></div>
+눌러서 걸러볼 것:           택배사별 / 판정별</code></pre>
 <p><strong>이 견본이 하는 일</strong></p>
 <table>
 <thead>

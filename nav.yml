@@ -1,0 +1,65 @@
+# ax-tutor 위키 네비게이션 — build_wiki.py의 단일 구조 소스.
+#
+# 규칙
+#   - group  : 하위 항목을 묶는 섹션/하위섹션. children 필수. (사이드바에서 접힌 트리로 표시)
+#   - label + path : 실제 페이지 링크. path 는 docs 루트(ax-wiki/docs) 기준 .md 경로.
+#       · 해당 md 가 있으면  → build 대상(이전/다음 페이저에 포함)
+#       · 해당 md 가 없으면  → 정적 페이지 링크로만 취급(직접 만든 HTML)
+#   - icon   : (선택) 링크 앞 기호. 정적/특수 페이지 강조용.
+#   - 깊이(폴더 중첩)는 자유. 상대경로는 build_wiki.py 가 페이지 위치에서 자동 계산.
+
+nav:
+  - group: "개발 환경 세팅"
+    children:
+      - { label: "환경 세팅 개요", path: "start/setup/index.md", icon: "◆" }
+      - { label: "1. VS Code 설치", path: "start/setup/vscode.md" }
+      - { label: "2. Python 설치", path: "start/setup/python.md" }
+      - { label: "3. Node.js 설치", path: "start/setup/nodejs.md" }
+      - { label: "4. AI 에이전트 설치", path: "start/setup/agent.md" }
+
+  - group: "들어가기"
+    children:
+      - { label: "여섯 가지 업무 유형", path: "types/index.md" }
+
+
+  - group: "실습 1 · 물류비 마감"
+    children:
+      - { label: "개요", path: "lab1/index.md", icon: "◆"}
+      - { label: "1 · 요금표를 표로", path: "lab1/step1.md" }
+      - { label: "2 · 청구서 합치기", path: "lab1/step2.md" }
+      - { label: "3 · 120건 재계산", path: "lab1/step3.md" }
+      - { label: "4 · 검증 설계·검산", path: "lab1/step4.md" }
+
+  - group: "실습 2 · 계약서에서 계약종합 만들기"
+    children:
+      - { label: "개요", path: "lab2/index.md", icon: "◆" }
+      - { label: "1 · 계약종합 만들기", path: "lab2/step1.md" }
+      - { label: "2 · 원본 대조·검산", path: "lab2/step2.md" }
+
+  - group: "실습 3 · 근거 붙인 보고문"
+    children:
+      - { label: "개요", path: "lab3/index.md", icon: "◆" }
+      - { label: "1 · 일단 써보게", path: "lab3/step1.md" }
+      - { label: "2 · 숫자마다 출처", path: "lab3/step2.md" }
+      - { label: "3 · 숫자 5개 역추적", path: "lab3/step3.md" }
+      - { label: "4·5 · 없는 문장·톤 두 벌", path: "lab3/step4.md" }
+
+  - group: "실습 4 · 대시보드와 디자인"
+    children:
+      - { label: "개요", path: "lab4/index.md", icon: "◆" }
+      - { label: "1 · 무엇을 보여줄지", path: "lab4/step1.md" }
+      - { label: "2 · 뼈대·검산", path: "lab4/step2.md" }
+      - { label: "3 · Before 캡처", path: "lab4/step3.md" }
+      - { label: "4 · 말로 인상 바꾸기", path: "lab4/step4.md" }
+      - { label: "5 · 두 무드 비교", path: "lab4/step5.md" }
+      - { label: "6 · 다크모드·반응형", path: "lab4/step6.md" }
+      - { label: "7 · 재검산·After", path: "lab4/step7.md" }
+      - { label: "막혔을 때 쓰는 문장", path: "lab4/stuck.md" }
+
+  - group: "도움말"
+    children:
+      - { label: "에러가 났어요", path: "help/errors.md" }
+      - { label: "이 말이 무슨 뜻이죠", path: "help/glossary.md" }
+      - { label: "AI에게 잘 시키는 법", path: "help/how-to-ask.md" }
+      - { label: "오늘 내가 친 문장", path: "help/prompts.md" }
+      - { label: "강의 끝나고 뭘 해볼까", path: "help/next.md" }
