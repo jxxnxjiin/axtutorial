@@ -12,10 +12,10 @@ nav:
   - group: "개발 환경 세팅"
     children:
       - { label: "환경 세팅 개요", path: "start/setup/index.md", icon: "◆" }
-      - { label: "1. VS Code 설치", path: "start/setup/vscode.md" }
-      - { label: "2. Python 설치", path: "start/setup/python.md" }
-      - { label: "3. Node.js 설치", path: "start/setup/nodejs.md" }
-      - { label: "4. AI 에이전트 설치", path: "start/setup/agent.md" }
+      - { label: "1 · VS Code 설치", path: "start/setup/vscode.md" }
+      - { label: "2 · Python 설치", path: "start/setup/python.md" }
+      - { label: "3 · Node.js 설치", path: "start/setup/nodejs.md" }
+      - { label: "4 · Claude Code 설치", path: "start/setup/agent.md" }
 
   - group: "들어가기"
     children:

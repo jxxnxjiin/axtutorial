@@ -1,4 +1,4 @@
-# ③ Node.js 설치하기
+# 3. Node.js 설치하기
 
 !!! abstract "이 페이지에서 하는 일"
     - 웹 서버를 구동하는 런타임 **Node.js**를 설치합니다
@@ -32,9 +32,9 @@ x64 아키텍처의 Windows용으로 미리 빌드된 버전을 받습니다. �
 - **라이선스 동의** — *"I accept the terms in the License Agreement"*를 체크하고 `Next`.
 - **설치 경로** — 기본 경로(`C:\Program Files\nodejs\`)를 유지하고 `Next`.
 - **설치 항목 선택** — 기본 설정을 유지합니다. 다음이 함께 설치됩니다.
-    - Node.js runtime
-    - npm package manager
-    - Add to PATH
+  - Node.js runtime
+  - npm package manager
+  - Add to PATH
 
 !!! danger "`Add to PATH`는 반드시 체크되어 있어야 합니다"
     이 옵션이 있어야 터미널에서 `node` 명령을 쓸 수 있습니다. 기본값이 체크이니 건드리지 마세요.

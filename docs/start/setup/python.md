@@ -1,4 +1,4 @@
-# ② Python 설치하기
+# 2. Python 설치하기
 
 !!! abstract "이 페이지에서 하는 일"
     - 데이터 처리·분석에 쓰는 **Python**을 설치합니다
@@ -23,7 +23,7 @@ https://www.python.org/downloads/
 !!! danger "Windows에서는 이 체크박스가 가장 중요합니다"
     설치 **첫 화면 아래쪽**의 **`Add Python to PATH`** 체크박스를 **반드시 켜세요.** 이걸 놓치면 뒤에서 `python` 명령이 동작하지 않습니다.
 
-    이미 안 켜고 설치했다면, 설치 파일을 다시 실행해 `Modify`로 고칠 수 있습니다.
+    이미 안 켜고 설치했다면, 설치 파일을 다시 실행해`Modify`로 고칠 수 있습니다.
 
 체크한 뒤 `Install Now`를 눌러 설치를 완료합니다.
 

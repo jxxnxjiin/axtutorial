@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>④ AI 코딩 에이전트(Claude Code) 설치하기 · ax-tutor</title>
-<meta name="description" content="개발 환경 세팅 — ④ AI 코딩 에이전트(Claude Code) 설치하기 · ax-tutor 실습 위키">
+<title>4 · Claude Code 설치 · ax-tutor</title>
+<meta name="description" content="개발 환경 세팅 — 4 · Claude Code 설치 · ax-tutor 실습 위키">
 <link rel="stylesheet" href="../../assets/site.css">
 </head>
 <body>
@@ -23,13 +23,13 @@
 <a class="nav-a" href="../../index.html#materials"><span class="g">▤</span> 강의 자료 내려받기</a>
 <div class="nav-h">// 개발 환경 세팅</div><div class="tree">
 <a class="nav-a" href="../../start/setup/index.html"><span class="g">◆</span> 환경 세팅 개요</a>
-<a class="nav-a" href="../../start/setup/vscode.html">1. VS Code 설치</a>
-<a class="nav-a" href="../../start/setup/python.html">2. Python 설치</a>
-<a class="nav-a" href="../../start/setup/nodejs.html">3. Node.js 설치</a>
-<a class="nav-a active" href="../../start/setup/agent.html">4. AI 에이전트 설치</a>
+<a class="nav-a" href="../../start/setup/vscode.html">1 · VS Code 설치</a>
+<a class="nav-a" href="../../start/setup/python.html">2 · Python 설치</a>
+<a class="nav-a" href="../../start/setup/nodejs.html">3 · Node.js 설치</a>
+<a class="nav-a active" href="../../start/setup/agent.html">4 · Claude Code 설치</a>
 </div>
-<div class="nav-h">// 시작하기</div><div class="tree">
-<a class="nav-a" href="../../types/index.html"><span class="g">◆</span> 여섯 가지 업무 유형</a>
+<div class="nav-h">// 들어가기</div><div class="tree">
+<a class="nav-a" href="../../types/index.html">여섯 가지 업무 유형</a>
 </div>
 <div class="nav-h">// 실습 1 · 물류비 마감</div><div class="tree">
 <a class="nav-a" href="../../lab1/index.html"><span class="g">◆</span> 개요</a>
@@ -83,7 +83,7 @@
     <div class="wrap">
       <article class="doc md rise">
         <div class="kicker mono"><b>//</b> 개발 환경 세팅</div>
-<h1 id="④-ai-코딩-에이전트claude-code-설치하기">④ AI 코딩 에이전트(Claude Code) 설치하기<a class="headerlink" href="#④-ai-코딩-에이전트claude-code-설치하기" title="Permanent link">&para;</a></h1>
+<h1 id="4--claude-code-설치">4 · Claude Code 설치<a class="headerlink" href="#4--claude-code-설치" title="Permanent link">&para;</a></h1>
 <div class="admonition abstract">
 <p class="admonition-title">이 페이지에서 하는 일</p>
 <ul>
@@ -96,19 +96,13 @@
 <hr />
 <h2 id="1-claude-code-확장-설치">1. Claude Code 확장 설치<a class="headerlink" href="#1-claude-code-확장-설치" title="Permanent link">&para;</a></h2>
 <ol>
-<li>
-<p>아래 링크에서 Claude Code 확장 페이지를 엽니다.</p>
-<pre class="highlight"><code>https://marketplace.visualstudio.com/items?itemName=Anthropic.claude-code</code></pre>
-</li>
-<li>
-<p>열린 페이지에서 <strong><code>VS Code용 설치</code></strong> 버튼을 누릅니다.</p>
-<p><img alt="마켓플레이스에서 VS Code용 설치 버튼 클릭" src="../../images/setup/claude_install_vscode.png" /></p>
-</li>
-<li>
-<p>VS Code가 열리며 확장 페이지가 뜹니다. <strong><code>Install</code></strong> 버튼을 눌러 설치합니다.</p>
-<p><img alt="VS Code 확장 페이지에서 Install 버튼 클릭" src="../../images/setup/claude_install_button.png" /></p>
-</li>
+<li>아래 링크에서 Claude Code 확장 페이지를 엽니다.</li>
 </ol>
+<p><pre class="highlight"><code>https://marketplace.visualstudio.com/items?itemName=Anthropic.claude-code</code></pre>
+2. 열린 페이지에서 <strong><code>VS Code용 설치</code></strong> 버튼을 누릅니다.</p>
+<p><img alt="마켓플레이스에서 VS Code용 설치 버튼 클릭" src="../../images/setup/claude_install_vscode.png" />
+3. VS Code가 열리며 확장 페이지가 뜹니다. <strong><code>Install</code></strong> 버튼을 눌러 설치합니다.</p>
+<p><img alt="VS Code 확장 페이지에서 Install 버튼 클릭" src="../../images/setup/claude_install_button.png" /></p>
 <hr />
 <h2 id="2-로그인">2. 로그인<a class="headerlink" href="#2-로그인" title="Permanent link">&para;</a></h2>
 <p>설치가 끝나면 <kbd>Ctrl</kbd>+<kbd>L</kbd> (맥은 <kbd>Cmd</kbd>+<kbd>L</kbd>)을 누릅니다. 오른쪽 패널에 Claude Code 화면이 뜹니다. 여기서 <strong><code>Claude.ai Subscription</code></strong>(구독 계정 로그인)을 눌러 로그인합니다. 안내대로 브라우저에서 로그인하면 됩니다.</p>
@@ -132,9 +126,9 @@
 <p>VS Code 확장으로 설치한 Claude Code는 <strong>VS Code 안에서만</strong> 쓸 수 있습니다. 터미널에서 좀 더 자유롭게 쓰고 싶다면 CLI 모드를 추가로 설치합니다.</p>
 <p><strong>1단계.</strong> 검색 창에 <code>명령 프롬프트</code>를 입력해 실행합니다.</p>
 <p><strong>2단계.</strong> 아래 명령을 입력하고 <kbd>Enter</kbd> (Windows 기준).</p>
-<pre class="highlight"><code class="language-bash">curl -fsSL https://claude.ai/install.cmd -o install.cmd &amp;&amp; install.cmd &amp;&amp; del install.cmd</code></pre>
+<p><code>bash     curl -fsSL https://claude.ai/install.cmd -o install.cmd &amp;&amp; install.cmd &amp;&amp; del install.cmd</code></p>
 <p><strong>3단계.</strong> 아래 명령으로 버전이 출력되면 설치 완료입니다.</p>
-<pre class="highlight"><code class="language-bash">claude --version</code></pre>
+<p><code>bash     claude --version</code></p>
 <p><code>Installation complete!</code> 가 떴는데도 버전이 안 나오면, 명령 프롬프트를 닫았다가 다시 열어 <code>claude --version</code> 을 입력해보세요.</p>
 </details>
 <hr />
@@ -156,7 +150,7 @@
 </tr>
 <tr>
 <td><code>Edit automatically</code></td>
-<td>파일 편집은 자동, 터미널 명령은 여전히 확인 — <strong>오늘 이걸 고르세요</strong></td>
+<td>파일 편집은 자동, 터미널 명령은 여전히 확인 —<strong>오늘 이걸 고르세요</strong></td>
 </tr>
 <tr>
 <td><code>Plan mode</code></td>
@@ -176,10 +170,11 @@
 <p><img alt="Allow Dangerously Skip Permissions 체크박스" src="../../images/setup/autoapprove_claude_allow_skip.png" /></p>
 <p><strong>4단계.</strong> Claude Code 패널 하단 드롭다운에서 <code>Bypass permissions</code> 선택</p>
 <p><img alt="모드 드롭다운에서 Bypass permissions 선택" src="../../images/setup/autoapprove_claude_bypass.png" /></p>
-<p>이 설정은 <strong>승인 없이 명령을 실행</strong>하게 합니다. 오늘 쓰는 실습 폴더에서만 쓰고, 회사 자료나 개인 파일이 있는 폴더에서는 켜지 마세요.</p>
+<p>이 설정은<strong>승인 없이 명령을 실행</strong>하게 합니다. 오늘 쓰는 실습 폴더에서만 쓰고, 회사 자료나 개인 파일이 있는 폴더에서는 켜지 마세요.</p>
 </details>
 <details class="note">
 <summary>강의가 끝난 뒤 되돌리는 법</summary>
+</details>
 <table>
 <thead>
 <tr>
@@ -190,16 +185,15 @@
 <tbody>
 <tr>
 <td>자동 편집</td>
-<td>모드 드롭다운에서 <code>Ask before edits</code> 로 되돌립니다</td>
+<td>모드 드롭다운에서<code>Ask before edits</code> 로 되돌립니다</td>
 </tr>
 <tr>
 <td>명령 자동 실행</td>
-<td>Settings → Extensions → Claude Code → <code>Allow Dangerously Skip Permissions</code> 체크 해제</td>
+<td>Settings → Extensions → Claude Code →<code>Allow Dangerously Skip Permissions</code> 체크 해제</td>
 </tr>
 </tbody>
 </table>
-<p>평소 작업 폴더에서는 되돌려 쓰시길 권합니다. 실수로 지운 파일을 되살릴 방법이 없는 경우가 있습니다.</p>
-</details>
+<pre class="highlight"><code>평소 작업 폴더에서는 되돌려 쓰시길 권합니다. 실수로 지운 파일을 되살릴 방법이 없는 경우가 있습니다.</code></pre>
 <hr />
 <h2 id="4-데이터-내려받고-압축-풀기">4. 데이터 내려받고 압축 풀기<a class="headerlink" href="#4-데이터-내려받고-압축-풀기" title="Permanent link">&para;</a></h2>
 <p><a href="../../index.html">홈 화면의 내려받기 표</a>에서 <strong>전체 zip</strong>을 받습니다.</p>
@@ -234,12 +228,12 @@
 <p>여기까지 됐으면 세팅 완료입니다.</p>
 
 <nav class="pager">
-<a class="prev" href="../../start/setup/nodejs.html"><span class="lbl">← 이전</span><span class="ttl">3. Node.js 설치</span></a>
+<a class="prev" href="../../start/setup/nodejs.html"><span class="lbl">← 이전</span><span class="ttl">3 · Node.js 설치</span></a>
 <a class="next" href="../../lab1/index.html"><span class="lbl">다음 →</span><span class="ttl">개요</span></a>
 </nav>
       </article>
       <aside class="toc mono"><h4>On this page</h4>
-<a href="#④-ai-코딩-에이전트claude-code-설치하기">④ AI 코딩 에이전트(Claude Code) 설치하기</a>
+<a href="#4--claude-code-설치">4 · Claude Code 설치</a>
 <a href="#1-claude-code-확장-설치">1. Claude Code 확장 설치</a>
 <a href="#2-로그인">2. 로그인</a>
 <a href="#3-확인-창-미리-꺼두기-자동-승인">3. 확인 창 미리 꺼두기 (자동 승인)</a>

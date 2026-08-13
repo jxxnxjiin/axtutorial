@@ -29,17 +29,18 @@
 
     <nav>
 <div class="nav-h">// 홈</div>
+<a class="nav-a" href="#overview"><span class="g">◆</span> 오늘의 지도</a>
 <a class="nav-a" href="#timetable"><span class="g">◷</span> 시간표</a>
 <a class="nav-a" href="#materials"><span class="g">▤</span> 강의 자료 내려받기</a>
 <div class="nav-h">// 개발 환경 세팅</div><div class="tree">
 <a class="nav-a" href="start/setup/index.html"><span class="g">◆</span> 환경 세팅 개요</a>
-<a class="nav-a" href="start/setup/vscode.html">1. VS Code 설치</a>
-<a class="nav-a" href="start/setup/python.html">2. Python 설치</a>
-<a class="nav-a" href="start/setup/nodejs.html">3. Node.js 설치</a>
-<a class="nav-a" href="start/setup/agent.html">4. AI 에이전트 설치</a>
+<a class="nav-a" href="start/setup/vscode.html">1 · VS Code 설치</a>
+<a class="nav-a" href="start/setup/python.html">2 · Python 설치</a>
+<a class="nav-a" href="start/setup/nodejs.html">3 · Node.js 설치</a>
+<a class="nav-a" href="start/setup/agent.html">4 · Claude Code 설치</a>
 </div>
-<div class="nav-h">// 시작하기</div><div class="tree">
-<a class="nav-a" href="types/index.html"><span class="g">◆</span> 여섯 가지 업무 유형</a>
+<div class="nav-h">// 들어가기</div><div class="tree">
+<a class="nav-a" href="types/index.html">여섯 가지 업무 유형</a>
 </div>
 <div class="nav-h">// 실습 1 · 물류비 마감</div><div class="tree">
 <a class="nav-a" href="lab1/index.html"><span class="g">◆</span> 개요</a>
@@ -122,8 +123,41 @@
             </div>
           </div>
         </div>
+        <!-- ---- OVERVIEW ---- -->
+        <section id="overview" data-nav="오늘의 지도" data-nav-icon="◆" data-toc="오늘의 지도">
+          <div class="sec-h"><span class="hash mono">##</span><h2>오늘의 지도</h2><span class="note mono">4 works · 5 hours</span></div>
+          <p class="lead"><a href="types/index.html" style="color:var(--coral);text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--line)">여섯 가지 업무 유형</a>(뽑기·모으기·줄이기·딱지 붙이기·쓰기·검사하기)을 실제 데이터로 하나씩 손에 익힙니다.
+            각 실습은 <b>흩어진 자료 → 한 표/한 문서 → 검산</b>의 리듬으로 흘러갑니다.
+            아래 카드는 이 여섯을 하루 일정상 <b>네 갈래 작업</b>으로 묶은 것 — <a href="types/index.html" style="color:var(--coral)">여섯 유형 자세히 보기 →</a></p>
+          <div class="grid4">
+            <div class="ov rise" style="animation-delay:.05s">
+              <div class="ov__n mono">WORK 01 — 물류·재고</div>
+              <div class="ov__t">숫자를 표로 뽑아 집계</div>
+              <div class="ov__d">사진·현황표처럼 구조 없던 것을 표로 옮기고, 필요한 값만 줄여 집계합니다.</div>
+              <div class="ov__out mono"><span class="lbl">out</span><code>.xlsx</code></div>
+            </div>
+            <div class="ov rise" style="animation-delay:.1s">
+              <div class="ov__n mono">WORK 02 — 취합·통합</div>
+              <div class="ov__t">흩어진 파일을 한 표로</div>
+              <div class="ov__d">채널·창구별로 나뉜 주문·견적·계약을 행을 보존하며 하나로 모읍니다.</div>
+              <div class="ov__out mono"><span class="lbl">out</span><code>주문종합.xlsx</code></div>
+            </div>
+            <div class="ov rise" style="animation-delay:.15s">
+              <div class="ov__n mono">WORK 03 — 분류·보고</div>
+              <div class="ov__t">딱지 붙이고 근거 붙여 쓰기</div>
+              <div class="ov__d">VOC를 기준표로 분류하고, 숫자마다 출처를 붙인 보고문을 씁니다.</div>
+              <div class="ov__out mono"><span class="lbl">out</span><code>점검보고.md</code></div>
+            </div>
+            <div class="ov rise" style="animation-delay:.2s">
+              <div class="ov__n mono">WORK 04 — 화면·스킬</div>
+              <div class="ov__t">대시보드와 재사용 스킬</div>
+              <div class="ov__d">내 데이터가 도는 화면을 만들고, 반복 작업을 스킬로 남겨 다음에도 씁니다.</div>
+              <div class="ov__out mono"><span class="lbl">out</span><code>dashboard.html</code> · <code>SKILL.md</code></div>
+            </div>
+          </div>
+        </section>
         <!-- ---- TIMETABLE ---- -->
-        <section id="timetable">
+        <section id="timetable" data-nav="시간표" data-nav-icon="◷" data-toc="시간표">
           <div class="sec-h"><span class="hash mono">##</span><h2>오늘 시간표</h2><span class="note mono">빈 시간은 쉬는 시간</span></div>
           <div class="tt mono">
             <div class="tt__grp"><span class="tt__gl">오전</span><span class="tt__gs">이론 · 실습 준비 (환경 세팅)</span></div>
@@ -140,7 +174,7 @@
         </section>
 
         <!-- ---- MATERIALS ---- -->
-        <section id="materials">
+        <section id="materials" data-nav="강의 자료 내려받기" data-nav-icon="▤" data-toc="강의 자료">
           <div class="sec-h"><span class="hash mono">##</span><h2>강의 자료 내려받기</h2><span class="note mono">materials/</span></div>
           <p class="lead">아래에서 실습에 필요한 파일을 다운로드 받으세요. <b>한글·띄어쓰기가 없는 이름의 폴더</b>를 만들어 모아두면 실습이 편합니다.</p>
 
@@ -279,7 +313,7 @@
         </section>
 
         <!-- ---- GUIDE ---- -->
-        <section id="guide">
+        <section id="guide" data-toc="실습 가이드">
           <div class="sec-h"><span class="hash mono">##</span><h2>실습 가이드</h2><span class="note mono">한 페이지 = 한 단계</span></div>
           <p class="lead">단계별 상세 안내가 이 위키 안에 그대로 들어 있습니다. 한 페이지가 한 단계이니,
             앞질러 가지 말고 지금 페이지 맨 아래 체크포인트를 먼저 통과하세요.</p>
@@ -318,7 +352,7 @@
         </section>
 
         <!-- ---- HELP ---- -->
-        <section id="help">
+        <section id="help" data-toc="막혔을 때">
           <div class="sec-h"><span class="hash mono">##</span><h2>막혔을 때</h2><span class="note mono">help/</span></div>
           <div class="help-grid">
             <a class="hcard" href="help/errors.html">
@@ -351,12 +385,12 @@
 
       <!-- ---- RIGHT TOC ---- -->
       <aside class="toc mono">
-        <h4>On this page</h4>
-        <a href="#overview" data-toc="overview">오늘의 지도</a>
-        <a href="#timetable" data-toc="timetable">시간표</a>
-        <a href="#materials" data-toc="materials">강의 자료</a>
-        <a href="#guide" data-toc="guide">실습 가이드</a>
-        <a href="#help" data-toc="help">막혔을 때</a>
+<h4>On this page</h4>
+<a href="#overview">오늘의 지도</a>
+<a href="#timetable">시간표</a>
+<a href="#materials">강의 자료</a>
+<a href="#guide">실습 가이드</a>
+<a href="#help">막혔을 때</a>
       </aside>
 
     </div>

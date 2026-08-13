@@ -33,6 +33,9 @@ FLAT = [(l, p, s) for l, p, s in _flatten(NAV_TREE) if os.path.exists(os.path.jo
 
 ICONS = {':material-run-fast:': '🏃', ':material-account-group:': '👥'}
 
+# 제목 슬러그(=본문 h1·목차 앵커 id) 생성기 — md 목차와 동일 규칙.
+SLUG = slugify(case='lower')
+
 def md_engine():
     return markdown.Markdown(extensions=[
         'admonition', 'pymdownx.details', 'pymdownx.superfences', 'pymdownx.tabbed',
@@ -75,13 +78,11 @@ def _render_nodes(nodes, cur, prefix):
             rows.append(f'<a class="nav-a{active}" href="{href}">{icon}{_html.escape(node["label"])}</a>')
     return rows
 
-def sidebar(cur, prefix='../', home='remote'):
-    # home='local'  : 홈(index.html) 자신 → 페이지 내 앵커로 링크
+def sidebar(cur, prefix='../', home='remote', home_rows=None):
+    # home='local'  : 홈(index.html) 자신 → 페이지 내 섹션 앵커로 링크(섹션의 data-nav 속성에서 생성)
     # home='remote' : 하위 페이지 → 홈으로 돌아가는 링크
     if home == 'local':
-        rows = ['<div class="nav-h">// 홈</div>',
-                '<a class="nav-a" href="#timetable"><span class="g">◷</span> 시간표</a>',
-                '<a class="nav-a" href="#materials"><span class="g">▤</span> 강의 자료 내려받기</a>']
+        rows = list(home_rows) if home_rows else ['<div class="nav-h">// 홈</div>']
     else:
         rows = ['<div class="nav-h">// 홈</div>',
                 f'<a class="nav-a" href="{prefix}index.html#materials"><span class="g">▤</span> 강의 자료 내려받기</a>']
@@ -173,19 +174,54 @@ STATIC_NAV = [
     ('types/index.html', dict(cur='types/index.md', prefix='../', home='remote')),
 ]
 
+# 정적 홈/유형 페이지의 좌측 홈 nav·우측 On this page 는 페이지 안 섹션이 스스로 들고 있는
+# data-nav / data-toc 속성에서 생성한다. 앵커 id 와 라벨이 같은 요소에 붙어 있어
+# '섹션은 지웠는데 목차만 남는' desync 가 원천 차단된다.
+#   data-nav="라벨"        : 좌측 홈 nav 에 노출 (data-nav-icon="◆" 로 앞 기호 지정)
+#   data-toc="라벨"        : 우측 On this page 에 노출
+_TAG_RE  = re.compile(r'<(?:section|h[1-6])\b([^>]*)>')
+_ATTR_RE = re.compile(r'([a-zA-Z][\w-]*)="([^"]*)"')
+
+def _anchored(page, key):
+    # id 와 key 속성을 함께 가진 태그를 문서 순서대로 [attrs dict] 로 수집.
+    out = []
+    for m in _TAG_RE.finditer(page):
+        a = dict(_ATTR_RE.findall(m.group(1)))
+        if 'id' in a and key in a:
+            out.append(a)
+    return out
+
+def home_nav_rows(page):
+    rows = ['<div class="nav-h">// 홈</div>']
+    for a in _anchored(page, 'data-nav'):
+        icon = f'<span class="g">{a["data-nav-icon"]}</span> ' if a.get('data-nav-icon') else ''
+        rows.append(f'<a class="nav-a" href="#{a["id"]}">{icon}{_html.escape(a["data-nav"])}</a>')
+    return rows
+
+def toc_block(page):
+    rows = ['<h4>On this page</h4>']
+    for a in _anchored(page, 'data-toc'):
+        rows.append(f'<a href="#{a["id"]}">{_html.escape(a["data-toc"])}</a>')
+    return '\n'.join(rows)
+
 def inject_nav():
     for relpath, kw in STATIC_NAV:
         fp = os.path.join(OUT, relpath)
         with open(fp, encoding='utf-8') as f:
             page = f.read()
-        nav = sidebar(**kw)
-        new, cnt = re.subn(r'<nav>.*?</nav>', lambda m: f'<nav>\n{nav}\n</nav>',
-                           page, count=1, flags=re.S)
+        home_rows = home_nav_rows(page) if kw.get('home') == 'local' else None
+        nav = sidebar(cur=kw['cur'], prefix=kw['prefix'], home=kw['home'], home_rows=home_rows)
+        page, cnt = re.subn(r'<nav>.*?</nav>', lambda m: f'<nav>\n{nav}\n</nav>',
+                            page, count=1, flags=re.S)
         if cnt == 0:
             raise SystemExit(f'✗ {relpath}: <nav>…</nav> 블록을 찾지 못함 — 수동 확인 필요')
+        toc = toc_block(page)
+        page, tcnt = re.subn(r'(<aside class="toc[^"]*">).*?(</aside>)',
+                             lambda m: f'{m.group(1)}\n{toc}\n      {m.group(2)}',
+                             page, count=1, flags=re.S)
         with open(fp, 'w', encoding='utf-8') as f:
-            f.write(new)
-        print(f'  ↳ nav 동기화: {relpath}')
+            f.write(page)
+        print(f'  ↳ nav{"·toc" if tcnt else ""} 동기화: {relpath}')
 
 def build():
     n = 0
@@ -198,9 +234,19 @@ def build():
         body = rewrite_links(body)
         # md 본문 끝의 손수 적은 이전/다음 블록 제거 — 아래 생성 .pager로 대체
         body = re.sub(r'<div class="stage-nav">.*?</div>\s*', '', body, flags=re.S)
-        # 제목 = 첫 h1 텍스트
-        m = re.search(r'<h1[^>]*>(.*?)(<a class="headerlink".*?</a>)?</h1>', body, re.S)
-        title = re.sub('<[^>]+>', '', m.group(1)).strip() if m else lbl
+        # 제목 = nav.yml label 로 통일. md 의 첫 # 은 무시(제거)하고 label 로 h1 주입.
+        # (본문 h1·우측 목차 첫 항목·<title> 세 곳이 label 로 일치 → 제목 desync 방지)
+        title = lbl
+        slug = SLUG(title, '-')
+        body = re.sub(r'<h1\b[^>]*>.*?</h1>\s*', '', body, count=1, flags=re.S)
+        body = (f'<h1 id="{slug}">{_html.escape(title)}'
+                f'<a class="headerlink" href="#{slug}" title="Permanent link">&para;</a></h1>\n'
+                + body)
+        toks = md.toc_tokens
+        if toks and toks[0].get('level') == 1:
+            toks = [{**toks[0], 'name': title, 'id': slug}] + list(toks[1:])
+        else:
+            toks = [{'level': 1, 'id': slug, 'name': title, 'children': []}] + list(toks)
         pfx = rel_prefix(path)
         page = (TEMPLATE
                 .replace('%%TITLE%%', _html.escape(title))
@@ -210,7 +256,7 @@ def build():
                 .replace('%%SECTION%%', _html.escape(sec))
                 .replace('%%CONTENT%%', body)
                 .replace('%%PAGER%%', pager(idx))
-                .replace('%%TOC%%', toc_html(md.toc_tokens))
+                .replace('%%TOC%%', toc_html(toks))
                 .replace('%%PREFIX%%', pfx))
         dst = os.path.join(OUT, path[:-3] + '.html')
         os.makedirs(os.path.dirname(dst), exist_ok=True)

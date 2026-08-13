@@ -1,4 +1,4 @@
-# ④ AI 코딩 에이전트(Claude Code) 설치하기
+# 4. AI 코딩 에이전트(Claude Code) 설치하기
 
 !!! abstract "이 페이지에서 하는 일"
     - VS Code에 **Claude Code**를 설치하고 로그인합니다
@@ -13,17 +13,15 @@
 
 1. 아래 링크에서 Claude Code 확장 페이지를 엽니다.
 
-    ```
-    https://marketplace.visualstudio.com/items?itemName=Anthropic.claude-code
-    ```
-
+   ```
+   https://marketplace.visualstudio.com/items?itemName=Anthropic.claude-code
+   ```
 2. 열린 페이지에서 **`VS Code용 설치`** 버튼을 누릅니다.
 
-    ![마켓플레이스에서 VS Code용 설치 버튼 클릭](../../images/setup/claude_install_vscode.png)
-
+   ![마켓플레이스에서 VS Code용 설치 버튼 클릭](../../images/setup/claude_install_vscode.png)
 3. VS Code가 열리며 확장 페이지가 뜹니다. **`Install`** 버튼을 눌러 설치합니다.
 
-    ![VS Code 확장 페이지에서 Install 버튼 클릭](../../images/setup/claude_install_button.png)
+   ![VS Code 확장 페이지에서 Install 버튼 클릭](../../images/setup/claude_install_button.png)
 
 ---
 
@@ -49,15 +47,11 @@
 
     **2단계.** 아래 명령을 입력하고 <kbd>Enter</kbd> (Windows 기준).
 
-    ```bash
-    curl -fsSL https://claude.ai/install.cmd -o install.cmd && install.cmd && del install.cmd
-    ```
+    ``bash     curl -fsSL https://claude.ai/install.cmd -o install.cmd && install.cmd && del install.cmd     ``
 
     **3단계.** 아래 명령으로 버전이 출력되면 설치 완료입니다.
 
-    ```bash
-    claude --version
-    ```
+    ``bash     claude --version     ``
 
     `Installation complete!` 가 떴는데도 버전이 안 나오면, 명령 프롬프트를 닫았다가 다시 열어 `claude --version` 을 입력해보세요.
 
@@ -71,11 +65,11 @@ VS Code 오른쪽 Claude Code 패널 **하단의 모드 드롭다운**에서 `Ed
 
 ![Claude Code 모드 드롭다운에서 Edit automatically 선택](../../images/setup/autoapprove_claude_edit.png)
 
-| 모드 | 동작 |
-|---|---|
-| `Ask before edits` | 고칠 때마다 물어봅니다 (기본값) |
-| `Edit automatically` | 파일 편집은 자동, 터미널 명령은 여전히 확인 — **오늘 이걸 고르세요** |
-| `Plan mode` | 고치기 전에 계획을 먼저 보여줍니다 |
+| 모드                   | 동작                                                                       |
+| ---------------------- | -------------------------------------------------------------------------- |
+| `Ask before edits`   | 고칠 때마다 물어봅니다 (기본값)                                            |
+| `Edit automatically` | 파일 편집은 자동, 터미널 명령은 여전히 확인 —**오늘 이걸 고르세요** |
+| `Plan mode`          | 고치기 전에 계획을 먼저 보여줍니다                                         |
 
 고르고 나면 입력창 오른쪽 아래에 `Edit automatically` 라벨이 뜹니다.
 
@@ -98,13 +92,14 @@ VS Code 오른쪽 Claude Code 패널 **하단의 모드 드롭다운**에서 `Ed
 
     ![모드 드롭다운에서 Bypass permissions 선택](../../images/setup/autoapprove_claude_bypass.png)
 
-    이 설정은 **승인 없이 명령을 실행**하게 합니다. 오늘 쓰는 실습 폴더에서만 쓰고, 회사 자료나 개인 파일이 있는 폴더에서는 켜지 마세요.
+    이 설정은**승인 없이 명령을 실행**하게 합니다. 오늘 쓰는 실습 폴더에서만 쓰고, 회사 자료나 개인 파일이 있는 폴더에서는 켜지 마세요.
 
 ??? note "강의가 끝난 뒤 되돌리는 법"
-    | 되돌릴 것 | 방법 |
-    |---|---|
-    | 자동 편집 | 모드 드롭다운에서 `Ask before edits` 로 되돌립니다 |
-    | 명령 자동 실행 | Settings → Extensions → Claude Code → `Allow Dangerously Skip Permissions` 체크 해제 |
+
+| 되돌릴 것      | 방법                                                                                     |
+| -------------- | ---------------------------------------------------------------------------------------- |
+| 자동 편집      | 모드 드롭다운에서`Ask before edits` 로 되돌립니다                                      |
+| 명령 자동 실행 | Settings → Extensions → Claude Code →`Allow Dangerously Skip Permissions` 체크 해제 |
 
     평소 작업 폴더에서는 되돌려 쓰시길 권합니다. 실수로 지운 파일을 되살릴 방법이 없는 경우가 있습니다.
 
