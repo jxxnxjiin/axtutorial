@@ -3,7 +3,6 @@
 !!! abstract "이 페이지에서 하는 일"
     - VS Code에 **Claude Code**를 설치하고 로그인합니다
     - 파일을 고칠 때마다 뜨는 확인 창을 미리 꺼둡니다 **(자동 승인)**
-    - 실습 데이터를 내려받아 압축까지 풀어둡니다
 
 오늘 말을 걸 상대인 **AI 코딩 에이전트**를 설치합니다. VS Code 확장 프로그램으로 설치하면 친숙한 채팅 UI로 바로 시작할 수 있습니다.
 
@@ -53,77 +52,19 @@
 
 ## 3. 확인 창 미리 꺼두기 (자동 승인)
 
-AI가 파일을 고칠 때마다 *"이 파일을 수정해도 될까요?"* 하고 물어봅니다. 오늘 하루는 파일을 수백 번 고치므로, 미리 꺼둡니다.
+AI가 파일을 고칠 때마다 *"이 파일을 수정해도 될까요?"* 하고 물어봅니다. 오늘 하루는 파일을 수백 번 고치므로, 미리 꺼두면 실습 흐름이 끊기지 않습니다.
 
-VS Code 오른쪽 Claude Code 패널 **하단의 모드 드롭다운**에서 `Edit automatically`를 고릅니다.
-
-![Claude Code 모드 드롭다운에서 Edit automatically 선택](../../images/setup/autoapprove_claude_edit.png)
-
-| 모드                   | 동작                                                                       |
-| ---------------------- | -------------------------------------------------------------------------- |
-| `Ask before edits`   | 고칠 때마다 물어봅니다 (기본값)                                            |
-| `Edit automatically` | 파일 편집은 자동, 터미널 명령은 여전히 확인 —**오늘 이걸 고르세요** |
-| `Plan mode`          | 고치기 전에 계획을 먼저 보여줍니다                                         |
-
-고르고 나면 입력창 오른쪽 아래에 `Edit automatically` 라벨이 뜹니다.
-
-??? note "터미널 명령까지 자동으로 넘기고 싶다면 (선택)"
-    실습 4에서 화면을 여러 번 다시 만들 때 조금 더 편합니다. 다만 켜지 않아도 오늘 실습은 전부 진행됩니다.
-
-    **1단계.** VS Code 왼쪽 아래 톱니바퀴 → `Settings` (<kbd>Ctrl</kbd>+<kbd>,</kbd>)
-
-    ![VS Code 설정 메뉴에서 Settings 선택](../../images/setup/autoapprove_claude_settings.png)
-
-    **2단계.** 왼쪽 트리에서 `Extensions` → `Claude Code`
-
-    ![Settings에서 Extensions 아래 Claude Code 선택](../../images/setup/autoapprove_claude_extensions.png)
-
-    **3단계.** 맨 위 `Allow Dangerously Skip Permissions` 체크박스를 켭니다
-
-    ![Allow Dangerously Skip Permissions 체크박스](../../images/setup/autoapprove_claude_allow_skip.png)
-
-    **4단계.** Claude Code 패널 하단 드롭다운에서 `Bypass permissions` 선택
-
-    ![모드 드롭다운에서 Bypass permissions 선택](../../images/setup/autoapprove_claude_bypass.png)
-
-    이 설정은 **승인 없이 명령을 실행**하게 합니다. 오늘 쓰는 실습 폴더에서만 쓰고, 회사 자료나 개인 파일이 있는 폴더에서는 켜지 마세요.
-
-??? note "강의가 끝난 뒤 되돌리는 법"
-
-| 되돌릴 것      | 방법                                                                                     |
-| -------------- | ---------------------------------------------------------------------------------------- |
-| 자동 편집      | 모드 드롭다운에서 `Ask before edits`로 되돌립니다                                      |
-| 명령 자동 실행 | Settings → Extensions → Claude Code → `Allow Dangerously Skip Permissions` 체크 해제 |
-
-> 평소 작업 폴더에서는 되돌려 쓰시길 권합니다. 실수로 지운 파일을 되살릴 방법이 없는 경우가 있습니다.
-
-## 4. 데이터 내려받고 압축 풀기
-
-[홈 화면의 내려받기 표](../../index.md)에서 **전체 zip**을 받습니다.
-
-압축을 풀 **위치**가 중요합니다.
-
-!!! danger "바탕화면에 풀지 마세요"
-    경로에 한글이나 띄어쓰기가 섞이면 도구가 파일을 못 찾는 일이 실제로 생깁니다.
-    **윈도우: `C:\workshop\` / 맥: `~/workshop/`** 에 푸세요. 폴더가 없으면 직접 만드세요.
-
-!!! success "이렇게 나오면 정상입니다"
-    - `workshop` 폴더 안에 `lab1` `lab2` `lab3` `lab4` `lab5` 다섯 폴더가 보입니다
-    - `lab1` 폴더를 열면 `발송내역.xlsx`, `청구서_A택배.csv`, `요금안내문` 폴더가 보입니다
-
-!!! warning "이렇게 보인다면"
-    - 폴더 안에 같은 이름 폴더가 또 있다 → 안쪽 폴더가 진짜입니다. 안쪽 것을 `workshop` 아래로 옮기세요
-    - 한글 이름이 깨진다 → 다른 압축 프로그램(반디집·알집 등)으로 다시 푸세요
+!!! tip "설정 방법은 부록에서"
+    Claude Code 모드 드롭다운에서 `Edit automatically`를 고르면 됩니다. 명령 실행까지 자동으로 넘기는 방법과 되돌리는 법은 [**부록 · 자동 허가 모드 설정**](autoapprove.md)에 정리해뒀습니다.
 
 ## 다 됐는지 스스로 확인하기
 
 - [ ] VS Code에서 Claude Code 패널이 뜨고, **로그인 화면 없이** 말을 걸 수 있다
 - [ ] 터미널에서 `python --version` · `node --version` 이 숫자를 답한다
 - [ ] Claude Code 패널 아래에 `Edit automatically` 라벨이 보인다
-- [ ] `C:\workshop\` (맥은 `~/workshop/`) 안에 `lab1`~`lab5` 폴더가 있다
 
-여기까지 됐으면 세팅 완료입니다.
+여기까지 됐으면 도구 설치는 끝입니다. 이제 실습 데이터를 준비합니다.
 
 <div class="stage-nav" markdown>
-**← 이전** [③ Node.js 설치](nodejs.md) · **다음 →** [1. 처음 5분 — 폴더 열고 말 걸기](../first-5min.md)
+**← 이전** [③ Node.js 설치](nodejs.md) · **다음 →** [⑤ 실습 데이터 준비](data.md)
 </div>

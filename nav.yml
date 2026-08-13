@@ -16,6 +16,8 @@ nav:
       - { label: "2 · Python 설치", path: "start/setup/python.md" }
       - { label: "3 · Node.js 설치", path: "start/setup/nodejs.md" }
       - { label: "4 · Claude Code 설치", path: "start/setup/agent.md" }
+      - { label: "5 · 실습 데이터 준비", path: "start/setup/data.md" }
+      - { label: "부록 · 자동 허가 모드", path: "start/setup/autoapprove.md", icon: "◇" }
 
   - group: "들어가기"
     children:
@@ -42,6 +44,34 @@ nav:
       - { label: "3 · 집계 검산", path: "lab3/step3.md" }
       - { label: "4 · 인사이트·검산", path: "lab3/step4.md" }
 
+  - group: "실습 4 · 고객 문의에 딱지 붙이기"
+    children:
+      - { label: "개요", path: "lab4/index.md", icon: "◆" }
+      - { label: "1 · 기준 확인·한 건 분류", path: "lab4/step1.md" }
+      - { label: "2 · 520건 일괄 분류", path: "lab4/step2.md" }
+      - { label: "3 · 분류 검산", path: "lab4/step3.md" }
+
+  - group: "실습 5 · 임원용 1페이지 보고서"
+    children:
+      - { label: "개요", path: "lab5/index.md", icon: "◆" }
+      - { label: "1 · 보고서 초안 쓰기", path: "lab5/step1.md" }
+      - { label: "2 · 보고서 검산", path: "lab5/step2.md" }
+
+  - group: "실습 6 · 제안서 사실로 되돌리기"
+    children:
+      - { label: "개요", path: "lab6/index.md", icon: "◆" }
+      - { label: "1 · 확인할 것 묻기", path: "lab6/step1.md" }
+      - { label: "2 · 관점별 검증", path: "lab6/step2.md" }
+      - { label: "3 · 사실로 재작성", path: "lab6/step3.md" }
+      - { label: "4 · 재검증·검사표", path: "lab6/step4.md" }
+
+  # - group: "심화 실습 · 이미지 공고 → 캐치 폼 웹앱"
+  #   children:
+  #     - { label: "개요", path: "advanced1/index.md", icon: "★" }
+  #     - { label: "1 · 결과 담을 빈 양식 만들기", path: "advanced1/stage1.md" }
+  #     - { label: "2 · 이미지에서 정보 뽑아 채우기", path: "advanced1/stage2.md" }
+  #     - { label: "3 · 웹 화면 붙이고 써보기", path: "advanced1/stage3.md" }
+
   # - group: "실습 4 · 대시보드와 디자인"
   #   children:
   #     - { label: "개요", path: "lab4/index.md", icon: "◆" }
@@ -59,5 +89,4 @@ nav:
       - { label: "에러가 났어요", path: "help/errors.md" }
       - { label: "이 말이 무슨 뜻이죠", path: "help/glossary.md" }
       - { label: "AI에게 잘 시키는 법", path: "help/how-to-ask.md" }
-      - { label: "오늘 내가 친 문장", path: "help/prompts.md" }
       - { label: "강의 끝나고 뭘 해볼까", path: "help/next.md" }

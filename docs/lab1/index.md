@@ -21,9 +21,18 @@
 | `주문종합.xlsx` | 채워 넣을 빈 템플릿 (제목 줄만 있음) |
 
 <div style="display:flex;gap:12px;flex-wrap:wrap">
-  <img src="../images/lab1/orders_example_1.png" alt="orders_example_1.png" style="flex:1 1 0;min-width:180px">
-  <img src="../images/lab1/orders_example_2.png" alt="orders_example_2.png" style="flex:1 1 0;min-width:180px">
-  <img src="../images/lab1/orders_example_3.png" alt="orders_example_3.png" style="flex:1 1 0;min-width:180px">
+  <figure style="flex:1 1 0;min-width:180px;margin:0">
+    <img src="../images/lab1/orders_example_1.png" alt="orders_example_1.png" style="width:100%;height:auto;display:block">
+    <figcaption style="text-align:center;font-size:0.85em;color:#888;margin-top:6px">웹주문</figcaption>
+  </figure>
+  <figure style="flex:1 1 0;min-width:180px;margin:0">
+    <img src="../images/lab1/orders_example_2.png" alt="orders_example_2.png" style="width:100%;height:auto;display:block">
+    <figcaption style="text-align:center;font-size:0.85em;color:#888;margin-top:6px">전화주문</figcaption>
+  </figure>
+  <figure style="flex:1 1 0;min-width:180px;margin:0">
+    <img src="../images/lab1/orders_example_3.png" alt="orders_example_3.png" style="width:100%;height:auto;display:block">
+    <figcaption style="text-align:center;font-size:0.85em;color:#888;margin-top:6px">제휴주문</figcaption>
+  </figure>
 </div>
 
 ## 실습에서 할 일

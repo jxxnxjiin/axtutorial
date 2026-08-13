@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="ko" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>1 · 결과 담을 빈 양식 만들기 · ax-tutor</title>
+<meta name="description" content="심화 실습 · 이미지 공고 → 캐치 폼 웹앱 — 1 · 결과 담을 빈 양식 만들기 · ax-tutor 실습 위키">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<div class="shell">
+  <aside class="side" id="side">
+    <div class="brand">
+      <a class="brand__row" href="../index.html" style="text-decoration:none">
+        <span class="ast mono">✻</span>
+        <div><div class="brand__name">ax<b>-</b>tutor</div></div>
+      </a>
+      <div class="brand__sub">Claude Code · 실습 위키</div>
+      <div class="session"><span class="dot"></span><span class="live">LIVE</span>
+        <span style="color:var(--muted)">강의 진행 중</span><span class="clock mono" id="clock">--:--</span></div>
+    </div>
+    <nav><div class="nav-h">// 홈</div>
+<a class="nav-a" href="../index.html#materials"><span class="g">▤</span> 강의 자료 내려받기</a>
+<div class="nav-h">// 개발 환경 세팅</div><div class="tree">
+<a class="nav-a" href="../start/setup/index.html"><span class="g">◆</span> 개요</a>
+<a class="nav-a" href="../start/setup/vscode.html">1 · VS Code 설치</a>
+<a class="nav-a" href="../start/setup/python.html">2 · Python 설치</a>
+<a class="nav-a" href="../start/setup/nodejs.html">3 · Node.js 설치</a>
+<a class="nav-a" href="../start/setup/agent.html">4 · Claude Code 설치</a>
+<a class="nav-a" href="../start/setup/autoapprove.html"><span class="g">◇</span> 부록 · 자동 허가 모드</a>
+</div>
+<div class="nav-h">// 들어가기</div><div class="tree">
+<a class="nav-a" href="../types/index.html">여섯 가지 업무 유형</a>
+</div>
+<div class="nav-h">// 실습 1 · 흩어진 주문 한 표로 모으기</div><div class="tree">
+<a class="nav-a" href="../lab1/index.html"><span class="g">◆</span> 개요</a>
+<a class="nav-a" href="../lab1/step1.html">1 · 한 표로 모으기</a>
+<a class="nav-a" href="../lab1/step2.html">2 · 원본 대조·검산</a>
+</div>
+<div class="nav-h">// 실습 2 · 계약서에서 계약종합 만들기</div><div class="tree">
+<a class="nav-a" href="../lab2/index.html"><span class="g">◆</span> 개요</a>
+<a class="nav-a" href="../lab2/step1.html">1 · 계약서 내용 종합하기</a>
+<a class="nav-a" href="../lab2/step2.html">2 · 원본 대조·검산</a>
+</div>
+<div class="nav-h">// 실습 3 · 쿠폰 성과 집계·인사이트</div><div class="tree">
+<a class="nav-a" href="../lab3/index.html"><span class="g">◆</span> 개요</a>
+<a class="nav-a" href="../lab3/step1.html">1 · 한 파일로 모으기</a>
+<a class="nav-a" href="../lab3/step2.html">2 · 성과표 채우기</a>
+<a class="nav-a" href="../lab3/step3.html">3 · 집계 검산</a>
+<a class="nav-a" href="../lab3/step4.html">4 · 인사이트·검산</a>
+</div>
+<div class="nav-h">// 실습 4 · 고객 문의에 딱지 붙이기</div><div class="tree">
+<a class="nav-a" href="../lab4/index.html"><span class="g">◆</span> 개요</a>
+<a class="nav-a" href="../lab4/step1.html">1 · 기준 확인·한 건 분류</a>
+<a class="nav-a" href="../lab4/step2.html">2 · 520건 일괄 분류</a>
+<a class="nav-a" href="../lab4/step3.html">3 · 분류 검산</a>
+</div>
+<div class="nav-h">// 실습 5 · 임원용 1페이지 보고서</div><div class="tree">
+<a class="nav-a" href="../lab5/index.html"><span class="g">◆</span> 개요</a>
+<a class="nav-a" href="../lab5/step1.html">1 · 보고서 초안 쓰기</a>
+<a class="nav-a" href="../lab5/step2.html">2 · 보고서 검산</a>
+</div>
+<div class="nav-h">// 실습 6 · 제안서 사실로 되돌리기</div><div class="tree">
+<a class="nav-a" href="../lab6/index.html"><span class="g">◆</span> 개요</a>
+<a class="nav-a" href="../lab6/step1.html">1 · 확인할 것 묻기</a>
+<a class="nav-a" href="../lab6/step2.html">2 · 관점별 검증</a>
+<a class="nav-a" href="../lab6/step3.html">3 · 사실로 재작성</a>
+<a class="nav-a" href="../lab6/step4.html">4 · 재검증·검사표</a>
+</div>
+<div class="nav-h">// 심화 실습 · 이미지 공고 → 캐치 폼 웹앱</div><div class="tree">
+<a class="nav-a" href="../advanced1/index.html"><span class="g">★</span> 개요</a>
+<a class="nav-a active" href="../advanced1/stage1.html">1 · 결과 담을 빈 양식 만들기</a>
+<a class="nav-a" href="../advanced1/stage2.html">2 · 이미지에서 정보 뽑아 채우기</a>
+<a class="nav-a" href="../advanced1/stage3.html">3 · 웹 화면 붙이고 써보기</a>
+</div>
+<div class="nav-h">// 도움말</div><div class="tree">
+<a class="nav-a" href="../help/errors.html">에러가 났어요</a>
+<a class="nav-a" href="../help/glossary.html">이 말이 무슨 뜻이죠</a>
+<a class="nav-a" href="../help/how-to-ask.html">AI에게 잘 시키는 법</a>
+<a class="nav-a" href="../help/next.html">강의 끝나고 뭘 해볼까</a>
+</div></nav>
+    <div class="side__foot">
+      <button class="iconbtn" id="themeBtn" title="테마 전환"><span id="themeIc">◐</span> <span id="themeLbl">light</span></button>
+      <a class="iconbtn" href="../index.html" title="홈">↖ home</a>
+    </div>
+  </aside>
+  <main class="main">
+    <div class="cmdbar mono">
+      <button class="burger" id="burger" aria-label="메뉴">≡</button>
+      <span class="path"><b>~/ax-tutor</b> <span class="full">$ cat</span> <span class="cur">advanced1/stage1.md</span></span>
+      <span class="caret"></span><span class="spacer"></span>
+      <span class="stat">심화 실습 · 이미지 공고 → 캐치 폼 웹앱</span>
+    </div>
+    <div class="wrap">
+      <article class="doc md rise">
+        <div class="kicker mono"><b>//</b> 심화 실습 · 이미지 공고 → 캐치 폼 웹앱</div>
+<h1 id="1--결과-담을-빈-양식-만들기">1 · 결과 담을 빈 양식 만들기<a class="headerlink" href="#1--결과-담을-빈-양식-만들기" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>자동화의 첫 발은 <strong>결과가 들어갈 빈 그릇을 먼저 만드는 것</strong>입니다. 캐치 폼이 어떻게 생겼는지 정리한 카탈로그를 만들고, 다음 단계에서 이미지가 처리되면 채워질 빈 엑셀과 HTML을 미리 만들어둡니다. 마지막에 가짜 데이터를 한 번 채워서 직접 열어 확인합니다.</p>
+</blockquote>
+<div class="admonition abstract">
+<p class="admonition-title">이 단계의 목적</p>
+<ul>
+<li>캐치 폼의 모든 항목을 정리한 카탈로그 만들기</li>
+<li>결과가 채워질 빈 엑셀과 빈 HTML 두 양식 만들기</li>
+<li>가짜 데이터를 한 번 채워서 직접 열어 확인 — 다음 단계에서 채워질 그릇이 어떻게 생겼는지 손에 잡히게</li>
+</ul>
+</div>
+<h2 id="1-1-카탈로그-정리">1-1. 카탈로그 정리<a class="headerlink" href="#1-1-카탈로그-정리" title="Permanent link">&para;</a></h2>
+<p>캐치 폼에 들어가는 모든 입력 항목을 프롬프트에 직접 나열해서 카탈로그를 만들어달라고 부탁합니다.</p>
+<div class="admonition info">
+<p class="admonition-title">왜 이게 필요해요?</p>
+<p>AI는 캐치 폼이 어떻게 생겼는지 모릅니다. 한 번 프롬프트로 정리해두면 이후 단계에서 계속 참조할 수 있는 카탈로그 파일이 생겨요. 본인 업무에 응용할 때도 "우리 업무에서 쓰는 양식은 이러이러해" 하고 나열하는 이 패턴이 그대로 쓰입니다.</p>
+</div>
+<h3 id="프롬프트에-꼭-담을-것-">프롬프트에 꼭 담을 것 ✅<a class="headerlink" href="#프롬프트에-꼭-담을-것-" title="Permanent link">&para;</a></h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>폼 전체 항목</strong> — 캐치 폼의 모든 입력 항목을 섹션별로 나열 (공고기본·모집부문·자격조건·채용절차·담당자·복리후생·기타정보)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>항목 유형 표기</strong> — 각 항목이 자유 입력 / 옵션 선택 / 카테고리 선택 / 반복 가능 중 무엇인지 표로 정리해달라고 요청</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>옵션 전부 나열</strong> — 선택지가 정해진 항목은 옵션을 빠짐없이. 복리후생처럼 계층형은 <strong>카테고리 트리</strong>로</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>예외·정규화 규칙</strong> — 카탈로그에 없는 입력의 행선지(예: 기타정보), 동의어 정규화(예: "정직원"→"정규직")</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>분리 규칙</strong> — 한 공고에 여러 직군이 섞이면 <strong>사업부문 단위로 모집부문 분리</strong></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>참고 파일</strong> — <code>@data/sample_catch_html.html</code></li>
+</ul>
+<details class="quote">
+<summary>예시 프롬프트 (캐치 폼 항목 전체 포함 — 펼쳐보기)</summary>
+<pre class="highlight"><code class="language-text">아래 캐치 폼 항목을 backend/catalog.md 로 정리해줘.
+각 항목이 자유 입력/옵션 선택/카테고리 선택/반복 가능 중 무엇인지 표로,
+선택지가 있으면 옵션 전부(복리후생 같은 계층형은 트리로),
+카탈로그에 없는 입력의 행선지·동의어 정규화·직군 여러 개면 사업부문 단위
+모집부문 분리 규칙도 함께. @data/sample_catch_html.html 참고.
+
+[공고 기본] 공고제목(자유), 대표직무(직무 트리 선택)
+[모집부문] (여러 개 가능) 모집부문명, 모집인원, 경력여부(신입/경력/무관),
+  담당업무, 근무지역(+재택 옵션), 필수·우대조건, 직급/직책, 근무부서
+[자격조건] 학력(드롭다운+재학/졸업예정 옵션),
+  고용형태(정규/계약/인턴/파견/교육생, 정규직은 수습기간),
+  급여(연봉/월급/시급+범위+회사내규/면접후결정 옵션), 근무시간
+[채용절차] 접수기간(+상시/마감 옵션), 게재예약일, 접수방법(복수),
+  전형단계(순서+유형: 서류/면접/인적성/레퍼런스), 이력서, 자기소개서
+[담당자] 이름·부서·전화·이메일(노출 여부), 인담Q&amp;A
+[복리후생] (카테고리별 복수) 보상·수당 / 휴가·휴직 / 사내시설 / 생활·건강
+[기타정보] 기업 소개, 유의사항 등 (자유, 500자)</code></pre>
+</details>
+<div class="admonition success">
+<p class="admonition-title">이런 결과가 보이면 정상입니다</p>
+<ul>
+<li><code>backend/catalog.md</code> 파일이 생겼습니다</li>
+<li>파일을 열어보면 섹션별로 항목 목록이 표로 정리돼있고, 정해진 옵션이 빠짐없이 나열돼있습니다</li>
+</ul>
+</div>
+<p><img alt="카탈로그 정리 결과 예시 — 섹션별 항목·옵션이 표로 정리된 모습" src="../images/advanced1/1_1catalog.png" /></p>
+<div class="admonition tip">
+<p class="admonition-title">이상하면?</p>
+<p>"복리후생 카테고리가 빠졌어", "옵션 중에 ○○가 누락됐어" 같이 내가 넘겨준 항목 목록과 비교해서 누락된 부분을 알려주세요. 카탈로그를 다듬어줄 겁니다.</p>
+</div>
+<h2 id="1-2-빈-양식-두-개-만들기--가짜-데이터로-확인">1-2. 빈 양식 두 개 만들기 + 가짜 데이터로 확인<a class="headerlink" href="#1-2-빈-양식-두-개-만들기--가짜-데이터로-확인" title="Permanent link">&para;</a></h2>
+<p>카탈로그가 만들어졌으면, 그 카탈로그를 바탕으로 결과가 들어갈 빈 엑셀과 빈 HTML을 만듭니다. 그리고 가짜 공고 한 건을 채워보고 직접 눈으로 확인합니다.</p>
+<div class="admonition info">
+<p class="admonition-title">왜 가짜 데이터를 한 번 채워보나요?</p>
+<p>빈 양식만 보면 "이게 잘 됐는지" 감이 잘 안 옵니다. 가짜 공고 한 건을 넣어서 양식이 어떻게 채워지는지 미리 보면, 다음 단계에서 진짜 공고가 채워질 결과의 모습이 손에 잡힙니다.</p>
+</div>
+<h3 id="프롬프트에-꼭-담을-것-_1">프롬프트에 꼭 담을 것 ✅<a class="headerlink" href="#프롬프트에-꼭-담을-것-_1" title="Permanent link">&para;</a></h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>빈 양식 3종</strong> (전부 <code>backend/templates/</code>) — <code>empty_form.xlsx</code>(카탈로그 항목이 제목 줄, 아래는 빈칸), <code>catch_preview.html.j2</code>, <code>schema.py</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>N개 반복 구조</strong> — 모집부문은 한 공고에 1~30개. 각 부문을 <strong>카드 박스</strong>로, <code>{% for %}</code> 반복으로 감싸 자동 복제 (한 덩어리로 이어지면 안 됨)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>빈 틀 유지</strong> — 템플릿엔 <code>{{ }}</code> 자리표시자만, <strong>가짜 글자 금지</strong></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>미분류 보관</strong> — 카탈로그에 없는 값은 버리지 말고 <code>schema.py</code>의 "기타 보관함"으로</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>검증용 가짜 채움</strong> — 모집부문 <strong>3개 이상</strong> 가짜 공고로 채운 결과는 템플릿과 분리해 <code>output/_preview/</code>에 저장</li>
+</ul>
+<div class="admonition quote">
+<p class="admonition-title">예시 프롬프트</p>
+<pre class="highlight"><code class="language-text">@backend/catalog.md @data/sample_catch_html.html 참고.
+
+backend/templates/ 에 빈 양식 3종을 만들어줘:
+1. empty_form.xlsx — 카탈로그 항목을 제목 줄로, 아래는 비움.
+   모집부문마다 한 줄로 늘어나는 구조.
+2. catch_preview.html.j2 — sample 톤을 따르되, 모집부문 1~30개를
+   각각 카드 박스로 그리고 {% for d in posting.divisions %} 반복으로
+   감싸. 값 자리는 {{ }} 자리표시자만, 가짜 글자 넣지 마.
+3. schema.py — 카탈로그 옵션만 쓰게 강제, 없는 내용은 "기타 보관함".
+
+그다음 템플릿은 그대로 두고, 가짜 공고(모집부문 3개 이상)로 채운 결과만
+output/_preview/ 에 저장해줘 (empty_form.filled.xlsx, catch_preview.html).
+3개 이상인 건 N개 카드가 제대로 그려지는지 검증하려는 거야.
+
+끝나면 empty_form.xlsx가 제목 줄만 있는지, .html.j2에 가짜 글자가
+없는지 확인하고 결과 파일 경로를 알려줘.</code></pre>
+</div>
+<div class="admonition success">
+<p class="admonition-title">이런 결과가 보이면 정상입니다</p>
+<ul>
+<li><code>backend/templates/</code> 는 깨끗한 빈 양식만 — <code>empty_form.xlsx</code> 는 열 제목만 + 데이터 행 0개, <code>.html.j2</code> 는 <code>{{ ... }}</code> 자리표시자만 + 모집부문이 <code>{% for %}</code> 반복문으로 감싸져 있음</li>
+<li><code>output/_preview/catch_preview.html</code> 을 더블클릭하면 브라우저에 <strong>모집부문 3개가 각각 카드 박스로 명확히 구분돼</strong> 세로로 나열 (카드끼리 테두리·여백으로 분리)</li>
+</ul>
+</div>
+<p><img alt="빈 엑셀 양식 결과 예시 — 카탈로그 항목이 제목 줄로 들어가있고 아래는 비어있는 모습" src="../images/advanced1/1_2엑셀빈양식.png" /></p>
+<div class="admonition tip">
+<p class="admonition-title">이상하면?</p>
+<ul>
+<li>"<strong>HTML에 모집부문 데이터는 있는데 한 덩어리로 이어져 보여</strong>" → 각 모집부문을 <strong>카드 박스</strong>(테두리·여백)로 감싸고 간격 벌려서 N개가 독립 카드로 보이게 <code>.html.j2</code> 수정</li>
+<li>"<strong>가짜 데이터 3개 넣었는데 HTML에 1개만 보여</strong>" → 템플릿에 <code>{% for d in posting.divisions %}...{% endfor %}</code> 반복문이 빠졌을 거야. 반복문으로 감싸기</li>
+<li>"<strong><code>empty_form.xlsx</code> 에 가짜 데이터가 박혀있어 / <code>.html.j2</code> 에 가짜 글자가 박혀있어</strong>" → <code>backend/templates/</code> 는 깨끗한 빈 틀만. 가짜 내용 다 지우고 자리표시자로 되돌린 뒤 채운 결과는 <code>output/_preview/</code> 로 따로 저장</li>
+<li>"<strong>엑셀에 카탈로그 항목이 빠졌어</strong>" → 카탈로그의 모든 항목이 열로 들어갔는지 재확인</li>
+</ul>
+</div>
+<h2 id="체크포인트">체크포인트<a class="headerlink" href="#체크포인트" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>backend/catalog.md</code> 가 만들어졌습니다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>backend/templates/empty_form.xlsx</code> 가 있고, <strong>열 제목만 있고 데이터 행이 0개</strong>입니다 (가짜 데이터 섞여있지 않음)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>backend/templates/</code> 안의 <code>.html.j2</code> 템플릿에 <strong><code>{{ ... }}</code> 자리표시자만</strong> 있고 가짜 글자가 직접 박혀있지 않으며, 모집부문 부분이 <code>{% for %}</code> 반복문으로 감싸져 있습니다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>output/_preview/</code> 안에 가짜 데이터로 채운 <code>empty_form.filled.xlsx</code> (3행 이상)와 <code>catch_preview.html</code> 이 있습니다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>output/_preview/catch_preview.html</code> 을 더블클릭했을 때 브라우저에 <strong>모집부문이 3개 이상의 카드로 각자 명확히 구분돼 나열</strong>되어 보입니다 (한 뭉치로 이어지지 않음)</li>
+</ul>
+<div class="admonition info">
+<p><strong>다음 단계에서는</strong> 이 빈 양식에 진짜 이미지 공고 데이터를 채우는 모듈을 만듭니다.</p>
+</div>
+<nav class="pager">
+<a class="prev" href="../advanced1/index.html"><span class="lbl">← 이전</span><span class="ttl">개요</span></a>
+<a class="next" href="../advanced1/stage2.html"><span class="lbl">다음 →</span><span class="ttl">2 · 이미지에서 정보 뽑아 채우기</span></a>
+</nav>
+      </article>
+      <aside class="toc mono"><h4>On this page</h4>
+<a href="#1--결과-담을-빈-양식-만들기">1 · 결과 담을 빈 양식 만들기</a>
+<a href="#1-1-카탈로그-정리">1-1. 카탈로그 정리</a>
+<a href="#프롬프트에-꼭-담을-것-" class="t3">프롬프트에 꼭 담을 것 ✅</a>
+<a href="#1-2-빈-양식-두-개-만들기--가짜-데이터로-확인">1-2. 빈 양식 두 개 만들기 + 가짜 데이터로 확인</a>
+<a href="#프롬프트에-꼭-담을-것-_1" class="t3">프롬프트에 꼭 담을 것 ✅</a>
+<a href="#체크포인트">체크포인트</a></aside>
+    </div>
+  </main>
+</div>
+<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';mermaid.initialize({startOnLoad:true,securityLevel:'loose'});</script>
+<script src="../assets/site.js"></script>
+</body>
+</html>

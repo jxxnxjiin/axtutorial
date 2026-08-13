@@ -17,8 +17,14 @@
 | `CT-2026-001.pdf` ~ `CT-2026-008.pdf` | 계약서 8건 |
 
 <div style="display:flex;gap:12px;flex-wrap:wrap">
-  <img src="../images/lab2/contract_example_1.png" alt="contract_example_1.png" style="flex:1 1 0;min-width:200px">
-  <img src="../images/lab2/contract_example_2.png" alt="contract_example_2.png" style="flex:1 1 0;min-width:200px">
+  <figure style="flex:1 1 0;min-width:200px;margin:0">
+    <img src="../images/lab2/contract_example_1.png" alt="contract_example_1.png" style="width:100%;height:auto;display:block">
+    <figcaption style="text-align:center;font-size:0.85em;color:#888;margin-top:6px">계약서 예시 1</figcaption>
+  </figure>
+  <figure style="flex:1 1 0;min-width:200px;margin:0">
+    <img src="../images/lab2/contract_example_2.png" alt="contract_example_2.png" style="width:100%;height:auto;display:block">
+    <figcaption style="text-align:center;font-size:0.85em;color:#888;margin-top:6px">계약서 예시 2</figcaption>
+  </figure>
 </div>
 
 ## 실습에서 할 일

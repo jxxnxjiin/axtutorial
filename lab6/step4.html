@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="ko" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>4 · 재검증·검사표 · ax-tutor</title>
+<meta name="description" content="실습 6 · 제안서 사실로 되돌리기 — 4 · 재검증·검사표 · ax-tutor 실습 위키">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<div class="shell">
+  <aside class="side" id="side">
+    <div class="brand">
+      <a class="brand__row" href="../index.html" style="text-decoration:none">
+        <span class="ast mono">✻</span>
+        <div><div class="brand__name">ax<b>-</b>tutor</div></div>
+      </a>
+      <div class="brand__sub">Claude Code · 실습 위키</div>
+      <div class="session"><span class="dot"></span><span class="live">LIVE</span>
+        <span style="color:var(--muted)">강의 진행 중</span><span class="clock mono" id="clock">--:--</span></div>
+    </div>
+    <nav><div class="nav-h">// 홈</div>
+<a class="nav-a" href="../index.html#materials"><span class="g">▤</span> 강의 자료 내려받기</a>
+<div class="nav-h">// 개발 환경 세팅</div><div class="tree">
+<a class="nav-a" href="../start/setup/index.html"><span class="g">◆</span> 개요</a>
+<a class="nav-a" href="../start/setup/vscode.html">1 · VS Code 설치</a>
+<a class="nav-a" href="../start/setup/python.html">2 · Python 설치</a>
+<a class="nav-a" href="../start/setup/nodejs.html">3 · Node.js 설치</a>
+<a class="nav-a" href="../start/setup/agent.html">4 · Claude Code 설치</a>
+<a class="nav-a" href="../start/setup/data.html">5 · 실습 데이터 준비</a>
+<a class="nav-a" href="../start/setup/autoapprove.html"><span class="g">◇</span> 부록 · 자동 허가 모드</a>
+</div>
+<div class="nav-h">// 들어가기</div><div class="tree">
+<a class="nav-a" href="../types/index.html">여섯 가지 업무 유형</a>
+</div>
+<div class="nav-h">// 실습 1 · 흩어진 주문 한 표로 모으기</div><div class="tree">
+<a class="nav-a" href="../lab1/index.html"><span class="g">◆</span> 개요</a>
+<a class="nav-a" href="../lab1/step1.html">1 · 한 표로 모으기</a>
+<a class="nav-a" href="../lab1/step2.html">2 · 원본 대조·검산</a>
+</div>
+<div class="nav-h">// 실습 2 · 계약서에서 계약종합 만들기</div><div class="tree">
+<a class="nav-a" href="../lab2/index.html"><span class="g">◆</span> 개요</a>
+<a class="nav-a" href="../lab2/step1.html">1 · 계약서 내용 종합하기</a>
+<a class="nav-a" href="../lab2/step2.html">2 · 원본 대조·검산</a>
+</div>
+<div class="nav-h">// 실습 3 · 쿠폰 성과 집계·인사이트</div><div class="tree">
+<a class="nav-a" href="../lab3/index.html"><span class="g">◆</span> 개요</a>
+<a class="nav-a" href="../lab3/step1.html">1 · 한 파일로 모으기</a>
+<a class="nav-a" href="../lab3/step2.html">2 · 성과표 채우기</a>
+<a class="nav-a" href="../lab3/step3.html">3 · 집계 검산</a>
+<a class="nav-a" href="../lab3/step4.html">4 · 인사이트·검산</a>
+</div>
+<div class="nav-h">// 실습 4 · 고객 문의에 딱지 붙이기</div><div class="tree">
+<a class="nav-a" href="../lab4/index.html"><span class="g">◆</span> 개요</a>
+<a class="nav-a" href="../lab4/step1.html">1 · 기준 확인·한 건 분류</a>
+<a class="nav-a" href="../lab4/step2.html">2 · 520건 일괄 분류</a>
+<a class="nav-a" href="../lab4/step3.html">3 · 분류 검산</a>
+</div>
+<div class="nav-h">// 실습 5 · 임원용 1페이지 보고서</div><div class="tree">
+<a class="nav-a" href="../lab5/index.html"><span class="g">◆</span> 개요</a>
+<a class="nav-a" href="../lab5/step1.html">1 · 보고서 초안 쓰기</a>
+<a class="nav-a" href="../lab5/step2.html">2 · 보고서 검산</a>
+</div>
+<div class="nav-h">// 실습 6 · 제안서 사실로 되돌리기</div><div class="tree">
+<a class="nav-a" href="../lab6/index.html"><span class="g">◆</span> 개요</a>
+<a class="nav-a" href="../lab6/step1.html">1 · 확인할 것 묻기</a>
+<a class="nav-a" href="../lab6/step2.html">2 · 관점별 검증</a>
+<a class="nav-a" href="../lab6/step3.html">3 · 사실로 재작성</a>
+<a class="nav-a active" href="../lab6/step4.html">4 · 재검증·검사표</a>
+</div>
+<div class="nav-h">// 도움말</div><div class="tree">
+<a class="nav-a" href="../help/errors.html">에러가 났어요</a>
+<a class="nav-a" href="../help/glossary.html">이 말이 무슨 뜻이죠</a>
+<a class="nav-a" href="../help/how-to-ask.html">AI에게 잘 시키는 법</a>
+<a class="nav-a" href="../help/next.html">강의 끝나고 뭘 해볼까</a>
+</div></nav>
+    <div class="side__foot">
+      <button class="iconbtn" id="themeBtn" title="테마 전환"><span id="themeIc">◐</span> <span id="themeLbl">light</span></button>
+      <a class="iconbtn" href="../index.html" title="홈">↖ home</a>
+    </div>
+  </aside>
+  <main class="main">
+    <div class="cmdbar mono">
+      <button class="burger" id="burger" aria-label="메뉴">≡</button>
+      <span class="path"><b>~/ax-tutor</b> <span class="full">$ cat</span> <span class="cur">lab6/step4.md</span></span>
+      <span class="caret"></span><span class="spacer"></span>
+      <span class="stat">실습 6 · 제안서 사실로 되돌리기</span>
+    </div>
+    <div class="wrap">
+      <article class="doc md rise">
+        <div class="kicker mono"><b>//</b> 실습 6 · 제안서 사실로 되돌리기</div>
+<h1 id="4--재검증검사표">4 · 재검증·검사표<a class="headerlink" href="#4--재검증검사표" title="Permanent link">&para;</a></h1>
+<p>수정했다고 끝이 아닙니다. <strong>고치는 과정에서 또 다른 오류가 생길 수 있어서</strong>, 고친 결과물을 독립적으로 다시 검증해야 합니다. 마지막으로 요구사항 6개 충족 여부를 <strong>검사표</strong>로 못 박습니다.</p>
+<h2 id="직접-시켜보세요">직접 시켜보세요<a class="headerlink" href="#직접-시켜보세요" title="Permanent link">&para;</a></h2>
+<p>3단계 수정본을 원본 자료와 놓고, 처음 보는 자료처럼 다시 검증시킵니다.</p>
+<h2 id="프롬프트에-꼭-담을-것-">프롬프트에 꼭 담을 것 ✅<a class="headerlink" href="#프롬프트에-꼭-담을-것-" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>독립 재검증</strong> — 수정본을 사양서·요구사항과 다시 대조 (앞 답을 믿지 말고)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>요구사항 검사표</strong> — 6개 항목별 충족·미흡·누락 + 근거를 표로</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>새 오류 점검</strong> — 고치면서 값이 어긋나거나 새 과장이 생기지 않았는지</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>남은 위험 표시</strong> — '확인 필요'로 둔 항목이 정리돼 있는지</li>
+</ul>
+<h2 id="이런-건-빼세요-">이런 건 빼세요 ❌<a class="headerlink" href="#이런-건-빼세요-" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 그냥 <strong>"이제 됐지?"</strong>라고만 묻기 (AI는 "됐다"고 답하기 쉽습니다)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 요구사항 <strong>일부만</strong> 확인하고 넘어가기 (6개 전부 검사)</li>
+</ul>
+<h2 id="예시-프롬프트">예시 프롬프트<a class="headerlink" href="#예시-프롬프트" title="Permanent link">&para;</a></h2>
+<p>여러분 문장을 먼저 보낸 뒤에 열어보세요.</p>
+<details class="example">
+<summary>이렇게 물어볼 수 있습니다</summary>
+<pre class="highlight"><code>제안서_수정본을 제품사양서·고객사_요구사항과 처음 보는 것처럼 다시 대조해서 검증해줘.
+1) 고치는 과정에서 값이 어긋나거나 새로운 과장 표현이 생기지 않았는지 확인해줘.
+2) 고객 요구사항 6개를 항목별로 충족·미흡·누락으로 판정하고 근거와 함께 검사표로 만들어줘.
+3) 아직 '확인 필요'로 남은 항목을 목록으로 정리해줘.
+됐다고 단정하지 말고, 남은 문제는 그대로 짚어줘.</code></pre>
+</details>
+<h2 id="실행-예시">실행 예시<a class="headerlink" href="#실행-예시" title="Permanent link">&para;</a></h2>
+<div class="admonition example">
+<p class="admonition-title">이렇게 나오면 됩니다</p>
+<p><img alt="step4-recheck.png" src="../images/lab6/step4-recheck.png" /></p>
+</div>
+<h2 id="체크포인트">체크포인트<a class="headerlink" href="#체크포인트" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 수정본을 원본 자료와 <strong>다시 대조</strong>했다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 요구사항 <strong>6개 전부</strong>가 검사표로 판정됐다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 고치면서 생긴 <strong>새 오류가 없다</strong></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 남은 <strong>'확인 필요'</strong> 항목이 목록으로 정리됐다</li>
+</ul>
+<nav class="pager">
+<a class="prev" href="../lab6/step3.html"><span class="lbl">← 이전</span><span class="ttl">3 · 사실로 재작성</span></a>
+<a class="next" href="../help/errors.html"><span class="lbl">다음 →</span><span class="ttl">에러가 났어요</span></a>
+</nav>
+      </article>
+      <aside class="toc mono"><h4>On this page</h4>
+<a href="#4--재검증검사표">4 · 재검증·검사표</a>
+<a href="#직접-시켜보세요">직접 시켜보세요</a>
+<a href="#프롬프트에-꼭-담을-것-">프롬프트에 꼭 담을 것 ✅</a>
+<a href="#이런-건-빼세요-">이런 건 빼세요 ❌</a>
+<a href="#예시-프롬프트">예시 프롬프트</a>
+<a href="#실행-예시">실행 예시</a>
+<a href="#체크포인트">체크포인트</a></aside>
+    </div>
+  </main>
+</div>
+<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';mermaid.initialize({startOnLoad:true,securityLevel:'loose'});</script>
+<script src="../assets/site.js"></script>
+</body>
+</html>

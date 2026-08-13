@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="ko" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>1 · 보고서 초안 쓰기 · ax-tutor</title>
+<meta name="description" content="실습 5 · 임원용 1페이지 보고서 — 1 · 보고서 초안 쓰기 · ax-tutor 실습 위키">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<div class="shell">
+  <aside class="side" id="side">
+    <div class="brand">
+      <a class="brand__row" href="../index.html" style="text-decoration:none">
+        <span class="ast mono">✻</span>
+        <div><div class="brand__name">ax<b>-</b>tutor</div></div>
+      </a>
+      <div class="brand__sub">Claude Code · 실습 위키</div>
+      <div class="session"><span class="dot"></span><span class="live">LIVE</span>
+        <span style="color:var(--muted)">강의 진행 중</span><span class="clock mono" id="clock">--:--</span></div>
+    </div>
+    <nav><div class="nav-h">// 홈</div>
+<a class="nav-a" href="../index.html#materials"><span class="g">▤</span> 강의 자료 내려받기</a>
+<div class="nav-h">// 개발 환경 세팅</div><div class="tree">
+<a class="nav-a" href="../start/setup/index.html"><span class="g">◆</span> 개요</a>
+<a class="nav-a" href="../start/setup/vscode.html">1 · VS Code 설치</a>
+<a class="nav-a" href="../start/setup/python.html">2 · Python 설치</a>
+<a class="nav-a" href="../start/setup/nodejs.html">3 · Node.js 설치</a>
+<a class="nav-a" href="../start/setup/agent.html">4 · Claude Code 설치</a>
+<a class="nav-a" href="../start/setup/data.html">5 · 실습 데이터 준비</a>
+<a class="nav-a" href="../start/setup/autoapprove.html"><span class="g">◇</span> 부록 · 자동 허가 모드</a>
+</div>
+<div class="nav-h">// 들어가기</div><div class="tree">
+<a class="nav-a" href="../types/index.html">여섯 가지 업무 유형</a>
+</div>
+<div class="nav-h">// 실습 1 · 흩어진 주문 한 표로 모으기</div><div class="tree">
+<a class="nav-a" href="../lab1/index.html"><span class="g">◆</span> 개요</a>
+<a class="nav-a" href="../lab1/step1.html">1 · 한 표로 모으기</a>
+<a class="nav-a" href="../lab1/step2.html">2 · 원본 대조·검산</a>
+</div>
+<div class="nav-h">// 실습 2 · 계약서에서 계약종합 만들기</div><div class="tree">
+<a class="nav-a" href="../lab2/index.html"><span class="g">◆</span> 개요</a>
+<a class="nav-a" href="../lab2/step1.html">1 · 계약서 내용 종합하기</a>
+<a class="nav-a" href="../lab2/step2.html">2 · 원본 대조·검산</a>
+</div>
+<div class="nav-h">// 실습 3 · 쿠폰 성과 집계·인사이트</div><div class="tree">
+<a class="nav-a" href="../lab3/index.html"><span class="g">◆</span> 개요</a>
+<a class="nav-a" href="../lab3/step1.html">1 · 한 파일로 모으기</a>
+<a class="nav-a" href="../lab3/step2.html">2 · 성과표 채우기</a>
+<a class="nav-a" href="../lab3/step3.html">3 · 집계 검산</a>
+<a class="nav-a" href="../lab3/step4.html">4 · 인사이트·검산</a>
+</div>
+<div class="nav-h">// 실습 4 · 고객 문의에 딱지 붙이기</div><div class="tree">
+<a class="nav-a" href="../lab4/index.html"><span class="g">◆</span> 개요</a>
+<a class="nav-a" href="../lab4/step1.html">1 · 기준 확인·한 건 분류</a>
+<a class="nav-a" href="../lab4/step2.html">2 · 520건 일괄 분류</a>
+<a class="nav-a" href="../lab4/step3.html">3 · 분류 검산</a>
+</div>
+<div class="nav-h">// 실습 5 · 임원용 1페이지 보고서</div><div class="tree">
+<a class="nav-a" href="../lab5/index.html"><span class="g">◆</span> 개요</a>
+<a class="nav-a active" href="../lab5/step1.html">1 · 보고서 초안 쓰기</a>
+<a class="nav-a" href="../lab5/step2.html">2 · 보고서 검산</a>
+</div>
+<div class="nav-h">// 실습 6 · 제안서 사실로 되돌리기</div><div class="tree">
+<a class="nav-a" href="../lab6/index.html"><span class="g">◆</span> 개요</a>
+<a class="nav-a" href="../lab6/step1.html">1 · 확인할 것 묻기</a>
+<a class="nav-a" href="../lab6/step2.html">2 · 관점별 검증</a>
+<a class="nav-a" href="../lab6/step3.html">3 · 사실로 재작성</a>
+<a class="nav-a" href="../lab6/step4.html">4 · 재검증·검사표</a>
+</div>
+<div class="nav-h">// 도움말</div><div class="tree">
+<a class="nav-a" href="../help/errors.html">에러가 났어요</a>
+<a class="nav-a" href="../help/glossary.html">이 말이 무슨 뜻이죠</a>
+<a class="nav-a" href="../help/how-to-ask.html">AI에게 잘 시키는 법</a>
+<a class="nav-a" href="../help/next.html">강의 끝나고 뭘 해볼까</a>
+</div></nav>
+    <div class="side__foot">
+      <button class="iconbtn" id="themeBtn" title="테마 전환"><span id="themeIc">◐</span> <span id="themeLbl">light</span></button>
+      <a class="iconbtn" href="../index.html" title="홈">↖ home</a>
+    </div>
+  </aside>
+  <main class="main">
+    <div class="cmdbar mono">
+      <button class="burger" id="burger" aria-label="메뉴">≡</button>
+      <span class="path"><b>~/ax-tutor</b> <span class="full">$ cat</span> <span class="cur">lab5/step1.md</span></span>
+      <span class="caret"></span><span class="spacer"></span>
+      <span class="stat">실습 5 · 임원용 1페이지 보고서</span>
+    </div>
+    <div class="wrap">
+      <article class="doc md rise">
+        <div class="kicker mono"><b>//</b> 실습 5 · 임원용 1페이지 보고서</div>
+<h1 id="1--보고서-초안-쓰기">1 · 보고서 초안 쓰기<a class="headerlink" href="#1--보고서-초안-쓰기" title="Permanent link">&para;</a></h1>
+<p>성과표를 근거로, 대표이사 성향과 보고서 양식에 맞춰 1페이지 초안을 씁니다. 보고서는 내 고생을 자랑하는 글이 아니라 <strong>상사가 결정을 내리게 돕는 글</strong>입니다.</p>
+<h2 id="직접-시켜보세요">직접 시켜보세요<a class="headerlink" href="#직접-시켜보세요" title="Permanent link">&para;</a></h2>
+<p>여러분 문장으로 AI에게 시킵니다. 아래 두 체크리스트를 먼저 읽고, 빠진 규칙이 없도록 프롬프트에 담으세요.</p>
+<h2 id="프롬프트에-꼭-담을-것-">프롬프트에 꼭 담을 것 ✅<a class="headerlink" href="#프롬프트에-꼭-담을-것-" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>읽을 대상</strong> — 보고 대상 프로필 + 보고서 양식 두 파일을 먼저 읽고 반영</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>근거 데이터</strong> — 숫자는 성과표(<code>7.쿠폰별성과표.xlsx</code>)에서만, 문장마다 <code>(근거: 파일·시트)</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>두괄식</strong> — 첫 3줄에 "결론이 뭔지 / 무엇을 해달라는지"</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>양식 5블록</strong> — 결론요약·핵심지표표·원인분석·건의·출처 순서 그대로</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>분량</strong> — 1페이지, 상세 표·계산은 첨부로 (본문은 결론·액션만)</li>
+</ul>
+<h2 id="이런-건-빼세요-">이런 건 빼세요 ❌<a class="headerlink" href="#이런-건-빼세요-" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 자료에 없는 표현 <strong>지어내기</strong> ("업계 1위", "고객 반응 폭발")</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 근거 없는 <strong>형용사</strong> ("압도적"·"최고" → 숫자 차이로)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>시간순 나열</strong> ("먼저 파일을 합치고, 다음에…") — 상사가 궁금한 순서로</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>건의사항 빼기</strong> (분석만 하고 끝내면 미완성)</li>
+</ul>
+<h2 id="예시-프롬프트">예시 프롬프트<a class="headerlink" href="#예시-프롬프트" title="Permanent link">&para;</a></h2>
+<p>여러분 문장을 먼저 보낸 뒤에 열어보세요.</p>
+<details class="example">
+<summary>이렇게 시킬 수 있습니다</summary>
+<pre class="highlight"><code>첨부한 보고대상_프로필.md와 보고서_양식.md를 먼저 읽고, 그 성향과 양식에 맞춰
+쿠폰별성과표.xlsx를 근거로 대표이사용 1페이지 보고서 초안을 써줘.
+- 첫 3줄에 결론과 요청사항을 두괄식으로.
+- 양식의 5블록(결론요약·핵심지표표·원인분석·건의·출처) 순서 그대로.
+- 모든 숫자 문장 끝에 (근거: 파일명·시트명)을 붙여.
+- '압도적'·'최고' 같은 형용사는 쓰지 말고 숫자 차이로 표현해.
+- 자료에 없는 내용은 지어내지 말고, 분석에서 그치지 말고 건의사항을 꼭 넣어.
+결과는 report.md 한 파일로 저장해줘.</code></pre>
+</details>
+<h2 id="실행-예시">실행 예시<a class="headerlink" href="#실행-예시" title="Permanent link">&para;</a></h2>
+<div class="admonition example">
+<p class="admonition-title">이렇게 나오면 됩니다</p>
+<p><img alt="step1-draft.png" src="../images/lab5/step1-draft.png" /></p>
+</div>
+<h2 id="체크포인트">체크포인트<a class="headerlink" href="#체크포인트" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>첫 3줄</strong>에 결론과 요청사항이 있다 (두괄식)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 양식 <strong>5블록</strong>이 순서대로 다 있다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 숫자 문장마다 <strong><code>(근거: 파일·시트)</code></strong>가 붙어 있다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>건의사항</strong>이 들어 있고, 본문이 1페이지를 넘지 않는다</li>
+</ul>
+<nav class="pager">
+<a class="prev" href="../lab5/index.html"><span class="lbl">← 이전</span><span class="ttl">개요</span></a>
+<a class="next" href="../lab5/step2.html"><span class="lbl">다음 →</span><span class="ttl">2 · 보고서 검산</span></a>
+</nav>
+      </article>
+      <aside class="toc mono"><h4>On this page</h4>
+<a href="#1--보고서-초안-쓰기">1 · 보고서 초안 쓰기</a>
+<a href="#직접-시켜보세요">직접 시켜보세요</a>
+<a href="#프롬프트에-꼭-담을-것-">프롬프트에 꼭 담을 것 ✅</a>
+<a href="#이런-건-빼세요-">이런 건 빼세요 ❌</a>
+<a href="#예시-프롬프트">예시 프롬프트</a>
+<a href="#실행-예시">실행 예시</a>
+<a href="#체크포인트">체크포인트</a></aside>
+    </div>
+  </main>
+</div>
+<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';mermaid.initialize({startOnLoad:true,securityLevel:'loose'});</script>
+<script src="../assets/site.js"></script>
+</body>
+</html>

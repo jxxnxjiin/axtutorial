@@ -24,10 +24,26 @@
 - [ ] 빈칸을 `0`으로 채우기 (금액 0원과 "금액 모름"은 다른 사건)
 - [ ] 항목을 마음대로 더하거나 바꾸기
 
+## 예시 프롬프트
+
+여러분 문장을 먼저 보낸 뒤에 열어보세요.
+
+??? example "이렇게 시킬 수 있습니다"
+    ```
+    이 폴더의 계약서 8건을 전부 읽고, 한 계약당 한 줄로 계약종합.xlsx에 정리해줘.
+    각 줄에 계약번호·계약명·계약 상대·계약기간·금액·자동갱신 여부 6개 항목을 채워.
+    계약서에 안 적힌 항목은 지어내지 말고 빈칸으로 두고, 특히 금액 조항이 없으면 0이 아니라 빈칸으로 남겨.
+    항목을 마음대로 더하거나 바꾸지 말고 위 6개만 뽑아줘.
+    다 되면 몇 건을 정리했는지와 빈칸으로 남긴 칸이 있는 계약을 알려줘.
+    ```
+
 ## 실행 예시
 
 !!! example "이렇게 나오면 됩니다"
-    ![step1-result.png](../images/lab2/step1-result.png)
+    <figure style="margin:0">
+      <img src="../images/lab2/step1-result.png" alt="step1-result.png" style="width:100%;height:auto;display:block">
+      <figcaption style="text-align:center;font-size:0.85em;color:#888;margin-top:6px">종합된 계약 결과</figcaption>
+    </figure>
 
 ## 체크포인트
 

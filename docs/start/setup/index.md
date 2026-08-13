@@ -36,7 +36,8 @@
 | ① | VS Code — 작업 공간 | [VS Code 설치](vscode.md) |
 | ② | Python — 데이터·AI 도구 | [Python 설치](python.md) |
 | ③ | Node.js — 웹 인프라 | [Node.js 설치](nodejs.md) |
-| ④ | Claude Code — AI 어시스턴트 (+ 자동 승인·데이터 준비) | [AI 에이전트 설치](agent.md) |
+| ④ | Claude Code — AI 어시스턴트 (+ 자동 승인) | [AI 에이전트 설치](agent.md) |
+| ⑤ | 실습 데이터 — 내려받고 압축 풀기 | [실습 데이터 준비](data.md) |
 
 !!! tip "노트북 환경에 맞춰 설치하세요"
     각 설치 페이지는 본인 노트북 환경(Windows / macOS)에 맞는 방법을 안내합니다. 사내 노트북이라 설치 권한이 막혀 있으면 운영진에게 알려주세요.

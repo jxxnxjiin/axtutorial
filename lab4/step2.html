@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>2 · 뼈대·검산 · ax-tutor</title>
-<meta name="description" content="실습 4 · 대시보드와 디자인 — 2 · 뼈대·검산 · ax-tutor 실습 위키">
+<title>2 · 520건 일괄 분류 · ax-tutor</title>
+<meta name="description" content="실습 4 · 고객 문의에 딱지 붙이기 — 2 · 520건 일괄 분류 · ax-tutor 실습 위키">
 <link rel="stylesheet" href="../assets/site.css">
 </head>
 <body>
@@ -27,6 +27,8 @@
 <a class="nav-a" href="../start/setup/python.html">2 · Python 설치</a>
 <a class="nav-a" href="../start/setup/nodejs.html">3 · Node.js 설치</a>
 <a class="nav-a" href="../start/setup/agent.html">4 · Claude Code 설치</a>
+<a class="nav-a" href="../start/setup/data.html">5 · 실습 데이터 준비</a>
+<a class="nav-a" href="../start/setup/autoapprove.html"><span class="g">◇</span> 부록 · 자동 허가 모드</a>
 </div>
 <div class="nav-h">// 들어가기</div><div class="tree">
 <a class="nav-a" href="../types/index.html">여섯 가지 업무 유형</a>
@@ -48,22 +50,28 @@
 <a class="nav-a" href="../lab3/step3.html">3 · 집계 검산</a>
 <a class="nav-a" href="../lab3/step4.html">4 · 인사이트·검산</a>
 </div>
-<div class="nav-h">// 실습 4 · 대시보드와 디자인</div><div class="tree">
+<div class="nav-h">// 실습 4 · 고객 문의에 딱지 붙이기</div><div class="tree">
 <a class="nav-a" href="../lab4/index.html"><span class="g">◆</span> 개요</a>
-<a class="nav-a" href="../lab4/step1.html">1 · 무엇을 보여줄지</a>
-<a class="nav-a active" href="../lab4/step2.html">2 · 뼈대·검산</a>
-<a class="nav-a" href="../lab4/step3.html">3 · Before 캡처</a>
-<a class="nav-a" href="../lab4/step4.html">4 · 말로 인상 바꾸기</a>
-<a class="nav-a" href="../lab4/step5.html">5 · 두 무드 비교</a>
-<a class="nav-a" href="../lab4/step6.html">6 · 다크모드·반응형</a>
-<a class="nav-a" href="../lab4/step7.html">7 · 재검산·After</a>
-<a class="nav-a" href="../lab4/stuck.html">막혔을 때 쓰는 문장</a>
+<a class="nav-a" href="../lab4/step1.html">1 · 기준 확인·한 건 분류</a>
+<a class="nav-a active" href="../lab4/step2.html">2 · 520건 일괄 분류</a>
+<a class="nav-a" href="../lab4/step3.html">3 · 분류 검산</a>
+</div>
+<div class="nav-h">// 실습 5 · 임원용 1페이지 보고서</div><div class="tree">
+<a class="nav-a" href="../lab5/index.html"><span class="g">◆</span> 개요</a>
+<a class="nav-a" href="../lab5/step1.html">1 · 보고서 초안 쓰기</a>
+<a class="nav-a" href="../lab5/step2.html">2 · 보고서 검산</a>
+</div>
+<div class="nav-h">// 실습 6 · 제안서 사실로 되돌리기</div><div class="tree">
+<a class="nav-a" href="../lab6/index.html"><span class="g">◆</span> 개요</a>
+<a class="nav-a" href="../lab6/step1.html">1 · 확인할 것 묻기</a>
+<a class="nav-a" href="../lab6/step2.html">2 · 관점별 검증</a>
+<a class="nav-a" href="../lab6/step3.html">3 · 사실로 재작성</a>
+<a class="nav-a" href="../lab6/step4.html">4 · 재검증·검사표</a>
 </div>
 <div class="nav-h">// 도움말</div><div class="tree">
 <a class="nav-a" href="../help/errors.html">에러가 났어요</a>
 <a class="nav-a" href="../help/glossary.html">이 말이 무슨 뜻이죠</a>
 <a class="nav-a" href="../help/how-to-ask.html">AI에게 잘 시키는 법</a>
-<a class="nav-a" href="../help/prompts.html">오늘 내가 친 문장</a>
 <a class="nav-a" href="../help/next.html">강의 끝나고 뭘 해볼까</a>
 </div></nav>
     <div class="side__foot">
@@ -76,245 +84,69 @@
       <button class="burger" id="burger" aria-label="메뉴">≡</button>
       <span class="path"><b>~/ax-tutor</b> <span class="full">$ cat</span> <span class="cur">lab4/step2.md</span></span>
       <span class="caret"></span><span class="spacer"></span>
-      <span class="stat">실습 4 · 대시보드와 디자인</span>
+      <span class="stat">실습 4 · 고객 문의에 딱지 붙이기</span>
     </div>
     <div class="wrap">
       <article class="doc md rise">
-        <div class="kicker mono"><b>//</b> 실습 4 · 대시보드와 디자인</div>
-<h1 id="2--뼈대검산">2 · 뼈대·검산<a class="headerlink" href="#2--뼈대검산" title="Permanent link">&para;</a></h1>
-<div class="admonition abstract">
-<p class="admonition-title">이 단계에서 하는 일 (약 17분)</p>
-<ul>
-<li>엑셀 두 개의 데이터가 들어간 화면 파일을 만듭니다</li>
-<li>브라우저에서 열어봅니다</li>
-<li><strong>화면의 숫자와 엑셀의 숫자를 세어 맞춰봅니다</strong></li>
-</ul>
-</div>
-<p>여기가 하루의 시험대입니다. <strong>아무것도 나열해주지 않습니다.</strong> 다섯 줄을 백지에서 전부 조립하는 자리입니다.</p>
-<hr />
-<h2 id="형태-조건만-드립니다">형태 조건만 드립니다<a class="headerlink" href="#형태-조건만-드립니다" title="Permanent link">&para;</a></h2>
-<p>이건 조립 대상이 아닙니다. 이 조건이 빠지면 화면이 아예 안 열리는 문제가 되기 때문에, 재료로 미리 드립니다.</p>
-<div class="admonition quote">
-<p class="admonition-title">이 조건은 그대로 쓰세요</p>
-<pre class="highlight"><code>파일 하나짜리 html로 만들고 이름은 dashboard.html,
-더블클릭하면 브라우저에서 열려야 하고, 인터넷 연결이 없어도 돌아야 해.</code></pre>
-</div>
-<p><strong>나머지는 전부 여러분이 씁니다.</strong></p>
-<hr />
-<h2 id="먼저-여러분-문장으로-시켜보세요">먼저 여러분 문장으로 시켜보세요<a class="headerlink" href="#먼저-여러분-문장으로-시켜보세요" title="Permanent link">&para;</a></h2>
-<div class="admonition quote">
-<p class="admonition-title">여기에 여러분 말로 채워서 실행하세요</p>
-<p><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_</span></p>
-<p>한 줄이어도 됩니다. 위 형태 조건만 붙이고, 나머지는 여러분 말로.</p>
-</div>
-<hr />
-<h2 id="나온-것을-열어봅니다">나온 것을 열어봅니다<a class="headerlink" href="#나온-것을-열어봅니다" title="Permanent link">&para;</a></h2>
-<p>만들어진 <code>dashboard.html</code> 을 <strong>더블클릭해서 브라우저에서 여세요.</strong></p>
-<div class="admonition example">
-<p class="admonition-title">엑셀을 옆에 띄우고 세 개만 세어보세요</p>
-<ul>
-<li><strong>표 행 수</strong> — 화면의 표가 몇 행인가요? 엑셀은 몇 행인가요?</li>
-<li><strong>색으로 표시된 건수</strong> — 화면에 몇 건인가요? 엑셀에서 그 기준에 해당하는 건 몇 건인가요?</li>
-<li><strong>맨 위 합계</strong> — 화면의 숫자와 엑셀에서 더한 값이 같나요?</li>
-</ul>
-<p>그리고 하나 더 — <strong>1단계에서 적은 숫자 3개가 맨 위에 그 순서로 있나요?</strong></p>
-</div>
-<hr />
-<details class="question">
-<summary>① 6분이 지나도 막혔다면 — 아직 펼치지 마세요</summary>
-<p>화면과 엑셀을 나란히 놓고 표 행 수를 세어보세요. 같나요?
-그리고 1단계에서 적은 숫자 3개가 맨 위에 있나요?</p>
-</details>
-<details class="tip">
-<summary>② 11분이 지났다면 — 정해야 할 네 가지</summary>
-<p>정해야 할 것은 넷입니다 — <strong>어느 파일을 읽을지(이름으로) / 무엇을 보여줄지 적어둔 파일이 있다는 걸 알려줄지 / 몇 행까지 넣을지 / 원본을 어떻게 할지.</strong></p>
-<p>표는 <strong>전량</strong>이 들어가야 합니다. 요약하면 엑셀과 행 수가 달라집니다.</p>
-</details>
-<details class="example">
-<summary>③ 모범답안 — 잘 되는 문장은 이렇게 생겼습니다 (여러분 문장을 한 번 보내본 뒤에 여세요)</summary>
-<p>형태 조건은 위에 이미 있으므로 여기서는 반복하지 않습니다.</p>
-<pre class="highlight"><code>대시보드에_보일_것.md를 먼저 읽어줘.
-물류비_점검표.xlsx와 다음달_챙길일.xlsx 두 파일의 데이터를 화면에 넣어줘.
-행을 줄이거나 "외 N건"으로 요약하지 말고 전부 넣어줘.
-엑셀 원본 두 개는 고치지 말고 읽기만 해.
-예쁘게 만들려고 하지 말고 숫자가 정확히 나오게만 해줘.
-다 되면 표에 몇 행을 넣었는지 표별로 알려줘.</code></pre>
-<p><strong>이 문장이 하는 일</strong> — 오늘 백지에서 조립하는 유일한 자리라, 이 표를 특히 자세히 보세요.</p>
-<table>
-<thead>
-<tr>
-<th>이 줄이</th>
-<th>없으면</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>대시보드에_보일_것.md를 먼저 읽어줘</code></td>
-<td>여러분이 방금 만든 파일이라 <strong>말 안 하면 존재를 모릅니다.</strong> 맨 위 숫자 3개가 내가 정한 게 아닌 것으로 채워집니다</td>
-</tr>
-<tr>
-<td>파일 두 개를 <strong>이름으로</strong></td>
-<td>"옆의 엑셀 두 개"라고 하면 결과가 틀렸을 때 <strong>무엇을 읽었는지 확인할 방법이 없습니다</strong></td>
-</tr>
-<tr>
-<td><code>"외 N건"으로 요약하지 말고 전부</code></td>
-<td>표가 10~20행에서 잘립니다. 화면은 완벽해 보이는데 <strong>엑셀과 행 수가 다릅니다</strong></td>
-</tr>
-<tr>
-<td><code>다 되면 몇 행을 넣었는지 표별로</code></td>
-<td>검산의 첫 항목(표 행 수 = 엑셀 행 수)을 직접 세야 합니다</td>
-</tr>
-</tbody>
-</table>
-<p><strong>한 번에 잘 됐다면</strong> — 여러분이 백지에서 쓴 문장에 이 다섯 줄 중 몇 개가 들어 있었는지 세어보세요. <strong>그 숫자가 오늘 하루의 결과입니다.</strong>
-<strong>아직 어긋난다면</strong> — 이 문장으로 갈아타세요. 그래도 안 되면 <code>못따라왔을때/dashboard_기본.html</code> 을 열고 3단계(캡처)로 가세요. <strong>3~7단계는 그 파일로도 전부 성립합니다.</strong></p>
-</details>
-<hr />
-<h2 id="내가-안-말한-게-뭐였을까요">내가 안 말한 게 뭐였을까요<a class="headerlink" href="#내가-안-말한-게-뭐였을까요" title="Permanent link">&para;</a></h2>
-<div class="admonition quote">
-<p class="admonition-title">이 한 줄은 복사해서 그대로 쓰세요</p>
-<pre class="highlight"><code>내가 이렇게 시키려고 해: (여러분이 방금 쓴 문장)
-이대로 하면 네가 임의로 정하게 되는 게 뭐야? 그것만 알려줘.
-고쳐 쓴 문장은 주지 말고, 아직 하지도 마.</code></pre>
-</div>
-<hr />
-<h2 id="그걸-채워서-다시-말해보세요">그걸 채워서 다시 말해보세요<a class="headerlink" href="#그걸-채워서-다시-말해보세요" title="Permanent link">&para;</a></h2>
-<div class="admonition quote">
-<p class="admonition-title">빠진 것만 덧붙여 다시 시키세요</p>
-<p><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_</span></p>
-</div>
-<hr />
-<h2 id="검산-반드시">검산 (반드시)<a class="headerlink" href="#검산-반드시" title="Permanent link">&para;</a></h2>
-<p>세 가지를 <strong>세어서</strong> 확인합니다. 눈으로 보고 "맞는 것 같다"는 검산이 아닙니다.</p>
-<table>
-<thead>
-<tr>
-<th>확인할 것</th>
-<th>화면</th>
-<th>엑셀</th>
-<th>같아야 함</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>표 행 수 (거르기를 다 켠 상태)</td>
-<td><span class="blank-line">____</span></td>
-<td><span class="blank-line">____</span></td>
-<td>○</td>
-</tr>
-<tr>
-<td>색으로 표시된 건수</td>
-<td><span class="blank-line">____</span></td>
-<td><span class="blank-line">____</span></td>
-<td>○</td>
-</tr>
-<tr>
-<td>맨 위 합계</td>
-<td><span class="blank-line">____</span></td>
-<td><span class="blank-line">____</span></td>
-<td>○</td>
-</tr>
-</tbody>
-</table>
-<p><strong>두 값이 다르면 화면이 데이터를 잘못 읽고 있는 것입니다.</strong></p>
-<div class="admonition success">
-<p class="admonition-title">이렇게 나오면 정상입니다</p>
-<ul>
-<li>더블클릭했더니 브라우저에서 화면이 열립니다</li>
-<li>표 행 수가 엑셀과 <strong>정확히 같습니다</strong></li>
-<li>맨 위 숫자 3개가 1단계에 적은 것과 <strong>같은 순서로</strong> 있습니다</li>
-<li>인터넷을 끊어도 화면이 그대로 열립니다</li>
-<li>엑셀 원본 두 개의 수정 날짜가 안 바뀌었습니다</li>
-</ul>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">이렇게 나왔다면</p>
-<ul>
-<li>표가 10~20행이고 "외 N건"이 붙어 있다 → <strong>"표를 요약하지 말고 엑셀의 모든 행을 넣어줘. 넣은 뒤 표별 행 수를 알려줘"</strong></li>
-<li>숫자가 예시값처럼 보인다 → <strong>"화면의 숫자가 엑셀에서 읽은 값인지, 예시로 넣은 값인지 확인해서 알려줘"</strong></li>
-<li>맨 위 숫자가 내가 정한 게 아니다 → <strong>"대시보드에_보일_것.md를 읽고, 거기 적힌 숫자 3개를 그 순서로 맨 위에 넣어줘"</strong></li>
-<li>화면이 안 열린다 / 빈 화면이다 → <a href="stuck.html">막혔을 때 쓰는 문장들</a>로 가세요</li>
-<li>파일을 못 찾는다고 한다 → 실습 1·2에서 파일 이름을 바꿨을 수 있습니다. <strong>이 경우 힌트를 더 열지 말고 <code>못따라왔을때/dashboard_기본.html</code> 을 바로 여세요</strong></li>
-</ul>
-</div>
-<details class="note">
-<summary>왜 '옆의 엑셀 두 개'가 안 될까요</summary>
-<p>"옆의", "이거", "아까 그거"는 사람끼리는 통하지만, 결과가 틀렸을 때 <strong>무엇을 읽었는지 확인할 방법이 없어집니다.</strong></p>
-<p>그리고 표가 잘리는 것은 성능 문제가 아닙니다. 화면 하나에 값이 다 들어가야 하는 조건에서는 <strong>요약하는 쪽이 읽기 좋다고 판단</strong>하기 때문입니다. 요약하지 말라고 말해야 전부 들어갑니다.</p>
-</details>
-<hr />
-<div class="admonition abstract">
-<p class="admonition-title">최소 코스 — 여기까지면 오늘 목표 달성입니다</p>
-<p>화면이 열리고 숫자 세 개가 엑셀과 맞으면 <strong>오늘 목표는 달성</strong>입니다.</p>
-</div>
-<hr />
-<h2 id="이-단계-결과물-규격">이 단계 결과물 규격<a class="headerlink" href="#이-단계-결과물-규격" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>파일</th>
-<th>내용</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>dashboard.html</code></td>
-<td>파일 하나. 더블클릭하면 브라우저에서 열리고, 인터넷 없이 동작합니다</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th>화면 요소</th>
-<th>규격</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>맨 위 숫자</td>
-<td><code>대시보드에_보일_것.md</code> 에 적은 3개를, 적은 순서로</td>
-</tr>
-<tr>
-<td>표</td>
-<td>엑셀 행 <strong>전량</strong>. "외 N건" 요약 금지</td>
-</tr>
-<tr>
-<td>색</td>
-<td><code>대시보드에_보일_것.md</code> 에 적은 기준 그대로</td>
-</tr>
-<tr>
-<td>원본 엑셀</td>
-<td>읽기만. 고치지 않습니다</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<p><strong>뭐가 달라졌는지 봅니다 — 체크포인트</strong></p>
+        <div class="kicker mono"><b>//</b> 실습 4 · 고객 문의에 딱지 붙이기</div>
+<h1 id="2--520건-일괄-분류">2 · 520건 일괄 분류<a class="headerlink" href="#2--520건-일괄-분류" title="Permanent link">&para;</a></h1>
+<p>기준이 통했으니 이제 520건 전체를 같은 규칙으로 분류해 빈 표를 채웁니다. 사람이 한 건씩 찍으면 1시간 반이 넘지만, 규칙을 정확히 주면 AI는 몇 분입니다.</p>
+<h2 id="직접-시켜보세요">직접 시켜보세요<a class="headerlink" href="#직접-시켜보세요" title="Permanent link">&para;</a></h2>
+<p>여러분 문장으로 AI에게 시킵니다. 아래 두 체크리스트를 먼저 읽고, 빠진 규칙이 없도록 프롬프트에 담으세요.</p>
+<h2 id="프롬프트에-꼭-담을-것-">프롬프트에 꼭 담을 것 ✅<a class="headerlink" href="#프롬프트에-꼭-담을-것-" title="Permanent link">&para;</a></h2>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 브라우저에서 화면이 열린다</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 표 행 수 · 색 건수 · 맨 위 합계를 <strong>세어서</strong> 엑셀과 맞췄다</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 맨 위 숫자 3개가 1단계에 적은 것과 같다</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 원본 엑셀이 그대로다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>분류 대상</strong> — VOC 원문 <strong>520건 전부</strong>, <code>item_id</code> 순서 그대로</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>판정 순서</strong> — 유형 → 감성 → 위험 스캔, 세 축 <strong>독립</strong>으로</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>복합·경계 규칙</strong> — 하자 언급해도 환불 요구면 환불취소, 부정+긍정 섞이면 본 사안 기준</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>빈칸 금지</strong> — 모든 줄의 세 칸을 채우고, 확신 없으면 기타·중립 + <code>검토필요</code> 표시</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>결과 파일</strong> — 채운 표, 파일명 지정 (예: <code>분류표.xlsx</code>)</li>
 </ul>
-
+<h2 id="이런-건-빼세요-">이런 건 빼세요 ❌<a class="headerlink" href="#이런-건-빼세요-" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 앞 몇 건만 하고 <strong>나머지는 알아서</strong> 채우게 두기 (전량 분류해야 함)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 애매한 줄을 <strong>흔한 유형으로 몰기</strong> (드문 칭찬감사·기타가 사라집니다)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 판단이 어려운 줄을 <strong>빈칸으로</strong> 남기기 (기타·중립 + 검토필요로)</li>
+</ul>
+<h2 id="예시-프롬프트">예시 프롬프트<a class="headerlink" href="#예시-프롬프트" title="Permanent link">&para;</a></h2>
+<p>여러분 문장을 먼저 보낸 뒤에 열어보세요.</p>
+<details class="example">
+<summary>이렇게 시킬 수 있습니다</summary>
+<pre class="highlight"><code>VOC_분류기준.pdf 기준 그대로 VOC원문.xlsx의 520건을 전부 분류해서 분류표.xlsx를 채워줘.
+item_id 순서대로, 각 줄에 문의유형·감성·위험대응 세 칸을 채워.
+판정 순서는 유형 → 감성 → 위험 스캔이고, 세 축은 독립으로 판단해.
+복합 문의는 기준의 우선순위 규칙을 따르고(하자 언급해도 환불 요구면 환불취소 등),
+확신이 없는 건은 억지로 분류하지 말고 기타·중립으로 둔 뒤 비고에 '검토필요'라고 적어줘.
+빈칸 없이 520줄을 다 채우고, 다 되면 유형별·감성별 건수와 위험대응 Y 건수를 알려줘.</code></pre>
+</details>
+<h2 id="실행-예시">실행 예시<a class="headerlink" href="#실행-예시" title="Permanent link">&para;</a></h2>
+<div class="admonition example">
+<p class="admonition-title">이렇게 나오면 됩니다</p>
+<p><img alt="step2-result.png" src="../images/lab4/step2-result.png" /></p>
+</div>
+<h2 id="체크포인트">체크포인트<a class="headerlink" href="#체크포인트" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 표가 <strong>520행</strong> 모두 채워졌다 (빈칸 없음)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 유형·감성 값이 전부 <strong>보기 안</strong>(6종·3종)에 있다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 위험대응이 <code>Y</code> 또는 빈칸으로만 되어 있고, <strong>감성과 따로</strong> 붙었다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 확신 없는 줄은 <strong><code>검토필요</code></strong>로 표시돼 있다 (빈칸이 아님)</li>
+</ul>
 <nav class="pager">
-<a class="prev" href="../lab4/step1.html"><span class="lbl">← 이전</span><span class="ttl">1 · 무엇을 보여줄지</span></a>
-<a class="next" href="../lab4/step3.html"><span class="lbl">다음 →</span><span class="ttl">3 · Before 캡처</span></a>
+<a class="prev" href="../lab4/step1.html"><span class="lbl">← 이전</span><span class="ttl">1 · 기준 확인·한 건 분류</span></a>
+<a class="next" href="../lab4/step3.html"><span class="lbl">다음 →</span><span class="ttl">3 · 분류 검산</span></a>
 </nav>
       </article>
       <aside class="toc mono"><h4>On this page</h4>
-<a href="#2--뼈대검산">2 · 뼈대·검산</a>
-<a href="#형태-조건만-드립니다">형태 조건만 드립니다</a>
-<a href="#먼저-여러분-문장으로-시켜보세요">먼저 여러분 문장으로 시켜보세요</a>
-<a href="#나온-것을-열어봅니다">나온 것을 열어봅니다</a>
-<a href="#내가-안-말한-게-뭐였을까요">내가 안 말한 게 뭐였을까요</a>
-<a href="#그걸-채워서-다시-말해보세요">그걸 채워서 다시 말해보세요</a>
-<a href="#검산-반드시">검산 (반드시)</a>
-<a href="#이-단계-결과물-규격">이 단계 결과물 규격</a></aside>
+<a href="#2--520건-일괄-분류">2 · 520건 일괄 분류</a>
+<a href="#직접-시켜보세요">직접 시켜보세요</a>
+<a href="#프롬프트에-꼭-담을-것-">프롬프트에 꼭 담을 것 ✅</a>
+<a href="#이런-건-빼세요-">이런 건 빼세요 ❌</a>
+<a href="#예시-프롬프트">예시 프롬프트</a>
+<a href="#실행-예시">실행 예시</a>
+<a href="#체크포인트">체크포인트</a></aside>
     </div>
   </main>
 </div>
+<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';mermaid.initialize({startOnLoad:true,securityLevel:'loose'});</script>
 <script src="../assets/site.js"></script>
 </body>
 </html>

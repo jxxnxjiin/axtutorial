@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>개요 · ax-tutor</title>
-<meta name="description" content="실습 4 · 대시보드와 디자인 — 개요 · ax-tutor 실습 위키">
+<meta name="description" content="실습 4 · 고객 문의에 딱지 붙이기 — 개요 · ax-tutor 실습 위키">
 <link rel="stylesheet" href="../assets/site.css">
 </head>
 <body>
@@ -27,6 +27,8 @@
 <a class="nav-a" href="../start/setup/python.html">2 · Python 설치</a>
 <a class="nav-a" href="../start/setup/nodejs.html">3 · Node.js 설치</a>
 <a class="nav-a" href="../start/setup/agent.html">4 · Claude Code 설치</a>
+<a class="nav-a" href="../start/setup/data.html">5 · 실습 데이터 준비</a>
+<a class="nav-a" href="../start/setup/autoapprove.html"><span class="g">◇</span> 부록 · 자동 허가 모드</a>
 </div>
 <div class="nav-h">// 들어가기</div><div class="tree">
 <a class="nav-a" href="../types/index.html">여섯 가지 업무 유형</a>
@@ -48,22 +50,28 @@
 <a class="nav-a" href="../lab3/step3.html">3 · 집계 검산</a>
 <a class="nav-a" href="../lab3/step4.html">4 · 인사이트·검산</a>
 </div>
-<div class="nav-h">// 실습 4 · 대시보드와 디자인</div><div class="tree">
+<div class="nav-h">// 실습 4 · 고객 문의에 딱지 붙이기</div><div class="tree">
 <a class="nav-a active" href="../lab4/index.html"><span class="g">◆</span> 개요</a>
-<a class="nav-a" href="../lab4/step1.html">1 · 무엇을 보여줄지</a>
-<a class="nav-a" href="../lab4/step2.html">2 · 뼈대·검산</a>
-<a class="nav-a" href="../lab4/step3.html">3 · Before 캡처</a>
-<a class="nav-a" href="../lab4/step4.html">4 · 말로 인상 바꾸기</a>
-<a class="nav-a" href="../lab4/step5.html">5 · 두 무드 비교</a>
-<a class="nav-a" href="../lab4/step6.html">6 · 다크모드·반응형</a>
-<a class="nav-a" href="../lab4/step7.html">7 · 재검산·After</a>
-<a class="nav-a" href="../lab4/stuck.html">막혔을 때 쓰는 문장</a>
+<a class="nav-a" href="../lab4/step1.html">1 · 기준 확인·한 건 분류</a>
+<a class="nav-a" href="../lab4/step2.html">2 · 520건 일괄 분류</a>
+<a class="nav-a" href="../lab4/step3.html">3 · 분류 검산</a>
+</div>
+<div class="nav-h">// 실습 5 · 임원용 1페이지 보고서</div><div class="tree">
+<a class="nav-a" href="../lab5/index.html"><span class="g">◆</span> 개요</a>
+<a class="nav-a" href="../lab5/step1.html">1 · 보고서 초안 쓰기</a>
+<a class="nav-a" href="../lab5/step2.html">2 · 보고서 검산</a>
+</div>
+<div class="nav-h">// 실습 6 · 제안서 사실로 되돌리기</div><div class="tree">
+<a class="nav-a" href="../lab6/index.html"><span class="g">◆</span> 개요</a>
+<a class="nav-a" href="../lab6/step1.html">1 · 확인할 것 묻기</a>
+<a class="nav-a" href="../lab6/step2.html">2 · 관점별 검증</a>
+<a class="nav-a" href="../lab6/step3.html">3 · 사실로 재작성</a>
+<a class="nav-a" href="../lab6/step4.html">4 · 재검증·검사표</a>
 </div>
 <div class="nav-h">// 도움말</div><div class="tree">
 <a class="nav-a" href="../help/errors.html">에러가 났어요</a>
 <a class="nav-a" href="../help/glossary.html">이 말이 무슨 뜻이죠</a>
 <a class="nav-a" href="../help/how-to-ask.html">AI에게 잘 시키는 법</a>
-<a class="nav-a" href="../help/prompts.html">오늘 내가 친 문장</a>
 <a class="nav-a" href="../help/next.html">강의 끝나고 뭘 해볼까</a>
 </div></nav>
     <div class="side__foot">
@@ -76,142 +84,81 @@
       <button class="burger" id="burger" aria-label="메뉴">≡</button>
       <span class="path"><b>~/ax-tutor</b> <span class="full">$ cat</span> <span class="cur">lab4/index.md</span></span>
       <span class="caret"></span><span class="spacer"></span>
-      <span class="stat">실습 4 · 대시보드와 디자인</span>
+      <span class="stat">실습 4 · 고객 문의에 딱지 붙이기</span>
     </div>
     <div class="wrap">
       <article class="doc md rise">
-        <div class="kicker mono"><b>//</b> 실습 4 · 대시보드와 디자인</div>
+        <div class="kicker mono"><b>//</b> 실습 4 · 고객 문의에 딱지 붙이기</div>
 <h1 id="개요">개요<a class="headerlink" href="#개요" title="Permanent link">&para;</a></h1>
-<p><span class="route-badge">👥 <strong>강사와 함께 가는 최소 코스</strong> — 1 → 2단계까지. 그 뒤는 각자 속도로</span>
-<span class="route-badge">🏃 <strong>혼자 더 가는 코스</strong> — 3 → 4 → 5 → 6 → 7단계</span></p>
-<p><strong>한 줄 목표: 내 데이터가 브라우저에서 도는 화면이 되고, 그 화면의 인상을 내가 고른다.</strong></p>
-<p>예상 소요 <strong>63분</strong>. <strong>완성하지 못해도 됩니다.</strong></p>
-<hr />
+<blockquote>
+<p><strong>한 줄 목표</strong>: 고객 문의 520건을 문의유형·감성·위험대응 3가지 축으로, 느낌이 아니라 <strong>기준 문서 그대로</strong> 분류해 빈 표를 채우고, 보기 밖 값·빈칸이 없는지 검산한다.</p>
+</blockquote>
 <h2 id="오늘-받은-일">오늘 받은 일<a class="headerlink" href="#오늘-받은-일" title="Permanent link">&para;</a></h2>
 <blockquote>
-<p>사수가 말합니다.</p>
-<p>"보고문 좋았어요. 근데 이거 매달 나올 거잖아요. 각 부서에서 자기 계약이랑 물류비를 직접 볼 수 있는 화면 하나 있으면 좋겠는데. 아, 그리고 팀장님이 보실 거니까 좀 볼만하게요."</p>
+<p>입사 첫 달. CS팀 사수가 말합니다.</p>
+<p>"고객 문의가 <strong>520건</strong> 쌓였어요. 이걸 문의유형·감정·위험대응 세 가지로 나눠 표에 채워줘요. <strong>기준 문서</strong>는 줄게요. 느낌으로 찍지 말고 <strong>기준대로만</strong> 붙여야 누가 해도 같은 결과가 나와요. 감정이 좋아 보여도 신고·소송 같은 <strong>위험 신호가 있으면 무조건 위험대응 표시</strong>예요. 애매하면 지어내지 말고 기타·중립으로 두고요."</p>
 </blockquote>
-<p>만들 것은 <strong>더블클릭하면 브라우저에서 열리는 파일 하나</strong>입니다. 서버도 없고, 인터넷 연결도 필요 없고, 어디에 올리지도 않습니다.</p>
-<hr />
-<h2 id="폴더에-있는-것-lab4">폴더에 있는 것 (<code>lab4/</code>)<a class="headerlink" href="#폴더에-있는-것-lab4" title="Permanent link">&para;</a></h2>
+<p>기준 문서를 AI에게 읽히고, 520건을 <strong>기준대로 한 번에 분류</strong>한 뒤, 보기 밖 값과 빈칸이 없는지 <strong>검산</strong>합니다.</p>
+<h2 id="폴더에-있는-것">폴더에 있는 것<a class="headerlink" href="#폴더에-있는-것" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
-<th>파일/폴더</th>
+<th>파일</th>
 <th>무엇</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>시작폴더/</code></td>
-<td><strong>여기서 작업합니다.</strong> 비어 있는 게 맞습니다</td>
+<td><code>1. VOC원문.xlsx</code></td>
+<td>고객 문의 520건 (<code>item_id</code>·<code>채널</code>·<code>text</code>)</td>
 </tr>
 <tr>
-<td><code>샘플_점검표.xlsx</code> · <code>샘플_챙길일.xlsx</code></td>
-<td>실습 1·2를 못 끝냈을 때만 쓰는 것</td>
+<td><code>2. VOC_분류기준.pdf</code></td>
+<td>분류 기준 문서 — 3개 축(문의유형 6종·감정 3종·위험 Y) + 복합·경계 규칙</td>
 </tr>
 <tr>
-<td><code>레퍼런스/</code></td>
-<td>참고용 화면 그림 4장</td>
-</tr>
-<tr>
-<td><code>디자인_지시문/</code></td>
-<td>스킬이 안 될 때 대신 쓰는 지시문 3장</td>
-</tr>
-<tr>
-<td><code>못따라왔을때/dashboard_기본.html</code></td>
-<td>2단계에서 막혔을 때 여는 완제품</td>
+<td><code>3. 분류표.xlsx</code></td>
+<td>채워 넣을 빈 표 (<code>item_id</code>·<code>채널</code>·<code>문의유형</code>·<code>감성</code>·<code>위험대응</code>)</td>
 </tr>
 </tbody>
 </table>
-<div class="admonition info">
-<p class="admonition-title">먼저 할 일</p>
-<p>실습 1·2에서 만든 엑셀 두 개(<code>물류비_점검표.xlsx</code> · <code>다음달_챙길일.xlsx</code>)를 <code>시작폴더/</code> 로 복사해 놓으세요. 앞 실습을 못 끝냈으면 샘플 두 개를 복사하면 됩니다.</p>
-</div>
-<p>빈 폴더로 시작하는 건 일부러입니다. 여기까지 온 여러분에게 필요한 건 시작 코드가 아니라 <strong>아무것도 없는 데서도 시작할 수 있다</strong>는 경험입니다.</p>
-<hr />
-<h2 id="오늘-이-실습에서-만드는-것">오늘 이 실습에서 만드는 것<a class="headerlink" href="#오늘-이-실습에서-만드는-것" title="Permanent link">&para;</a></h2>
+<h2 id="실습에서-할-일">실습에서 할 일<a class="headerlink" href="#실습에서-할-일" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
 <th>단계</th>
-<th>무엇</th>
-<th>분</th>
+<th>할 일</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><a href="step1.html">1</a></td>
-<td>무엇을 보여줄지 먼저 씁니다</td>
-<td>10</td>
+<td><a href="step1.html">1단계</a></td>
+<td>기준 문서를 읽히고 <strong>한 건</strong>부터 분류해 본다</td>
 </tr>
 <tr>
-<td><a href="step2.html">2</a></td>
-<td>화면을 만들고 숫자를 검산합니다</td>
-<td>17</td>
+<td><a href="step2.html">2단계</a></td>
+<td>기준대로 <strong>520건을 한 번에</strong> 분류한다</td>
 </tr>
 <tr>
-<td><a href="step3.html">3</a></td>
-<td>Before를 캡처합니다</td>
-<td>3</td>
-</tr>
-<tr>
-<td><a href="step4.html">4</a></td>
-<td>말만 바꿔서 인상을 바꿉니다</td>
-<td>9</td>
-</tr>
-<tr>
-<td><a href="step5.html">5</a></td>
-<td>스킬로 두 가지 무드를 만들어 고릅니다</td>
-<td>15</td>
-</tr>
-<tr>
-<td><a href="step6.html">6</a></td>
-<td>한 마디로 되는 것들을 켭니다</td>
-<td>1</td>
-</tr>
-<tr>
-<td><a href="step7.html">7</a></td>
-<td>다시 검산하고 After를 남깁니다</td>
-<td>8</td>
+<td><a href="step3.html">3단계</a></td>
+<td>보기 밖 값·빈칸·경계 케이스를 <strong>검산</strong>한다</td>
 </tr>
 </tbody>
 </table>
-<div class="admonition abstract">
-<p class="admonition-title">최소 코스 — 여기까지면 오늘 목표 달성입니다</p>
-<p><strong>2단계에서 화면이 열리고 숫자가 엑셀과 맞으면</strong> 오늘 목표는 달성입니다.
-<strong>완성하지 못해도 괜찮습니다.</strong> 5단계에서 멈추는 사람이 많고, 그건 성공입니다.</p>
-</div>
-<hr />
-<h2 id="이-실습은-백지에서-시작합니다">이 실습은 백지에서 시작합니다<a class="headerlink" href="#이-실습은-백지에서-시작합니다" title="Permanent link">&para;</a></h2>
-<p>다섯 줄은 이미 다 찼습니다. 여기서는 <strong>아무도 안 도와주는 백지에서 그 다섯 줄을 전부 조립</strong>합니다. 오늘 하루의 시험대입니다.</p>
-<div class="admonition quote">
-<p class="admonition-title">내 문장에 이게 있나 (다 채워진 상태)</p>
-<ol>
-<li><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>__</span></li>
-<li><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>__</span></li>
-<li><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>__</span></li>
-<li><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>__</span></li>
-<li><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>__</span></li>
-</ol>
-</div>
-<p>막히면 <a href="stuck.html">막혔을 때 쓰는 문장들</a>을 여세요.</p>
-
 <nav class="pager">
 <a class="prev" href="../lab3/step4.html"><span class="lbl">← 이전</span><span class="ttl">4 · 인사이트·검산</span></a>
-<a class="next" href="../lab4/step1.html"><span class="lbl">다음 →</span><span class="ttl">1 · 무엇을 보여줄지</span></a>
+<a class="next" href="../lab4/step1.html"><span class="lbl">다음 →</span><span class="ttl">1 · 기준 확인·한 건 분류</span></a>
 </nav>
       </article>
       <aside class="toc mono"><h4>On this page</h4>
 <a href="#개요">개요</a>
 <a href="#오늘-받은-일">오늘 받은 일</a>
-<a href="#폴더에-있는-것-lab4">폴더에 있는 것 (lab4/)</a>
-<a href="#오늘-이-실습에서-만드는-것">오늘 이 실습에서 만드는 것</a>
-<a href="#이-실습은-백지에서-시작합니다">이 실습은 백지에서 시작합니다</a></aside>
+<a href="#폴더에-있는-것">폴더에 있는 것</a>
+<a href="#실습에서-할-일">실습에서 할 일</a></aside>
     </div>
   </main>
 </div>
+<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';mermaid.initialize({startOnLoad:true,securityLevel:'loose'});</script>
 <script src="../assets/site.js"></script>
 </body>
 </html>

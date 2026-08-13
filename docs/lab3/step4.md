@@ -35,7 +35,10 @@
 ## 실행 예시
 
 !!! example "이렇게 나오면 됩니다"
-    ![step4-insight.png](../images/lab3/step4-insight.png)
+    <figure style="margin:0">
+      <img src="../images/lab3/step4-insight.png" alt="step4-insight.png" style="width:100%;height:auto;display:block">
+      <figcaption style="text-align:center;font-size:0.85em;color:#888;margin-top:6px">뽑아낸 인사이트</figcaption>
+    </figure>
 
 ## 체크포인트
 

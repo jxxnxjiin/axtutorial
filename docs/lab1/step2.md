@@ -37,7 +37,10 @@
 ## 실행 예시
 
 !!! example "이렇게 나오면 됩니다"
-    ![step2-verify.png](../images/lab1/step2-verify.png)
+    <figure style="margin:0">
+      <img src="../images/lab1/step2-verify.png" alt="step2-verify.png" style="width:100%;height:auto;display:block">
+      <figcaption style="text-align:center;font-size:0.85em;color:#888;margin-top:6px">원본 대조·검산 결과</figcaption>
+    </figure>
 
 ## 체크포인트
 

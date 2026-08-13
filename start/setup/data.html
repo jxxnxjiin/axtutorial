@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="ko" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>5 · 실습 데이터 준비 · ax-tutor</title>
+<meta name="description" content="개발 환경 세팅 — 5 · 실습 데이터 준비 · ax-tutor 실습 위키">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<div class="shell">
+  <aside class="side" id="side">
+    <div class="brand">
+      <a class="brand__row" href="../../index.html" style="text-decoration:none">
+        <span class="ast mono">✻</span>
+        <div><div class="brand__name">ax<b>-</b>tutor</div></div>
+      </a>
+      <div class="brand__sub">Claude Code · 실습 위키</div>
+      <div class="session"><span class="dot"></span><span class="live">LIVE</span>
+        <span style="color:var(--muted)">강의 진행 중</span><span class="clock mono" id="clock">--:--</span></div>
+    </div>
+    <nav><div class="nav-h">// 홈</div>
+<a class="nav-a" href="../../index.html#materials"><span class="g">▤</span> 강의 자료 내려받기</a>
+<div class="nav-h">// 개발 환경 세팅</div><div class="tree">
+<a class="nav-a" href="../../start/setup/index.html"><span class="g">◆</span> 개요</a>
+<a class="nav-a" href="../../start/setup/vscode.html">1 · VS Code 설치</a>
+<a class="nav-a" href="../../start/setup/python.html">2 · Python 설치</a>
+<a class="nav-a" href="../../start/setup/nodejs.html">3 · Node.js 설치</a>
+<a class="nav-a" href="../../start/setup/agent.html">4 · Claude Code 설치</a>
+<a class="nav-a active" href="../../start/setup/data.html">5 · 실습 데이터 준비</a>
+<a class="nav-a" href="../../start/setup/autoapprove.html"><span class="g">◇</span> 부록 · 자동 허가 모드</a>
+</div>
+<div class="nav-h">// 들어가기</div><div class="tree">
+<a class="nav-a" href="../../types/index.html">여섯 가지 업무 유형</a>
+</div>
+<div class="nav-h">// 실습 1 · 흩어진 주문 한 표로 모으기</div><div class="tree">
+<a class="nav-a" href="../../lab1/index.html"><span class="g">◆</span> 개요</a>
+<a class="nav-a" href="../../lab1/step1.html">1 · 한 표로 모으기</a>
+<a class="nav-a" href="../../lab1/step2.html">2 · 원본 대조·검산</a>
+</div>
+<div class="nav-h">// 실습 2 · 계약서에서 계약종합 만들기</div><div class="tree">
+<a class="nav-a" href="../../lab2/index.html"><span class="g">◆</span> 개요</a>
+<a class="nav-a" href="../../lab2/step1.html">1 · 계약서 내용 종합하기</a>
+<a class="nav-a" href="../../lab2/step2.html">2 · 원본 대조·검산</a>
+</div>
+<div class="nav-h">// 실습 3 · 쿠폰 성과 집계·인사이트</div><div class="tree">
+<a class="nav-a" href="../../lab3/index.html"><span class="g">◆</span> 개요</a>
+<a class="nav-a" href="../../lab3/step1.html">1 · 한 파일로 모으기</a>
+<a class="nav-a" href="../../lab3/step2.html">2 · 성과표 채우기</a>
+<a class="nav-a" href="../../lab3/step3.html">3 · 집계 검산</a>
+<a class="nav-a" href="../../lab3/step4.html">4 · 인사이트·검산</a>
+</div>
+<div class="nav-h">// 실습 4 · 고객 문의에 딱지 붙이기</div><div class="tree">
+<a class="nav-a" href="../../lab4/index.html"><span class="g">◆</span> 개요</a>
+<a class="nav-a" href="../../lab4/step1.html">1 · 기준 확인·한 건 분류</a>
+<a class="nav-a" href="../../lab4/step2.html">2 · 520건 일괄 분류</a>
+<a class="nav-a" href="../../lab4/step3.html">3 · 분류 검산</a>
+</div>
+<div class="nav-h">// 실습 5 · 임원용 1페이지 보고서</div><div class="tree">
+<a class="nav-a" href="../../lab5/index.html"><span class="g">◆</span> 개요</a>
+<a class="nav-a" href="../../lab5/step1.html">1 · 보고서 초안 쓰기</a>
+<a class="nav-a" href="../../lab5/step2.html">2 · 보고서 검산</a>
+</div>
+<div class="nav-h">// 실습 6 · 제안서 사실로 되돌리기</div><div class="tree">
+<a class="nav-a" href="../../lab6/index.html"><span class="g">◆</span> 개요</a>
+<a class="nav-a" href="../../lab6/step1.html">1 · 확인할 것 묻기</a>
+<a class="nav-a" href="../../lab6/step2.html">2 · 관점별 검증</a>
+<a class="nav-a" href="../../lab6/step3.html">3 · 사실로 재작성</a>
+<a class="nav-a" href="../../lab6/step4.html">4 · 재검증·검사표</a>
+</div>
+<div class="nav-h">// 도움말</div><div class="tree">
+<a class="nav-a" href="../../help/errors.html">에러가 났어요</a>
+<a class="nav-a" href="../../help/glossary.html">이 말이 무슨 뜻이죠</a>
+<a class="nav-a" href="../../help/how-to-ask.html">AI에게 잘 시키는 법</a>
+<a class="nav-a" href="../../help/next.html">강의 끝나고 뭘 해볼까</a>
+</div></nav>
+    <div class="side__foot">
+      <button class="iconbtn" id="themeBtn" title="테마 전환"><span id="themeIc">◐</span> <span id="themeLbl">light</span></button>
+      <a class="iconbtn" href="../../index.html" title="홈">↖ home</a>
+    </div>
+  </aside>
+  <main class="main">
+    <div class="cmdbar mono">
+      <button class="burger" id="burger" aria-label="메뉴">≡</button>
+      <span class="path"><b>~/ax-tutor</b> <span class="full">$ cat</span> <span class="cur">start/setup/data.md</span></span>
+      <span class="caret"></span><span class="spacer"></span>
+      <span class="stat">개발 환경 세팅</span>
+    </div>
+    <div class="wrap">
+      <article class="doc md rise">
+        <div class="kicker mono"><b>//</b> 개발 환경 세팅</div>
+<h1 id="5--실습-데이터-준비">5 · 실습 데이터 준비<a class="headerlink" href="#5--실습-데이터-준비" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">이 페이지에서 하는 일</p>
+<ul>
+<li>실습 데이터 <strong>전체 zip</strong>을 내려받습니다</li>
+<li>경로 문제가 안 생기는 <strong>올바른 위치</strong>에 압축을 풉니다</li>
+</ul>
+</div>
+<p>도구 설치가 끝났으니, 오늘 만질 <strong>실습 재료</strong>를 내려받아 압축까지 풀어둡니다.</p>
+<h2 id="1-전체-zip-내려받기">1. 전체 zip 내려받기<a class="headerlink" href="#1-전체-zip-내려받기" title="Permanent link">&para;</a></h2>
+<p><a href="../../index.html">홈 화면의 내려받기 표</a>에서 <strong>전체 zip</strong>을 받습니다.</p>
+<h2 id="2-올바른-위치에-압축-풀기">2. 올바른 위치에 압축 풀기<a class="headerlink" href="#2-올바른-위치에-압축-풀기" title="Permanent link">&para;</a></h2>
+<p>압축을 풀 <strong>위치</strong>가 중요합니다.</p>
+<div class="admonition danger">
+<p class="admonition-title">바탕화면에 풀지 마세요</p>
+<p>경로에 한글이나 띄어쓰기가 섞이면 도구가 파일을 못 찾는 일이 실제로 생깁니다.
+<strong>윈도우: <code>C:\workshop\</code> / 맥: <code>~/workshop/</code></strong> 에 푸세요. 폴더가 없으면 직접 만드세요.</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">이렇게 나오면 정상입니다</p>
+<ul>
+<li><code>workshop</code> 폴더 안에 <code>lab1</code> <code>lab2</code> <code>lab3</code> <code>lab4</code> <code>lab5</code> 다섯 폴더가 보입니다</li>
+<li><code>lab1</code> 폴더를 열면 <code>발송내역.xlsx</code>, <code>청구서_A택배.csv</code>, <code>요금안내문</code> 폴더가 보입니다</li>
+</ul>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">이렇게 보인다면</p>
+<ul>
+<li>폴더 안에 같은 이름 폴더가 또 있다 → 안쪽 폴더가 진짜입니다. 안쪽 것을 <code>workshop</code> 아래로 옮기세요</li>
+<li>한글 이름이 깨진다 → 다른 압축 프로그램(반디집·알집 등)으로 다시 푸세요</li>
+</ul>
+</div>
+<h2 id="다-됐는지-스스로-확인하기">다 됐는지 스스로 확인하기<a class="headerlink" href="#다-됐는지-스스로-확인하기" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>C:\workshop\</code> (맥은 <code>~/workshop/</code>) 안에 <code>lab1</code>~<code>lab5</code> 폴더가 있다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>lab1</code> 폴더를 열면 실습 파일들이 보인다</li>
+</ul>
+<p>여기까지 됐으면 세팅과 데이터 준비가 모두 끝났습니다.</p>
+
+<nav class="pager">
+<a class="prev" href="../../start/setup/agent.html"><span class="lbl">← 이전</span><span class="ttl">4 · Claude Code 설치</span></a>
+<a class="next" href="../../start/setup/autoapprove.html"><span class="lbl">다음 →</span><span class="ttl">부록 · 자동 허가 모드</span></a>
+</nav>
+      </article>
+      <aside class="toc mono"><h4>On this page</h4>
+<a href="#5--실습-데이터-준비">5 · 실습 데이터 준비</a>
+<a href="#1-전체-zip-내려받기">1. 전체 zip 내려받기</a>
+<a href="#2-올바른-위치에-압축-풀기">2. 올바른 위치에 압축 풀기</a>
+<a href="#다-됐는지-스스로-확인하기">다 됐는지 스스로 확인하기</a></aside>
+    </div>
+  </main>
+</div>
+<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';mermaid.initialize({startOnLoad:true,securityLevel:'loose'});</script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

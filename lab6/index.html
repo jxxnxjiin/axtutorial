@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="ko" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>개요 · ax-tutor</title>
+<meta name="description" content="실습 6 · 제안서 사실로 되돌리기 — 개요 · ax-tutor 실습 위키">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<div class="shell">
+  <aside class="side" id="side">
+    <div class="brand">
+      <a class="brand__row" href="../index.html" style="text-decoration:none">
+        <span class="ast mono">✻</span>
+        <div><div class="brand__name">ax<b>-</b>tutor</div></div>
+      </a>
+      <div class="brand__sub">Claude Code · 실습 위키</div>
+      <div class="session"><span class="dot"></span><span class="live">LIVE</span>
+        <span style="color:var(--muted)">강의 진행 중</span><span class="clock mono" id="clock">--:--</span></div>
+    </div>
+    <nav><div class="nav-h">// 홈</div>
+<a class="nav-a" href="../index.html#materials"><span class="g">▤</span> 강의 자료 내려받기</a>
+<div class="nav-h">// 개발 환경 세팅</div><div class="tree">
+<a class="nav-a" href="../start/setup/index.html"><span class="g">◆</span> 개요</a>
+<a class="nav-a" href="../start/setup/vscode.html">1 · VS Code 설치</a>
+<a class="nav-a" href="../start/setup/python.html">2 · Python 설치</a>
+<a class="nav-a" href="../start/setup/nodejs.html">3 · Node.js 설치</a>
+<a class="nav-a" href="../start/setup/agent.html">4 · Claude Code 설치</a>
+<a class="nav-a" href="../start/setup/data.html">5 · 실습 데이터 준비</a>
+<a class="nav-a" href="../start/setup/autoapprove.html"><span class="g">◇</span> 부록 · 자동 허가 모드</a>
+</div>
+<div class="nav-h">// 들어가기</div><div class="tree">
+<a class="nav-a" href="../types/index.html">여섯 가지 업무 유형</a>
+</div>
+<div class="nav-h">// 실습 1 · 흩어진 주문 한 표로 모으기</div><div class="tree">
+<a class="nav-a" href="../lab1/index.html"><span class="g">◆</span> 개요</a>
+<a class="nav-a" href="../lab1/step1.html">1 · 한 표로 모으기</a>
+<a class="nav-a" href="../lab1/step2.html">2 · 원본 대조·검산</a>
+</div>
+<div class="nav-h">// 실습 2 · 계약서에서 계약종합 만들기</div><div class="tree">
+<a class="nav-a" href="../lab2/index.html"><span class="g">◆</span> 개요</a>
+<a class="nav-a" href="../lab2/step1.html">1 · 계약서 내용 종합하기</a>
+<a class="nav-a" href="../lab2/step2.html">2 · 원본 대조·검산</a>
+</div>
+<div class="nav-h">// 실습 3 · 쿠폰 성과 집계·인사이트</div><div class="tree">
+<a class="nav-a" href="../lab3/index.html"><span class="g">◆</span> 개요</a>
+<a class="nav-a" href="../lab3/step1.html">1 · 한 파일로 모으기</a>
+<a class="nav-a" href="../lab3/step2.html">2 · 성과표 채우기</a>
+<a class="nav-a" href="../lab3/step3.html">3 · 집계 검산</a>
+<a class="nav-a" href="../lab3/step4.html">4 · 인사이트·검산</a>
+</div>
+<div class="nav-h">// 실습 4 · 고객 문의에 딱지 붙이기</div><div class="tree">
+<a class="nav-a" href="../lab4/index.html"><span class="g">◆</span> 개요</a>
+<a class="nav-a" href="../lab4/step1.html">1 · 기준 확인·한 건 분류</a>
+<a class="nav-a" href="../lab4/step2.html">2 · 520건 일괄 분류</a>
+<a class="nav-a" href="../lab4/step3.html">3 · 분류 검산</a>
+</div>
+<div class="nav-h">// 실습 5 · 임원용 1페이지 보고서</div><div class="tree">
+<a class="nav-a" href="../lab5/index.html"><span class="g">◆</span> 개요</a>
+<a class="nav-a" href="../lab5/step1.html">1 · 보고서 초안 쓰기</a>
+<a class="nav-a" href="../lab5/step2.html">2 · 보고서 검산</a>
+</div>
+<div class="nav-h">// 실습 6 · 제안서 사실로 되돌리기</div><div class="tree">
+<a class="nav-a active" href="../lab6/index.html"><span class="g">◆</span> 개요</a>
+<a class="nav-a" href="../lab6/step1.html">1 · 확인할 것 묻기</a>
+<a class="nav-a" href="../lab6/step2.html">2 · 관점별 검증</a>
+<a class="nav-a" href="../lab6/step3.html">3 · 사실로 재작성</a>
+<a class="nav-a" href="../lab6/step4.html">4 · 재검증·검사표</a>
+</div>
+<div class="nav-h">// 도움말</div><div class="tree">
+<a class="nav-a" href="../help/errors.html">에러가 났어요</a>
+<a class="nav-a" href="../help/glossary.html">이 말이 무슨 뜻이죠</a>
+<a class="nav-a" href="../help/how-to-ask.html">AI에게 잘 시키는 법</a>
+<a class="nav-a" href="../help/next.html">강의 끝나고 뭘 해볼까</a>
+</div></nav>
+    <div class="side__foot">
+      <button class="iconbtn" id="themeBtn" title="테마 전환"><span id="themeIc">◐</span> <span id="themeLbl">light</span></button>
+      <a class="iconbtn" href="../index.html" title="홈">↖ home</a>
+    </div>
+  </aside>
+  <main class="main">
+    <div class="cmdbar mono">
+      <button class="burger" id="burger" aria-label="메뉴">≡</button>
+      <span class="path"><b>~/ax-tutor</b> <span class="full">$ cat</span> <span class="cur">lab6/index.md</span></span>
+      <span class="caret"></span><span class="spacer"></span>
+      <span class="stat">실습 6 · 제안서 사실로 되돌리기</span>
+    </div>
+    <div class="wrap">
+      <article class="doc md rise">
+        <div class="kicker mono"><b>//</b> 실습 6 · 제안서 사실로 되돌리기</div>
+<h1 id="개요">개요<a class="headerlink" href="#개요" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>한 줄 목표</strong>: 동료가 쓴 영업 제안서 초안을 사양서·고객 요구사항과 대조해, 과장·불일치·누락을 잡아 <strong>사실대로 고치고</strong> 요구사항 충족 여부를 검사표로 마무리한다.</p>
+</blockquote>
+<h2 id="오늘-받은-일">오늘 받은 일<a class="headerlink" href="#오늘-받은-일" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>로봇 제조사 '한울로보틱스' 신입. 팀장님이 말합니다.</p>
+<p>"동기 김신입이 쓴 <strong>영업 제안서 초안</strong>인데, 과장이 좀 있는 것 같아. <strong>사양서</strong>랑 <strong>고객 요구사항</strong>이랑 맞는지 보고 사실대로 고쳐줘. '이 정도면 됐다' 하고 그냥 올리면 사고 나. 틀린 건 눈에 띄는데 <strong>빠진 건 잘 안 보이니까</strong> 특히 조심하고."</p>
+</blockquote>
+<p>내가 잘 모르는 분야라도, AI와 함께 <strong>① 뭘 봐야 하는지 묻고 → ② 관점을 나눠 검증 → ③ 사실로 재작성 → ④ 다시 검증</strong> 순서로 진행합니다.</p>
+<h2 id="폴더에-있는-것">폴더에 있는 것<a class="headerlink" href="#폴더에-있는-것" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>파일</th>
+<th>무엇</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>1.영업제안서_초안.pdf</code></td>
+<td>동료가 만든 로봇 판매 제안서 (과장·불일치·누락이 섞여 있음)</td>
+</tr>
+<tr>
+<td><code>2.제품사양서.xlsx</code></td>
+<td>자사 로봇 실제 사양 (모델별 가반하중·가격·유지비, 인증 현황)</td>
+</tr>
+<tr>
+<td><code>3.고객사_요구사항.pdf</code></td>
+<td>고객사 미팅 메모 — 요구사항 6개</td>
+</tr>
+</tbody>
+</table>
+<h2 id="실습에서-할-일">실습에서 할 일<a class="headerlink" href="#실습에서-할-일" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>단계</th>
+<th>할 일</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="step1.html">1단계</a></td>
+<td>뭘 확인해야 하는지 AI에게 물어 <strong>검토 체크리스트</strong>를 만든다</td>
+</tr>
+<tr>
+<td><a href="step2.html">2단계</a></td>
+<td>관점을 나눠 <strong>따로따로</strong> 검증한다 (사실·고객·검토자)</td>
+</tr>
+<tr>
+<td><a href="step3.html">3단계</a></td>
+<td>문제를 종합해 <strong>사실에 맞춰 다시 쓴다</strong></td>
+</tr>
+<tr>
+<td><a href="step4.html">4단계</a></td>
+<td>고친 제안서를 <strong>재검증</strong>하고 요구사항 충족 검사표로 마무리한다</td>
+</tr>
+</tbody>
+</table>
+<nav class="pager">
+<a class="prev" href="../lab5/step2.html"><span class="lbl">← 이전</span><span class="ttl">2 · 보고서 검산</span></a>
+<a class="next" href="../lab6/step1.html"><span class="lbl">다음 →</span><span class="ttl">1 · 확인할 것 묻기</span></a>
+</nav>
+      </article>
+      <aside class="toc mono"><h4>On this page</h4>
+<a href="#개요">개요</a>
+<a href="#오늘-받은-일">오늘 받은 일</a>
+<a href="#폴더에-있는-것">폴더에 있는 것</a>
+<a href="#실습에서-할-일">실습에서 할 일</a></aside>
+    </div>
+  </main>
+</div>
+<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';mermaid.initialize({startOnLoad:true,securityLevel:'loose'});</script>
+<script src="../assets/site.js"></script>
+</body>
+</html>

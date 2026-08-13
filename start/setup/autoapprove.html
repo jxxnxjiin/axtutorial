@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="ko" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>부록 · 자동 허가 모드 · ax-tutor</title>
+<meta name="description" content="개발 환경 세팅 — 부록 · 자동 허가 모드 · ax-tutor 실습 위키">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<div class="shell">
+  <aside class="side" id="side">
+    <div class="brand">
+      <a class="brand__row" href="../../index.html" style="text-decoration:none">
+        <span class="ast mono">✻</span>
+        <div><div class="brand__name">ax<b>-</b>tutor</div></div>
+      </a>
+      <div class="brand__sub">Claude Code · 실습 위키</div>
+      <div class="session"><span class="dot"></span><span class="live">LIVE</span>
+        <span style="color:var(--muted)">강의 진행 중</span><span class="clock mono" id="clock">--:--</span></div>
+    </div>
+    <nav><div class="nav-h">// 홈</div>
+<a class="nav-a" href="../../index.html#materials"><span class="g">▤</span> 강의 자료 내려받기</a>
+<div class="nav-h">// 개발 환경 세팅</div><div class="tree">
+<a class="nav-a" href="../../start/setup/index.html"><span class="g">◆</span> 개요</a>
+<a class="nav-a" href="../../start/setup/vscode.html">1 · VS Code 설치</a>
+<a class="nav-a" href="../../start/setup/python.html">2 · Python 설치</a>
+<a class="nav-a" href="../../start/setup/nodejs.html">3 · Node.js 설치</a>
+<a class="nav-a" href="../../start/setup/agent.html">4 · Claude Code 설치</a>
+<a class="nav-a" href="../../start/setup/data.html">5 · 실습 데이터 준비</a>
+<a class="nav-a active" href="../../start/setup/autoapprove.html"><span class="g">◇</span> 부록 · 자동 허가 모드</a>
+</div>
+<div class="nav-h">// 들어가기</div><div class="tree">
+<a class="nav-a" href="../../types/index.html">여섯 가지 업무 유형</a>
+</div>
+<div class="nav-h">// 실습 1 · 흩어진 주문 한 표로 모으기</div><div class="tree">
+<a class="nav-a" href="../../lab1/index.html"><span class="g">◆</span> 개요</a>
+<a class="nav-a" href="../../lab1/step1.html">1 · 한 표로 모으기</a>
+<a class="nav-a" href="../../lab1/step2.html">2 · 원본 대조·검산</a>
+</div>
+<div class="nav-h">// 실습 2 · 계약서에서 계약종합 만들기</div><div class="tree">
+<a class="nav-a" href="../../lab2/index.html"><span class="g">◆</span> 개요</a>
+<a class="nav-a" href="../../lab2/step1.html">1 · 계약서 내용 종합하기</a>
+<a class="nav-a" href="../../lab2/step2.html">2 · 원본 대조·검산</a>
+</div>
+<div class="nav-h">// 실습 3 · 쿠폰 성과 집계·인사이트</div><div class="tree">
+<a class="nav-a" href="../../lab3/index.html"><span class="g">◆</span> 개요</a>
+<a class="nav-a" href="../../lab3/step1.html">1 · 한 파일로 모으기</a>
+<a class="nav-a" href="../../lab3/step2.html">2 · 성과표 채우기</a>
+<a class="nav-a" href="../../lab3/step3.html">3 · 집계 검산</a>
+<a class="nav-a" href="../../lab3/step4.html">4 · 인사이트·검산</a>
+</div>
+<div class="nav-h">// 실습 4 · 고객 문의에 딱지 붙이기</div><div class="tree">
+<a class="nav-a" href="../../lab4/index.html"><span class="g">◆</span> 개요</a>
+<a class="nav-a" href="../../lab4/step1.html">1 · 기준 확인·한 건 분류</a>
+<a class="nav-a" href="../../lab4/step2.html">2 · 520건 일괄 분류</a>
+<a class="nav-a" href="../../lab4/step3.html">3 · 분류 검산</a>
+</div>
+<div class="nav-h">// 실습 5 · 임원용 1페이지 보고서</div><div class="tree">
+<a class="nav-a" href="../../lab5/index.html"><span class="g">◆</span> 개요</a>
+<a class="nav-a" href="../../lab5/step1.html">1 · 보고서 초안 쓰기</a>
+<a class="nav-a" href="../../lab5/step2.html">2 · 보고서 검산</a>
+</div>
+<div class="nav-h">// 실습 6 · 제안서 사실로 되돌리기</div><div class="tree">
+<a class="nav-a" href="../../lab6/index.html"><span class="g">◆</span> 개요</a>
+<a class="nav-a" href="../../lab6/step1.html">1 · 확인할 것 묻기</a>
+<a class="nav-a" href="../../lab6/step2.html">2 · 관점별 검증</a>
+<a class="nav-a" href="../../lab6/step3.html">3 · 사실로 재작성</a>
+<a class="nav-a" href="../../lab6/step4.html">4 · 재검증·검사표</a>
+</div>
+<div class="nav-h">// 도움말</div><div class="tree">
+<a class="nav-a" href="../../help/errors.html">에러가 났어요</a>
+<a class="nav-a" href="../../help/glossary.html">이 말이 무슨 뜻이죠</a>
+<a class="nav-a" href="../../help/how-to-ask.html">AI에게 잘 시키는 법</a>
+<a class="nav-a" href="../../help/next.html">강의 끝나고 뭘 해볼까</a>
+</div></nav>
+    <div class="side__foot">
+      <button class="iconbtn" id="themeBtn" title="테마 전환"><span id="themeIc">◐</span> <span id="themeLbl">light</span></button>
+      <a class="iconbtn" href="../../index.html" title="홈">↖ home</a>
+    </div>
+  </aside>
+  <main class="main">
+    <div class="cmdbar mono">
+      <button class="burger" id="burger" aria-label="메뉴">≡</button>
+      <span class="path"><b>~/ax-tutor</b> <span class="full">$ cat</span> <span class="cur">start/setup/autoapprove.md</span></span>
+      <span class="caret"></span><span class="spacer"></span>
+      <span class="stat">개발 환경 세팅</span>
+    </div>
+    <div class="wrap">
+      <article class="doc md rise">
+        <div class="kicker mono"><b>//</b> 개발 환경 세팅</div>
+<h1 id="부록--자동-허가-모드">부록 · 자동 허가 모드<a class="headerlink" href="#부록--자동-허가-모드" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>코딩 에이전트는 안전을 위해 액션 실행 전 <em>"이 파일을 수정해도 될까요?", "이 명령어를 실행해도 괜찮을까요?"</em> 하고 매번 확인을 요청합니다. 실습 중에는 파일을 수백 번 고치므로, <strong>매번 승인하는 번거로움을 줄이도록</strong> 미리 자동 허가 모드로 바꿔둡니다.</p>
+</blockquote>
+<div class="admonition warning">
+<p class="admonition-title">시작 전에 이것만 기억하세요</p>
+<p>이 설정은 <strong>실습 폴더에서만</strong> 편의를 위해 씁니다. <strong>실제 업무 폴더</strong>나 <strong>민감한 파일이 있는 폴더</strong>에서는 기본 승인 모드로 돌아가 쓰시길 권합니다. 실수로 지운 파일을 되살릴 방법이 없는 경우가 있습니다.</p>
+</div>
+<p>Claude Code는 자유도에 따라 <strong>두 단계</strong>로 설정할 수 있습니다.</p>
+<table>
+<thead>
+<tr>
+<th>단계</th>
+<th>동작</th>
+<th>추천 상황</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>자유도 中 — <strong>Edit automatically</strong></td>
+<td>파일 편집만 자동 승인</td>
+<td>코드만 고쳐보는 실습</td>
+</tr>
+<tr>
+<td>자유도 上 — <strong>Bypass permissions</strong></td>
+<td>편집 + 명령어 실행까지 자동 승인</td>
+<td>서버 실행·설치·테스트까지 자동화</td>
+</tr>
+</tbody>
+</table>
+<h2 id="자유도-中--edit-automatically">자유도 中 · Edit automatically<a class="headerlink" href="#자유도-中--edit-automatically" title="Permanent link">&para;</a></h2>
+<p>VS Code 오른쪽 Claude Code 패널 <strong>하단의 모드 드롭다운</strong>에서 <code>Edit automatically</code>를 고릅니다.</p>
+<p><img alt="Claude Code 모드 드롭다운에서 Edit automatically 선택" src="../../images/setup/autoapprove_claude_edit.png" /></p>
+<table>
+<thead>
+<tr>
+<th>모드</th>
+<th>동작</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Ask before edits</code></td>
+<td>고칠 때마다 물어봅니다 (기본값)</td>
+</tr>
+<tr>
+<td><code>Edit automatically</code></td>
+<td>파일 편집은 자동, 터미널 명령은 여전히 확인</td>
+</tr>
+<tr>
+<td><code>Plan mode</code></td>
+<td>고치기 전에 계획을 먼저 보여줍니다</td>
+</tr>
+</tbody>
+</table>
+<p>고르고 나면 입력창 오른쪽 아래에 <code>Edit automatically</code> 라벨이 뜹니다.</p>
+<h2 id="자유도-上--bypass-permissions">자유도 上 · Bypass permissions<a class="headerlink" href="#자유도-上--bypass-permissions" title="Permanent link">&para;</a></h2>
+<p>파일 편집뿐 아니라 <strong>터미널 명령 실행까지 확인 없이</strong> 진행합니다. 먼저 VS Code 설정에서 이 모드를 허용한 뒤, Claude Code 하단에서 모드를 켭니다.</p>
+<p><strong>1단계.</strong> VS Code 왼쪽 아래 톱니바퀴(⚙️) → <code>Settings</code> (<kbd>Ctrl</kbd>+<kbd>,</kbd>)</p>
+<p><img alt="VS Code 설정 메뉴에서 Settings 선택" src="../../images/setup/autoapprove_claude_settings.png" /></p>
+<p><strong>2단계.</strong> 왼쪽 트리에서 <code>Extensions</code> → <code>Claude Code</code></p>
+<p><img alt="Settings에서 Extensions 아래 Claude Code 선택" src="../../images/setup/autoapprove_claude_extensions.png" /></p>
+<p><strong>3단계.</strong> 맨 위 <code>Allow Dangerously Skip Permissions</code> 체크박스를 켭니다</p>
+<p><img alt="Allow Dangerously Skip Permissions 체크박스" src="../../images/setup/autoapprove_claude_allow_skip.png" /></p>
+<p><strong>4단계.</strong> Claude Code 패널 하단 드롭다운에서 <code>Bypass permissions</code> 선택</p>
+<p><img alt="모드 드롭다운에서 Bypass permissions 선택" src="../../images/setup/autoapprove_claude_bypass.png" /></p>
+<div class="admonition success">
+<p class="admonition-title">완료</p>
+<p>입력창 오른쪽 아래에 <code>Bypass permissions</code> 라벨이 뜨면 적용된 것입니다. 이제 파일 편집·패키지 설치·서버 실행 같은 명령이 모두 자동으로 진행됩니다.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">이 옵션이 무엇을 허용하나요</p>
+<p>이 옵션은 <strong>승인 없이 명령을 실행</strong>하게 합니다. 오늘 쓰는 실습 폴더에서만 켜고, 회사 자료나 개인 파일이 있는 폴더에서는 켜지 마세요.</p>
+</div>
+<h2 id="되돌리는-방법">되돌리는 방법<a class="headerlink" href="#되돌리는-방법" title="Permanent link">&para;</a></h2>
+<p>실습이 끝나고 평소대로 쓰고 싶을 때:</p>
+<table>
+<thead>
+<tr>
+<th>되돌릴 것</th>
+<th>방법</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>자동 편집</td>
+<td>모드 드롭다운에서 <code>Ask before edits</code>로 되돌립니다</td>
+</tr>
+<tr>
+<td>명령 자동 실행</td>
+<td>Settings → Extensions → Claude Code → <code>Allow Dangerously Skip Permissions</code> 체크 해제</td>
+</tr>
+</tbody>
+</table>
+<nav class="pager">
+<a class="prev" href="../../start/setup/data.html"><span class="lbl">← 이전</span><span class="ttl">5 · 실습 데이터 준비</span></a>
+<a class="next" href="../../lab1/index.html"><span class="lbl">다음 →</span><span class="ttl">개요</span></a>
+</nav>
+      </article>
+      <aside class="toc mono"><h4>On this page</h4>
+<a href="#부록--자동-허가-모드">부록 · 자동 허가 모드</a>
+<a href="#자유도-中--edit-automatically">자유도 中 · Edit automatically</a>
+<a href="#자유도-上--bypass-permissions">자유도 上 · Bypass permissions</a>
+<a href="#되돌리는-방법">되돌리는 방법</a></aside>
+    </div>
+  </main>
+</div>
+<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';mermaid.initialize({startOnLoad:true,securityLevel:'loose'});</script>
+<script src="../../assets/site.js"></script>
+</body>
+</html>

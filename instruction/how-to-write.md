@@ -127,20 +127,32 @@
 - 이미지는 `images/labN/` 에 두고 상대경로 `../images/labN/파일.png`.
 - **alt 텍스트는 이미지 파일명 그대로** 씁니다(서술 X). 이미지가 아직 없을 때 브라우저에 파일명이 떠서, 작성자가 어떤 파일을 어디에 넣을지 바로 알아볼 수 있게 하기 위함입니다.
 - 예시 이미지에는 결과 화면뿐 아니라 **모범 프롬프트 화면**이 들어가도 됩니다 (2-4 참고).
+- **이미지 아래엔 짧은 설명 캡션을 단다.** `<figure>` 로 감싸고 `<figcaption>` 에 **그 이미지가 무엇을 보여주는지**를 2~6단어로. alt(파일명)은 그대로 두고, 캡션은 사람이 읽는 라벨입니다.
+  - 캡션은 **명사구로 짧게**: "합쳐진 주문종합", "채워진 쿠폰 성과표". 문장·군더더기 설명(왜·어떻게)은 넣지 않습니다.
+  - `!!! example` 안이든 개요의 나란히 배치든 **모든 콘텐츠 이미지에 캡션**을 답니다. (단계별 설치 스크린샷처럼 서술형 alt·번호 단계가 이미 라벨 역할을 하는 곳은 생략 가능.)
 
 ```md
 ## 실행 예시
 
 !!! example "이렇게 나오면 됩니다"
-    ![step1-result.png](../images/lab2/step1-result.png)
+    <figure style="margin:0">
+      <img src="../images/labN/stepN-result.png" alt="stepN-result.png" style="width:100%;height:auto;display:block">
+      <figcaption style="text-align:center;font-size:0.85em;color:#888;margin-top:6px">캡션(무엇을 보여주는지)</figcaption>
+    </figure>
 ```
 
-- 개요에서 입력 자료를 보여줄 땐 나란히 배치도 가능(alt는 마찬가지로 파일명):
+- 개요에서 입력 자료를 나란히 보여줄 땐 각 이미지를 `<figure>` 로 감싸고 캡션을 답니다(alt는 마찬가지로 파일명). flex 크기 지정은 `img` 가 아니라 **`figure` 로** 옮깁니다:
 
 ```md
 <div style="display:flex;gap:12px;flex-wrap:wrap">
-  <img src="../images/lab2/contract_example_1.png" alt="contract_example_1.png" style="flex:1 1 0;min-width:200px">
-  <img src="../images/lab2/contract_example_2.png" alt="contract_example_2.png" style="flex:1 1 0;min-width:200px">
+  <figure style="flex:1 1 0;min-width:200px;margin:0">
+    <img src="../images/labN/example_1.png" alt="example_1.png" style="width:100%;height:auto;display:block">
+    <figcaption style="text-align:center;font-size:0.85em;color:#888;margin-top:6px">캡션</figcaption>
+  </figure>
+  <figure style="flex:1 1 0;min-width:200px;margin:0">
+    <img src="../images/labN/example_2.png" alt="example_2.png" style="width:100%;height:auto;display:block">
+    <figcaption style="text-align:center;font-size:0.85em;color:#888;margin-top:6px">캡션</figcaption>
+  </figure>
 </div>
 ```
 
@@ -220,7 +232,10 @@
 ## 실행 예시
 
 !!! example "이렇게 나오면 됩니다"
-    ![화면 내용을 서술하는 alt](../images/labN/stepN-result.png)
+    <figure style="margin:0">
+      <img src="../images/labN/stepN-result.png" alt="stepN-result.png" style="width:100%;height:auto;display:block">
+      <figcaption style="text-align:center;font-size:0.85em;color:#888;margin-top:6px">캡션(무엇을 보여주는지)</figcaption>
+    </figure>
 
 ## 체크포인트
 
@@ -254,7 +269,7 @@ lab을 다 쓰면 두 가지로 마무리합니다.
 - [ ] step 소스가 대략 40줄 이내로 간결하다
 - [ ] `프롬프트에 담을 것 ✅` / `빼세요 ❌` 체크리스트가 있다
 - [ ] 본문·헤딩은 파일명을 박지 않고 뉴트럴하게, 파일명은 프롬프트 체크리스트로 명시했다
-- [ ] `실행 예시`에 실제 이미지 + 서술형 alt 텍스트가 있다
+- [ ] `실행 예시`에 실제 이미지가 있고, 파일명 alt + **짧은 설명 캡션(`<figcaption>`)** 이 달려 있다
 - [ ] `체크포인트`가 눈으로 검증 가능한 `- [ ]` 항목으로 끝난다
 - [ ] 모범답안을 넣었다면 학습자가 먼저 시도한 뒤 위치이고, 접기/이미지 하나로 짧게 처리했다
 - [ ] `???` 다단계 중첩, 빈칸 채우기, 수동 네비게이션을 쓰지 않았다

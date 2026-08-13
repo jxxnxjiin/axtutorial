@@ -45,7 +45,10 @@
 ## 실행 예시
 
 !!! example "이렇게 나오면 됩니다"
-    ![step2-result.png](../images/lab3/step2-result.png)
+    <figure style="margin:0">
+      <img src="../images/lab3/step2-result.png" alt="step2-result.png" style="width:100%;height:auto;display:block">
+      <figcaption style="text-align:center;font-size:0.85em;color:#888;margin-top:6px">채워진 쿠폰 성과표</figcaption>
+    </figure>
 
 ## 체크포인트
 

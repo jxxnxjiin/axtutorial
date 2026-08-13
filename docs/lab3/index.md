@@ -18,8 +18,14 @@
 | `7.쿠폰별성과표.xlsx` | 채워 넣을 빈 집계표 (쿠폰 44개, 칸 이름만 있음) |
 
 <div style="display:flex;gap:12px;flex-wrap:wrap">
-  <img src="../images/lab3/raw_orders_example.png" alt="raw_orders_example.png" style="flex:1 1 0;min-width:200px">
-  <img src="../images/lab3/coupon_table_empty.png" alt="coupon_table_empty.png" style="flex:1 1 0;min-width:200px">
+  <figure style="flex:1 1 0;min-width:200px;margin:0">
+    <img src="../images/lab3/channel_data_example.png" alt="channel_data_example.png" style="width:100%;height:auto;display:block">
+    <figcaption style="text-align:center;font-size:0.85em;color:#888;margin-top:6px">채널별 주문 기록</figcaption>
+  </figure>
+  <figure style="flex:1 1 0;min-width:200px;margin:0">
+    <img src="../images/lab3/coupon_table_empty.png" alt="coupon_table_empty.png" style="width:100%;height:auto;display:block">
+    <figcaption style="text-align:center;font-size:0.85em;color:#888;margin-top:6px">채워 넣을 빈 성과표</figcaption>
+  </figure>
 </div>
 
 ## 실습에서 할 일

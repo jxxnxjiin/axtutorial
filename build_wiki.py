@@ -36,6 +36,10 @@ ICONS = {':material-run-fast:': '🏃', ':material-account-group:': '👥'}
 # 제목 슬러그(=본문 h1·목차 앵커 id) 생성기 — md 목차와 동일 규칙.
 SLUG = slugify(case='lower')
 
+def _mermaid_fence(source, language, css_class, options, md, **kwargs):
+    # ```mermaid 블록 → <pre class="mermaid">…</pre> (템플릿의 mermaid.js가 렌더)
+    return f'<pre class="mermaid">{_html.escape(source)}</pre>'
+
 def md_engine():
     return markdown.Markdown(extensions=[
         'admonition', 'pymdownx.details', 'pymdownx.superfences', 'pymdownx.tabbed',
@@ -45,6 +49,9 @@ def md_engine():
     ], extension_configs={
         'pymdownx.tabbed': {'alternate_style': True},
         'pymdownx.tasklist': {'custom_checkbox': True},
+        'pymdownx.superfences': {'custom_fences': [
+            {'name': 'mermaid', 'class': 'mermaid', 'format': _mermaid_fence},
+        ]},
         'toc': {'permalink': True, 'slugify': slugify(case='lower')},
     })
 
@@ -162,6 +169,7 @@ TEMPLATE = '''<!doctype html>
     </div>
   </main>
 </div>
+<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';mermaid.initialize({startOnLoad:true,securityLevel:'loose'});</script>
 <script src="%%PREFIX%%assets/site.js"></script>
 </body>
 </html>
