@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>개요 · ax-tutor</title>
-<meta name="description" content="실습 1 · 물류비 마감 — 개요 · ax-tutor 실습 위키">
+<meta name="description" content="실습 1 · 흩어진 주문 한 표로 모으기 — 개요 · ax-tutor 실습 위키">
 <link rel="stylesheet" href="../assets/site.css">
 </head>
 <body>
@@ -22,7 +22,7 @@
     <nav><div class="nav-h">// 홈</div>
 <a class="nav-a" href="../index.html#materials"><span class="g">▤</span> 강의 자료 내려받기</a>
 <div class="nav-h">// 개발 환경 세팅</div><div class="tree">
-<a class="nav-a" href="../start/setup/index.html"><span class="g">◆</span> 환경 세팅 개요</a>
+<a class="nav-a" href="../start/setup/index.html"><span class="g">◆</span> 개요</a>
 <a class="nav-a" href="../start/setup/vscode.html">1 · VS Code 설치</a>
 <a class="nav-a" href="../start/setup/python.html">2 · Python 설치</a>
 <a class="nav-a" href="../start/setup/nodejs.html">3 · Node.js 설치</a>
@@ -31,16 +31,14 @@
 <div class="nav-h">// 들어가기</div><div class="tree">
 <a class="nav-a" href="../types/index.html">여섯 가지 업무 유형</a>
 </div>
-<div class="nav-h">// 실습 1 · 물류비 마감</div><div class="tree">
+<div class="nav-h">// 실습 1 · 흩어진 주문 한 표로 모으기</div><div class="tree">
 <a class="nav-a active" href="../lab1/index.html"><span class="g">◆</span> 개요</a>
-<a class="nav-a" href="../lab1/step1.html">1 · 요금표를 표로</a>
-<a class="nav-a" href="../lab1/step2.html">2 · 청구서 합치기</a>
-<a class="nav-a" href="../lab1/step3.html">3 · 120건 재계산</a>
-<a class="nav-a" href="../lab1/step4.html">4 · 검증 설계·검산</a>
+<a class="nav-a" href="../lab1/step1.html">1 · 한 표로 모으기</a>
+<a class="nav-a" href="../lab1/step2.html">2 · 원본 대조·검산</a>
 </div>
 <div class="nav-h">// 실습 2 · 계약서에서 계약종합 만들기</div><div class="tree">
 <a class="nav-a" href="../lab2/index.html"><span class="g">◆</span> 개요</a>
-<a class="nav-a" href="../lab2/step1.html">1 · 계약종합 만들기</a>
+<a class="nav-a" href="../lab2/step1.html">1 · 계약서 내용 종합하기</a>
 <a class="nav-a" href="../lab2/step2.html">2 · 원본 대조·검산</a>
 </div>
 <div class="nav-h">// 실습 3 · 근거 붙인 보고문</div><div class="tree">
@@ -78,25 +76,22 @@
       <button class="burger" id="burger" aria-label="메뉴">≡</button>
       <span class="path"><b>~/ax-tutor</b> <span class="full">$ cat</span> <span class="cur">lab1/index.md</span></span>
       <span class="caret"></span><span class="spacer"></span>
-      <span class="stat">실습 1 · 물류비 마감</span>
+      <span class="stat">실습 1 · 흩어진 주문 한 표로 모으기</span>
     </div>
     <div class="wrap">
       <article class="doc md rise">
-        <div class="kicker mono"><b>//</b> 실습 1 · 물류비 마감</div>
+        <div class="kicker mono"><b>//</b> 실습 1 · 흩어진 주문 한 표로 모으기</div>
 <h1 id="개요">개요<a class="headerlink" href="#개요" title="Permanent link">&para;</a></h1>
-<p><span class="route-badge">👥 <strong>강사와 함께 가는 최소 코스</strong> — 0단계 → 1 → 2 → 3 → 4단계</span>
-<span class="route-badge">🏃 <strong>혼자 더 가는 코스</strong> — 위 전부 + <a href="extra.html">더 해보기</a></span></p>
-<p><strong>한 줄 목표: 양식이 다른 청구서 두 장과 사진으로 찍힌 요금표를 맞대어, 청구가 맞는지 120건 전부에 대해 스스로 증명한다.</strong></p>
-<p>예상 소요 <strong>50분</strong>.</p>
-<hr />
+<blockquote>
+<p><strong>한 줄 목표</strong>: 웹·전화·제휴 세 경로로 따로 들어온 주문 파일을, 양식이 제각각인데도 표준 7칸짜리 엑셀 한 장으로 합치되 한 건도 빠뜨리거나 지어내지 않는다.</p>
+</blockquote>
 <h2 id="오늘-받은-일">오늘 받은 일<a class="headerlink" href="#오늘-받은-일" title="Permanent link">&para;</a></h2>
 <blockquote>
-<p>입사 3주차. 사수가 말합니다.</p>
-<p>"우리가 택배사 두 곳을 쓰는데, 이번 달 청구서가 둘 다 왔어요. 계약 요금표대로 청구된 건지 한번 봐주세요. 요금표는 담당자가 종이로 주고 간 걸 폰으로 찍어놨고, 특약 조건은 텍스트 파일로 정리해뒀어요. 아, 두 회사 청구서 양식이 완전히 달라요."</p>
+<p>입사 3주차. 영업지원팀 사수가 말합니다.</p>
+<p>"주문이 웹·전화·제휴 세 군데로 따로 들어와요. 파일이 세 개인데 양식이 다 달라요 — 어떤 건 제목이 한글, 어떤 건 영어예요. 이걸 하나의 주문종합 표로 합쳐줘요. 한 건도 빠지면 안 되고, 없는 값을 지어내도 안 됩니다."</p>
 </blockquote>
-<p>택배 요금은 <strong>무게 구간과 도착 지역</strong>으로 정해집니다. 발송한 건마다 정당한 요금을 다시 계산해서 청구액과 비교하면 됩니다. 여기까지가 알아야 할 전부입니다. 회계 지식도 물류 지식도 필요 없습니다.</p>
-<hr />
-<h2 id="폴더에-있는-것-lab1">폴더에 있는 것 (<code>lab1/</code>)<a class="headerlink" href="#폴더에-있는-것-lab1" title="Permanent link">&para;</a></h2>
+<p>세 파일을 표준 7칸으로 모아 AI에게 작업을 맡기고, 한 건도 새거나 겹치지 않았는지 <strong>검산</strong>까지 진행해 봅시다.</p>
+<h2 id="폴더에-있는-것">폴더에 있는 것<a class="headerlink" href="#폴더에-있는-것" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
@@ -106,130 +101,62 @@
 </thead>
 <tbody>
 <tr>
-<td><code>발송내역.xlsx</code></td>
-<td>우리가 보낸 건들의 기록</td>
+<td><code>웹주문.xlsx</code></td>
+<td>웹으로 들어온 주문 150건 — 제목이 한글 (<code>주문번호·고객명·상품…</code>)</td>
 </tr>
 <tr>
-<td><code>청구서_A택배.csv</code></td>
-<td>A택배가 보내온 청구서</td>
+<td><code>전화주문.xlsx</code></td>
+<td>전화로 받은 주문 140건 — 제목이 영문 (<code>order_id·name·item…</code>)</td>
 </tr>
 <tr>
-<td><code>청구서_B물류.xlsx</code></td>
-<td>B물류가 보내온 청구서 (<strong>A와 서식이 다릅니다</strong>)</td>
+<td><code>제휴주문.xlsx</code></td>
+<td>제휴사가 넘긴 주문 120건 — 제목이 또 다름 (<code>협력사주문ID·구매자·품목…</code>)</td>
 </tr>
 <tr>
-<td><code>요금안내문/</code></td>
-<td>종이 요금표를 찍은 사진 5장</td>
+<td><code>작업방법참고.xlsx</code></td>
+<td>표준 7칸 규칙 + 세 파일 열 이름 대조표</td>
 </tr>
 <tr>
-<td><code>계약특약.txt</code></td>
-<td>요금 안내문에 없는 조건들이 적힌 문서</td>
-</tr>
-<tr>
-<td><code>못따라왔을때/</code></td>
-<td>막혔을 때 여는 완제품 — <code>1단계결과/</code> <code>2단계결과/</code> <code>3단계결과/</code></td>
+<td><code>주문종합.xlsx</code></td>
+<td>채워 넣을 빈 템플릿 (제목 줄만 있음)</td>
 </tr>
 </tbody>
 </table>
-<div class="admonition info">
-<p class="admonition-title">이 실습의 결과 파일 이름과 칸 규격은 각 단계 페이지 <strong>맨 아래</strong>에 있습니다</p>
-<p>먼저 여러분 문장으로 시켜보고, 필요할 때 아래로 내려가세요.</p>
+<div style="display:flex;gap:12px;flex-wrap:wrap">
+  <img src="../images/lab1/orders_example_1.png" alt="orders_example_1.png" style="flex:1 1 0;min-width:180px">
+  <img src="../images/lab1/orders_example_2.png" alt="orders_example_2.png" style="flex:1 1 0;min-width:180px">
+  <img src="../images/lab1/orders_example_3.png" alt="orders_example_3.png" style="flex:1 1 0;min-width:180px">
 </div>
-<hr />
-<h2 id="0단계--워밍업-2분">0단계 — 워밍업 (2분)<a class="headerlink" href="#0단계--워밍업-2분" title="Permanent link">&para;</a></h2>
-<p>여러분 말로 폴더 안을 한번 훑어보게 시켜보세요. 어떻게 말해도 됩니다.</p>
-<div class="admonition quote">
-<p class="admonition-title">여러분 문장으로 시켜보세요</p>
-<p><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_</span></p>
-<p>(예시가 아니라 <strong>빈 칸</strong>입니다. 여러분 말로 채워서 실행하세요)</p>
-</div>
-<p>그리고 <strong>두 숫자를 종이에 적어두세요.</strong></p>
-<div class="admonition abstract">
-<p class="admonition-title">종이에 적을 두 숫자</p>
-<ul>
-<li>발송내역의 건수 : <strong>120건</strong></li>
-<li>청구서 두 장의 건수 합 : <strong>118건</strong></li>
-</ul>
-</div>
-<p>두 숫자가 다릅니다. <strong>왜 다른지는 이따 2단계에서 보게 됩니다.</strong> 지금은 적어두기만 하세요.</p>
-<div class="admonition success">
-<p class="admonition-title">이렇게 나오면 정상입니다</p>
-<ul>
-<li>폴더 안 파일 목록이 화면에 나왔습니다</li>
-<li>종이(또는 메모장)에 <code>120</code> 과 <code>118</code> 두 숫자가 적혀 있습니다</li>
-</ul>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">이렇게 나왔다면</p>
-<ul>
-<li>"파일이 없다"고 한다 → 열려 있는 폴더가 <code>workshop</code>이 아닙니다. <code>파일 &gt; 폴더 열기</code>로 다시 여세요</li>
-<li>사진 5장이 안 보인다 → "요금안내문 폴더 안에 뭐가 있는지도 알려줘"라고 이어서 시켜보세요</li>
-</ul>
-</div>
-<hr />
-<h2 id="오늘-이-실습에서-만드는-것">오늘 이 실습에서 만드는 것<a class="headerlink" href="#오늘-이-실습에서-만드는-것" title="Permanent link">&para;</a></h2>
+
+<h2 id="실습에서-할-일">실습에서 할 일<a class="headerlink" href="#실습에서-할-일" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
 <th>단계</th>
-<th>무엇</th>
-<th>분</th>
+<th>할 일</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><a href="step1.html">1단계</a></td>
-<td>사진 5장의 요금표를 표로 옮깁니다</td>
-<td>15</td>
+<td>세 파일을 표준 7칸짜리 <strong>엑셀 한 장으로 합친다</strong></td>
 </tr>
 <tr>
 <td><a href="step2.html">2단계</a></td>
-<td>청구서 두 장과 발송내역을 하나로 합칩니다</td>
-<td>13</td>
-</tr>
-<tr>
-<td><a href="step3.html">3단계</a></td>
-<td>120건을 다시 계산해 판정합니다</td>
-<td>9</td>
-</tr>
-<tr>
-<td><a href="step4.html">4단계</a></td>
-<td>확인 항목을 직접 설계해 검산합니다</td>
-<td>11</td>
+<td>빠진 건·겹친 건이 없는지 원본과 대조하며 <strong>검산</strong>한다</td>
 </tr>
 </tbody>
 </table>
-<div class="admonition abstract">
-<p class="admonition-title">최소 코스 — 여기까지면 오늘 목표 달성입니다</p>
-<p><strong>2단계에서 통합 표가 122행으로 나오면</strong> 이 실습의 목표는 달성입니다. 3·4단계는 거기서 더 가는 길입니다.</p>
-</div>
-<hr />
-<h2 id="오늘-채워갈-빈-목록">오늘 채워갈 빈 목록<a class="headerlink" href="#오늘-채워갈-빈-목록" title="Permanent link">&para;</a></h2>
-<p>이 실습에서 <strong>세 줄</strong>이 채워집니다. 지금은 비어 있습니다.</p>
-<div class="admonition quote">
-<p class="admonition-title">내 문장에 이게 있나</p>
-<ol>
-<li><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>__</span></li>
-<li><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>__</span></li>
-<li><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>__</span></li>
-<li><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>__</span></li>
-<li><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>__</span></li>
-</ol>
-<p>본거지는 <a href="../help/how-to-ask.html">AI에게 잘 시키는 법</a> 입니다.</p>
-</div>
-
 <nav class="pager">
 <a class="prev" href="../start/setup/agent.html"><span class="lbl">← 이전</span><span class="ttl">4 · Claude Code 설치</span></a>
-<a class="next" href="../lab1/step1.html"><span class="lbl">다음 →</span><span class="ttl">1 · 요금표를 표로</span></a>
+<a class="next" href="../lab1/step1.html"><span class="lbl">다음 →</span><span class="ttl">1 · 한 표로 모으기</span></a>
 </nav>
       </article>
       <aside class="toc mono"><h4>On this page</h4>
 <a href="#개요">개요</a>
 <a href="#오늘-받은-일">오늘 받은 일</a>
-<a href="#폴더에-있는-것-lab1">폴더에 있는 것 (lab1/)</a>
-<a href="#0단계--워밍업-2분">0단계 — 워밍업 (2분)</a>
-<a href="#오늘-이-실습에서-만드는-것">오늘 이 실습에서 만드는 것</a>
-<a href="#오늘-채워갈-빈-목록">오늘 채워갈 빈 목록</a></aside>
+<a href="#폴더에-있는-것">폴더에 있는 것</a>
+<a href="#실습에서-할-일">실습에서 할 일</a></aside>
     </div>
   </main>
 </div>

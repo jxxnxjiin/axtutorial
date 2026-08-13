@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>여섯 가지 업무 유형 · ax-tutor</title>
-<meta name="description" content="반복업무를 이루는 6가지 작업 유형과, 오늘 각 유형을 만나는 실습 소개 · ax-tutor">
+<meta name="description" content="반복업무를 이루는 6가지 작업 유형과, 직무별로 실무에서 만나는 상황들 · ax-tutor">
 <link rel="stylesheet" href="../assets/site.css">
 </head>
 <body>
@@ -23,7 +23,7 @@
 <div class="nav-h">// 홈</div>
 <a class="nav-a" href="../index.html#materials"><span class="g">▤</span> 강의 자료 내려받기</a>
 <div class="nav-h">// 개발 환경 세팅</div><div class="tree">
-<a class="nav-a" href="../start/setup/index.html"><span class="g">◆</span> 환경 세팅 개요</a>
+<a class="nav-a" href="../start/setup/index.html"><span class="g">◆</span> 개요</a>
 <a class="nav-a" href="../start/setup/vscode.html">1 · VS Code 설치</a>
 <a class="nav-a" href="../start/setup/python.html">2 · Python 설치</a>
 <a class="nav-a" href="../start/setup/nodejs.html">3 · Node.js 설치</a>
@@ -32,16 +32,14 @@
 <div class="nav-h">// 들어가기</div><div class="tree">
 <a class="nav-a active" href="../types/index.html">여섯 가지 업무 유형</a>
 </div>
-<div class="nav-h">// 실습 1 · 물류비 마감</div><div class="tree">
+<div class="nav-h">// 실습 1 · 흩어진 주문 한 표로 모으기</div><div class="tree">
 <a class="nav-a" href="../lab1/index.html"><span class="g">◆</span> 개요</a>
-<a class="nav-a" href="../lab1/step1.html">1 · 요금표를 표로</a>
-<a class="nav-a" href="../lab1/step2.html">2 · 청구서 합치기</a>
-<a class="nav-a" href="../lab1/step3.html">3 · 120건 재계산</a>
-<a class="nav-a" href="../lab1/step4.html">4 · 검증 설계·검산</a>
+<a class="nav-a" href="../lab1/step1.html">1 · 한 표로 모으기</a>
+<a class="nav-a" href="../lab1/step2.html">2 · 원본 대조·검산</a>
 </div>
 <div class="nav-h">// 실습 2 · 계약서에서 계약종합 만들기</div><div class="tree">
 <a class="nav-a" href="../lab2/index.html"><span class="g">◆</span> 개요</a>
-<a class="nav-a" href="../lab2/step1.html">1 · 계약종합 만들기</a>
+<a class="nav-a" href="../lab2/step1.html">1 · 계약서 내용 종합하기</a>
 <a class="nav-a" href="../lab2/step2.html">2 · 원본 대조·검산</a>
 </div>
 <div class="nav-h">// 실습 3 · 근거 붙인 보고문</div><div class="tree">
@@ -80,113 +78,97 @@
       <button class="burger" id="burger" aria-label="메뉴">≡</button>
       <span class="path"><b>~/ax-tutor</b> <span class="full">$ cat</span> <span class="cur">six-types.md</span></span>
       <span class="caret"></span><span class="spacer"></span>
-      <span class="stat">시작하기</span>
+      <span class="stat">들어가기</span>
     </div>
     <div class="wrap">
       <article class="doc md rise">
-        <div class="kicker mono"><b>//</b> 시작하기</div>
-<section class="hero6">
-  <div class="k">Taxonomy of Repetitive Work</div>
-  <h2>신입사원의 반복업무는 결국 <b>이 여섯 가지</b> 작업의 조합</h2>
-  <p>직무가 영업이든 인사든 마케팅이든, 손으로 반복하는 일은 아래 여섯 모양 중 하나예요. 오늘 실습은 이 여섯을 실제 데이터로 하나씩 손에 익히는 시간입니다.</p>
-  <span class="ghost mono">6</span>
-</section>
+        <div class="kicker mono"><b>//</b> 들어가기</div>
+<h1 id="여섯-가지-업무-유형" data-toc="여섯 가지 업무 유형">여섯 가지 업무 유형<a class="headerlink" href="#여섯-가지-업무-유형" title="Permanent link">&para;</a></h1>
+<p class="lead">직무가 영업이든 인사든 마케팅이든, 손으로 반복하는 일은 아래 <b>여섯 모양</b> 중 하나의 조합이에요. 각 유형이 <b>무엇을 무엇으로</b> 바꾸는지와, <b>직무별로 실무에서 어떤 상황과 만나는지</b>를 정리했습니다. 구체적인 처리법·함정·검산은 연결된 <b>실습에서 직접</b> 다룹니다.</p>
 
-<h2 id="taxo" data-toc="한눈에 보는 6유형">한눈에 보는 6유형</h2>
+<h2 id="taxo" data-toc="한눈에 보는 6유형">한눈에 보는 6유형<a class="headerlink" href="#taxo" title="Permanent link">&para;</a></h2>
 <table class="taxo"><thead><tr>
 <th>코드</th><th>쉬운 이름</th><th>입력 → 출력</th><th>한 줄 판별</th>
 </tr></thead><tbody>
-<tr style="--ac:var(--blue)"><td class="code">①</td><td class="easy">뽑기<small>추출·파싱</small></td><td class="io">비정형(PDF·이미지) <b style="color:var(--ac)">→</b> 표</td><td class="tell">"구조 없던 걸 표로 만든다"</td></tr>
-<tr style="--ac:var(--violet)"><td class="code">②</td><td class="easy">모으기<small>취합·통합</small></td><td class="io">정형 여러 개 <b style="color:var(--ac)">→</b> 정형 하나</td><td class="tell">"행을 보존하며 여러 파일을 합친다"</td></tr>
-<tr style="--ac:var(--green)"><td class="code">③</td><td class="easy">줄이기<small>집계·분석</small></td><td class="io">정형 표 <b style="color:var(--ac)">→</b> 요약·지표</td><td class="tell">"행을 줄여 수치·인사이트로"</td></tr>
-<tr style="--ac:var(--amber)"><td class="code">④</td><td class="easy">딱지 붙이기<small>분류</small></td><td class="io">자유 텍스트 <b style="color:var(--ac)">→</b> 범주 라벨</td><td class="tell">"이게 뭐냐 (정답이 모호)"</td></tr>
-<tr style="--ac:var(--coral)"><td class="code">⑤</td><td class="easy">쓰기<small>초안 작성</small></td><td class="io">자료 <b style="color:var(--ac)">→</b> 새 산문</td><td class="tell">"없던 글을 쓴다"</td></tr>
-<tr style="--ac:#5fb0a4"><td class="code">⑥</td><td class="easy">검사하기<small>검증·검수</small></td><td class="io">데이터 + 규칙 <b style="color:var(--ac)">→</b> 위반 판정</td><td class="tell">"규칙에 맞냐 (정답이 규칙)"</td></tr>
+<tr><td class="code">①</td><td class="easy">뽑기<small>추출·파싱</small></td><td class="io">비정형(PDF·이미지) <b style="color:var(--coral)">→</b> 표</td><td class="tell">"구조 없던 걸 표로 만든다"</td></tr>
+<tr><td class="code">②</td><td class="easy">모으기<small>취합·통합</small></td><td class="io">정형 여러 개 <b style="color:var(--coral)">→</b> 정형 하나</td><td class="tell">"행을 보존하며 여러 파일을 합친다"</td></tr>
+<tr><td class="code">③</td><td class="easy">줄이기<small>집계·분석</small></td><td class="io">정형 표 <b style="color:var(--coral)">→</b> 요약·지표</td><td class="tell">"행을 줄여 수치·인사이트로"</td></tr>
+<tr><td class="code">④</td><td class="easy">딱지 붙이기<small>분류</small></td><td class="io">자유 텍스트 <b style="color:var(--coral)">→</b> 범주 라벨</td><td class="tell">"이게 뭐냐 (정답이 모호)"</td></tr>
+<tr><td class="code">⑤</td><td class="easy">쓰기<small>초안 작성</small></td><td class="io">자료 <b style="color:var(--coral)">→</b> 새 산문</td><td class="tell">"없던 글을 쓴다"</td></tr>
+<tr><td class="code">⑥</td><td class="easy">검사하기<small>검증·검수</small></td><td class="io">데이터 + 규칙 <b style="color:var(--coral)">→</b> 위반 판정</td><td class="tell">"규칙에 맞냐 (정답이 규칙)"</td></tr>
 </tbody></table>
 
-<h2 id="detail" data-toc="유형별로 뜯어보기">유형별로 뜯어보기 · 연결 실습</h2>
-<p style="color:var(--muted);font-size:13.5px;margin:-6px 0 16px">각 유형이 <b>왜 헷갈리는지</b>와, 오늘 그걸 <b>어느 실습에서 만나는지</b>를 함께 붙였어요.</p>
+<h2 id="detail" data-toc="직무별 실무 상황">직무별로 만나는 실무 상황<a class="headerlink" href="#detail" title="Permanent link">&para;</a></h2>
+<p style="color:var(--muted);font-size:13.5px;margin:-6px 0 18px">같은 유형이라도 직무마다 다른 얼굴로 나타나요. 아래는 각 유형이 실무에서 만나는 대표 상황들 — 구체적인 처리법은 연결된 실습에서 다룹니다.</p>
 <div class="t6grid">
-<div class="t6" style="--ac:var(--blue)">
+<div class="t6">
   <div class="th"><span class="num">①</span><span class="nm">뽑기</span><span class="fm">추출·파싱</span></div>
   <div class="io">비정형(PDF·이미지) <b>→</b> 표</div>
   <dl>
-    <dt>비유</dt><dd>받아쓰기 — 불러주는 걸 칸에 옮겨 적기</dd>
-    <dt>실무</dt><dd>계약서 PDF에서 기한·금액 뽑기 · 영수증 사진을 표로</dd>
-    <dt>함정</dt><dd>없는 값을 그럴듯하게 지어냄 → "안 적힌 건 0이 아니라 빈칸, 지어내지 마"</dd>
+    <dt>총무·법무</dt><dd>계약서 PDF 더미에서 계약번호·기한·금액·자동갱신 여부 → 계약대장</dd>
+    <dt>회계</dt><dd>영수증 사진에서 가맹점·금액·항목을 표로 (OCR)</dd>
+    <dt>마케팅</dt><dd>경쟁사 화면 캡처에서 가격·구성요소를 표로 (벤치마킹)</dd>
   </dl>
   <div class="lab"><span class="tg">실습1</span><a href="../lab1/step1.html">요금표를 표로</a><span class="tg">실습2</span><a href="../lab2/step1.html">계약서 한 장</a></div>
 </div>
-<div class="t6" style="--ac:var(--violet)">
+<div class="t6">
   <div class="th"><span class="num">②</span><span class="nm">모으기</span><span class="fm">취합·통합</span></div>
   <div class="io">정형 여러 개 <b>→</b> 정형 하나</div>
   <dl>
-    <dt>비유</dt><dd>빨래를 한 바구니에 — 단, 한 짝도 안 빠뜨린다</dd>
-    <dt>실무</dt><dd>웹·전화·제휴 주문을 한 대장으로 · 업체별 견적을 비교표 한 장으로</dd>
-    <dt>함정</dt><dd>합계까지 내버림(=③ 줄이기와 혼동) · 빈칸을 0으로 채움</dd>
+    <dt>영업지원</dt><dd>웹·전화·제휴 주문 파일을 한 주문대장으로</dd>
+    <dt>구매</dt><dd>업체별 견적서 여러 개를 비교표 한 장으로</dd>
+    <dt>HR·운영</dt><dd>지점별·부서별 매출/문의 표를 본사 한 표로</dd>
   </dl>
-  <div class="lab"><span class="tg">실습1</span><a href="../lab1/step2.html">청구서 합치기</a><span class="tg">실습2</span><a href="../lab2/step2.html">열두 건으로</a></div>
+  <div class="lab"><span class="tg">실습1</span><a href="../lab1/step2.html">청구서 합치기</a><span class="tg">실습2</span><a href="../lab2/step2.html">원본 대조·검산</a></div>
 </div>
-<div class="t6" style="--ac:var(--green)">
+<div class="t6">
   <div class="th"><span class="num">③</span><span class="nm">줄이기</span><span class="fm">집계·분석</span></div>
   <div class="io">정형 표 <b>→</b> 요약·지표</div>
   <dl>
-    <dt>비유</dt><dd>한 달치 영수증을 "이번 달 총 얼마" 한 줄로</dd>
-    <dt>실무</dt><dd>9천 줄 주문 로그 → 쿠폰별 ROI · 일별 매출 → 사원별 실적</dd>
-    <dt>함정</dt><dd>맞추기(조인)를 먼저 안 함 · 세는 범위(결제완료만)를 안 거름</dd>
+    <dt>마케팅</dt><dd>9천 줄 주문 로그 → 쿠폰별 ROI · 발송로그 → 캠페인별 오픈·클릭·전환율</dd>
+    <dt>영업</dt><dd>일별 매출 → 사원별·월별 실적·목표대비</dd>
+    <dt>HR</dt><dd>설문 500건 → 항목별 응답률 · 근태 로그 → 월별 집계</dd>
   </dl>
   <div class="lab"><span class="tg">실습1</span><a href="../lab1/step3.html">120건 재계산</a><span class="tg">실습4</span><a href="../lab4/index.html">대시보드 지표</a></div>
 </div>
-<div class="t6" style="--ac:var(--amber)">
+<div class="t6">
   <div class="th"><span class="num">④</span><span class="nm">딱지 붙이기</span><span class="fm">분류</span></div>
   <div class="io">자유 텍스트 <b>→</b> 범주 라벨</div>
   <dl>
-    <dt>비유</dt><dd>빨래를 색깔별로 — 단, 느낌 말고 규칙대로</dd>
-    <dt>실무</dt><dd>VOC를 문의유형·감성으로 분류 · 이력서에 1차 통과 태그</dd>
-    <dt>함정</dt><dd>느낌으로 찍기 · 애매하면 지어내지 말고 "기타·중립"으로 보류</dd>
+    <dt>CS·운영</dt><dd>고객 문의를 문의유형·감성·위험으로 분류하고 담당 부서로 라우팅</dd>
+    <dt>HR</dt><dd>들어온 이력서에 "서류 통과·보류" 1차 태그</dd>
+    <dt>회계</dt><dd>영수증·카드내역을 계정과목으로 분류</dd>
   </dl>
-  <div class="lab"><span class="tg">실습2</span><a href="../lab2/step4.html">공고 가져와 나누기</a><span class="tg">여유</span><a href="../lab5/step1.html">회의 결정 골라내기</a></div>
+  <div class="lab"><span class="tg">준비 중</span><span style="color:var(--faint);font-size:12px">오늘은 개념 위주로 다룸</span></div>
 </div>
-<div class="t6" style="--ac:var(--coral)">
+<div class="t6">
   <div class="th"><span class="num">⑤</span><span class="nm">쓰기</span><span class="fm">초안 작성</span></div>
   <div class="io">자료 <b>→</b> 새 산문</div>
   <dl>
-    <dt>비유</dt><dd>정보 덩어리를 사람 마음을 끄는 문장으로</dd>
-    <dt>실무</dt><dd>제품 정보 시트 → 상세설명 · 명단 → 수료증 100장 일괄 생성</dd>
-    <dt>함정</dt><dd>환각(없는 사실 지어냄) → 문장마다 (근거: …) 꼬리표로 사실을 묶음</dd>
+    <dt>마케팅</dt><dd>제품 정보 시트 → 상세설명·홍보 카피 초안</dd>
+    <dt>HR·총무</dt><dd>명단 → 수료증·재직증명서 100장 일괄 생성 (mail-merge)</dd>
+    <dt>공통</dt><dd>집계 결과 → 주간 보고 초안</dd>
   </dl>
-  <div class="lab"><span class="tg">실습3</span><a href="../lab3/index.html">근거 붙인 보고문</a><span class="tg">실습2</span><a href="../lab2/step3.html">회사소개 문단</a></div>
+  <div class="lab"><span class="tg">실습3</span><a href="../lab3/index.html">근거 붙인 보고문</a></div>
 </div>
-<div class="t6" style="--ac:#5fb0a4">
+<div class="t6">
   <div class="th"><span class="num">⑥</span><span class="nm">검사하기</span><span class="fm">검증·검수</span></div>
   <div class="io">데이터 + 규칙 <b>→</b> 위반 판정</div>
   <dl>
-    <dt>비유</dt><dd>숙제 검사 — 규칙이 정답, 내 느낌이 낄 자리가 없다</dd>
-    <dt>실무</dt><dd>발주·입고·계산서 3장부 대사 · 창고 실사 vs 전산 재고</dd>
-    <dt>함정</dt><dd>허위경보(멀쩡한 걸 위반으로) · 행이 없는 것과 0인 것을 혼동</dd>
+    <dt>재경·회계</dt><dd>발주·입고·세금계산서 3장부 대사 · 은행 거래내역 vs 장부</dd>
+    <dt>물류·총무</dt><dd>창고 실사 vs 전산 재고 · 자산 명부 정합성</dd>
+    <dt>데이터·마케팅</dt><dd>메타데이터가 규칙(길이·중복·누락)에 맞는지 감사</dd>
   </dl>
   <div class="lab"><span class="tg">실습1</span><a href="../lab1/step4.html">검증 설계·검산</a><span class="tg">실습3</span><a href="../lab3/step2.html">숫자마다 출처</a></div>
 </div>
 </div>
-
-<h2 id="combo" data-toc="6개는 레고 블록">6개는 레고 블록</h2>
-<div class="combo">
-  <h3>단일 유형은 워밍업, 실무는 대개 2~3개의 조합</h3>
-  <p>앞 블록의 <b>출력이 뒤 블록의 입력</b>이 됩니다. 그래서 각 블록을 검산으로 끊어 두는 게 중요해요. "매주 손으로 하던 그 잡무"도 사실은 이름 붙은 블록 몇 개의 연결입니다.</p>
-  <div class="flow">
-    <b>④ 딱지 붙이기</b><span class="ar">→</span><b>③ 줄이기</b><span class="ar">→</span><b>⑤ 쓰기</b>
-    <span class="ar" style="margin:0 4px">＝</span>
-    <span>VOC 520건 분류 → 유형별 집계 → 주간 보고 초안</span>
-  </div>
-</div>
-
-<nav class="pager"><a class="prev" href="../index.html"><span class="lbl">← 이전</span><span class="ttl">오늘의 지도</span></a><a class="next" href="../start/setup/index.html"><span class="lbl">다음 →</span><span class="ttl">0 · 개발 환경 세팅</span></a></nav>
+<nav class="pager"><a class="prev" href="../index.html#overview"><span class="lbl">← 이전</span><span class="ttl">오늘의 지도</span></a><a class="next" href="../start/setup/index.html"><span class="lbl">다음 →</span><span class="ttl">0 · 개발 환경 세팅</span></a></nav>
       </article>
       <aside class="toc mono">
 <h4>On this page</h4>
+<a href="#여섯-가지-업무-유형">여섯 가지 업무 유형</a>
 <a href="#taxo">한눈에 보는 6유형</a>
-<a href="#detail">유형별로 뜯어보기</a>
-<a href="#combo">6개는 레고 블록</a>
+<a href="#detail">직무별 실무 상황</a>
       </aside>
     </div>
   </main>

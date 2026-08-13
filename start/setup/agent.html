@@ -22,7 +22,7 @@
     <nav><div class="nav-h">// 홈</div>
 <a class="nav-a" href="../../index.html#materials"><span class="g">▤</span> 강의 자료 내려받기</a>
 <div class="nav-h">// 개발 환경 세팅</div><div class="tree">
-<a class="nav-a" href="../../start/setup/index.html"><span class="g">◆</span> 환경 세팅 개요</a>
+<a class="nav-a" href="../../start/setup/index.html"><span class="g">◆</span> 개요</a>
 <a class="nav-a" href="../../start/setup/vscode.html">1 · VS Code 설치</a>
 <a class="nav-a" href="../../start/setup/python.html">2 · Python 설치</a>
 <a class="nav-a" href="../../start/setup/nodejs.html">3 · Node.js 설치</a>
@@ -31,16 +31,14 @@
 <div class="nav-h">// 들어가기</div><div class="tree">
 <a class="nav-a" href="../../types/index.html">여섯 가지 업무 유형</a>
 </div>
-<div class="nav-h">// 실습 1 · 물류비 마감</div><div class="tree">
+<div class="nav-h">// 실습 1 · 흩어진 주문 한 표로 모으기</div><div class="tree">
 <a class="nav-a" href="../../lab1/index.html"><span class="g">◆</span> 개요</a>
-<a class="nav-a" href="../../lab1/step1.html">1 · 요금표를 표로</a>
-<a class="nav-a" href="../../lab1/step2.html">2 · 청구서 합치기</a>
-<a class="nav-a" href="../../lab1/step3.html">3 · 120건 재계산</a>
-<a class="nav-a" href="../../lab1/step4.html">4 · 검증 설계·검산</a>
+<a class="nav-a" href="../../lab1/step1.html">1 · 한 표로 모으기</a>
+<a class="nav-a" href="../../lab1/step2.html">2 · 원본 대조·검산</a>
 </div>
 <div class="nav-h">// 실습 2 · 계약서에서 계약종합 만들기</div><div class="tree">
 <a class="nav-a" href="../../lab2/index.html"><span class="g">◆</span> 개요</a>
-<a class="nav-a" href="../../lab2/step1.html">1 · 계약종합 만들기</a>
+<a class="nav-a" href="../../lab2/step1.html">1 · 계약서 내용 종합하기</a>
 <a class="nav-a" href="../../lab2/step2.html">2 · 원본 대조·검산</a>
 </div>
 <div class="nav-h">// 실습 3 · 근거 붙인 보고문</div><div class="tree">
@@ -93,7 +91,6 @@
 </ul>
 </div>
 <p>오늘 말을 걸 상대인 <strong>AI 코딩 에이전트</strong>를 설치합니다. VS Code 확장 프로그램으로 설치하면 친숙한 채팅 UI로 바로 시작할 수 있습니다.</p>
-<hr />
 <h2 id="1-claude-code-확장-설치">1. Claude Code 확장 설치<a class="headerlink" href="#1-claude-code-확장-설치" title="Permanent link">&para;</a></h2>
 <ol>
 <li>아래 링크에서 Claude Code 확장 페이지를 엽니다.</li>
@@ -103,7 +100,6 @@
 <p><img alt="마켓플레이스에서 VS Code용 설치 버튼 클릭" src="../../images/setup/claude_install_vscode.png" />
 3. VS Code가 열리며 확장 페이지가 뜹니다. <strong><code>Install</code></strong> 버튼을 눌러 설치합니다.</p>
 <p><img alt="VS Code 확장 페이지에서 Install 버튼 클릭" src="../../images/setup/claude_install_button.png" /></p>
-<hr />
 <h2 id="2-로그인">2. 로그인<a class="headerlink" href="#2-로그인" title="Permanent link">&para;</a></h2>
 <p>설치가 끝나면 <kbd>Ctrl</kbd>+<kbd>L</kbd> (맥은 <kbd>Cmd</kbd>+<kbd>L</kbd>)을 누릅니다. 오른쪽 패널에 Claude Code 화면이 뜹니다. 여기서 <strong><code>Claude.ai Subscription</code></strong>(구독 계정 로그인)을 눌러 로그인합니다. 안내대로 브라우저에서 로그인하면 됩니다.</p>
 <p><img alt="오른쪽 Claude Code 패널에서 Claude.ai Subscription 로그인" src="../../images/setup/claude_login_panel.png" /></p>
@@ -131,7 +127,6 @@
 <p><code>bash     claude --version</code></p>
 <p><code>Installation complete!</code> 가 떴는데도 버전이 안 나오면, 명령 프롬프트를 닫았다가 다시 열어 <code>claude --version</code> 을 입력해보세요.</p>
 </details>
-<hr />
 <h2 id="3-확인-창-미리-꺼두기-자동-승인">3. 확인 창 미리 꺼두기 (자동 승인)<a class="headerlink" href="#3-확인-창-미리-꺼두기-자동-승인" title="Permanent link">&para;</a></h2>
 <p>AI가 파일을 고칠 때마다 <em>"이 파일을 수정해도 될까요?"</em> 하고 물어봅니다. 오늘 하루는 파일을 수백 번 고치므로, 미리 꺼둡니다.</p>
 <p>VS Code 오른쪽 Claude Code 패널 <strong>하단의 모드 드롭다운</strong>에서 <code>Edit automatically</code>를 고릅니다.</p>
@@ -170,7 +165,7 @@
 <p><img alt="Allow Dangerously Skip Permissions 체크박스" src="../../images/setup/autoapprove_claude_allow_skip.png" /></p>
 <p><strong>4단계.</strong> Claude Code 패널 하단 드롭다운에서 <code>Bypass permissions</code> 선택</p>
 <p><img alt="모드 드롭다운에서 Bypass permissions 선택" src="../../images/setup/autoapprove_claude_bypass.png" /></p>
-<p>이 설정은<strong>승인 없이 명령을 실행</strong>하게 합니다. 오늘 쓰는 실습 폴더에서만 쓰고, 회사 자료나 개인 파일이 있는 폴더에서는 켜지 마세요.</p>
+<p>이 설정은 <strong>승인 없이 명령을 실행</strong>하게 합니다. 오늘 쓰는 실습 폴더에서만 쓰고, 회사 자료나 개인 파일이 있는 폴더에서는 켜지 마세요.</p>
 </details>
 <details class="note">
 <summary>강의가 끝난 뒤 되돌리는 법</summary>
@@ -185,16 +180,17 @@
 <tbody>
 <tr>
 <td>자동 편집</td>
-<td>모드 드롭다운에서<code>Ask before edits</code> 로 되돌립니다</td>
+<td>모드 드롭다운에서 <code>Ask before edits</code>로 되돌립니다</td>
 </tr>
 <tr>
 <td>명령 자동 실행</td>
-<td>Settings → Extensions → Claude Code →<code>Allow Dangerously Skip Permissions</code> 체크 해제</td>
+<td>Settings → Extensions → Claude Code → <code>Allow Dangerously Skip Permissions</code> 체크 해제</td>
 </tr>
 </tbody>
 </table>
-<pre class="highlight"><code>평소 작업 폴더에서는 되돌려 쓰시길 권합니다. 실수로 지운 파일을 되살릴 방법이 없는 경우가 있습니다.</code></pre>
-<hr />
+<blockquote>
+<p>평소 작업 폴더에서는 되돌려 쓰시길 권합니다. 실수로 지운 파일을 되살릴 방법이 없는 경우가 있습니다.</p>
+</blockquote>
 <h2 id="4-데이터-내려받고-압축-풀기">4. 데이터 내려받고 압축 풀기<a class="headerlink" href="#4-데이터-내려받고-압축-풀기" title="Permanent link">&para;</a></h2>
 <p><a href="../../index.html">홈 화면의 내려받기 표</a>에서 <strong>전체 zip</strong>을 받습니다.</p>
 <p>압축을 풀 <strong>위치</strong>가 중요합니다.</p>
@@ -217,7 +213,6 @@
 <li>한글 이름이 깨진다 → 다른 압축 프로그램(반디집·알집 등)으로 다시 푸세요</li>
 </ul>
 </div>
-<hr />
 <h2 id="다-됐는지-스스로-확인하기">다 됐는지 스스로 확인하기<a class="headerlink" href="#다-됐는지-스스로-확인하기" title="Permanent link">&para;</a></h2>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> VS Code에서 Claude Code 패널이 뜨고, <strong>로그인 화면 없이</strong> 말을 걸 수 있다</li>
