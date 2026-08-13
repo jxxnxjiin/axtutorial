@@ -34,25 +34,25 @@ nav:
       - { label: "1 · 계약서 내용 종합하기", path: "lab2/step1.md" }
       - { label: "2 · 원본 대조·검산", path: "lab2/step2.md" }
 
-  - group: "실습 3 · 근거 붙인 보고문"
+  - group: "실습 3 · 쿠폰 성과 집계·인사이트"
     children:
       - { label: "개요", path: "lab3/index.md", icon: "◆" }
-      - { label: "1 · 일단 써보게", path: "lab3/step1.md" }
-      - { label: "2 · 숫자마다 출처", path: "lab3/step2.md" }
-      - { label: "3 · 숫자 5개 역추적", path: "lab3/step3.md" }
-      - { label: "4·5 · 없는 문장·톤 두 벌", path: "lab3/step4.md" }
+      - { label: "1 · 한 파일로 모으기", path: "lab3/step1.md" }
+      - { label: "2 · 성과표 채우기", path: "lab3/step2.md" }
+      - { label: "3 · 집계 검산", path: "lab3/step3.md" }
+      - { label: "4 · 인사이트·검산", path: "lab3/step4.md" }
 
-  - group: "실습 4 · 대시보드와 디자인"
-    children:
-      - { label: "개요", path: "lab4/index.md", icon: "◆" }
-      - { label: "1 · 무엇을 보여줄지", path: "lab4/step1.md" }
-      - { label: "2 · 뼈대·검산", path: "lab4/step2.md" }
-      - { label: "3 · Before 캡처", path: "lab4/step3.md" }
-      - { label: "4 · 말로 인상 바꾸기", path: "lab4/step4.md" }
-      - { label: "5 · 두 무드 비교", path: "lab4/step5.md" }
-      - { label: "6 · 다크모드·반응형", path: "lab4/step6.md" }
-      - { label: "7 · 재검산·After", path: "lab4/step7.md" }
-      - { label: "막혔을 때 쓰는 문장", path: "lab4/stuck.md" }
+  # - group: "실습 4 · 대시보드와 디자인"
+  #   children:
+  #     - { label: "개요", path: "lab4/index.md", icon: "◆" }
+  #     - { label: "1 · 무엇을 보여줄지", path: "lab4/step1.md" }
+  #     - { label: "2 · 뼈대·검산", path: "lab4/step2.md" }
+  #     - { label: "3 · Before 캡처", path: "lab4/step3.md" }
+  #     - { label: "4 · 말로 인상 바꾸기", path: "lab4/step4.md" }
+  #     - { label: "5 · 두 무드 비교", path: "lab4/step5.md" }
+  #     - { label: "6 · 다크모드·반응형", path: "lab4/step6.md" }
+  #     - { label: "7 · 재검산·After", path: "lab4/step7.md" }
+  #     - { label: "막혔을 때 쓰는 문장", path: "lab4/stuck.md" }
 
   - group: "도움말"
     children:
