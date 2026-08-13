@@ -22,15 +22,15 @@
 
 <div style="display:flex;gap:12px;flex-wrap:wrap">
   <figure style="flex:1 1 0;min-width:180px;margin:0">
-    <img src="../images/lab1/orders_example_1.png" alt="orders_example_1.png" style="width:100%;height:auto;display:block">
+    <img src="../images/lab1/orders_example_1.png" alt="orders_example_1.png" style="width:100%;height:320px;object-fit:cover;object-position:top;display:block">
     <figcaption style="text-align:center;font-size:0.85em;color:#888;margin-top:6px">웹주문</figcaption>
   </figure>
   <figure style="flex:1 1 0;min-width:180px;margin:0">
-    <img src="../images/lab1/orders_example_2.png" alt="orders_example_2.png" style="width:100%;height:auto;display:block">
+    <img src="../images/lab1/orders_example_2.png" alt="orders_example_2.png" style="width:100%;height:320px;object-fit:cover;object-position:top;display:block">
     <figcaption style="text-align:center;font-size:0.85em;color:#888;margin-top:6px">전화주문</figcaption>
   </figure>
   <figure style="flex:1 1 0;min-width:180px;margin:0">
-    <img src="../images/lab1/orders_example_3.png" alt="orders_example_3.png" style="width:100%;height:auto;display:block">
+    <img src="../images/lab1/orders_example_3.png" alt="orders_example_3.png" style="width:100%;height:320px;object-fit:cover;object-position:top;display:block">
     <figcaption style="text-align:center;font-size:0.85em;color:#888;margin-top:6px">제휴주문</figcaption>
   </figure>
 </div>
