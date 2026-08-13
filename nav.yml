@@ -11,7 +11,7 @@
 nav:
   - group: "개발 환경 세팅"
     children:
-      - { label: "환경 세팅 개요", path: "start/setup/index.md", icon: "◆" }
+      - { label: "개요", path: "start/setup/index.md", icon: "◆" }
       - { label: "1 · VS Code 설치", path: "start/setup/vscode.md" }
       - { label: "2 · Python 설치", path: "start/setup/python.md" }
       - { label: "3 · Node.js 설치", path: "start/setup/nodejs.md" }
@@ -22,18 +22,16 @@ nav:
       - { label: "여섯 가지 업무 유형", path: "types/index.md" }
 
 
-  - group: "실습 1 · 물류비 마감"
+  - group: "실습 1 · 흩어진 주문 한 표로 모으기"
     children:
       - { label: "개요", path: "lab1/index.md", icon: "◆"}
-      - { label: "1 · 요금표를 표로", path: "lab1/step1.md" }
-      - { label: "2 · 청구서 합치기", path: "lab1/step2.md" }
-      - { label: "3 · 120건 재계산", path: "lab1/step3.md" }
-      - { label: "4 · 검증 설계·검산", path: "lab1/step4.md" }
+      - { label: "1 · 한 표로 모으기", path: "lab1/step1.md" }
+      - { label: "2 · 원본 대조·검산", path: "lab1/step2.md" }
 
   - group: "실습 2 · 계약서에서 계약종합 만들기"
     children:
       - { label: "개요", path: "lab2/index.md", icon: "◆" }
-      - { label: "1 · 계약종합 만들기", path: "lab2/step1.md" }
+      - { label: "1 · 계약서 내용 종합하기", path: "lab2/step1.md" }
       - { label: "2 · 원본 대조·검산", path: "lab2/step2.md" }
 
   - group: "실습 3 · 근거 붙인 보고문"

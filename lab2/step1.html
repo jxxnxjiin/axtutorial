@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>1 · 계약종합 만들기 · ax-tutor</title>
-<meta name="description" content="실습 2 · 계약서에서 계약종합 만들기 — 1 · 계약종합 만들기 · ax-tutor 실습 위키">
+<title>1 · 계약서 내용 종합하기 · ax-tutor</title>
+<meta name="description" content="실습 2 · 계약서에서 계약종합 만들기 — 1 · 계약서 내용 종합하기 · ax-tutor 실습 위키">
 <link rel="stylesheet" href="../assets/site.css">
 </head>
 <body>
@@ -22,7 +22,7 @@
     <nav><div class="nav-h">// 홈</div>
 <a class="nav-a" href="../index.html#materials"><span class="g">▤</span> 강의 자료 내려받기</a>
 <div class="nav-h">// 개발 환경 세팅</div><div class="tree">
-<a class="nav-a" href="../start/setup/index.html"><span class="g">◆</span> 환경 세팅 개요</a>
+<a class="nav-a" href="../start/setup/index.html"><span class="g">◆</span> 개요</a>
 <a class="nav-a" href="../start/setup/vscode.html">1 · VS Code 설치</a>
 <a class="nav-a" href="../start/setup/python.html">2 · Python 설치</a>
 <a class="nav-a" href="../start/setup/nodejs.html">3 · Node.js 설치</a>
@@ -31,16 +31,14 @@
 <div class="nav-h">// 들어가기</div><div class="tree">
 <a class="nav-a" href="../types/index.html">여섯 가지 업무 유형</a>
 </div>
-<div class="nav-h">// 실습 1 · 물류비 마감</div><div class="tree">
+<div class="nav-h">// 실습 1 · 흩어진 주문 한 표로 모으기</div><div class="tree">
 <a class="nav-a" href="../lab1/index.html"><span class="g">◆</span> 개요</a>
-<a class="nav-a" href="../lab1/step1.html">1 · 요금표를 표로</a>
-<a class="nav-a" href="../lab1/step2.html">2 · 청구서 합치기</a>
-<a class="nav-a" href="../lab1/step3.html">3 · 120건 재계산</a>
-<a class="nav-a" href="../lab1/step4.html">4 · 검증 설계·검산</a>
+<a class="nav-a" href="../lab1/step1.html">1 · 한 표로 모으기</a>
+<a class="nav-a" href="../lab1/step2.html">2 · 원본 대조·검산</a>
 </div>
 <div class="nav-h">// 실습 2 · 계약서에서 계약종합 만들기</div><div class="tree">
 <a class="nav-a" href="../lab2/index.html"><span class="g">◆</span> 개요</a>
-<a class="nav-a active" href="../lab2/step1.html">1 · 계약종합 만들기</a>
+<a class="nav-a active" href="../lab2/step1.html">1 · 계약서 내용 종합하기</a>
 <a class="nav-a" href="../lab2/step2.html">2 · 원본 대조·검산</a>
 </div>
 <div class="nav-h">// 실습 3 · 근거 붙인 보고문</div><div class="tree">
@@ -83,22 +81,21 @@
     <div class="wrap">
       <article class="doc md rise">
         <div class="kicker mono"><b>//</b> 실습 2 · 계약서에서 계약종합 만들기</div>
-<h1 id="1--계약종합-만들기">1 · 계약종합 만들기<a class="headerlink" href="#1--계약종합-만들기" title="Permanent link">&para;</a></h1>
-<p>계약서 8건에서 아래 6개 항목을 뽑아 한 표(<code>계약종합</code> 엑셀)로 만듭니다. 한 계약이 한 줄입니다.</p>
+<h1 id="1--계약서-내용-종합하기">1 · 계약서 내용 종합하기<a class="headerlink" href="#1--계약서-내용-종합하기" title="Permanent link">&para;</a></h1>
+<p>계약서 8건에서 아래 6개 항목을 뽑아 하나의 엑셀 파일로 정리합니다. 한 계약이 한 줄입니다.</p>
 <h2 id="뽑을-항목-여섯-개">뽑을 항목 여섯 개<a class="headerlink" href="#뽑을-항목-여섯-개" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p>계약번호 / 계약명 / 상대방 / 계약기간 / 금액 / 자동갱신 여부</p>
 </blockquote>
-<hr />
 <h2 id="직접-시켜보세요">직접 시켜보세요<a class="headerlink" href="#직접-시켜보세요" title="Permanent link">&para;</a></h2>
 <p>여러분 문장으로 AI에게 시킵니다. 아래 두 체크리스트를 먼저 읽고, 빠진 규칙이 없도록 프롬프트에 담으세요.</p>
 <h2 id="프롬프트에-꼭-담을-것-">프롬프트에 꼭 담을 것 ✅<a class="headerlink" href="#프롬프트에-꼭-담을-것-" title="Permanent link">&para;</a></h2>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 뽑을 <strong>6개 항목을 그대로 지정</strong> (계약번호·계약명·상대방·계약기간·금액·자동갱신 여부)</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>안 적힌 항목은 지어내지 말고 비워둘 것</strong></li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>금액 조항이 없으면 0이 아니라 빈칸</strong>으로 둘 것</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 폴더의 계약서 <strong>8건을 모두</strong> 읽어 한 계약당 한 줄로 정리</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 결과를 <strong><code>계약종합</code> 엑셀 파일</strong>로 저장</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>뽑을 항목</strong> — 계약번호·계약명·계약 상대·계약기간·금액·자동갱신 여부</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>없는 값 처리</strong> — 안 적힌 항목은 지어내지 말고 빈칸</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>빈 금액 처리</strong> — 금액 조항이 없으면 0이 아니라 빈칸</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>읽을 대상</strong> — 폴더의 계약서 8건 전부, 한 계약당 한 줄</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>결과 파일</strong> — 하나의 엑셀 파일, 파일명 지정 (예: <code>계약종합.xlsx</code>)</li>
 </ul>
 <h2 id="이런-건-빼세요-">이런 건 빼세요 ❌<a class="headerlink" href="#이런-건-빼세요-" title="Permanent link">&para;</a></h2>
 <ul class="task-list">
@@ -106,13 +103,11 @@
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 빈칸을 <code>0</code>으로 채우기 (금액 0원과 "금액 모름"은 다른 사건)</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 항목을 마음대로 더하거나 바꾸기</li>
 </ul>
-<hr />
 <h2 id="실행-예시">실행 예시<a class="headerlink" href="#실행-예시" title="Permanent link">&para;</a></h2>
 <div class="admonition example">
 <p class="admonition-title">이렇게 나오면 됩니다</p>
-<p><img alt="계약종합 8행이 만들어지고, 금액이 없는 계약 한 건이 빈칸으로 남은 결과 화면" src="../images/lab2/step1-result.png" /></p>
+<p><img alt="step1-result.png" src="../images/lab2/step1-result.png" /></p>
 </div>
-<hr />
 <h2 id="체크포인트">체크포인트<a class="headerlink" href="#체크포인트" title="Permanent link">&para;</a></h2>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 계약종합이 <strong>8행</strong>(계약 8건)으로 나왔다</li>
@@ -125,7 +120,7 @@
 </nav>
       </article>
       <aside class="toc mono"><h4>On this page</h4>
-<a href="#1--계약종합-만들기">1 · 계약종합 만들기</a>
+<a href="#1--계약서-내용-종합하기">1 · 계약서 내용 종합하기</a>
 <a href="#뽑을-항목-여섯-개">뽑을 항목 여섯 개</a>
 <a href="#직접-시켜보세요">직접 시켜보세요</a>
 <a href="#프롬프트에-꼭-담을-것-">프롬프트에 꼭 담을 것 ✅</a>

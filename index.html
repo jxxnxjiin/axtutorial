@@ -33,7 +33,7 @@
 <a class="nav-a" href="#timetable"><span class="g">◷</span> 시간표</a>
 <a class="nav-a" href="#materials"><span class="g">▤</span> 강의 자료 내려받기</a>
 <div class="nav-h">// 개발 환경 세팅</div><div class="tree">
-<a class="nav-a" href="start/setup/index.html"><span class="g">◆</span> 환경 세팅 개요</a>
+<a class="nav-a" href="start/setup/index.html"><span class="g">◆</span> 개요</a>
 <a class="nav-a" href="start/setup/vscode.html">1 · VS Code 설치</a>
 <a class="nav-a" href="start/setup/python.html">2 · Python 설치</a>
 <a class="nav-a" href="start/setup/nodejs.html">3 · Node.js 설치</a>
@@ -42,16 +42,14 @@
 <div class="nav-h">// 들어가기</div><div class="tree">
 <a class="nav-a" href="types/index.html">여섯 가지 업무 유형</a>
 </div>
-<div class="nav-h">// 실습 1 · 물류비 마감</div><div class="tree">
+<div class="nav-h">// 실습 1 · 흩어진 주문 한 표로 모으기</div><div class="tree">
 <a class="nav-a" href="lab1/index.html"><span class="g">◆</span> 개요</a>
-<a class="nav-a" href="lab1/step1.html">1 · 요금표를 표로</a>
-<a class="nav-a" href="lab1/step2.html">2 · 청구서 합치기</a>
-<a class="nav-a" href="lab1/step3.html">3 · 120건 재계산</a>
-<a class="nav-a" href="lab1/step4.html">4 · 검증 설계·검산</a>
+<a class="nav-a" href="lab1/step1.html">1 · 한 표로 모으기</a>
+<a class="nav-a" href="lab1/step2.html">2 · 원본 대조·검산</a>
 </div>
 <div class="nav-h">// 실습 2 · 계약서에서 계약종합 만들기</div><div class="tree">
 <a class="nav-a" href="lab2/index.html"><span class="g">◆</span> 개요</a>
-<a class="nav-a" href="lab2/step1.html">1 · 계약종합 만들기</a>
+<a class="nav-a" href="lab2/step1.html">1 · 계약서 내용 종합하기</a>
 <a class="nav-a" href="lab2/step2.html">2 · 원본 대조·검산</a>
 </div>
 <div class="nav-h">// 실습 3 · 근거 붙인 보고문</div><div class="tree">
@@ -125,34 +123,44 @@
         </div>
         <!-- ---- OVERVIEW ---- -->
         <section id="overview" data-nav="오늘의 지도" data-nav-icon="◆" data-toc="오늘의 지도">
-          <div class="sec-h"><span class="hash mono">##</span><h2>오늘의 지도</h2><span class="note mono">4 works · 5 hours</span></div>
-          <p class="lead"><a href="types/index.html" style="color:var(--coral);text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--line)">여섯 가지 업무 유형</a>(뽑기·모으기·줄이기·딱지 붙이기·쓰기·검사하기)을 실제 데이터로 하나씩 손에 익힙니다.
-            각 실습은 <b>흩어진 자료 → 한 표/한 문서 → 검산</b>의 리듬으로 흘러갑니다.
-            아래 카드는 이 여섯을 하루 일정상 <b>네 갈래 작업</b>으로 묶은 것 — <a href="types/index.html" style="color:var(--coral)">여섯 유형 자세히 보기 →</a></p>
+          <div class="sec-h"><span class="hash mono">##</span><h2>오늘의 지도</h2><span class="note mono">6 types</span></div>
+          <p class="lead">오늘 익힐 건 결국 <b>여섯 가지 작업</b>이에요. 직무가 영업이든 인사든 마케팅이든, 손으로 반복하는 일은 아래 여섯 모양 중 하나의 조합입니다. 각 카드에 <b>입력 → 출력</b>과 오늘 그걸 만나는 <b>실습</b>을 붙였어요 — <a href="types/index.html" style="color:var(--coral);text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--line)">여섯 유형 자세히 보기 →</a></p>
           <div class="grid4">
             <div class="ov rise" style="animation-delay:.05s">
-              <div class="ov__n mono">WORK 01 — 물류·재고</div>
-              <div class="ov__t">숫자를 표로 뽑아 집계</div>
-              <div class="ov__d">사진·현황표처럼 구조 없던 것을 표로 옮기고, 필요한 값만 줄여 집계합니다.</div>
-              <div class="ov__out mono"><span class="lbl">out</span><code>.xlsx</code></div>
+              <div class="ov__n mono">TYPE ① · 추출·파싱</div>
+              <div class="ov__t">뽑기</div>
+              <div class="ov__d"><b>비정형(PDF·이미지) → 표</b><br>구조 없던 걸 표로 만든다</div>
+              <div class="ov__out mono"><span class="lbl">실습</span><a href="lab2/step1.html"><code>계약서 한 장</code></a></div>
             </div>
             <div class="ov rise" style="animation-delay:.1s">
-              <div class="ov__n mono">WORK 02 — 취합·통합</div>
-              <div class="ov__t">흩어진 파일을 한 표로</div>
-              <div class="ov__d">채널·창구별로 나뉜 주문·견적·계약을 행을 보존하며 하나로 모읍니다.</div>
-              <div class="ov__out mono"><span class="lbl">out</span><code>주문종합.xlsx</code></div>
+              <div class="ov__n mono">TYPE ② · 취합·통합</div>
+              <div class="ov__t">모으기</div>
+              <div class="ov__d"><b>정형 여러 개 → 정형 하나</b><br>행을 보존하며 여러 파일을 합친다</div>
+              <div class="ov__out mono"><span class="lbl">실습</span><a href="lab1/step1.html"><code>주문 한 표로</code></a><a href="lab1/step2.html"><code>원본 대조·검산</code></a></div>
             </div>
             <div class="ov rise" style="animation-delay:.15s">
-              <div class="ov__n mono">WORK 03 — 분류·보고</div>
-              <div class="ov__t">딱지 붙이고 근거 붙여 쓰기</div>
-              <div class="ov__d">VOC를 기준표로 분류하고, 숫자마다 출처를 붙인 보고문을 씁니다.</div>
-              <div class="ov__out mono"><span class="lbl">out</span><code>점검보고.md</code></div>
+              <div class="ov__n mono">TYPE ③ · 집계·분석</div>
+              <div class="ov__t">줄이기</div>
+              <div class="ov__d"><b>정형 표 → 요약·지표</b><br>행을 줄여 수치·인사이트로</div>
+              <div class="ov__out mono"><span class="lbl">실습</span><a href="lab4/index.html"><code>대시보드 지표</code></a></div>
             </div>
             <div class="ov rise" style="animation-delay:.2s">
-              <div class="ov__n mono">WORK 04 — 화면·스킬</div>
-              <div class="ov__t">대시보드와 재사용 스킬</div>
-              <div class="ov__d">내 데이터가 도는 화면을 만들고, 반복 작업을 스킬로 남겨 다음에도 씁니다.</div>
-              <div class="ov__out mono"><span class="lbl">out</span><code>dashboard.html</code> · <code>SKILL.md</code></div>
+              <div class="ov__n mono">TYPE ④ · 분류</div>
+              <div class="ov__t">딱지 붙이기</div>
+              <div class="ov__d"><b>자유 텍스트 → 범주 라벨</b><br>이게 뭐냐 (정답이 모호)</div>
+              <div class="ov__out mono"><span class="lbl">실습</span><span style="color:var(--faint)">개념 위주 · 준비 중</span></div>
+            </div>
+            <div class="ov rise" style="animation-delay:.25s">
+              <div class="ov__n mono">TYPE ⑤ · 초안 작성</div>
+              <div class="ov__t">쓰기</div>
+              <div class="ov__d"><b>자료 → 새 산문</b><br>없던 글을 쓴다</div>
+              <div class="ov__out mono"><span class="lbl">실습</span><a href="lab3/index.html"><code>근거 붙인 보고문</code></a></div>
+            </div>
+            <div class="ov rise" style="animation-delay:.3s">
+              <div class="ov__n mono">TYPE ⑥ · 검증·검수</div>
+              <div class="ov__t">검사하기</div>
+              <div class="ov__d"><b>데이터 + 규칙 → 위반 판정</b><br>규칙에 맞냐 (정답이 규칙)</div>
+              <div class="ov__out mono"><span class="lbl">실습</span><a href="lab1/step2.html"><code>주문 대조·검산</code></a><a href="lab3/step2.html"><code>숫자마다 출처</code></a></div>
             </div>
           </div>
         </section>
@@ -318,15 +326,10 @@
           <p class="lead">단계별 상세 안내가 이 위키 안에 그대로 들어 있습니다. 한 페이지가 한 단계이니,
             앞질러 가지 말고 지금 페이지 맨 아래 체크포인트를 먼저 통과하세요.</p>
           <div class="glist">
-            <a class="gl" href="start/setup/index.html">
-              <span class="gl__ic mono">0</span>
-              <div><div class="gl__t">시작하기 · 개발 환경 세팅과 규칙 <span class="ext-link">▷</span></div>
-                <div class="gl__d">VS Code·Python·Node.js·AI 에이전트 설치, 처음 5분, 오후 규칙 3가지.</div></div>
-            </a>
             <a class="gl" href="lab1/index.html">
               <span class="gl__ic mono">L1</span>
-              <div><div class="gl__t">실습 1 · 물류비 마감 <span class="ext-link">▷</span></div>
-                <div class="gl__d">사진 요금표를 표로 옮기고 120건을 다시 계산·판정합니다.</div></div>
+              <div><div class="gl__t">실습 1 · 흩어진 주문 한 표로 모으기 <span class="ext-link">▷</span></div>
+                <div class="gl__d">웹·전화·제휴 세 파일을 표준 7칸으로 합치고, 빠지거나 겹친 건이 없는지 검산합니다.</div></div>
             </a>
             <a class="gl" href="lab2/index.html">
               <span class="gl__ic mono">L2</span>
@@ -342,11 +345,6 @@
               <span class="gl__ic mono">L4</span>
               <div><div class="gl__t">실습 4 · 대시보드 + 디자인 <span class="ext-link">▷</span></div>
                 <div class="gl__d">내 데이터가 도는 화면을 만들고 인상을 직접 고릅니다.</div></div>
-            </a>
-            <a class="gl" href="lab5/index.html">
-              <span class="gl__ic mono">A·B</span>
-              <div><div class="gl__t">여유 실습 A · B <span class="ext-link">▷</span></div>
-                <div class="gl__d">회의 녹취에서 결정만 뽑기 · 내 대시보드를 링크로 공유하기.</div></div>
             </a>
           </div>
         </section>

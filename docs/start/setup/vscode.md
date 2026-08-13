@@ -8,11 +8,6 @@
 - 앞으로의 실습, 바이브코딩은 모두 이 안에서 진행합니다.
 - 가지고 계신 노트북 환경(Windows / macOS)에 맞춰 설치해주세요.
 
-!!! info "Antigravity를 쓸 예정이라면 건너뛰어도 됩니다"
-    실습에 Claude Code나 Codex가 아닌 **Antigravity**를 사용하실 예정이라면 VS Code는 설치하지 않으셔도 됩니다.
-
----
-
 ## 다운로드
 
 VS Code 공식 사이트에 접속해 본인 OS용 설치 파일을 받습니다.
@@ -27,7 +22,6 @@ https://code.visualstudio.com/download
 !!! tip "Windows 설치 중 이 옵션은 켜두세요"
     설치 마법사의 *"Add to PATH"* 항목은 체크된 상태로 두세요. 나중에 터미널에서 `code` 명령을 쓸 수 있게 됩니다.
 
----
 
 ## 설치 확인
 

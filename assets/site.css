@@ -403,8 +403,8 @@ footer .ast-sm{color:var(--coral)}
 
 /* task list */
 .md .task-list{list-style:none;padding-left:.2em}
-.md .task-list-item{display:flex;align-items:baseline;gap:.5em}
-.md .task-list-control{position:relative}
+.md .task-list-item{display:list-item;list-style:none}
+.md .task-list-control{position:relative;margin-right:.3em}
 .md .task-list-item input{accent-color:var(--coral)}
 
 /* ---- admonitions (!!!)  ---- */
