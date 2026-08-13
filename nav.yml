@@ -65,6 +65,13 @@ nav:
       - { label: "3 · 사실로 재작성", path: "lab6/step3.md" }
       - { label: "4 · 재검증·검사표", path: "lab6/step4.md" }
 
+  - group: "실습 7 · 반복작업을 재사용 스킬로 만들기"
+    children:
+      - { label: "개요", path: "lab7/index.md", icon: "◆" }
+      - { label: "1 · 범용 스킬 만들기", path: "lab7/step1.md" }
+      - { label: "2 · 견적 통합에 응용", path: "lab7/step2.md" }
+      - { label: "3 · 동료에게 넘기기", path: "lab7/step3.md" }
+
   # - group: "심화 실습 · 이미지 공고 → 캐치 폼 웹앱"
   #   children:
   #     - { label: "개요", path: "advanced1/index.md", icon: "★" }
