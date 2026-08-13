@@ -50,18 +50,18 @@
 <a class="nav-a" href="../lab3/step3.html">3 · 집계 검산</a>
 <a class="nav-a" href="../lab3/step4.html">4 · 인사이트·검산</a>
 </div>
-<div class="nav-h">// 실습 4 · 고객 문의에 딱지 붙이기</div><div class="tree">
+<div class="nav-h">// 실습 4 · 임원용 1페이지 보고서</div><div class="tree">
 <a class="nav-a" href="../lab4/index.html"><span class="g">◆</span> 개요</a>
-<a class="nav-a" href="../lab4/step1.html">1 · 기준 확인·한 건 분류</a>
-<a class="nav-a" href="../lab4/step2.html">2 · 520건 일괄 분류</a>
-<a class="nav-a" href="../lab4/step3.html">3 · 분류 검산</a>
+<a class="nav-a" href="../lab4/step1.html">1 · 보고서 초안 쓰기</a>
+<a class="nav-a" href="../lab4/step2.html">2 · 보고서 검산</a>
 </div>
-<div class="nav-h">// 실습 5 · 임원용 1페이지 보고서</div><div class="tree">
+<div class="nav-h">// 실습 5 · 고객 문의에 딱지 붙이기</div><div class="tree">
 <a class="nav-a" href="../lab5/index.html"><span class="g">◆</span> 개요</a>
-<a class="nav-a" href="../lab5/step1.html">1 · 보고서 초안 쓰기</a>
-<a class="nav-a" href="../lab5/step2.html">2 · 보고서 검산</a>
+<a class="nav-a" href="../lab5/step1.html">1 · 기준 확인·한 건 분류</a>
+<a class="nav-a" href="../lab5/step2.html">2 · 520건 일괄 분류</a>
+<a class="nav-a" href="../lab5/step3.html">3 · 분류 검산</a>
 </div>
-<div class="nav-h">// 실습 6 · 제안서 사실로 되돌리기</div><div class="tree">
+<div class="nav-h">// 실습 6 · 제안서 내용 검증하기</div><div class="tree">
 <a class="nav-a" href="../lab6/index.html"><span class="g">◆</span> 개요</a>
 <a class="nav-a" href="../lab6/step1.html">1 · 확인할 것 묻기</a>
 <a class="nav-a" href="../lab6/step2.html">2 · 관점별 검증</a>
@@ -96,9 +96,9 @@
       <article class="doc md rise">
         <div class="kicker mono"><b>//</b> 실습 1 · 흩어진 주문 한 표로 모으기</div>
 <h1 id="1--한-표로-모으기">1 · 한 표로 모으기<a class="headerlink" href="#1--한-표로-모으기" title="Permanent link">&para;</a></h1>
-<p>세 주문 파일을 표준 7칸(<code>주문번호·고객명·상품명·수량·금액_원·주문일·주문채널</code>)에 맞춰 하나의 엑셀 파일로 합칩니다. 파일마다 열 제목이 달라도 <strong>같은 뜻이면 같은 칸</strong>으로 옮깁니다.</p>
+<p>세 주문 파일을 제공된 작업 방법(<code>작업방법참고.xlsx</code>)에 맞춰 하나의 엑셀 파일로 합칩니다. 파일마다 열 제목이 달라도 <strong>같은 뜻이면 같은 칸</strong>으로 옮깁니다.</p>
 <h2 id="직접-시켜보세요">직접 시켜보세요<a class="headerlink" href="#직접-시켜보세요" title="Permanent link">&para;</a></h2>
-<p>여러분 문장으로 AI에게 시킵니다. 아래 두 체크리스트를 먼저 읽고, 빠진 규칙이 없도록 프롬프트에 담으세요. 열 이름 대조표는 <code>작업방법참고.xlsx</code>에 있습니다.</p>
+<p>아래 두 체크리스트를 먼저 읽고, 빠진 규칙이 없도록 프롬프트에 담아보세요. 열 이름 대조표는 <code>작업방법참고.xlsx</code>에 있습니다.</p>
 <h2 id="프롬프트에-꼭-담을-것-">프롬프트에 꼭 담을 것 ✅<a class="headerlink" href="#프롬프트에-꼭-담을-것-" title="Permanent link">&para;</a></h2>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>읽을 대상</strong> — 세 파일 <code>웹주문</code>·<code>전화주문</code>·<code>제휴주문</code> 전부</li>
@@ -112,24 +112,22 @@
 </ul>
 <h2 id="이런-건-빼세요-">이런 건 빼세요 ❌<a class="headerlink" href="#이런-건-빼세요-" title="Permanent link">&para;</a></h2>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 채널별 <strong>합계·요약</strong> 내기 (이건 모으기지 줄이기가 아닙니다 — 행을 보존)</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 겹친 주문번호를 그냥 <strong>두 줄로 두기</strong> (한 줄로 합쳐야 합니다)</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 빈 금액을 <code>0</code>으로 채우기 (<code>0원</code>과 <code>금액 모름</code>은 다른 사건)</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> "알아서 잘 합쳐줘"처럼 <strong>칸·규칙 없는 지시</strong></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 빈 금액을 <code>0</code>으로 채우기 (<code>0원</code>과 <code>금액 모름</code>은 다른 의미입니다)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> "알아서 잘 합쳐줘"처럼 <strong>명확한 칸·규칙이 없는 지시</strong></li>
 </ul>
 <h2 id="예시-프롬프트">예시 프롬프트<a class="headerlink" href="#예시-프롬프트" title="Permanent link">&para;</a></h2>
 <p>여러분 문장을 먼저 보낸 뒤에 열어보세요.</p>
 <details class="example">
 <summary>이렇게 시킬 수 있습니다</summary>
-<div class="highlight"><pre><span></span><code>이 폴더의 웹주문.xlsx, 전화주문.xlsx, 제휴주문.xlsx 세 파일을 읽어서
+<pre class="highlight"><code>이 폴더의 웹주문.xlsx, 전화주문.xlsx, 제휴주문.xlsx 세 파일을 읽어서
 주문종합.xlsx의 표준 7칸(주문번호·고객명·상품명·수량·금액_원·주문일·주문채널)에 맞춰 합쳐줘.
 파일마다 열 제목이 다른데, 작업방법참고.xlsx의 대조표대로 같은 뜻이면 같은 칸으로 옮겨.
 각 줄이 어느 파일에서 왔는지 주문채널에 웹/전화/제휴로 적어줘.
 같은 주문번호가 여러 파일에 겹치면 한 줄로 합치고, 온 채널을 채널칸에 모두 남겨줘.
 주문일은 YYYY-MM-DD로 통일해. 제휴 파일 날짜는 월/일 순서니까 주의해.
 금액이 원본에 비어 있으면 0을 넣지 말고 빈칸으로 둬.
-다 되면 원본 세 파일 건수 합과, 합친 뒤 줄 수와, 겹쳐서 합쳐진 건수를 숫자로 알려줘.
-</code></pre></div>
+다 되면 원본 세 파일 건수 합과, 합친 뒤 줄 수와, 겹쳐서 합쳐진 건수를 숫자로 알려줘.</code></pre>
 </details>
 <h2 id="실행-예시">실행 예시<a class="headerlink" href="#실행-예시" title="Permanent link">&para;</a></h2>
 <div class="admonition example">
@@ -142,9 +140,9 @@
 <h2 id="체크포인트">체크포인트<a class="headerlink" href="#체크포인트" title="Permanent link">&para;</a></h2>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 결과 엑셀 파일에 표준 <strong>7칸</strong>이 그대로 있다</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 세 원본 건수 합(150 + 140 + 120 = <strong>410건</strong>)을 받아 적었다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 세 원본 건수 합(150 + 140 + 120 = <strong>410건</strong>)이 모두 들어있다</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 합친 뒤 줄 수와 <strong>겹쳐서 합쳐진 건수</strong>를 AI에게 숫자로 받았다</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 아무 줄이나 골라 <code>주문채널</code>이 실제 원본 파일과 맞다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>주문채널</code> 내 임의의 줄이 실제 원본 파일과 맞는다</li>
 </ul>
 <nav class="pager">
 <a class="prev" href="../lab1/index.html"><span class="lbl">← 이전</span><span class="ttl">개요</span></a>

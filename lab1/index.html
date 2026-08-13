@@ -50,18 +50,18 @@
 <a class="nav-a" href="../lab3/step3.html">3 · 집계 검산</a>
 <a class="nav-a" href="../lab3/step4.html">4 · 인사이트·검산</a>
 </div>
-<div class="nav-h">// 실습 4 · 고객 문의에 딱지 붙이기</div><div class="tree">
+<div class="nav-h">// 실습 4 · 임원용 1페이지 보고서</div><div class="tree">
 <a class="nav-a" href="../lab4/index.html"><span class="g">◆</span> 개요</a>
-<a class="nav-a" href="../lab4/step1.html">1 · 기준 확인·한 건 분류</a>
-<a class="nav-a" href="../lab4/step2.html">2 · 520건 일괄 분류</a>
-<a class="nav-a" href="../lab4/step3.html">3 · 분류 검산</a>
+<a class="nav-a" href="../lab4/step1.html">1 · 보고서 초안 쓰기</a>
+<a class="nav-a" href="../lab4/step2.html">2 · 보고서 검산</a>
 </div>
-<div class="nav-h">// 실습 5 · 임원용 1페이지 보고서</div><div class="tree">
+<div class="nav-h">// 실습 5 · 고객 문의에 딱지 붙이기</div><div class="tree">
 <a class="nav-a" href="../lab5/index.html"><span class="g">◆</span> 개요</a>
-<a class="nav-a" href="../lab5/step1.html">1 · 보고서 초안 쓰기</a>
-<a class="nav-a" href="../lab5/step2.html">2 · 보고서 검산</a>
+<a class="nav-a" href="../lab5/step1.html">1 · 기준 확인·한 건 분류</a>
+<a class="nav-a" href="../lab5/step2.html">2 · 520건 일괄 분류</a>
+<a class="nav-a" href="../lab5/step3.html">3 · 분류 검산</a>
 </div>
-<div class="nav-h">// 실습 6 · 제안서 사실로 되돌리기</div><div class="tree">
+<div class="nav-h">// 실습 6 · 제안서 내용 검증하기</div><div class="tree">
 <a class="nav-a" href="../lab6/index.html"><span class="g">◆</span> 개요</a>
 <a class="nav-a" href="../lab6/step1.html">1 · 확인할 것 묻기</a>
 <a class="nav-a" href="../lab6/step2.html">2 · 관점별 검증</a>
@@ -104,7 +104,7 @@
 <p>입사 3주차. 영업지원팀 사수가 말합니다.</p>
 <p>"주문이 웹·전화·제휴 세 군데로 따로 들어와요. 파일이 세 개인데 양식이 다 달라요 — 어떤 건 제목이 한글, 어떤 건 영어예요. 이걸 하나의 주문종합 표로 합쳐줘요. 한 건도 빠지면 안 되고, 없는 값을 지어내도 안 됩니다."</p>
 </blockquote>
-<p>세 파일을 표준 7칸으로 모아 AI에게 작업을 맡기고, 한 건도 새거나 겹치지 않았는지 <strong>검산</strong>까지 진행해 봅시다.</p>
+<p>AI를 이용해 세 파일을 하나의 파일로 묶고, 한 건도 새거나 겹치지 않았는지 <strong>검산</strong>까지 진행해 봅시다.</p>
 <h2 id="폴더에-있는-것">폴더에 있는 것<a class="headerlink" href="#폴더에-있는-것" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -116,23 +116,23 @@
 <tbody>
 <tr>
 <td><code>웹주문.xlsx</code></td>
-<td>웹으로 들어온 주문 150건 — 제목이 한글 (<code>주문번호·고객명·상품…</code>)</td>
+<td>웹으로 들어온 주문 150건</td>
 </tr>
 <tr>
 <td><code>전화주문.xlsx</code></td>
-<td>전화로 받은 주문 140건 — 제목이 영문 (<code>order_id·name·item…</code>)</td>
+<td>전화로 받은 주문 140건</td>
 </tr>
 <tr>
 <td><code>제휴주문.xlsx</code></td>
-<td>제휴사가 넘긴 주문 120건 — 제목이 또 다름 (<code>협력사주문ID·구매자·품목…</code>)</td>
+<td>제휴사가 넘긴 주문 120건</td>
 </tr>
 <tr>
 <td><code>작업방법참고.xlsx</code></td>
-<td>표준 7칸 규칙 + 세 파일 열 이름 대조표</td>
+<td>작업 방법, 세 파일 열 이름 대조표</td>
 </tr>
 <tr>
 <td><code>주문종합.xlsx</code></td>
-<td>채워 넣을 빈 템플릿 (제목 줄만 있음)</td>
+<td>채워 넣을 빈 템플릿</td>
 </tr>
 </tbody>
 </table>
@@ -162,11 +162,11 @@
 <tbody>
 <tr>
 <td><a href="step1.html">1단계</a></td>
-<td>세 파일을 표준 7칸짜리 <strong>엑셀 한 장으로 합친다</strong></td>
+<td>세 파일의 내용을 <strong>엑셀 한 장으로 합친다</strong></td>
 </tr>
 <tr>
 <td><a href="step2.html">2단계</a></td>
-<td>빠진 건·겹친 건이 없는지 원본과 대조하며 <strong>검산</strong>한다</td>
+<td>빠지거나 겹친 건이 없는지 원본과 대조하며 <strong>검산</strong>한다</td>
 </tr>
 </tbody>
 </table>

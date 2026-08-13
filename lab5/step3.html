@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>3 · 분류 검산 · ax-tutor</title>
-<meta name="description" content="실습 4 · 고객 문의에 딱지 붙이기 — 3 · 분류 검산 · ax-tutor 실습 위키">
+<meta name="description" content="실습 5 · 고객 문의에 딱지 붙이기 — 3 · 분류 검산 · ax-tutor 실습 위키">
 <link rel="stylesheet" href="../assets/site.css">
 </head>
 <body>
@@ -50,18 +50,18 @@
 <a class="nav-a" href="../lab3/step3.html">3 · 집계 검산</a>
 <a class="nav-a" href="../lab3/step4.html">4 · 인사이트·검산</a>
 </div>
-<div class="nav-h">// 실습 4 · 고객 문의에 딱지 붙이기</div><div class="tree">
+<div class="nav-h">// 실습 4 · 임원용 1페이지 보고서</div><div class="tree">
 <a class="nav-a" href="../lab4/index.html"><span class="g">◆</span> 개요</a>
-<a class="nav-a" href="../lab4/step1.html">1 · 기준 확인·한 건 분류</a>
-<a class="nav-a" href="../lab4/step2.html">2 · 520건 일괄 분류</a>
-<a class="nav-a active" href="../lab4/step3.html">3 · 분류 검산</a>
+<a class="nav-a" href="../lab4/step1.html">1 · 보고서 초안 쓰기</a>
+<a class="nav-a" href="../lab4/step2.html">2 · 보고서 검산</a>
 </div>
-<div class="nav-h">// 실습 5 · 임원용 1페이지 보고서</div><div class="tree">
+<div class="nav-h">// 실습 5 · 고객 문의에 딱지 붙이기</div><div class="tree">
 <a class="nav-a" href="../lab5/index.html"><span class="g">◆</span> 개요</a>
-<a class="nav-a" href="../lab5/step1.html">1 · 보고서 초안 쓰기</a>
-<a class="nav-a" href="../lab5/step2.html">2 · 보고서 검산</a>
+<a class="nav-a" href="../lab5/step1.html">1 · 기준 확인·한 건 분류</a>
+<a class="nav-a" href="../lab5/step2.html">2 · 520건 일괄 분류</a>
+<a class="nav-a active" href="../lab5/step3.html">3 · 분류 검산</a>
 </div>
-<div class="nav-h">// 실습 6 · 제안서 사실로 되돌리기</div><div class="tree">
+<div class="nav-h">// 실습 6 · 제안서 내용 검증하기</div><div class="tree">
 <a class="nav-a" href="../lab6/index.html"><span class="g">◆</span> 개요</a>
 <a class="nav-a" href="../lab6/step1.html">1 · 확인할 것 묻기</a>
 <a class="nav-a" href="../lab6/step2.html">2 · 관점별 검증</a>
@@ -88,20 +88,20 @@
   <main class="main">
     <div class="cmdbar mono">
       <button class="burger" id="burger" aria-label="메뉴">≡</button>
-      <span class="path"><b>~/ax-tutor</b> <span class="full">$ cat</span> <span class="cur">lab4/step3.md</span></span>
+      <span class="path"><b>~/ax-tutor</b> <span class="full">$ cat</span> <span class="cur">lab5/step3.md</span></span>
       <span class="caret"></span><span class="spacer"></span>
-      <span class="stat">실습 4 · 고객 문의에 딱지 붙이기</span>
+      <span class="stat">실습 5 · 고객 문의에 딱지 붙이기</span>
     </div>
     <div class="wrap">
       <article class="doc md rise">
-        <div class="kicker mono"><b>//</b> 실습 4 · 고객 문의에 딱지 붙이기</div>
+        <div class="kicker mono"><b>//</b> 실습 5 · 고객 문의에 딱지 붙이기</div>
 <h1 id="3--분류-검산">3 · 분류 검산<a class="headerlink" href="#3--분류-검산" title="Permanent link">&para;</a></h1>
-<p>520건이 다 채워져도 그대로 믿으면 안 됩니다. <strong>보기 밖 값이 섞이거나, 위험 신호를 감성에 끌려 놓치거나, 애매한 줄을 흔한 유형으로 몰면</strong> 표는 깔끔해 보여도 틀립니다. 눈으로 몇 건 대조한 뒤, AI에게 <strong>자기 분류를 스스로 검산</strong>하게 시킵니다.</p>
+<p>520건이 다 채워져도 그대로 믿으면 안 됩니다. 보기 밖 값이 섞이거나, 애매한 줄을 흔한 유형으로 몰면 표는 깔끔해 보여도 틀립니다. 눈으로 몇 건 대조한 뒤, AI에게 <strong>자기 분류를 스스로 검산</strong>하게 시킵니다.</p>
 <h2 id="직접-시켜보세요">직접 시켜보세요<a class="headerlink" href="#직접-시켜보세요" title="Permanent link">&para;</a></h2>
 <p>2단계에서 채운 표를 VOC 원문·기준 문서와 놓고, 아래 내용을 AI에게 검증시킵니다.</p>
 <h2 id="검증에-포함해볼-것-">검증에 포함해볼 것 ✅<a class="headerlink" href="#검증에-포함해볼-것-" title="Permanent link">&para;</a></h2>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>값 범위</strong> — 유형·감성 칸에 보기(6종·3종) 밖의 값이나 <strong>빈칸</strong>이 있는 줄 전부 신고</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>값 범위</strong> — 유형·감성 칸에 보기 밖의 값이나 <strong>빈칸</strong>이 있는 줄 전부 신고</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>위험 누락</strong> — 감성이 긍정·중립인데 신고·소송·안전 신호가 있는 줄이 <code>Y</code>로 됐는지</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>경계 케이스</strong> — <code>검토필요</code> 줄과 복합 문의를 원문과 다시 대조</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>쏠림 점검</strong> — 유형별 건수를 뽑아 특정 유형으로 몰리지 않았는지</li>
@@ -115,19 +115,18 @@
 <p>여러분 문장을 먼저 보낸 뒤에 열어보세요.</p>
 <details class="example">
 <summary>이렇게 물어볼 수 있습니다</summary>
-<div class="highlight"><pre><span></span><code>채운 분류표.xlsx를 VOC원문.xlsx·VOC_분류기준.pdf와 대조해서 스스로 검산해줘.
+<pre class="highlight"><code>채운 분류표.xlsx를 VOC원문.xlsx·VOC_분류기준.pdf와 대조해서 스스로 검산해줘.
 1) 문의유형·감성 칸에 보기(6종·3종) 밖의 값이나 빈칸이 있는 줄을 item_id로 전부 짚어줘.
 2) 감성이 긍정·중립인데 신고·소송·안전 신호가 있는 문장을 찾아서 위험대응이 Y로 됐는지 확인해줘.
-3) &#39;검토필요&#39;로 표시한 줄과 복합 문의를 원문 문장과 다시 대조해줘.
+3) '검토필요'로 표시한 줄과 복합 문의를 원문 문장과 다시 대조해줘.
 4) 유형별 건수를 표로 뽑아서 특정 유형으로 쏠리지 않았는지 보여줘.
-맞다고 단정하지 말고, 어긋난 줄은 item_id로 짚어줘.
-</code></pre></div>
+맞다고 단정하지 말고, 어긋난 줄은 item_id로 짚어줘.</code></pre>
 </details>
 <h2 id="실행-예시">실행 예시<a class="headerlink" href="#실행-예시" title="Permanent link">&para;</a></h2>
 <div class="admonition example">
 <p class="admonition-title">이렇게 나오면 됩니다</p>
 <p><figure style="margin:0">
-  <img src="../images/lab4/step3-verify.png" alt="step3-verify.png" style="width:100%;height:auto;display:block">
+  <img src="../images/lab5/step3-verify.png" alt="step3-verify.png" style="width:100%;height:auto;display:block">
   <figcaption style="text-align:center;font-size:0.85em;color:#888;margin-top:6px">보기 밖 값·위험 누락·쏠림을 짚은 검산 결과</figcaption>
 </figure></p>
 </div>
@@ -136,11 +135,10 @@
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 보기 밖 값·빈칸이 <strong>0건</strong>이다</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 감성이 좋아도 위험 신호가 있는 줄은 <strong><code>Y</code></strong>로 잡혀 있다</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>검토필요</code> 줄을 <strong>원문과 다시 대조</strong>했다</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 유형별 건수를 확인해 <strong>한쪽으로 몰리지 않았다</strong></li>
 </ul>
 <nav class="pager">
-<a class="prev" href="../lab4/step2.html"><span class="lbl">← 이전</span><span class="ttl">2 · 520건 일괄 분류</span></a>
-<a class="next" href="../lab5/index.html"><span class="lbl">다음 →</span><span class="ttl">개요</span></a>
+<a class="prev" href="../lab5/step2.html"><span class="lbl">← 이전</span><span class="ttl">2 · 520건 일괄 분류</span></a>
+<a class="next" href="../lab6/index.html"><span class="lbl">다음 →</span><span class="ttl">개요</span></a>
 </nav>
       </article>
       <aside class="toc mono"><h4>On this page</h4>

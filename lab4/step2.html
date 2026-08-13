@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>2 · 520건 일괄 분류 · ax-tutor</title>
-<meta name="description" content="실습 4 · 고객 문의에 딱지 붙이기 — 2 · 520건 일괄 분류 · ax-tutor 실습 위키">
+<title>2 · 보고서 검산 · ax-tutor</title>
+<meta name="description" content="실습 4 · 임원용 1페이지 보고서 — 2 · 보고서 검산 · ax-tutor 실습 위키">
 <link rel="stylesheet" href="../assets/site.css">
 </head>
 <body>
@@ -50,18 +50,18 @@
 <a class="nav-a" href="../lab3/step3.html">3 · 집계 검산</a>
 <a class="nav-a" href="../lab3/step4.html">4 · 인사이트·검산</a>
 </div>
-<div class="nav-h">// 실습 4 · 고객 문의에 딱지 붙이기</div><div class="tree">
+<div class="nav-h">// 실습 4 · 임원용 1페이지 보고서</div><div class="tree">
 <a class="nav-a" href="../lab4/index.html"><span class="g">◆</span> 개요</a>
-<a class="nav-a" href="../lab4/step1.html">1 · 기준 확인·한 건 분류</a>
-<a class="nav-a active" href="../lab4/step2.html">2 · 520건 일괄 분류</a>
-<a class="nav-a" href="../lab4/step3.html">3 · 분류 검산</a>
+<a class="nav-a" href="../lab4/step1.html">1 · 보고서 초안 쓰기</a>
+<a class="nav-a active" href="../lab4/step2.html">2 · 보고서 검산</a>
 </div>
-<div class="nav-h">// 실습 5 · 임원용 1페이지 보고서</div><div class="tree">
+<div class="nav-h">// 실습 5 · 고객 문의에 딱지 붙이기</div><div class="tree">
 <a class="nav-a" href="../lab5/index.html"><span class="g">◆</span> 개요</a>
-<a class="nav-a" href="../lab5/step1.html">1 · 보고서 초안 쓰기</a>
-<a class="nav-a" href="../lab5/step2.html">2 · 보고서 검산</a>
+<a class="nav-a" href="../lab5/step1.html">1 · 기준 확인·한 건 분류</a>
+<a class="nav-a" href="../lab5/step2.html">2 · 520건 일괄 분류</a>
+<a class="nav-a" href="../lab5/step3.html">3 · 분류 검산</a>
 </div>
-<div class="nav-h">// 실습 6 · 제안서 사실로 되돌리기</div><div class="tree">
+<div class="nav-h">// 실습 6 · 제안서 내용 검증하기</div><div class="tree">
 <a class="nav-a" href="../lab6/index.html"><span class="g">◆</span> 개요</a>
 <a class="nav-a" href="../lab6/step1.html">1 · 확인할 것 묻기</a>
 <a class="nav-a" href="../lab6/step2.html">2 · 관점별 검증</a>
@@ -90,65 +90,61 @@
       <button class="burger" id="burger" aria-label="메뉴">≡</button>
       <span class="path"><b>~/ax-tutor</b> <span class="full">$ cat</span> <span class="cur">lab4/step2.md</span></span>
       <span class="caret"></span><span class="spacer"></span>
-      <span class="stat">실습 4 · 고객 문의에 딱지 붙이기</span>
+      <span class="stat">실습 4 · 임원용 1페이지 보고서</span>
     </div>
     <div class="wrap">
       <article class="doc md rise">
-        <div class="kicker mono"><b>//</b> 실습 4 · 고객 문의에 딱지 붙이기</div>
-<h1 id="2--520건-일괄-분류">2 · 520건 일괄 분류<a class="headerlink" href="#2--520건-일괄-분류" title="Permanent link">&para;</a></h1>
-<p>기준이 통했으니 이제 520건 전체를 같은 규칙으로 분류해 빈 표를 채웁니다. 사람이 한 건씩 찍으면 1시간 반이 넘지만, 규칙을 정확히 주면 AI는 몇 분입니다.</p>
+        <div class="kicker mono"><b>//</b> 실습 4 · 임원용 1페이지 보고서</div>
+<h1 id="2--보고서-검산">2 · 보고서 검산<a class="headerlink" href="#2--보고서-검산" title="Permanent link">&para;</a></h1>
+<p>초안이 그럴듯하게 나올수록 위험합니다. 대표이사는 <strong>숫자 하나가 안 맞으면 뒤 내용 전체를 의심</strong>합니다. 문장을 다듬는 건 사람이 하되, <strong>사실은 AI가 못 지어내게</strong> 검산합니다.</p>
 <h2 id="직접-시켜보세요">직접 시켜보세요<a class="headerlink" href="#직접-시켜보세요" title="Permanent link">&para;</a></h2>
-<p>여러분 문장으로 AI에게 시킵니다. 아래 두 체크리스트를 먼저 읽고, 빠진 규칙이 없도록 프롬프트에 담으세요.</p>
-<h2 id="프롬프트에-꼭-담을-것-">프롬프트에 꼭 담을 것 ✅<a class="headerlink" href="#프롬프트에-꼭-담을-것-" title="Permanent link">&para;</a></h2>
+<p>1단계 초안을 성과표와 놓고, 아래 내용을 AI에게 검증시킵니다.</p>
+<h2 id="검증에-포함해볼-것-">검증에 포함해볼 것 ✅<a class="headerlink" href="#검증에-포함해볼-것-" title="Permanent link">&para;</a></h2>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>분류 대상</strong> — VOC 원문 <strong>520건 전부</strong>, <code>item_id</code> 순서 그대로</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>판정 순서</strong> — 유형 → 감성 → 위험 스캔, 세 축 <strong>독립</strong>으로</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>복합·경계 규칙</strong> — 하자 언급해도 환불 요구면 환불취소, 부정+긍정 섞이면 본 사안 기준</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>빈칸 금지</strong> — 모든 줄의 세 칸을 채우고, 확신 없으면 기타·중립 + <code>검토필요</code> 표시</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>결과 파일</strong> — 채운 표, 파일명 지정 (예: <code>분류표.xlsx</code>)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>근거 자수</strong> — 문장마다 성과표의 어느 셀에서 나왔는지, 출처 없는 문장 전부 신고</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>숫자 대조</strong> — 본문 숫자가 성과표 값과 정확히 같은지 (적자 쿠폰 수·적자 규모 등)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>형용사 사냥</strong> — 근거 없는 형용사·최상급을 찾아 숫자 표현으로 바꾸기</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>출처표</strong> — 마지막 블록에 파일·시트·검산 여부가 표로 있는지</li>
 </ul>
 <h2 id="이런-건-빼세요-">이런 건 빼세요 ❌<a class="headerlink" href="#이런-건-빼세요-" title="Permanent link">&para;</a></h2>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 앞 몇 건만 하고 <strong>나머지는 알아서</strong> 채우게 두기 (전량 분류해야 함)</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 애매한 줄을 <strong>흔한 유형으로 몰기</strong> (드문 칭찬감사·기타가 사라집니다)</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 판단이 어려운 줄을 <strong>빈칸으로</strong> 남기기 (기타·중립 + 검토필요로)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 그냥 <strong>"이 보고서 괜찮아?"</strong>라고만 묻기 (문장 품질만 답하기 쉽습니다)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 숫자 대조 없이 <strong>읽기 좋으면 통과</strong>시키기</li>
 </ul>
 <h2 id="예시-프롬프트">예시 프롬프트<a class="headerlink" href="#예시-프롬프트" title="Permanent link">&para;</a></h2>
 <p>여러분 문장을 먼저 보낸 뒤에 열어보세요.</p>
 <details class="example">
-<summary>이렇게 시킬 수 있습니다</summary>
-<div class="highlight"><pre><span></span><code>VOC_분류기준.pdf 기준 그대로 VOC원문.xlsx의 520건을 전부 분류해서 분류표.xlsx를 채워줘.
-item_id 순서대로, 각 줄에 문의유형·감성·위험대응 세 칸을 채워.
-판정 순서는 유형 → 감성 → 위험 스캔이고, 세 축은 독립으로 판단해.
-복합 문의는 기준의 우선순위 규칙을 따르고(하자 언급해도 환불 요구면 환불취소 등),
-확신이 없는 건은 억지로 분류하지 말고 기타·중립으로 둔 뒤 비고에 &#39;검토필요&#39;라고 적어줘.
-빈칸 없이 520줄을 다 채우고, 다 되면 유형별·감성별 건수와 위험대응 Y 건수를 알려줘.
-</code></pre></div>
+<summary>이렇게 물어볼 수 있습니다</summary>
+<pre class="highlight"><code>이 보고서 초안을 쿠폰별성과표.xlsx와 대조해서 스스로 검산해줘.
+1) 문장마다 그 숫자가 성과표의 어느 셀에서 나왔는지 짚고, 출처를 못 대는 문장은 전부 신고해줘.
+2) 본문 숫자(적자 쿠폰 수·적자 규모·순이익률 등)가 성과표 값과 정확히 같은지 대조해줘.
+3) 근거 없는 형용사나 최상급('압도적'·'최고' 등)을 찾아 숫자 표현으로 바꿀 안을 제시해줘.
+맞다고 단정하지 말고, 자료에서 확인 안 되는 표현은 그대로 짚어줘.</code></pre>
 </details>
 <h2 id="실행-예시">실행 예시<a class="headerlink" href="#실행-예시" title="Permanent link">&para;</a></h2>
 <div class="admonition example">
 <p class="admonition-title">이렇게 나오면 됩니다</p>
 <p><figure style="margin:0">
-  <img src="../images/lab4/step2-result.png" alt="step2-result.png" style="width:100%;height:auto;display:block">
-  <figcaption style="text-align:center;font-size:0.85em;color:#888;margin-top:6px">520건이 3축으로 분류돼 채워진 표</figcaption>
+  <img src="../images/lab4/step2-verify.png" alt="step2-verify.png" style="width:100%;height:auto;display:block">
+  <figcaption style="text-align:center;font-size:0.85em;color:#888;margin-top:6px">출처 없는 문장·형용사·숫자 불일치를 자수한 검산 결과</figcaption>
 </figure></p>
 </div>
 <h2 id="체크포인트">체크포인트<a class="headerlink" href="#체크포인트" title="Permanent link">&para;</a></h2>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 표가 <strong>520행</strong> 모두 채워졌다 (빈칸 없음)</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 유형·감성 값이 전부 <strong>보기 안</strong>(6종·3종)에 있다</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 위험대응이 <code>Y</code> 또는 빈칸으로만 되어 있고, <strong>감성과 따로</strong> 붙었다</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 확신 없는 줄은 <strong><code>검토필요</code></strong>로 표시돼 있다 (빈칸이 아님)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 자료에 없는 표현(<strong>지어낸 문장</strong>)이 0건이다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 본문 숫자가 성과표 값과 <strong>정확히 일치</strong>한다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 근거 없는 <strong>형용사가 숫자 표현</strong>으로 바뀌었다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 마지막에 <strong>출처표</strong>(파일·시트·검산 완료)가 있다</li>
 </ul>
 <nav class="pager">
-<a class="prev" href="../lab4/step1.html"><span class="lbl">← 이전</span><span class="ttl">1 · 기준 확인·한 건 분류</span></a>
-<a class="next" href="../lab4/step3.html"><span class="lbl">다음 →</span><span class="ttl">3 · 분류 검산</span></a>
+<a class="prev" href="../lab4/step1.html"><span class="lbl">← 이전</span><span class="ttl">1 · 보고서 초안 쓰기</span></a>
+<a class="next" href="../lab5/index.html"><span class="lbl">다음 →</span><span class="ttl">개요</span></a>
 </nav>
       </article>
       <aside class="toc mono"><h4>On this page</h4>
-<a href="#2--520건-일괄-분류">2 · 520건 일괄 분류</a>
+<a href="#2--보고서-검산">2 · 보고서 검산</a>
 <a href="#직접-시켜보세요">직접 시켜보세요</a>
-<a href="#프롬프트에-꼭-담을-것-">프롬프트에 꼭 담을 것 ✅</a>
+<a href="#검증에-포함해볼-것-">검증에 포함해볼 것 ✅</a>
 <a href="#이런-건-빼세요-">이런 건 빼세요 ❌</a>
 <a href="#예시-프롬프트">예시 프롬프트</a>
 <a href="#실행-예시">실행 예시</a>

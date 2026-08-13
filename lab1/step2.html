@@ -50,18 +50,18 @@
 <a class="nav-a" href="../lab3/step3.html">3 · 집계 검산</a>
 <a class="nav-a" href="../lab3/step4.html">4 · 인사이트·검산</a>
 </div>
-<div class="nav-h">// 실습 4 · 고객 문의에 딱지 붙이기</div><div class="tree">
+<div class="nav-h">// 실습 4 · 임원용 1페이지 보고서</div><div class="tree">
 <a class="nav-a" href="../lab4/index.html"><span class="g">◆</span> 개요</a>
-<a class="nav-a" href="../lab4/step1.html">1 · 기준 확인·한 건 분류</a>
-<a class="nav-a" href="../lab4/step2.html">2 · 520건 일괄 분류</a>
-<a class="nav-a" href="../lab4/step3.html">3 · 분류 검산</a>
+<a class="nav-a" href="../lab4/step1.html">1 · 보고서 초안 쓰기</a>
+<a class="nav-a" href="../lab4/step2.html">2 · 보고서 검산</a>
 </div>
-<div class="nav-h">// 실습 5 · 임원용 1페이지 보고서</div><div class="tree">
+<div class="nav-h">// 실습 5 · 고객 문의에 딱지 붙이기</div><div class="tree">
 <a class="nav-a" href="../lab5/index.html"><span class="g">◆</span> 개요</a>
-<a class="nav-a" href="../lab5/step1.html">1 · 보고서 초안 쓰기</a>
-<a class="nav-a" href="../lab5/step2.html">2 · 보고서 검산</a>
+<a class="nav-a" href="../lab5/step1.html">1 · 기준 확인·한 건 분류</a>
+<a class="nav-a" href="../lab5/step2.html">2 · 520건 일괄 분류</a>
+<a class="nav-a" href="../lab5/step3.html">3 · 분류 검산</a>
 </div>
-<div class="nav-h">// 실습 6 · 제안서 사실로 되돌리기</div><div class="tree">
+<div class="nav-h">// 실습 6 · 제안서 내용 검증하기</div><div class="tree">
 <a class="nav-a" href="../lab6/index.html"><span class="g">◆</span> 개요</a>
 <a class="nav-a" href="../lab6/step1.html">1 · 확인할 것 묻기</a>
 <a class="nav-a" href="../lab6/step2.html">2 · 관점별 검증</a>
@@ -96,7 +96,7 @@
       <article class="doc md rise">
         <div class="kicker mono"><b>//</b> 실습 1 · 흩어진 주문 한 표로 모으기</div>
 <h1 id="2--원본-대조검산">2 · 원본 대조·검산<a class="headerlink" href="#2--원본-대조검산" title="Permanent link">&para;</a></h1>
-<p>합쳐진 표가 그럴듯해 보여도 그대로 믿으면 안 됩니다. <strong>한 건이라도 빠지거나 겹쳐 남으면 뒤 작업이 전부 어긋납니다.</strong> 사람이 410건을 일일이 못 보니, AI에게 <strong>자기 결과를 스스로 검산</strong>하게 시켜 빠진 줄·겹친 줄을 잡습니다.</p>
+<p>합쳐진 표가 그럴듯해 보여도 그대로 믿으면 안 됩니다. <strong>한 건이라도 빠지거나 겹쳐 남으면 뒤 작업이 전부 어긋납니다.</strong> 사람이 410건을 일일이 못 보니, AI에게 <strong>결과를 스스로 검산</strong>하게 하여 빠지거나 겹친 줄을 잡습니다.</p>
 <h2 id="직접-시켜보세요">직접 시켜보세요<a class="headerlink" href="#직접-시켜보세요" title="Permanent link">&para;</a></h2>
 <p>1단계에서 만든 결과 엑셀 파일을 놓고, 아래 내용을 AI에게 검증시킵니다.</p>
 <h2 id="검증에-포함해볼-것-">검증에 포함해볼 것 ✅<a class="headerlink" href="#검증에-포함해볼-것-" title="Permanent link">&para;</a></h2>
@@ -116,14 +116,13 @@
 <p>여러분 문장을 먼저 보낸 뒤에 열어보세요.</p>
 <details class="example">
 <summary>이렇게 물어볼 수 있습니다</summary>
-<div class="highlight"><pre><span></span><code>주문종합.xlsx를 세 원본 파일과 대조해서 스스로 검산해줘.
+<pre class="highlight"><code>주문종합.xlsx를 세 원본 파일과 대조해서 스스로 검산해줘.
 1) 합친 줄 수가 원본 세 파일 건수 합에서 겹쳐 합쳐진 건수를 뺀 값과 맞는지 숫자로 보여줘.
 2) 세 원본의 주문번호 중 종합에 빠진 게 하나라도 있으면 전부 알려줘.
 3) 같은 주문번호가 두 줄로 남은 게 있으면 알려주고, 채널칸에 온 채널이 다 적혔는지 확인해줘.
 4) 주문일이 YYYY-MM-DD가 아닌 줄을 전부 찾아줘.
 5) 원본에서 금액이 비어 있던 줄이 종합에서도 빈칸인지 확인해줘.
-맞다고 단정하지 말고, 어긋난 줄은 번호로 짚어줘.
-</code></pre></div>
+맞다고 단정하지 말고, 어긋난 줄은 번호로 짚어줘.</code></pre>
 </details>
 <h2 id="실행-예시">실행 예시<a class="headerlink" href="#실행-예시" title="Permanent link">&para;</a></h2>
 <div class="admonition example">

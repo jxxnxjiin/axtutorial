@@ -50,18 +50,18 @@
 <a class="nav-a" href="../lab3/step3.html">3 · 집계 검산</a>
 <a class="nav-a" href="../lab3/step4.html">4 · 인사이트·검산</a>
 </div>
-<div class="nav-h">// 실습 4 · 고객 문의에 딱지 붙이기</div><div class="tree">
+<div class="nav-h">// 실습 4 · 임원용 1페이지 보고서</div><div class="tree">
 <a class="nav-a" href="../lab4/index.html"><span class="g">◆</span> 개요</a>
-<a class="nav-a" href="../lab4/step1.html">1 · 기준 확인·한 건 분류</a>
-<a class="nav-a" href="../lab4/step2.html">2 · 520건 일괄 분류</a>
-<a class="nav-a" href="../lab4/step3.html">3 · 분류 검산</a>
+<a class="nav-a" href="../lab4/step1.html">1 · 보고서 초안 쓰기</a>
+<a class="nav-a" href="../lab4/step2.html">2 · 보고서 검산</a>
 </div>
-<div class="nav-h">// 실습 5 · 임원용 1페이지 보고서</div><div class="tree">
+<div class="nav-h">// 실습 5 · 고객 문의에 딱지 붙이기</div><div class="tree">
 <a class="nav-a" href="../lab5/index.html"><span class="g">◆</span> 개요</a>
-<a class="nav-a" href="../lab5/step1.html">1 · 보고서 초안 쓰기</a>
-<a class="nav-a" href="../lab5/step2.html">2 · 보고서 검산</a>
+<a class="nav-a" href="../lab5/step1.html">1 · 기준 확인·한 건 분류</a>
+<a class="nav-a" href="../lab5/step2.html">2 · 520건 일괄 분류</a>
+<a class="nav-a" href="../lab5/step3.html">3 · 분류 검산</a>
 </div>
-<div class="nav-h">// 실습 6 · 제안서 사실로 되돌리기</div><div class="tree">
+<div class="nav-h">// 실습 6 · 제안서 내용 검증하기</div><div class="tree">
 <a class="nav-a" href="../lab6/index.html"><span class="g">◆</span> 개요</a>
 <a class="nav-a" href="../lab6/step1.html">1 · 확인할 것 묻기</a>
 <a class="nav-a" href="../lab6/step2.html">2 · 관점별 검증</a>
@@ -98,11 +98,11 @@
 <h1 id="1--한-파일로-모으기">1 · 한 파일로 모으기<a class="headerlink" href="#1--한-파일로-모으기" title="Permanent link">&para;</a></h1>
 <p>채널 5곳에 따로 온 주문 기록을 하나의 엑셀 파일로 모읍니다. 어느 값이 어느 채널에서 왔는지도 함께 기록합니다.</p>
 <h2 id="직접-시켜보세요">직접 시켜보세요<a class="headerlink" href="#직접-시켜보세요" title="Permanent link">&para;</a></h2>
-<p>여러분 문장으로 AI에게 시킵니다. 아래 두 체크리스트를 먼저 읽고, 빠진 규칙이 없도록 프롬프트에 담으세요.</p>
+<p>아래 두 체크리스트를 먼저 읽고, 빠진 규칙이 없도록 프롬프트에 담아보세요.</p>
 <h2 id="프롬프트에-꼭-담을-것-">프롬프트에 꼭 담을 것 ✅<a class="headerlink" href="#프롬프트에-꼭-담을-것-" title="Permanent link">&para;</a></h2>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>읽을 대상</strong> — 채널 5곳 원본 <code>1~5.주문기록_*</code> 전부</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>출처 표시</strong> — 각 줄에 <code>판매채널</code> (11번가·네이버·이마트·G마켓·쿠팡)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>출처 표시</strong> — 각 줄에 <code>판매채널</code> 기록</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>원본 보존</strong> — 취소 건도 빼지 말고 그대로 (필터는 집계에서)</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>결과 파일</strong> — 하나의 엑셀 파일, 파일명 지정 (예: <code>주문종합.xlsx</code>)</li>
 </ul>
@@ -115,12 +115,11 @@
 <p>여러분 문장을 먼저 보낸 뒤에 열어보세요.</p>
 <details class="example">
 <summary>이렇게 시킬 수 있습니다</summary>
-<div class="highlight"><pre><span></span><code>이 폴더의 주문기록 파일 다섯 개(11번가·네이버·이마트·G마켓·쿠팡)를 하나로 모아줘.
+<pre class="highlight"><code>이 폴더의 주문기록 파일 다섯 개(11번가·네이버·이마트·G마켓·쿠팡)를 하나로 모아줘.
 각 줄에 어느 채널에서 왔는지 판매채널 칸을 새로 만들어 적어줘.
 취소된 주문도 빼지 말고 그대로 담아 (거르는 건 다음 단계에서 할 거야).
 결과는 주문종합.xlsx 한 파일로 저장해줘.
-다 되면 채널별 건수와 전체 합계 줄 수를 알려줘.
-</code></pre></div>
+다 되면 채널별 건수와 전체 합계 줄 수를 알려줘.</code></pre>
 </details>
 <h2 id="실행-예시">실행 예시<a class="headerlink" href="#실행-예시" title="Permanent link">&para;</a></h2>
 <div class="admonition example">

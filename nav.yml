@@ -44,20 +44,20 @@ nav:
       - { label: "3 · 집계 검산", path: "lab3/step3.md" }
       - { label: "4 · 인사이트·검산", path: "lab3/step4.md" }
 
-  - group: "실습 4 · 고객 문의에 딱지 붙이기"
+  - group: "실습 4 · 임원용 1페이지 보고서"
     children:
       - { label: "개요", path: "lab4/index.md", icon: "◆" }
-      - { label: "1 · 기준 확인·한 건 분류", path: "lab4/step1.md" }
-      - { label: "2 · 520건 일괄 분류", path: "lab4/step2.md" }
-      - { label: "3 · 분류 검산", path: "lab4/step3.md" }
+      - { label: "1 · 보고서 초안 쓰기", path: "lab4/step1.md" }
+      - { label: "2 · 보고서 검산", path: "lab4/step2.md" }
 
-  - group: "실습 5 · 임원용 1페이지 보고서"
+  - group: "실습 5 · 고객 문의에 딱지 붙이기"
     children:
       - { label: "개요", path: "lab5/index.md", icon: "◆" }
-      - { label: "1 · 보고서 초안 쓰기", path: "lab5/step1.md" }
-      - { label: "2 · 보고서 검산", path: "lab5/step2.md" }
+      - { label: "1 · 기준 확인·한 건 분류", path: "lab5/step1.md" }
+      - { label: "2 · 520건 일괄 분류", path: "lab5/step2.md" }
+      - { label: "3 · 분류 검산", path: "lab5/step3.md" }
 
-  - group: "실습 6 · 제안서 사실로 되돌리기"
+  - group: "실습 6 · 제안서 내용 검증하기"
     children:
       - { label: "개요", path: "lab6/index.md", icon: "◆" }
       - { label: "1 · 확인할 것 묻기", path: "lab6/step1.md" }
@@ -78,18 +78,6 @@ nav:
   #     - { label: "1 · 결과 담을 빈 양식 만들기", path: "advanced1/stage1.md" }
   #     - { label: "2 · 이미지에서 정보 뽑아 채우기", path: "advanced1/stage2.md" }
   #     - { label: "3 · 웹 화면 붙이고 써보기", path: "advanced1/stage3.md" }
-
-  # - group: "실습 4 · 대시보드와 디자인"
-  #   children:
-  #     - { label: "개요", path: "lab4/index.md", icon: "◆" }
-  #     - { label: "1 · 무엇을 보여줄지", path: "lab4/step1.md" }
-  #     - { label: "2 · 뼈대·검산", path: "lab4/step2.md" }
-  #     - { label: "3 · Before 캡처", path: "lab4/step3.md" }
-  #     - { label: "4 · 말로 인상 바꾸기", path: "lab4/step4.md" }
-  #     - { label: "5 · 두 무드 비교", path: "lab4/step5.md" }
-  #     - { label: "6 · 다크모드·반응형", path: "lab4/step6.md" }
-  #     - { label: "7 · 재검산·After", path: "lab4/step7.md" }
-  #     - { label: "막혔을 때 쓰는 문장", path: "lab4/stuck.md" }
 
   - group: "도움말"
     children:

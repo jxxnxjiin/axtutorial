@@ -50,18 +50,18 @@
 <a class="nav-a" href="../lab3/step3.html">3 · 집계 검산</a>
 <a class="nav-a" href="../lab3/step4.html">4 · 인사이트·검산</a>
 </div>
-<div class="nav-h">// 실습 4 · 고객 문의에 딱지 붙이기</div><div class="tree">
+<div class="nav-h">// 실습 4 · 임원용 1페이지 보고서</div><div class="tree">
 <a class="nav-a" href="../lab4/index.html"><span class="g">◆</span> 개요</a>
-<a class="nav-a" href="../lab4/step1.html">1 · 기준 확인·한 건 분류</a>
-<a class="nav-a" href="../lab4/step2.html">2 · 520건 일괄 분류</a>
-<a class="nav-a" href="../lab4/step3.html">3 · 분류 검산</a>
+<a class="nav-a" href="../lab4/step1.html">1 · 보고서 초안 쓰기</a>
+<a class="nav-a" href="../lab4/step2.html">2 · 보고서 검산</a>
 </div>
-<div class="nav-h">// 실습 5 · 임원용 1페이지 보고서</div><div class="tree">
+<div class="nav-h">// 실습 5 · 고객 문의에 딱지 붙이기</div><div class="tree">
 <a class="nav-a" href="../lab5/index.html"><span class="g">◆</span> 개요</a>
-<a class="nav-a" href="../lab5/step1.html">1 · 보고서 초안 쓰기</a>
-<a class="nav-a" href="../lab5/step2.html">2 · 보고서 검산</a>
+<a class="nav-a" href="../lab5/step1.html">1 · 기준 확인·한 건 분류</a>
+<a class="nav-a" href="../lab5/step2.html">2 · 520건 일괄 분류</a>
+<a class="nav-a" href="../lab5/step3.html">3 · 분류 검산</a>
 </div>
-<div class="nav-h">// 실습 6 · 제안서 사실로 되돌리기</div><div class="tree">
+<div class="nav-h">// 실습 6 · 제안서 내용 검증하기</div><div class="tree">
 <a class="nav-a" href="../lab6/index.html"><span class="g">◆</span> 개요</a>
 <a class="nav-a" href="../lab6/step1.html">1 · 확인할 것 묻기</a>
 <a class="nav-a" href="../lab6/step2.html">2 · 관점별 검증</a>
@@ -96,31 +96,35 @@
       <article class="doc md rise">
         <div class="kicker mono"><b>//</b> 실습 7 · 반복작업을 재사용 스킬로 만들기</div>
 <h1 id="2--견적-통합에-응용">2 · 견적 통합에 응용<a class="headerlink" href="#2--견적-통합에-응용" title="Permanent link">&para;</a></h1>
-<p>이제 재료를 바꿉니다. 거래처 3곳 견적 파일은 주문과 열 이름도 다르고 csv·xlsx가 섞여 있습니다. 새 지침을 또 쓰지 않고, 1단계에서 만든 <strong>같은 스킬</strong>을 불러와 통합되는지 봅니다. 절차는 그대로, 바뀐 건 데이터뿐이라는 걸 확인하는 단계입니다.</p>
+<p>이제 재료를 바꿉니다. 거래처 3곳 견적 파일은 주문과 열 이름도 다르고 csv·xlsx가 섞여 있습니다. 새 지침을 또 쓰지 않고, 1단계에서 저장한 <strong>같은 <code>데이터통합</code> 스킬을 불러와</strong> 통합되는지 봅니다. 절차는 그대로, 바뀐 건 데이터뿐이라는 걸 확인하는 단계입니다.</p>
+<div class="admonition warning">
+<p class="admonition-title">견적은 '중복 제거' 대상이 아닙니다</p>
+<p>주문에는 <code>주문번호</code>라는 고유키가 있어 겹치는 행을 합쳤지만, 견적에는 그런 고유키가 없습니다. 오히려 <strong>같은 품목을 여러 거래처가 견적내는 것이 정상</strong>이고, 그게 비교의 핵심입니다. 그래서 견적은 모든 행을 남기고, 검산은 <code>통합 행 수 = 세 파일 행 수 합</code>(중복 제거 0)으로 확인합니다. 1단계에서 중복 제거를 <strong>조건부</strong>로 만들었다면 스킬이 알아서 이렇게 동작합니다.</p>
+</div>
 <h2 id="직접-시켜보세요">직접 시켜보세요<a class="headerlink" href="#직접-시켜보세요" title="Permanent link">&para;</a></h2>
-<p>만든 스킬을 견적 폴더에 그대로 적용시킵니다. 통합 뒤에는 반드시 스스로 검산하게 합니다.</p>
+<p>저장한 스킬을 견적 폴더에 그대로 불러와 적용시킵니다. 통합 뒤에는 반드시 스스로 검산하게 합니다.</p>
 <h2 id="프롬프트에-꼭-담을-것-">프롬프트에 꼭 담을 것 ✅<a class="headerlink" href="#프롬프트에-꼭-담을-것-" title="Permanent link">&para;</a></h2>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>쓸 도구</strong> — 새로 설명하지 말고 1단계에서 만든 스킬을 그대로 사용</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>쓸 도구</strong> — 새로 설명하지 말고 1단계에서 저장한 <code>데이터통합</code> 스킬을 불러와 사용</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>대상 폴더</strong> — 견적 3파일 전부(csv·xlsx 섞여 있어도)</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>열 매핑 확인</strong> — 열 이름이 제각각이니, 매핑표를 먼저 보여주고 진행</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>같은 품목 모으기</strong> — 같은 물품끼리 묶어 단가를 비교할 수 있게</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>통합 검산</strong> — 통합 행 수 = 세 파일 행 수 합 − 중복 제거 건수</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>같은 품목 모으기</strong> — 같은 물품끼리 묶어 거래처별 단가를 비교할 수 있게</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>행 보존 검산</strong> — 견적은 고유키가 없으니 중복 제거하지 말고, 통합 행 수 = 세 파일 행 수 합이 맞는지 확인</li>
 </ul>
 <h2 id="이런-건-빼세요-">이런 건 빼세요 ❌<a class="headerlink" href="#이런-건-빼세요-" title="Permanent link">&para;</a></h2>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 견적용으로 <strong>규칙을 처음부터 다시</strong> 설명하기 (스킬을 쓰는 의미가 없어짐)</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 매핑을 <strong>확인 없이</strong> 통째로 맡기기 (열 뜻을 넘겨짚습니다)</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 값이 없는 칸을 <strong>0이나 임의값</strong>으로 채우기</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 같은 품목을 <strong>중복으로 오인해 한 줄로 합치기</strong> (거래처별 단가 비교가 사라집니다)</li>
 </ul>
 <h2 id="모범-프롬프트">모범 프롬프트<a class="headerlink" href="#모범-프롬프트" title="Permanent link">&para;</a></h2>
 <details class="example">
 <summary>이렇게 시킬 수 있습니다</summary>
-<div class="highlight"><pre><span></span><code>아까 만든 데이터통합 스킬을 써서 2.견적통합 폴더의 견적 3파일을 하나의 비교표로 합쳐줘.
+<pre class="highlight"><code>아까 만든 데이터통합 스킬을 불러와서 2.견적통합 폴더의 견적 3파일을 하나의 비교표로 합쳐줘.
 파일마다 열 이름이 다르니 표준 칸으로 어떻게 매핑할지 표로 먼저 보여주고, 확인받은 다음 진행해줘.
-같은 품목끼리 모아 단가를 비교할 수 있게 정리하고,
-통합 행 수 = 세 파일 행 수 합 − 중복 제거 건수가 맞는지 검산표로 보여줘.
-</code></pre></div>
+견적은 주문번호 같은 고유키가 없고 같은 품목이 거래처마다 나오는 게 정상이니 중복 제거하지 말고,
+같은 품목끼리 모아 거래처별 단가를 비교할 수 있게 정리해줘.
+통합 행 수 = 세 파일 행 수 합이 맞는지 검산표로 보여줘.</code></pre>
 </details>
 <h2 id="실행-예시">실행 예시<a class="headerlink" href="#실행-예시" title="Permanent link">&para;</a></h2>
 <div class="admonition example">
@@ -132,9 +136,9 @@
 </div>
 <h2 id="체크포인트">체크포인트<a class="headerlink" href="#체크포인트" title="Permanent link">&para;</a></h2>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 새 지침 없이 <strong>1단계 스킬만으로</strong> 견적이 통합됐다</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 열 이름이 달라도 <strong>표준 칸으로 매핑</strong>돼 같은 품목이 모여 있다</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 통합 행 수가 <strong>검산과 맞고</strong>, 값 없는 칸이 0이 아니라 빈칸이다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 새 지침 없이 <strong>1단계에서 저장한 스킬을 불러와</strong> 견적이 통합됐다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 열 이름이 달라도 <strong>표준 칸으로 매핑</strong>돼 같은 품목이 모여 거래처별 단가가 비교된다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>중복 제거 없이 모든 행이 보존</strong>됐고, 통합 행 수 = 세 파일 행 수 합으로 검산이 맞는다</li>
 </ul>
 <nav class="pager">
 <a class="prev" href="../lab7/step1.html"><span class="lbl">← 이전</span><span class="ttl">1 · 범용 스킬 만들기</span></a>
