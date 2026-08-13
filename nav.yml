@@ -9,7 +9,7 @@
 #   - 깊이(폴더 중첩)는 자유. 상대경로는 build_wiki.py 가 페이지 위치에서 자동 계산.
 
 nav:
-  - group: "개발 환경 세팅"
+  - group: "실습 준비"
     children:
       - { label: "개요", path: "start/setup/index.md", icon: "◆" }
       - { label: "1 · VS Code 설치", path: "start/setup/vscode.md" }

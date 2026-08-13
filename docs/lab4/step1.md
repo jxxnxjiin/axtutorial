@@ -43,7 +43,10 @@
 ## 실행 예시
 
 !!! example "이렇게 나오면 됩니다"
-    ![step1-onecase.png](../images/lab4/step1-onecase.png)
+    <figure style="margin:0">
+      <img src="../images/lab4/step1-onecase.png" alt="step1-onecase.png" style="width:100%;height:auto;display:block">
+      <figcaption style="text-align:center;font-size:0.85em;color:#888;margin-top:6px">문의 1건에 유형·감성·위험 3칸이 채워진 결과</figcaption>
+    </figure>
 
 ## 체크포인트
 

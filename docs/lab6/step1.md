@@ -32,7 +32,10 @@
 ## 실행 예시
 
 !!! example "이렇게 나오면 됩니다"
-    ![step1-checklist.png](../images/lab6/step1-checklist.png)
+    <figure style="margin:0">
+      <img src="../images/lab6/step1-checklist.png" alt="step1-checklist.png" style="width:100%;height:auto;display:block">
+      <figcaption style="text-align:center;font-size:0.85em;color:#888;margin-top:6px">AI가 만든 검토 체크리스트</figcaption>
+    </figure>
 
 ## 체크포인트
 

@@ -54,7 +54,10 @@
 ## 실행 예시
 
 !!! example "이렇게 나오면 됩니다"
-    ![step2-perspectives.png](../images/lab6/step2-perspectives.png)
+    <figure style="margin:0">
+      <img src="../images/lab6/step2-perspectives.png" alt="step2-perspectives.png" style="width:100%;height:auto;display:block">
+      <figcaption style="text-align:center;font-size:0.85em;color:#888;margin-top:6px">사실·고객·검토자 세 관점의 검증 결과</figcaption>
+    </figure>
 
 ## 체크포인트
 

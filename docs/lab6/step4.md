@@ -34,7 +34,10 @@
 ## 실행 예시
 
 !!! example "이렇게 나오면 됩니다"
-    ![step4-recheck.png](../images/lab6/step4-recheck.png)
+    <figure style="margin:0">
+      <img src="../images/lab6/step4-recheck.png" alt="step4-recheck.png" style="width:100%;height:auto;display:block">
+      <figcaption style="text-align:center;font-size:0.85em;color:#888;margin-top:6px">요구사항 6개 충족 검사표 + 남은 '확인 필요' 목록</figcaption>
+    </figure>
 
 ## 체크포인트
 
