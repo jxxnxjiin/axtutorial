@@ -5,19 +5,25 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>1 · 한 파일로 모으기 · ax-tutor</title>
 <meta name="description" content="실습 3 · 쿠폰 성과 집계·인사이트 — 1 · 한 파일로 모으기 · ax-tutor 실습 위키">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<script>/* 저장된 테마를 첫 페인트 전에 적용 — 테마 깜빡임(FOUC) 방지 */
+(function(){try{var t=localStorage.getItem('ax-theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}})()</script>
 <link rel="stylesheet" href="../assets/site.css">
 </head>
 <body>
 <div class="shell">
   <aside class="side" id="side">
     <div class="brand">
-      <a class="brand__row" href="../index.html" style="text-decoration:none">
+      <a class="brand__row" href="../index.html">
         <span class="ast mono">✻</span>
         <div><div class="brand__name">ax<b>-</b>tutor</div></div>
       </a>
       <div class="brand__sub">Claude Code · 실습 위키</div>
-      <div class="session"><span class="dot"></span><span class="live">LIVE</span>
-        <span style="color:var(--muted)">강의 진행 중</span><span class="clock mono" id="clock">--:--</span></div>
+      <div class="session"><span class="live">하루 완주 과정</span><span class="clock mono" id="clock">--:--</span></div>
     </div>
     <nav><div class="nav-h">// 홈</div>
 <a class="nav-a" href="../index.html#overview"><span class="g">◆</span> 오늘의 지도</a>
@@ -119,12 +125,11 @@
 <p>여러분 문장을 먼저 보낸 뒤에 열어보세요.</p>
 <details class="example">
 <summary>이렇게 시킬 수 있습니다</summary>
-<div class="highlight"><pre><span></span><code>이 폴더의 주문기록 파일 다섯 개(11번가·네이버·이마트·G마켓·쿠팡)를 하나로 모아줘.
+<pre class="highlight"><code>이 폴더의 주문기록 파일 다섯 개(11번가·네이버·이마트·G마켓·쿠팡)를 하나로 모아줘.
 각 줄에 어느 채널에서 왔는지 판매채널 칸을 새로 만들어 적어줘.
 취소된 주문도 빼지 말고 그대로 담아 (거르는 건 다음 단계에서 할 거야).
 결과는 주문종합.xlsx 한 파일로 저장해줘.
-다 되면 채널별 건수와 전체 합계 줄 수를 알려줘.
-</code></pre></div>
+다 되면 채널별 건수와 전체 합계 줄 수를 알려줘.</code></pre>
 </details>
 <h2 id="실행-예시">실행 예시<a class="headerlink" href="#실행-예시" title="Permanent link">&para;</a></h2>
 <div class="admonition example">

@@ -5,19 +5,25 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>3 · 동료에게 넘기기 · ax-tutor</title>
 <meta name="description" content="실습 7 · 반복작업을 재사용 스킬로 만들기 — 3 · 동료에게 넘기기 · ax-tutor 실습 위키">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<script>/* 저장된 테마를 첫 페인트 전에 적용 — 테마 깜빡임(FOUC) 방지 */
+(function(){try{var t=localStorage.getItem('ax-theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}})()</script>
 <link rel="stylesheet" href="../assets/site.css">
 </head>
 <body>
 <div class="shell">
   <aside class="side" id="side">
     <div class="brand">
-      <a class="brand__row" href="../index.html" style="text-decoration:none">
+      <a class="brand__row" href="../index.html">
         <span class="ast mono">✻</span>
         <div><div class="brand__name">ax<b>-</b>tutor</div></div>
       </a>
       <div class="brand__sub">Claude Code · 실습 위키</div>
-      <div class="session"><span class="dot"></span><span class="live">LIVE</span>
-        <span style="color:var(--muted)">강의 진행 중</span><span class="clock mono" id="clock">--:--</span></div>
+      <div class="session"><span class="live">하루 완주 과정</span><span class="clock mono" id="clock">--:--</span></div>
     </div>
     <nav><div class="nav-h">// 홈</div>
 <a class="nav-a" href="../index.html#overview"><span class="g">◆</span> 오늘의 지도</a>
@@ -122,11 +128,10 @@
 <p>여러분 문장을 먼저 보낸 뒤에 열어보세요.</p>
 <details class="example">
 <summary>이렇게 시킬 수 있습니다</summary>
-<div class="highlight"><pre><span></span><code>.claude/skills/데이터통합 스킬을 옆 팀 동료에게 넘기려고 해.
+<pre class="highlight"><code>.claude/skills/데이터통합 스킬을 옆 팀 동료에게 넘기려고 해.
 다른 사람 폴더에서 열었을 때 안 돌아갈 부분 — 특정 파일명이나 열 이름, 내 폴더 경로가
 SKILL.md에 남아 있는 곳을 표로 정리해서 알려줘. 걸리는 곳은 범용 표현으로 고쳐줘.
-마지막에 비개발자가 따라 할 수 있는 사용법 한 줄을 넣고, 그 스킬 폴더를 압축해서 전달할 수 있게 정리해줘.
-</code></pre></div>
+마지막에 비개발자가 따라 할 수 있는 사용법 한 줄을 넣고, 그 스킬 폴더를 압축해서 전달할 수 있게 정리해줘.</code></pre>
 </details>
 <h2 id="실행-예시">실행 예시<a class="headerlink" href="#실행-예시" title="Permanent link">&para;</a></h2>
 <div class="admonition example">

@@ -5,6 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ax-tutor · 하루 실습 위키</title>
 <meta name="description" content="코딩 없이, 하루 만에 내 일을 자동화하는 AX 실무 실습 위키 — 강의 자료와 실습 가이드.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<script>/* 저장된 테마를 첫 페인트 전에 적용 — 테마 깜빡임(FOUC) 방지 */
+(function(){try{var t=localStorage.getItem('ax-theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}})()</script>
 <link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
@@ -21,8 +28,7 @@
       </div>
       <div class="brand__sub">Claude Code · 실습 위키</div>
       <div class="session">
-        <span class="dot"></span><span class="live">LIVE</span>
-        <span style="color:var(--muted)">강의 진행 중</span>
+        <span class="live">하루 완주 과정</span>
         <span class="clock mono" id="clock">--:--</span>
       </div>
     </div>
@@ -139,7 +145,7 @@
         <!-- ---- OVERVIEW ---- -->
         <section id="overview" data-nav="오늘의 지도" data-nav-icon="◆" data-toc="오늘의 지도">
           <div class="sec-h"><span class="hash mono">##</span><h2>오늘의 지도</h2><span class="note mono">6 types</span></div>
-          <p class="lead">오늘 익힐 건 결국 <b>여섯 가지 작업</b>이에요. 직무가 영업이든 인사든 마케팅이든, 손으로 반복하는 일은 아래 여섯 모양 중 하나의 조합입니다. 각 카드에 <b>입력 → 출력</b>과 오늘 그걸 만나는 <b>실습</b>을 붙였어요 — <a href="types/index.html" style="color:var(--coral);text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--line)">여섯 유형 자세히 보기 →</a></p>
+          <p class="lead">오늘 익힐 건 결국 <b>여섯 가지 작업</b>이에요. 직무가 영업이든 인사든 마케팅이든, 손으로 반복하는 일은 아래 여섯 모양 중 하나의 조합입니다. 각 카드에 <b>입력 → 출력</b>과 오늘 그걸 만나는 <b>실습</b>을 붙였어요 — <a class="more" href="types/index.html">여섯 유형 자세히 보기 →</a></p>
           <div class="grid4">
             <div class="ov rise" style="animation-delay:.05s">
               <div class="ov__n mono">TYPE ① · 추출·파싱</div>

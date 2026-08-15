@@ -5,19 +5,25 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>1 · 계약서 내용 종합하기 · ax-tutor</title>
 <meta name="description" content="실습 2 · 계약서에서 계약종합 만들기 — 1 · 계약서 내용 종합하기 · ax-tutor 실습 위키">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<script>/* 저장된 테마를 첫 페인트 전에 적용 — 테마 깜빡임(FOUC) 방지 */
+(function(){try{var t=localStorage.getItem('ax-theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}})()</script>
 <link rel="stylesheet" href="../assets/site.css">
 </head>
 <body>
 <div class="shell">
   <aside class="side" id="side">
     <div class="brand">
-      <a class="brand__row" href="../index.html" style="text-decoration:none">
+      <a class="brand__row" href="../index.html">
         <span class="ast mono">✻</span>
         <div><div class="brand__name">ax<b>-</b>tutor</div></div>
       </a>
       <div class="brand__sub">Claude Code · 실습 위키</div>
-      <div class="session"><span class="dot"></span><span class="live">LIVE</span>
-        <span style="color:var(--muted)">강의 진행 중</span><span class="clock mono" id="clock">--:--</span></div>
+      <div class="session"><span class="live">하루 완주 과정</span><span class="clock mono" id="clock">--:--</span></div>
     </div>
     <nav><div class="nav-h">// 홈</div>
 <a class="nav-a" href="../index.html#overview"><span class="g">◆</span> 오늘의 지도</a>
@@ -125,12 +131,11 @@
 <p>여러분 문장을 먼저 보낸 뒤에 열어보세요.</p>
 <details class="example">
 <summary>이렇게 시킬 수 있습니다</summary>
-<div class="highlight"><pre><span></span><code>이 폴더의 계약서 8건을 전부 읽고, 한 계약당 한 줄로 계약종합.xlsx에 정리해줘.
+<pre class="highlight"><code>이 폴더의 계약서 8건을 전부 읽고, 한 계약당 한 줄로 계약종합.xlsx에 정리해줘.
 각 줄에 계약번호·계약명·계약 상대·계약기간·금액·자동갱신 여부 6개 항목을 채워.
 계약서에 안 적힌 항목은 지어내지 말고 빈칸으로 두고, 특히 금액 조항이 없으면 0이 아니라 빈칸으로 남겨.
 항목을 마음대로 더하거나 바꾸지 말고 위 6개만 뽑아줘.
-다 되면 몇 건을 정리했는지와 빈칸으로 남긴 칸이 있는 계약을 알려줘.
-</code></pre></div>
+다 되면 몇 건을 정리했는지와 빈칸으로 남긴 칸이 있는 계약을 알려줘.</code></pre>
 </details>
 <h2 id="실행-예시">실행 예시<a class="headerlink" href="#실행-예시" title="Permanent link">&para;</a></h2>
 <div class="admonition example">

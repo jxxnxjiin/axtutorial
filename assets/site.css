@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&display=swap');
-@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css');
+/* 웹폰트는 각 HTML <head>의 preconnect + <link rel="stylesheet">로 로드한다.
+   (CSS @import는 직렬 블로킹이라 강의장 네트워크에서 첫 렌더를 늦춘다) */
 
 /* ============================================================
    ax-tutor — Claude Code 터미널 감성 실습 위키
@@ -11,21 +11,22 @@
 :root{
   --bg:#232220;        --bg-deep:#1b1a18;   --panel:#2a2825;
   --raised:#322f2b;    --line:#3b3833;      --line-soft:#332f2b;
-  --ink:#ece7db;       --ink-dim:#b7b0a2;   --muted:#8f887b;   --faint:#6a6459;
+  --ink:#ece7db;       --ink-dim:#b7b0a2;   --muted:#9c948a;   --faint:#837c6e;
   --coral:#d97757;     --coral-hi:#e88c6c;  --coral-deep:#bd5f3d;
   --green:#84b06e;     --amber:#dda94a;     --blue:#7fb4d1;    --violet:#a892c9;
   --shadow:0 18px 50px -22px rgba(0,0,0,.7);
   --glow:0 0 0 1px rgba(217,119,87,.35), 0 12px 40px -14px rgba(217,119,87,.35);
-  --sb:262px;
+  --sb:262px;    --on-coral:#2a1810;
 }
 [data-theme="light"]{
   --bg:#f4f1e9;        --bg-deep:#eae5d9;   --panel:#fbf9f3;
   --raised:#fffdf7;    --line:#ddd6c6;      --line-soft:#e6e0d1;
-  --ink:#2b2823;       --ink-dim:#4f4a41;   --muted:#7c7568;   --faint:#a49c8c;
-  --coral:#c15f3c;     --coral-hi:#d97757;  --coral-deep:#a34d2e;
-  --green:#5a8a44;     --amber:#a9791f;     --blue:#3d7f9e;    --violet:#7a63a8;
+  --ink:#2b2823;       --ink-dim:#4f4a41;   --muted:#6d6659;   --faint:#8d8474;
+  --coral:#b0522f;     --coral-hi:#a84c2c;  --coral-deep:#8f4224;
+  --green:#487135;     --amber:#8a6218;     --blue:#2f6f8c;    --violet:#6b539c;
   --shadow:0 18px 44px -26px rgba(80,60,40,.35);
-  --glow:0 0 0 1px rgba(193,95,60,.28), 0 12px 34px -16px rgba(193,95,60,.3);
+  --glow:0 0 0 1px rgba(176,82,47,.28), 0 12px 34px -16px rgba(176,82,47,.3);
+  --on-coral:#fff;
 }
 
 *{box-sizing:border-box;margin:0;padding:0}
@@ -59,12 +60,15 @@ body::after{
 a{color:inherit;text-decoration:none}
 ::selection{background:rgba(217,119,87,.28);color:var(--ink)}
 
+/* 키보드 포커스 — 커스텀 버튼·카드에서도 초점이 보이도록 (톤은 코랄 유지) */
+:focus-visible{outline:2px solid var(--coral);outline-offset:2px}
+
 /* ============================ LAYOUT ============================ */
 .shell{display:grid;grid-template-columns:var(--sb) minmax(0,1fr);min-height:100vh}
 
 /* ---------------------------- SIDEBAR ---------------------------- */
 .side{
-  position:sticky;top:0;align-self:start;height:100vh;
+  position:sticky;top:0;align-self:start;height:100dvh;
   border-right:1px solid var(--line);background:linear-gradient(180deg,var(--bg-deep),var(--panel));
   display:flex;flex-direction:column;z-index:40;
 }
@@ -167,7 +171,7 @@ nav{padding:14px 12px;overflow-y:auto;flex:1;scrollbar-width:thin;scrollbar-colo
   font-family:"JetBrains Mono",monospace;letter-spacing:-.01em;
 }
 .btn:hover{transform:translateY(-2px)}
-.btn--p{background:var(--coral);border-color:var(--coral);color:#fff;box-shadow:0 10px 26px -12px var(--coral)}
+.btn--p{background:var(--coral);border-color:var(--coral);color:var(--on-coral);box-shadow:0 10px 26px -12px var(--coral)}
 .btn--p:hover{background:var(--coral-hi);box-shadow:var(--glow)}
 .btn .k{opacity:.7}
 
@@ -178,6 +182,8 @@ section{scroll-margin-top:64px}
 .sec-h h2{font-size:23px;font-weight:800;letter-spacing:-.02em}
 .sec-h .note{font-family:"JetBrains Mono",monospace;font-size:11px;color:var(--faint);margin-left:auto;letter-spacing:.04em}
 .lead{color:var(--ink-dim);max-width:66ch;margin-bottom:6px}
+.lead a.more{color:var(--coral);text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--line)}
+.lead a.more:hover{text-decoration-color:var(--coral)}
 
 /* ---- overview 4 cards ---- */
 .grid4{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:20px}
@@ -185,7 +191,7 @@ section{scroll-margin-top:64px}
 .ov:hover{border-color:var(--coral);transform:translateY(-3px);box-shadow:var(--glow)}
 .ov__n{font-family:"JetBrains Mono",monospace;font-size:11px;color:var(--coral);letter-spacing:.1em}
 .ov__t{font-size:16px;font-weight:750;margin:6px 0 8px}
-.ov__d{font-size:13px;color:var(--muted);line-height:1.6}
+.ov__d{font-size:14px;color:var(--muted);line-height:1.6}
 .ov__out{margin-top:12px;font-family:"JetBrains Mono",monospace;font-size:11px;color:var(--ink-dim);display:flex;align-items:center;gap:7px}
 .ov__out .lbl{color:var(--faint)}
 .ov__out code{color:var(--green);background:rgba(132,176,110,.1);padding:1px 6px;border-radius:5px}
@@ -250,7 +256,7 @@ section{scroll-margin-top:64px}
 
 .combo{border:1px solid var(--line);border-radius:12px;background:var(--bg-deep);padding:18px 20px;margin:0 0 8px}
 .combo h3{font-size:15px;margin:0 0 8px;letter-spacing:-.01em}
-.combo p{font-size:13px;color:var(--muted);margin:0 0 12px}
+.combo p{font-size:13.5px;color:var(--muted);margin:0 0 12px}
 .combo .flow{font-family:"JetBrains Mono",monospace;font-size:12px;color:var(--ink-dim);display:flex;flex-wrap:wrap;align-items:center;gap:8px}
 .combo .flow b{color:var(--coral);background:var(--panel);border:1px solid var(--line);border-radius:7px;padding:4px 9px;font-weight:700}
 .combo .flow .ar{color:var(--faint)}
@@ -273,7 +279,7 @@ section{scroll-margin-top:64px}
 .card__t{font-size:16.5px;font-weight:750;letter-spacing:-.01em}
 .tags{margin-left:auto;display:flex;gap:5px;flex-wrap:wrap;justify-content:flex-end}
 .tag{font-family:"JetBrains Mono",monospace;font-size:10px;color:var(--ink-dim);border:1px solid var(--line);border-radius:20px;padding:2px 8px;font-style:normal;white-space:nowrap}
-.card__d{padding:0 18px 14px;font-size:13px;color:var(--muted);line-height:1.62}
+.card__d{padding:0 18px 14px;font-size:14px;color:var(--muted);line-height:1.62}
 .files{border-top:1px solid var(--line-soft);padding:8px;margin-top:auto;background:rgba(0,0,0,.08)}
 [data-theme="light"] .files{background:rgba(0,0,0,.02)}
 .sub{font-family:"JetBrains Mono",monospace;font-size:10.5px;color:var(--faint);padding:8px 8px 4px;letter-spacing:.03em}
@@ -306,7 +312,7 @@ section{scroll-margin-top:64px}
 .gl__t{font-size:14px;font-weight:700;display:flex;align-items:center;gap:7px}
 .gl__t .ext-link{font-size:11px;color:var(--faint)}
 .gl:hover .gl__t .ext-link{color:var(--blue)}
-.gl__d{font-size:12px;color:var(--muted);margin-top:3px;line-height:1.55}
+.gl__d{font-size:13px;color:var(--muted);margin-top:3px;line-height:1.55}
 
 /* ---- help ---- */
 .help-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px;margin-top:20px}
@@ -314,14 +320,14 @@ section{scroll-margin-top:64px}
 .hcard:hover{border-color:var(--coral);transform:translateY(-2px)}
 .hcard__t{font-family:"JetBrains Mono",monospace;font-size:13px;font-weight:700;color:var(--ink);display:flex;gap:8px;align-items:center}
 .hcard__t .q{color:var(--coral)}
-.hcard__d{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.55}
+.hcard__d{font-size:13px;color:var(--muted);margin-top:6px;line-height:1.55}
 
 .callout{
   margin-top:22px;border:1px solid var(--line);border-left:3px solid var(--amber);border-radius:10px;
   padding:15px 18px;background:var(--panel);display:flex;gap:13px;align-items:flex-start;
 }
 .callout .ic{color:var(--amber);font-size:17px;flex:none;line-height:1.5}
-.callout p{font-size:13px;color:var(--ink-dim)}
+.callout p{font-size:14px;color:var(--ink-dim)}
 .callout b{color:var(--ink)}
 .callout code{font-family:"JetBrains Mono",monospace;background:var(--raised);padding:1px 6px;border-radius:5px;font-size:12px;color:var(--amber)}
 
@@ -347,6 +353,8 @@ footer .ast-sm{color:var(--coral)}
   .help-grid{grid-template-columns:1fr}
 }
 @media(max-width:560px){
+  .cmdbar .stat{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0;flex:0 1 auto}
+
   .term__body{padding:24px 20px}
   .wrap,.cmdbar{padding-left:16px;padding-right:16px}
   .tt__row{grid-template-columns:112px 1fr}
@@ -386,7 +394,8 @@ footer .ast-sm{color:var(--coral)}
 
 /* code blocks */
 .md .highlight{margin:1em 0;border:1px solid var(--line);border-radius:11px;overflow:hidden;background:var(--bg-deep)}
-.md .highlight pre{margin:0;padding:15px 17px;overflow-x:auto;font-family:"JetBrains Mono",monospace;font-size:14.7px;line-height:1.7}
+.md .highlight pre,.md pre.highlight{margin:0;padding:15px 17px;overflow-x:auto;font-family:"JetBrains Mono",monospace;font-size:14.7px;line-height:1.7}
+.md pre.highlight{margin:1em 0}
 .md .highlight code{font-family:inherit;background:none;border:none;padding:0;color:var(--ink)}
 .md .highlight a{border:none}
 .md pre>code{display:block;padding:15px 17px;overflow-x:auto;border:1px solid var(--line);border-radius:11px;background:var(--bg-deep);font-family:"JetBrains Mono",monospace;font-size:14.7px;line-height:1.7}
@@ -510,7 +519,7 @@ footer .ast-sm{color:var(--coral)}
 .md h2[id="내가-안-말한-게-뭐였을까요"]::before,
 .md h2[id="그걸-채워서-다시-말해보세요"]::before,
 .md h2[id="뭐가-달라졌는지-봅니다"]::before{
-  flex:none;width:1.55em;height:1.55em;border-radius:50%;background:var(--coral);color:#fff;
+  flex:none;width:1.55em;height:1.55em;border-radius:50%;background:var(--coral);color:var(--on-coral);
   font-family:"JetBrains Mono",monospace;font-size:.6em;font-weight:800;display:flex;align-items:center;justify-content:center;
 }
 .md h2[id="먼저-여러분-문장으로-시켜보세요"]::before{content:"1"}
@@ -699,8 +708,8 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
   border:1px solid var(--coral);background:color-mix(in srgb,var(--coral) 12%,transparent);
   color:var(--coral);font-family:"JetBrains Mono",monospace;font-size:12.5px;font-weight:600;transition:.18s;
 }
-.zipbtn:hover{background:var(--coral);color:#fff;transform:translateY(-2px);box-shadow:0 10px 24px -12px var(--coral)}
+.zipbtn:hover{background:var(--coral);color:var(--on-coral);transform:translateY(-2px);box-shadow:0 10px 24px -12px var(--coral)}
 .zipbtn .sz{color:var(--faint);font-weight:400}
-.zipbtn:hover .sz{color:rgba(255,255,255,.8)}
-.zipall .hint{font-size:12px;color:var(--muted)}
+.zipbtn:hover .sz{color:var(--on-coral);opacity:.75}
+.zipall .hint{font-size:13px;color:var(--muted)}
 .card .zipbtn{width:calc(100% - 16px);justify-content:center;margin:8px;padding:9px;font-size:11.5px;border-radius:9px}
