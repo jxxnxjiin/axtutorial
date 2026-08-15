@@ -36,6 +36,22 @@
     document.addEventListener('click',function(e){ if(side.classList.contains('open')&&!e.target.closest('#side')&&!e.target.closest('#burger'))side.classList.remove('open'); });
   }
 
+  // ---- sidebar scroll 유지: 페이지 이동 시 스크롤 위치 저장/복원 ----
+  var sideNav=document.querySelector('#side nav');
+  if(sideNav){
+    try{
+      var savedTop=sessionStorage.getItem('ax-side-scroll');
+      if(savedTop!==null){ sideNav.scrollTop=+savedTop; }
+      else{
+        var act=sideNav.querySelector('.nav-a.active');
+        if(act)act.scrollIntoView({block:'center'});
+      }
+    }catch(e){}
+    window.addEventListener('pagehide',function(){
+      try{sessionStorage.setItem('ax-side-scroll',sideNav.scrollTop);}catch(e){}
+    });
+  }
+
   // ---- generic scrollspy: highlight in-page toc + nav anchors ----
   var links=[].slice.call(document.querySelectorAll('.toc a[href^="#"], .nav-a[href^="#"]'));
   var map={}; // id -> {toc:[], nav:[]}

@@ -92,6 +92,8 @@ def sidebar(cur, prefix='../', home='remote', home_rows=None):
         rows = list(home_rows) if home_rows else ['<div class="nav-h">// 홈</div>']
     else:
         rows = ['<div class="nav-h">// 홈</div>',
+                f'<a class="nav-a" href="{prefix}index.html#overview"><span class="g">◆</span> 오늘의 지도</a>',
+                f'<a class="nav-a" href="{prefix}index.html#timetable"><span class="g">◷</span> 시간표</a>',
                 f'<a class="nav-a" href="{prefix}index.html#materials"><span class="g">▤</span> 강의 자료 내려받기</a>']
     rows += _render_nodes(NAV_TREE, cur, prefix)
     return '\n'.join(rows)
