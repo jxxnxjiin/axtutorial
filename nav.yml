@@ -72,6 +72,12 @@ nav:
       - { label: "2 · 견적 통합에 응용", path: "lab7/step2.md" }
       - { label: "3 · 동료에게 넘기기", path: "lab7/step3.md" }
 
+  - group: "심화 실습 · 남의 스킬로 웹페이지 만들기"
+    children:
+      - { label: "개요", path: "advanced2/index.md", icon: "★" }
+      - { label: "1 · 스킬 없이 먼저 만들기", path: "advanced2/stage1.md" }
+      - { label: "2 · 스킬 설치하고 다시 만들기", path: "advanced2/stage2.md" }
+
   # - group: "심화 실습 · 이미지 공고 → 캐치 폼 웹앱"
   #   children:
   #     - { label: "개요", path: "advanced1/index.md", icon: "★" }

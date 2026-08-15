@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="ko" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>1 · 스킬 없이 먼저 만들기 · ax-tutor</title>
+<meta name="description" content="심화 실습 · 남의 스킬로 웹페이지 만들기 — 1 · 스킬 없이 먼저 만들기 · ax-tutor 실습 위키">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<script>/* 저장된 테마를 첫 페인트 전에 적용 — 테마 깜빡임(FOUC) 방지 */
+(function(){try{var t=localStorage.getItem('ax-theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}})()</script>
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<div class="shell">
+  <aside class="side" id="side">
+    <div class="brand">
+      <a class="brand__row" href="../index.html">
+        <span class="ast mono">✻</span>
+        <div><div class="brand__name">ax<b>-</b>tutor</div></div>
+      </a>
+      <div class="brand__sub">Claude Code · 실습 위키</div>
+      <div class="session"><span class="live">하루 완주 과정</span><span class="clock mono" id="clock">--:--</span></div>
+    </div>
+    <nav><div class="nav-h">// 홈</div>
+<a class="nav-a" href="../index.html#overview"><span class="g">◆</span> 오늘의 지도</a>
+<a class="nav-a" href="../index.html#timetable"><span class="g">◷</span> 시간표</a>
+<a class="nav-a" href="../index.html#materials"><span class="g">▤</span> 강의 자료 내려받기</a>
+<div class="nav-h">// 실습 준비</div><div class="tree">
+<a class="nav-a" href="../start/setup/index.html"><span class="g">◆</span> 개요</a>
+<a class="nav-a" href="../start/setup/vscode.html">1 · VS Code 설치</a>
+<a class="nav-a" href="../start/setup/python.html">2 · Python 설치</a>
+<a class="nav-a" href="../start/setup/nodejs.html">3 · Node.js 설치</a>
+<a class="nav-a" href="../start/setup/agent.html">4 · Claude Code 설치</a>
+<a class="nav-a" href="../start/setup/data.html">5 · 실습 데이터 준비</a>
+<a class="nav-a" href="../start/setup/autoapprove.html"><span class="g">◇</span> 부록 · 자동 허가 모드</a>
+</div>
+<div class="nav-h">// 들어가기</div><div class="tree">
+<a class="nav-a" href="../types/index.html">여섯 가지 업무 유형</a>
+</div>
+<div class="nav-h">// 실습 1 · 흩어진 주문 한 표로 모으기</div><div class="tree">
+<a class="nav-a" href="../lab1/index.html"><span class="g">◆</span> 개요</a>
+<a class="nav-a" href="../lab1/step1.html">1 · 한 표로 모으기</a>
+<a class="nav-a" href="../lab1/step2.html">2 · 원본 대조·검산</a>
+</div>
+<div class="nav-h">// 실습 2 · 계약서에서 계약종합 만들기</div><div class="tree">
+<a class="nav-a" href="../lab2/index.html"><span class="g">◆</span> 개요</a>
+<a class="nav-a" href="../lab2/step1.html">1 · 계약서 내용 종합하기</a>
+<a class="nav-a" href="../lab2/step2.html">2 · 원본 대조·검산</a>
+</div>
+<div class="nav-h">// 실습 3 · 쿠폰 성과 집계·인사이트</div><div class="tree">
+<a class="nav-a" href="../lab3/index.html"><span class="g">◆</span> 개요</a>
+<a class="nav-a" href="../lab3/step1.html">1 · 한 파일로 모으기</a>
+<a class="nav-a" href="../lab3/step2.html">2 · 성과표 채우기</a>
+<a class="nav-a" href="../lab3/step3.html">3 · 집계 검산</a>
+<a class="nav-a" href="../lab3/step4.html">4 · 인사이트·검산</a>
+</div>
+<div class="nav-h">// 실습 4 · 임원용 1페이지 보고서</div><div class="tree">
+<a class="nav-a" href="../lab4/index.html"><span class="g">◆</span> 개요</a>
+<a class="nav-a" href="../lab4/step1.html">1 · 보고서 초안 쓰기</a>
+<a class="nav-a" href="../lab4/step2.html">2 · 보고서 검산</a>
+</div>
+<div class="nav-h">// 실습 5 · 고객 문의에 딱지 붙이기</div><div class="tree">
+<a class="nav-a" href="../lab5/index.html"><span class="g">◆</span> 개요</a>
+<a class="nav-a" href="../lab5/step1.html">1 · 기준 확인·한 건 분류</a>
+<a class="nav-a" href="../lab5/step2.html">2 · 520건 일괄 분류</a>
+<a class="nav-a" href="../lab5/step3.html">3 · 분류 검산</a>
+</div>
+<div class="nav-h">// 실습 6 · 제안서 내용 검증하기</div><div class="tree">
+<a class="nav-a" href="../lab6/index.html"><span class="g">◆</span> 개요</a>
+<a class="nav-a" href="../lab6/step1.html">1 · 확인할 것 묻기</a>
+<a class="nav-a" href="../lab6/step2.html">2 · 관점별 검증</a>
+<a class="nav-a" href="../lab6/step3.html">3 · 사실로 재작성</a>
+<a class="nav-a" href="../lab6/step4.html">4 · 재검증·검사표</a>
+</div>
+<div class="nav-h">// 실습 7 · 반복작업을 재사용 스킬로 만들기</div><div class="tree">
+<a class="nav-a" href="../lab7/index.html"><span class="g">◆</span> 개요</a>
+<a class="nav-a" href="../lab7/step1.html">1 · 범용 스킬 만들기</a>
+<a class="nav-a" href="../lab7/step2.html">2 · 견적 통합에 응용</a>
+<a class="nav-a" href="../lab7/step3.html">3 · 동료에게 넘기기</a>
+</div>
+<div class="nav-h">// 심화 실습 · 남의 스킬로 웹페이지 만들기</div><div class="tree">
+<a class="nav-a" href="../advanced2/index.html"><span class="g">★</span> 개요</a>
+<a class="nav-a active" href="../advanced2/stage1.html">1 · 스킬 없이 먼저 만들기</a>
+<a class="nav-a" href="../advanced2/stage2.html">2 · 스킬 설치하고 다시 만들기</a>
+</div>
+<div class="nav-h">// 도움말</div><div class="tree">
+<a class="nav-a" href="../help/errors.html">에러가 났어요</a>
+<a class="nav-a" href="../help/glossary.html">이 말이 무슨 뜻이죠</a>
+<a class="nav-a" href="../help/how-to-ask.html">AI에게 잘 시키는 법</a>
+<a class="nav-a" href="../help/prompts.html">오늘 내가 친 문장</a>
+<a class="nav-a" href="../help/next.html">강의 끝나고 뭘 해볼까</a>
+</div></nav>
+    <div class="side__foot">
+      <button class="iconbtn" id="themeBtn" title="테마 전환"><span id="themeIc">◐</span> <span id="themeLbl">light</span></button>
+      <a class="iconbtn" href="../index.html" title="홈">↖ home</a>
+    </div>
+  </aside>
+  <main class="main">
+    <div class="cmdbar mono">
+      <button class="burger" id="burger" aria-label="메뉴">≡</button>
+      <span class="path"><b>~/ax-tutor</b> <span class="full">$ cat</span> <span class="cur">advanced2/stage1.md</span></span>
+      <span class="caret"></span><span class="spacer"></span>
+      <span class="stat">심화 실습 · 남의 스킬로 웹페이지 만들기</span>
+    </div>
+    <div class="wrap">
+      <article class="doc md rise">
+        <div class="kicker mono"><b>//</b> 심화 실습 · 남의 스킬로 웹페이지 만들기</div>
+<h1 id="1--스킬-없이-먼저-만들기">1 · 스킬 없이 먼저 만들기<a class="headerlink" href="#1--스킬-없이-먼저-만들기" title="Permanent link">&para;</a></h1>
+<p>먼저 아무 디자인 스킬 없이 페이지를 만듭니다. 이 결과가 비교의 기준선이 됩니다.</p>
+<p>한 가지 미리 말해 두면, 이 단계의 결과물은 아마 <strong>꽤 괜찮아 보일 겁니다.</strong> 그래서 이 실습이 재미있습니다. "AI가 못 만든다"가 아니라 "AI가 <strong>매번 똑같은 걸</strong> 만든다"는 것을 눈으로 확인하는 게 이 단계의 목적입니다.</p>
+<div class="admonition info">
+<p class="admonition-title">실습 7에서 만든 스킬이 폴더에 남아 있어도 괜찮습니다</p>
+<p>주문 통합용 스킬이라 웹페이지 작업에는 끼어들지 않습니다. 이 실습의 비교 조건은 <strong>디자인 스킬</strong>의 유무입니다.</p>
+</div>
+<h2 id="직접-시켜보세요">직접 시켜보세요<a class="headerlink" href="#직접-시켜보세요" title="Permanent link">&para;</a></h2>
+<p><a href="index.html">개요</a>에서 준비한 실습 폴더를 VS Code로 열고 시작합니다. 프롬프트가 참고하는 <code>2.제품사양서.xlsx</code>가 그 폴더에 있어야 합니다.</p>
+<p>아래 프롬프트를 그대로 복사해 보내세요. 2단계에서 <strong>한 글자도 바꾸지 않고</strong> 다시 쓸 거라서, 이번만큼은 여러분 문장으로 바꾸지 말고 그대로 씁니다.</p>
+<div class="admonition quote">
+<p class="admonition-title">시연용 프롬프트 (1·2단계 공통)</p>
+<div class="highlight"><pre><span></span><code>2.제품사양서.xlsx를 참고해서, 우리 회사(한울로보틱스)의
+산업용 협동로봇 제품 소개 페이지를 만들어줘.
+고객사 담당자에게 링크로 보낼 페이지야. 요즘 스타일로 세련되게, 테크 기업 느낌으로.
+
+섹션은 이 정도로: 히어로, 제품 라인업, 도입 효과,
+도입 절차, 고객 사례, 자주 묻는 질문, 문의.
+숫자는 사양서에 있는 값만 쓰고, 없는 값은 지어내지 마.
+
+만드는 방법:
+- 2.비교용/before/ 폴더에 HTML 파일 하나로. CSS와 JS를 그 파일 안에 넣어서,
+  설치나 빌드 없이 더블클릭하면 바로 열리게.
+- 데스크톱 1440px 기준으로 만들고, 모바일에서도 안 깨지게.
+- 한글이 깨지지 않게 폰트를 처리해줘.
+</code></pre></div>
+</div>
+<div class="admonition info">
+<p class="admonition-title">왜 HTML 파일 하나로 만드나요?</p>
+<p>제대로 된 웹사이트는 보통 설치와 빌드 과정이 있는 프로젝트로 만듭니다. 하지만 이 실습의 목적은 <strong>스킬 유무에 따른 결과 비교</strong>라서, 더블클릭 한 번으로 열리는 파일 하나가 가장 빠르고 확실합니다. 파일 하나도 엄연한 웹페이지입니다. 나중에 진짜로 고객사에 보내려면 이 파일을 회사 서버나 호스팅 서비스에 올려 주소만 받으면 됩니다.</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">이런 결과가 보이면 정상입니다</p>
+<ul>
+<li><code>2.비교용/before/</code>에 HTML 파일이 생겼고, 더블클릭하면 브라우저에서 열립니다</li>
+<li>첫인상이 그럴듯합니다. "오, 괜찮은데?" 싶은 상태 그대로 다음 절로 넘어가세요</li>
+</ul>
+</div>
+<h2 id="실행-예시">실행 예시<a class="headerlink" href="#실행-예시" title="Permanent link">&para;</a></h2>
+<div class="admonition example">
+<p class="admonition-title">이렇게 나오면 됩니다</p>
+<p><figure style="margin:0">
+  <img src="../images/advanced2/stage1-before.png" alt="stage1-before.png" style="width:100%;height:auto;display:block">
+  <figcaption style="text-align:center;font-size:0.85em;color:#888;margin-top:6px">스킬 없이 만든 Before 페이지</figcaption>
+</figure></p>
+</div>
+<h2 id="ai-티-찾아보기">AI 티 찾아보기<a class="headerlink" href="#ai-티-찾아보기" title="Permanent link">&para;</a></h2>
+<p>방금 만든 페이지를 열어 두고, 아래 목록과 대조해 보세요. 이 목록은 2단계에서 설치할 스킬이 실제로 금지하는 항목들입니다. 몇 개나 해당하는지 세어 보세요.</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 배경이나 버튼에 <strong>보라색·파란색 그라데이션</strong>이 있다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 히어로(첫 화면)가 <strong>가운데 정렬</strong>이고, 제목 아래 버튼 두 개가 나란히 있다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 기능·효과가 <strong>똑같은 크기의 카드 3개</strong>로 나란히 놓여 있다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 고객 사례에 <strong>"김OO 물류팀장"</strong> 같은 무난한 가상 인물이 등장한다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>99%, 50% 감소</strong> 같은 딱 떨어지는 숫자가 있다 (사양서에 없는 값이면 실습 6에서 잡던 바로 그 "지어낸 숫자"입니다)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 섹션마다 제목 위에 <strong>작은 대문자 라벨</strong>이 반복된다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 제품 화면이 있어야 할 자리에 <strong>네모 상자로 흉내 낸 가짜 화면</strong>이 있다</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">이게 왜 '티'인가요?</p>
+<p>하나하나는 흠이 아닙니다. 문제는 <strong>어떤 주제를 시켜도 이 조합이 똑같이 나온다</strong>는 것입니다. AI는 학습한 것 중 가장 무난한 평균을 뱉는데, 웹 디자인에서 그 평균이 바로 이 목록입니다. 그래서 AI가 만든 페이지끼리는 회사가 달라도 서로 닮아 있습니다.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">글에도 똑같은 티가 있습니다</p>
+<p>2단계에서 설치할 스킬의 금지 목록에는 <strong>줄표(—) 남용 금지</strong>도 들어 있습니다. AI가 쓴 글에서 자주 보이는 바로 그 버릇입니다. AI 티는 디자인에도 글에도 같은 방식으로 남습니다.</p>
+</div>
+<h2 id="체크포인트">체크포인트<a class="headerlink" href="#체크포인트" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>2.비교용/before/</code>에 HTML 파일이 생겼고 더블클릭으로 열린다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 위 목록에서 <strong>3개 이상</strong>을 내 결과물에서 직접 찾았다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 페이지의 숫자 중 사양서에 없는 값이 있는지 확인했다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 이 파일을 지우지 않고 그대로 두었다 (2단계에서 나란히 비교)</li>
+</ul>
+<nav class="pager">
+<a class="prev" href="../advanced2/index.html"><span class="lbl">← 이전</span><span class="ttl">개요</span></a>
+<a class="next" href="../advanced2/stage2.html"><span class="lbl">다음 →</span><span class="ttl">2 · 스킬 설치하고 다시 만들기</span></a>
+</nav>
+      </article>
+      <aside class="toc mono"><h4>On this page</h4>
+<a href="#1--스킬-없이-먼저-만들기">1 · 스킬 없이 먼저 만들기</a>
+<a href="#직접-시켜보세요">직접 시켜보세요</a>
+<a href="#실행-예시">실행 예시</a>
+<a href="#ai-티-찾아보기">AI 티 찾아보기</a>
+<a href="#체크포인트">체크포인트</a></aside>
+    </div>
+  </main>
+</div>
+<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';mermaid.initialize({startOnLoad:true,securityLevel:'loose'});</script>
+<script src="../assets/site.js"></script>
+</body>
+</html>

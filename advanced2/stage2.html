@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="ko" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2 · 스킬 설치하고 다시 만들기 · ax-tutor</title>
+<meta name="description" content="심화 실습 · 남의 스킬로 웹페이지 만들기 — 2 · 스킬 설치하고 다시 만들기 · ax-tutor 실습 위키">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<script>/* 저장된 테마를 첫 페인트 전에 적용 — 테마 깜빡임(FOUC) 방지 */
+(function(){try{var t=localStorage.getItem('ax-theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}})()</script>
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<div class="shell">
+  <aside class="side" id="side">
+    <div class="brand">
+      <a class="brand__row" href="../index.html">
+        <span class="ast mono">✻</span>
+        <div><div class="brand__name">ax<b>-</b>tutor</div></div>
+      </a>
+      <div class="brand__sub">Claude Code · 실습 위키</div>
+      <div class="session"><span class="live">하루 완주 과정</span><span class="clock mono" id="clock">--:--</span></div>
+    </div>
+    <nav><div class="nav-h">// 홈</div>
+<a class="nav-a" href="../index.html#overview"><span class="g">◆</span> 오늘의 지도</a>
+<a class="nav-a" href="../index.html#timetable"><span class="g">◷</span> 시간표</a>
+<a class="nav-a" href="../index.html#materials"><span class="g">▤</span> 강의 자료 내려받기</a>
+<div class="nav-h">// 실습 준비</div><div class="tree">
+<a class="nav-a" href="../start/setup/index.html"><span class="g">◆</span> 개요</a>
+<a class="nav-a" href="../start/setup/vscode.html">1 · VS Code 설치</a>
+<a class="nav-a" href="../start/setup/python.html">2 · Python 설치</a>
+<a class="nav-a" href="../start/setup/nodejs.html">3 · Node.js 설치</a>
+<a class="nav-a" href="../start/setup/agent.html">4 · Claude Code 설치</a>
+<a class="nav-a" href="../start/setup/data.html">5 · 실습 데이터 준비</a>
+<a class="nav-a" href="../start/setup/autoapprove.html"><span class="g">◇</span> 부록 · 자동 허가 모드</a>
+</div>
+<div class="nav-h">// 들어가기</div><div class="tree">
+<a class="nav-a" href="../types/index.html">여섯 가지 업무 유형</a>
+</div>
+<div class="nav-h">// 실습 1 · 흩어진 주문 한 표로 모으기</div><div class="tree">
+<a class="nav-a" href="../lab1/index.html"><span class="g">◆</span> 개요</a>
+<a class="nav-a" href="../lab1/step1.html">1 · 한 표로 모으기</a>
+<a class="nav-a" href="../lab1/step2.html">2 · 원본 대조·검산</a>
+</div>
+<div class="nav-h">// 실습 2 · 계약서에서 계약종합 만들기</div><div class="tree">
+<a class="nav-a" href="../lab2/index.html"><span class="g">◆</span> 개요</a>
+<a class="nav-a" href="../lab2/step1.html">1 · 계약서 내용 종합하기</a>
+<a class="nav-a" href="../lab2/step2.html">2 · 원본 대조·검산</a>
+</div>
+<div class="nav-h">// 실습 3 · 쿠폰 성과 집계·인사이트</div><div class="tree">
+<a class="nav-a" href="../lab3/index.html"><span class="g">◆</span> 개요</a>
+<a class="nav-a" href="../lab3/step1.html">1 · 한 파일로 모으기</a>
+<a class="nav-a" href="../lab3/step2.html">2 · 성과표 채우기</a>
+<a class="nav-a" href="../lab3/step3.html">3 · 집계 검산</a>
+<a class="nav-a" href="../lab3/step4.html">4 · 인사이트·검산</a>
+</div>
+<div class="nav-h">// 실습 4 · 임원용 1페이지 보고서</div><div class="tree">
+<a class="nav-a" href="../lab4/index.html"><span class="g">◆</span> 개요</a>
+<a class="nav-a" href="../lab4/step1.html">1 · 보고서 초안 쓰기</a>
+<a class="nav-a" href="../lab4/step2.html">2 · 보고서 검산</a>
+</div>
+<div class="nav-h">// 실습 5 · 고객 문의에 딱지 붙이기</div><div class="tree">
+<a class="nav-a" href="../lab5/index.html"><span class="g">◆</span> 개요</a>
+<a class="nav-a" href="../lab5/step1.html">1 · 기준 확인·한 건 분류</a>
+<a class="nav-a" href="../lab5/step2.html">2 · 520건 일괄 분류</a>
+<a class="nav-a" href="../lab5/step3.html">3 · 분류 검산</a>
+</div>
+<div class="nav-h">// 실습 6 · 제안서 내용 검증하기</div><div class="tree">
+<a class="nav-a" href="../lab6/index.html"><span class="g">◆</span> 개요</a>
+<a class="nav-a" href="../lab6/step1.html">1 · 확인할 것 묻기</a>
+<a class="nav-a" href="../lab6/step2.html">2 · 관점별 검증</a>
+<a class="nav-a" href="../lab6/step3.html">3 · 사실로 재작성</a>
+<a class="nav-a" href="../lab6/step4.html">4 · 재검증·검사표</a>
+</div>
+<div class="nav-h">// 실습 7 · 반복작업을 재사용 스킬로 만들기</div><div class="tree">
+<a class="nav-a" href="../lab7/index.html"><span class="g">◆</span> 개요</a>
+<a class="nav-a" href="../lab7/step1.html">1 · 범용 스킬 만들기</a>
+<a class="nav-a" href="../lab7/step2.html">2 · 견적 통합에 응용</a>
+<a class="nav-a" href="../lab7/step3.html">3 · 동료에게 넘기기</a>
+</div>
+<div class="nav-h">// 심화 실습 · 남의 스킬로 웹페이지 만들기</div><div class="tree">
+<a class="nav-a" href="../advanced2/index.html"><span class="g">★</span> 개요</a>
+<a class="nav-a" href="../advanced2/stage1.html">1 · 스킬 없이 먼저 만들기</a>
+<a class="nav-a active" href="../advanced2/stage2.html">2 · 스킬 설치하고 다시 만들기</a>
+</div>
+<div class="nav-h">// 도움말</div><div class="tree">
+<a class="nav-a" href="../help/errors.html">에러가 났어요</a>
+<a class="nav-a" href="../help/glossary.html">이 말이 무슨 뜻이죠</a>
+<a class="nav-a" href="../help/how-to-ask.html">AI에게 잘 시키는 법</a>
+<a class="nav-a" href="../help/prompts.html">오늘 내가 친 문장</a>
+<a class="nav-a" href="../help/next.html">강의 끝나고 뭘 해볼까</a>
+</div></nav>
+    <div class="side__foot">
+      <button class="iconbtn" id="themeBtn" title="테마 전환"><span id="themeIc">◐</span> <span id="themeLbl">light</span></button>
+      <a class="iconbtn" href="../index.html" title="홈">↖ home</a>
+    </div>
+  </aside>
+  <main class="main">
+    <div class="cmdbar mono">
+      <button class="burger" id="burger" aria-label="메뉴">≡</button>
+      <span class="path"><b>~/ax-tutor</b> <span class="full">$ cat</span> <span class="cur">advanced2/stage2.md</span></span>
+      <span class="caret"></span><span class="spacer"></span>
+      <span class="stat">심화 실습 · 남의 스킬로 웹페이지 만들기</span>
+    </div>
+    <div class="wrap">
+      <article class="doc md rise">
+        <div class="kicker mono"><b>//</b> 심화 실습 · 남의 스킬로 웹페이지 만들기</div>
+<h1 id="2--스킬-설치하고-다시-만들기">2 · 스킬 설치하고 다시 만들기<a class="headerlink" href="#2--스킬-설치하고-다시-만들기" title="Permanent link">&para;</a></h1>
+<p>이제 남이 만든 스킬을 가져와 설치하고, 1단계와 <strong>똑같은 프롬프트</strong>를 다시 보냅니다.</p>
+<h2 id="스킬-설치하기">스킬 설치하기<a class="headerlink" href="#스킬-설치하기" title="Permanent link">&para;</a></h2>
+<p>실습 7에서 여러분의 스킬을 받은 동료가 한 일을 떠올려 보세요. zip을 풀어 <code>.claude/skills/</code> 폴더에 넣는 것이 전부였습니다. 남의 스킬을 가져올 때도 똑같습니다. 방법은 두 가지인데 결과는 같습니다.</p>
+<p><strong>방법 1 · 명령어 한 줄 (인터넷이 되는 경우)</strong></p>
+<p>터미널에 아래를 입력합니다.</p>
+<div class="highlight"><pre><span></span><code>npx<span class="w"> </span>skills<span class="w"> </span>add<span class="w"> </span>https://github.com/Leonxlnx/taste-skill<span class="w"> </span>--skill<span class="w"> </span><span class="s2">&quot;design-taste-frontend&quot;</span>
+</code></pre></div>
+<p>실행 중에 어떤 도구에 설치할지 물으면 <strong>Claude Code</strong>를, 범위를 물으면 <strong>현재 프로젝트</strong>를 고르세요. 끝나면 설치된 경로가 출력됩니다. 명령이 실패하거나 사내망이라 막히면 방법 2로 진행하면 됩니다.</p>
+<p><strong>방법 2 · 파일 복사 (실습 7에서 zip을 받았을 때와 같은 방식)</strong></p>
+<p>GitHub 저장소의 <code>skills/taste-skill/SKILL.md</code> 파일을 열어 <strong>Raw</strong> 버튼으로 내려받습니다. 그리고 내 작업 폴더에 아래 폴더를 만들어 그 안에 <code>SKILL.md</code>로 저장합니다. 실습 7에서 배운 대로, <strong>폴더 이름이 곧 스킬 이름</strong>이 됩니다.</p>
+<div class="highlight"><pre><span></span><code>심화실습/
+└─ .claude/
+    └─ skills/
+        └─ design-taste-frontend/
+            └─ SKILL.md
+</code></pre></div>
+<div class="admonition success">
+<p class="admonition-title">설치가 됐는지 확인</p>
+<p>위 경로(방법 1이라면 명령이 출력한 경로)에 <code>SKILL.md</code>가 있으면 끝입니다. 별도의 실행이나 등록은 없습니다.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">실습 7과 부르는 방식이 다릅니다</p>
+<p>실습 7에서는 "데이터통합 스킬로 합쳐줘"처럼 <strong>이름을 불러</strong> 썼습니다. 이번 스킬은 웹페이지를 만드는 작업이 오면 AI가 <strong>스스로 찾아 읽도록</strong> 만들어져 있어, 이름을 부르지 않아도 됩니다. 스킬마다 발동 방식이 조금씩 다르고, 그건 스킬을 만든 사람이 정해 둔 것입니다.</p>
+</div>
+<h2 id="설치한-스킬-구경하기">설치한 스킬 구경하기<a class="headerlink" href="#설치한-스킬-구경하기" title="Permanent link">&para;</a></h2>
+<p>다시 만들기 전에, 방금 넣은 <code>SKILL.md</code>를 한번 열어 스크롤해 보세요. 세 군데만 보면 됩니다.</p>
+<ul>
+<li><strong>AI TELLS(금지 목록)</strong> — 1단계에서 여러분이 찾은 티들이 항목별로 적혀 있습니다. 보라 그라데이션, 3열 균등 카드, 가상 인물 후기, 지어낸 숫자까지. 어떤 색이 금지인지 색상 코드까지 못 박혀 있습니다.</li>
+<li><strong>FINAL PRE-FLIGHT CHECK(출고 전 검사)</strong> — 만들고 나서 스스로 검사할 항목 목록입니다. 하나라도 걸리면 다시 만들라고 적혀 있습니다. 지금까지 실습 내내 해 온 <strong>검산을 스킬 안에 미리 넣어둔 것</strong>입니다.</li>
+<li><strong>다이얼 세 개</strong> — <code>DESIGN_VARIANCE</code>(디자인 파격), <code>MOTION_INTENSITY</code>(움직임), <code>VISUAL_DENSITY</code>(밀도)라는 1~10 눈금 세 개가 정의돼 있습니다. AI가 작업 전에 이 값부터 정하고 시작합니다.</li>
+</ul>
+<p>읽다 보면 알게 됩니다. 이 파일은 코드가 아니라 <strong>잘 정리된 잔소리</strong>입니다. 여러분이 실습 7에서 주문 통합 규칙을 적었듯, 어느 디자이너가 자기 기준을 적어둔 것뿐입니다.</p>
+<h2 id="같은-프롬프트로-다시-시키기">같은 프롬프트로 다시 시키기<a class="headerlink" href="#같은-프롬프트로-다시-시키기" title="Permanent link">&para;</a></h2>
+<p><strong>반드시 새 대화를 시작한 뒤</strong> 보내세요. 스킬 목록은 대화를 시작할 때 읽히기 때문에, 1단계 대화에 이어서 보내면 새로 설치한 스킬이 반영되지 않을 수 있습니다.</p>
+<p>1단계 프롬프트를 그대로 복사해 보내되, 저장 위치만 <code>2.비교용/after/</code>로 바꿉니다. 바뀌는 건 그 한 줄뿐입니다.</p>
+<div class="admonition info">
+<p class="admonition-title">결과보다 먼저 눈여겨볼 것</p>
+<p>스킬이 제대로 걸렸다면, 페이지를 만들기 전에 AI가 <strong>무엇을 만들지 먼저 선언합니다.</strong> 이 페이지를 어떤 성격의 페이지로 읽었는지 말하고, 다이얼 세 개의 값을 정하고 시작합니다.</p>
+<p>지금까지는 시키면 바로 만들었는데, 이제 <strong>만들기 전에 판단부터</strong> 합니다. 스킬이 그렇게 시킨 것입니다. 이 선언이 안 보이면 스킬이 안 읽힌 것입니다. 설치 경로를 확인하고, 경로가 맞는데도 안 보이면 대화를 새로 시작했는지 확인하세요.</p>
+</div>
+<h2 id="실행-예시">실행 예시<a class="headerlink" href="#실행-예시" title="Permanent link">&para;</a></h2>
+<div class="admonition example">
+<p class="admonition-title">이렇게 나오면 됩니다</p>
+<p><figure style="margin:0">
+  <img src="../images/advanced2/stage2-declare.png" alt="stage2-declare.png" style="width:100%;height:auto;display:block">
+  <figcaption style="text-align:center;font-size:0.85em;color:#888;margin-top:6px">만들기 전에 판단부터: 스킬의 선언과 다이얼 값</figcaption>
+</figure></p>
+</div>
+<h2 id="나란히-비교하기">나란히 비교하기<a class="headerlink" href="#나란히-비교하기" title="Permanent link">&para;</a></h2>
+<p>브라우저 창 두 개를 좌우로 띄웁니다. 왼쪽에 <code>before/</code>, 오른쪽에 <code>after/</code>. 1단계의 티 목록을 다시 꺼내 하나씩 대조해 보세요.</p>
+<div class="admonition success">
+<p class="admonition-title">이런 결과가 보이면 정상입니다</p>
+<ul>
+<li>색·글꼴·첫 화면 구성이 1단계와 <strong>눈에 띄게</strong> 다릅니다</li>
+<li>1단계에서 체크한 티 중 <strong>대부분이 오른쪽에는 없습니다</strong></li>
+<li>페이지의 숫자가 여전히 사양서 값과 일치합니다 (스킬은 디자인만 바꿉니다. 지어내지 않기는 여러분 프롬프트가 지키는 것입니다)</li>
+</ul>
+</div>
+<h2 id="실행-예시_1">실행 예시<a class="headerlink" href="#실행-예시_1" title="Permanent link">&para;</a></h2>
+<div class="admonition example">
+<p class="admonition-title">이렇게 나오면 됩니다</p>
+<p><figure style="margin:0">
+  <img src="../images/advanced2/stage2-compare.png" alt="stage2-compare.png" style="width:100%;height:auto;display:block">
+  <figcaption style="text-align:center;font-size:0.85em;color:#888;margin-top:6px">왼쪽 before · 오른쪽 after 나란히 비교</figcaption>
+</figure></p>
+</div>
+<h2 id="만든-페이지는-어떻게-보여주나요">만든 페이지는 어떻게 보여주나요?<a class="headerlink" href="#만든-페이지는-어떻게-보여주나요" title="Permanent link">&para;</a></h2>
+<p>여기서 의문이 하나 남습니다. 팀장님은 "링크로 보낼 페이지"를 시켰는데, 지금 손에 있는 건 내 폴더의 파일입니다.</p>
+<p>가장 빠른 답은 실습 7에서 이미 해 봤습니다. <strong>파일째 보내는 것</strong>입니다. CSS와 JS가 전부 한 파일 안에 있어서, 메신저나 메일로 보내면 받은 사람도 더블클릭 한 번으로 똑같이 봅니다. 사내 검토나 시안 공유는 이걸로 충분합니다.</p>
+<p>진짜 주소(링크)가 필요해지면 그때 이 파일을 회사 서버나 웹 호스팅 서비스에 올리면 됩니다. 파일은 이미 완성돼 있으니, 올리는 방법 역시 AI에게 시키면 되는 다음 업무일 뿐입니다.</p>
+<h2 id="더-해보기--대화로-조율하기">더 해보기 · 대화로 조율하기<a class="headerlink" href="#더-해보기--대화로-조율하기" title="Permanent link">&para;</a></h2>
+<p>시간이 남으면 After 대화에 이어서 이렇게 보내 보세요. 아까 구경한 다이얼 두 개를 직접 움직여 보는 것입니다.</p>
+<div class="highlight"><pre><span></span><code>DESIGN_VARIANCE를 9로, MOTION_INTENSITY를 8로 올려서 다시 만들어줘.
+</code></pre></div>
+<p>파일을 한 줄도 안 고치고 대화만으로 같은 스킬의 톤이 확 바뀝니다. 남의 스킬도 <strong>가져온 다음 내 취향으로 조율</strong>할 수 있다는 뜻입니다.</p>
+<h2 id="체크포인트">체크포인트<a class="headerlink" href="#체크포인트" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>.claude/skills/design-taste-frontend/SKILL.md</code>가 제 위치에 있다 (방법 1이라면 명령이 출력한 경로)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>새 대화</strong>에서 다시 만들었고, AI가 <strong>만들기 전에 판단(선언)부터</strong> 하는 것을 봤다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> before/after를 나란히 띄워 1단계 티 목록으로 대조했다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> after의 숫자도 사양서 값과 맞는지 확인했다</li>
+</ul>
+<h2 id="마무리하며">마무리하며<a class="headerlink" href="#마무리하며" title="Permanent link">&para;</a></h2>
+<p>이 과정 전체를 한 문장으로 접으면 이렇습니다.</p>
+<p>실습 1~6에서 <strong>일을 잘 시키고 검산하는 법</strong>을 익혔고, 실습 7에서 그 절차를 <strong>스킬로 만들어 넘겼고</strong>, 오늘 <strong>남이 만든 스킬을 가져와 썼습니다.</strong> 만들 줄 알고 가져올 줄 알면, 처음 보는 업무 앞에서 맨손으로 시작할 일이 없습니다.</p>
+<p>여러분이 다음에 할 일은 하나입니다. 반복되는 업무를 만나면, 시키기 전에 먼저 찾아보세요. 누군가 이미 적어뒀을 수 있습니다.</p>
+<nav class="pager">
+<a class="prev" href="../advanced2/stage1.html"><span class="lbl">← 이전</span><span class="ttl">1 · 스킬 없이 먼저 만들기</span></a>
+<a class="next" href="../help/errors.html"><span class="lbl">다음 →</span><span class="ttl">에러가 났어요</span></a>
+</nav>
+      </article>
+      <aside class="toc mono"><h4>On this page</h4>
+<a href="#2--스킬-설치하고-다시-만들기">2 · 스킬 설치하고 다시 만들기</a>
+<a href="#스킬-설치하기">스킬 설치하기</a>
+<a href="#설치한-스킬-구경하기">설치한 스킬 구경하기</a>
+<a href="#같은-프롬프트로-다시-시키기">같은 프롬프트로 다시 시키기</a>
+<a href="#실행-예시">실행 예시</a>
+<a href="#나란히-비교하기">나란히 비교하기</a>
+<a href="#실행-예시_1">실행 예시</a>
+<a href="#만든-페이지는-어떻게-보여주나요">만든 페이지는 어떻게 보여주나요?</a>
+<a href="#더-해보기--대화로-조율하기">더 해보기 · 대화로 조율하기</a>
+<a href="#체크포인트">체크포인트</a>
+<a href="#마무리하며">마무리하며</a></aside>
+    </div>
+  </main>
+</div>
+<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';mermaid.initialize({startOnLoad:true,securityLevel:'loose'});</script>
+<script src="../assets/site.js"></script>
+</body>
+</html>
