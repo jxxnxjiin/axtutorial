@@ -20,6 +20,8 @@
         <span style="color:var(--muted)">강의 진행 중</span><span class="clock mono" id="clock">--:--</span></div>
     </div>
     <nav><div class="nav-h">// 홈</div>
+<a class="nav-a" href="../index.html#overview"><span class="g">◆</span> 오늘의 지도</a>
+<a class="nav-a" href="../index.html#timetable"><span class="g">◷</span> 시간표</a>
 <a class="nav-a" href="../index.html#materials"><span class="g">▤</span> 강의 자료 내려받기</a>
 <div class="nav-h">// 실습 준비</div><div class="tree">
 <a class="nav-a" href="../start/setup/index.html"><span class="g">◆</span> 개요</a>
@@ -96,13 +98,13 @@
       <article class="doc md rise">
         <div class="kicker mono"><b>//</b> 실습 2 · 계약서에서 계약종합 만들기</div>
 <h1 id="1--계약서-내용-종합하기">1 · 계약서 내용 종합하기<a class="headerlink" href="#1--계약서-내용-종합하기" title="Permanent link">&para;</a></h1>
-<p>계약서 8건에서 아래 6개 항목을 뽑아 하나의 엑셀 파일로 정리합니다. 한 계약이 한 줄입니다.</p>
+<p>계약서 PDF를 하나 열어 보세요. 어디에도 표가 없는 줄글이고, 같은 금액도 '₩9,000,000'과 '금 구백만원정'처럼 문서마다 다르게 적혀 있습니다. AI는 이런 문서에서 항목을 뽑아 표로 만드는 일을 생각보다 빨리 해내지만, 함정이 있습니다 — 안 적힌 항목을 그럴듯하게 채워 넣는 것입니다. 그래서 뽑을 항목 6개를 못 박고 "없으면 비워둬"를 함께 넘겨, 계약서 8건을 한 계약 한 줄의 엑셀로 정리합니다.</p>
 <h2 id="뽑을-항목-여섯-개">뽑을 항목 여섯 개<a class="headerlink" href="#뽑을-항목-여섯-개" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p>계약번호 / 계약명 / 상대방 / 계약기간 / 금액 / 자동갱신 여부</p>
 </blockquote>
 <h2 id="직접-시켜보세요">직접 시켜보세요<a class="headerlink" href="#직접-시켜보세요" title="Permanent link">&para;</a></h2>
-<p>여러분 문장으로 AI에게 시킵니다. 아래 두 체크리스트를 먼저 읽고, 빠진 규칙이 없도록 프롬프트에 담으세요.</p>
+<p>여러분 문장으로 AI에게 시킵니다. 아래 두 체크리스트를 먼저 읽고 빠진 규칙이 없도록 프롬프트에 담으세요.</p>
 <h2 id="프롬프트에-꼭-담을-것-">프롬프트에 꼭 담을 것 ✅<a class="headerlink" href="#프롬프트에-꼭-담을-것-" title="Permanent link">&para;</a></h2>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>뽑을 항목</strong> — 계약번호·계약명·계약 상대·계약기간·금액·자동갱신 여부</li>
@@ -121,11 +123,12 @@
 <p>여러분 문장을 먼저 보낸 뒤에 열어보세요.</p>
 <details class="example">
 <summary>이렇게 시킬 수 있습니다</summary>
-<pre class="highlight"><code>이 폴더의 계약서 8건을 전부 읽고, 한 계약당 한 줄로 계약종합.xlsx에 정리해줘.
+<div class="highlight"><pre><span></span><code>이 폴더의 계약서 8건을 전부 읽고, 한 계약당 한 줄로 계약종합.xlsx에 정리해줘.
 각 줄에 계약번호·계약명·계약 상대·계약기간·금액·자동갱신 여부 6개 항목을 채워.
 계약서에 안 적힌 항목은 지어내지 말고 빈칸으로 두고, 특히 금액 조항이 없으면 0이 아니라 빈칸으로 남겨.
 항목을 마음대로 더하거나 바꾸지 말고 위 6개만 뽑아줘.
-다 되면 몇 건을 정리했는지와 빈칸으로 남긴 칸이 있는 계약을 알려줘.</code></pre>
+다 되면 몇 건을 정리했는지와 빈칸으로 남긴 칸이 있는 계약을 알려줘.
+</code></pre></div>
 </details>
 <h2 id="실행-예시">실행 예시<a class="headerlink" href="#실행-예시" title="Permanent link">&para;</a></h2>
 <div class="admonition example">

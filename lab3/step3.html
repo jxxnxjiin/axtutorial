@@ -20,6 +20,8 @@
         <span style="color:var(--muted)">강의 진행 중</span><span class="clock mono" id="clock">--:--</span></div>
     </div>
     <nav><div class="nav-h">// 홈</div>
+<a class="nav-a" href="../index.html#overview"><span class="g">◆</span> 오늘의 지도</a>
+<a class="nav-a" href="../index.html#timetable"><span class="g">◷</span> 시간표</a>
 <a class="nav-a" href="../index.html#materials"><span class="g">▤</span> 강의 자료 내려받기</a>
 <div class="nav-h">// 실습 준비</div><div class="tree">
 <a class="nav-a" href="../start/setup/index.html"><span class="g">◆</span> 개요</a>
@@ -96,9 +98,9 @@
       <article class="doc md rise">
         <div class="kicker mono"><b>//</b> 실습 3 · 쿠폰 성과 집계·인사이트</div>
 <h1 id="3--집계-검산">3 · 집계 검산<a class="headerlink" href="#3--집계-검산" title="Permanent link">&para;</a></h1>
-<p>집계표가 깔끔해 보여도 그대로 믿으면 안 됩니다. 취소 한 뭉치가 섞이거나 평균을 잘못 내면, <strong>밑지는 쿠폰이 남는 쿠폰으로 둔갑합니다.</strong> 사람이 9천 건을 셀 수 없으니, AI에게 <strong>집계를 스스로 검산</strong>하게 하여 함정을 잡습니다.</p>
+<p>2단계에서 성과표 44줄이 깔끔하게 채워졌습니다. 그런데 이 표를 근거로 쿠폰을 접고 늘리는 결정이 내려질 텐데, 취소 한 뭉치가 섞이거나 평균을 잘못 내면 <strong>밑지는 쿠폰이 남는 쿠폰으로 둔갑합니다.</strong> 사람이 9천 건을 다시 셀 수는 없으니, AI에게 되물어서 숫자로 증명시킵니다 — 이게 집계를 신뢰할 수 있는 자산으로 바꾸는 습관입니다.</p>
 <h2 id="직접-시켜보세요">직접 시켜보세요<a class="headerlink" href="#직접-시켜보세요" title="Permanent link">&para;</a></h2>
-<p>2단계에서 채운 성과표를 1단계 통합 파일과 놓고, 아래 내용을 AI에게 검증시킵니다.</p>
+<p>2단계에서 채운 성과표를 1단계 통합 파일과 놓고 아래 내용을 AI에게 검증시킵니다.</p>
 <h2 id="검증에-포함해볼-것-">검증에 포함해볼 것 ✅<a class="headerlink" href="#검증에-포함해볼-것-" title="Permanent link">&para;</a></h2>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>필터 확인</strong> — 사용건수 총합이 결제완료 <strong>8,322건</strong>과 맞는지 (초과면 취소가 섞인 것)</li>
@@ -115,12 +117,13 @@
 <p>여러분 문장을 먼저 보낸 뒤에 열어보세요.</p>
 <details class="example">
 <summary>이렇게 물어볼 수 있습니다</summary>
-<pre class="highlight"><code>채운 쿠폰별성과표를 1단계에서 만든 주문종합.xlsx와 대조해서 스스로 검산해줘.
-1) 성과표 사용건수의 총합이 원본의 '결제완료' 건수와 정확히 같은지 숫자로 보여줘.
+<div class="highlight"><pre><span></span><code>채운 쿠폰별성과표를 1단계에서 만든 주문종합.xlsx와 대조해서 스스로 검산해줘.
+1) 성과표 사용건수의 총합이 원본의 &#39;결제완료&#39; 건수와 정확히 같은지 숫자로 보여줘.
 2) 취소 건이 집계에 섞여 있지 않은지 확인해줘.
 3) 전체 순이익률을 낼 때 쿠폰별 비율의 단순평균이 아니라, 총순이익÷총매출로 냈는지 확인해줘.
 4) 순이익이 마이너스인 적자 쿠폰을 원본에서 다시 세서 목록으로 알려줘.
-맞다고 단정하지 말고, 어긋난 쿠폰은 코드로 짚어줘.</code></pre>
+맞다고 단정하지 말고, 어긋난 쿠폰은 코드로 짚어줘.
+</code></pre></div>
 </details>
 <h2 id="실행-예시">실행 예시<a class="headerlink" href="#실행-예시" title="Permanent link">&para;</a></h2>
 <div class="admonition example">

@@ -20,6 +20,8 @@
         <span style="color:var(--muted)">강의 진행 중</span><span class="clock mono" id="clock">--:--</span></div>
     </div>
     <nav><div class="nav-h">// 홈</div>
+<a class="nav-a" href="../index.html#overview"><span class="g">◆</span> 오늘의 지도</a>
+<a class="nav-a" href="../index.html#timetable"><span class="g">◷</span> 시간표</a>
 <a class="nav-a" href="../index.html#materials"><span class="g">▤</span> 강의 자료 내려받기</a>
 <div class="nav-h">// 실습 준비</div><div class="tree">
 <a class="nav-a" href="../start/setup/index.html"><span class="g">◆</span> 개요</a>
@@ -96,12 +98,14 @@
       <article class="doc md rise">
         <div class="kicker mono"><b>//</b> 실습 5 · 고객 문의에 딱지 붙이기</div>
 <h1 id="3--분류-검산">3 · 분류 검산<a class="headerlink" href="#3--분류-검산" title="Permanent link">&para;</a></h1>
-<p>520건이 다 채워져도 그대로 믿으면 안 됩니다. 보기 밖 값이 섞이거나, 애매한 줄을 흔한 유형으로 몰면 표는 깔끔해 보여도 틀립니다. 눈으로 몇 건 대조한 뒤, AI에게 <strong>자기 분류를 스스로 검산</strong>하게 시킵니다.</p>
+<p>2단계에서 520건이 다 채워졌습니다. 다음 할 일은 앞선 실습들과 같습니다 — 표가 채워졌다는 사실만으로 믿지 않고 눈으로 몇 건 대조한 뒤 AI에게 자기 분류를 스스로 검산하게 시킵니다.</p>
+<p>오류가 나는 자리는 정해져 있습니다. 기준 안에서 판단했다면 여섯 가지 유형과 세 가지 감성 밖의 값이 나올 수 없습니다. 보기 밖의 값이나 빈칸은 AI가 <strong>기준 밖에서 찍었다</strong>는 신호입니다. 애매한 줄을 흔한 유형으로 몰아 버리면 표는 깔끔해 보여도 틀린 표입니다.</p>
+<p>가장 무서운 오류는 위험대응 누락입니다. 유형·감성이 몇 건 틀리면 통계가 조금 흔들리는 정도지만, 신고·소송·안전 신호가 든 문의를 놓치면 회사가 즉시 대응할 기회를 잃습니다. 감정 표현이 점잖아 보여도 그런 신호가 있으면 무조건 위험대응입니다. 검산에서 이 항목을 따로 훑습니다.</p>
 <h2 id="직접-시켜보세요">직접 시켜보세요<a class="headerlink" href="#직접-시켜보세요" title="Permanent link">&para;</a></h2>
-<p>2단계에서 채운 표를 VOC 원문·기준 문서와 놓고, 아래 내용을 AI에게 검증시킵니다.</p>
+<p>2단계에서 채운 표를 VOC 원문·기준 문서와 놓고 아래 내용을 AI에게 검증시킵니다.</p>
 <h2 id="검증에-포함해볼-것-">검증에 포함해볼 것 ✅<a class="headerlink" href="#검증에-포함해볼-것-" title="Permanent link">&para;</a></h2>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>값 범위</strong> — 유형·감성 칸에 보기 밖의 값이나 <strong>빈칸</strong>이 있는 줄 전부 신고</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>값 범위</strong> — 유형·감성 칸에 보기 밖의 값이나 <strong>빈칸</strong>이 있는 줄 전부 신고 (기준 밖에서 찍었다는 신호)</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>위험 누락</strong> — 감성이 긍정·중립인데 신고·소송·안전 신호가 있는 줄이 <code>Y</code>로 됐는지</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>경계 케이스</strong> — <code>검토필요</code> 줄과 복합 문의를 원문과 다시 대조</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>쏠림 점검</strong> — 유형별 건수를 뽑아 특정 유형으로 몰리지 않았는지</li>
@@ -115,12 +119,13 @@
 <p>여러분 문장을 먼저 보낸 뒤에 열어보세요.</p>
 <details class="example">
 <summary>이렇게 물어볼 수 있습니다</summary>
-<pre class="highlight"><code>채운 분류표.xlsx를 VOC원문.xlsx·VOC_분류기준.pdf와 대조해서 스스로 검산해줘.
+<div class="highlight"><pre><span></span><code>채운 분류표.xlsx를 VOC원문.xlsx·VOC_분류기준.pdf와 대조해서 스스로 검산해줘.
 1) 문의유형·감성 칸에 보기(6종·3종) 밖의 값이나 빈칸이 있는 줄을 item_id로 전부 짚어줘.
 2) 감성이 긍정·중립인데 신고·소송·안전 신호가 있는 문장을 찾아서 위험대응이 Y로 됐는지 확인해줘.
-3) '검토필요'로 표시한 줄과 복합 문의를 원문 문장과 다시 대조해줘.
+3) &#39;검토필요&#39;로 표시한 줄과 복합 문의를 원문 문장과 다시 대조해줘.
 4) 유형별 건수를 표로 뽑아서 특정 유형으로 쏠리지 않았는지 보여줘.
-맞다고 단정하지 말고, 어긋난 줄은 item_id로 짚어줘.</code></pre>
+맞다고 단정하지 말고, 어긋난 줄은 item_id로 짚어줘.
+</code></pre></div>
 </details>
 <h2 id="실행-예시">실행 예시<a class="headerlink" href="#실행-예시" title="Permanent link">&para;</a></h2>
 <div class="admonition example">

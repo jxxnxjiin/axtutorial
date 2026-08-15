@@ -20,6 +20,8 @@
         <span style="color:var(--muted)">강의 진행 중</span><span class="clock mono" id="clock">--:--</span></div>
     </div>
     <nav><div class="nav-h">// 홈</div>
+<a class="nav-a" href="../index.html#overview"><span class="g">◆</span> 오늘의 지도</a>
+<a class="nav-a" href="../index.html#timetable"><span class="g">◷</span> 시간표</a>
 <a class="nav-a" href="../index.html#materials"><span class="g">▤</span> 강의 자료 내려받기</a>
 <div class="nav-h">// 실습 준비</div><div class="tree">
 <a class="nav-a" href="../start/setup/index.html"><span class="g">◆</span> 개요</a>
@@ -96,9 +98,9 @@
       <article class="doc md rise">
         <div class="kicker mono"><b>//</b> 실습 6 · 제안서 내용 검증하기</div>
 <h1 id="1--확인할-것-묻기">1 · 확인할 것 묻기<a class="headerlink" href="#1--확인할-것-묻기" title="Permanent link">&para;</a></h1>
-<p>제안서 검토는 절차가 정해져 있지 않고, 신입은 뭘 봐야 할지 막막합니다. 그래서 먼저 AI에게 <strong>"이걸 검토하려면 뭘 확인해야 하냐"</strong>를 물어 <strong>검토 체크리스트</strong>를 받습니다. 딱지 붙이기에서 기준을 먼저 세운 것과 같습니다.</p>
+<p>팀장님이 준 파일 세 개를 받아 들었는데, 제안서 검토는 절차가 정해져 있지 않고 로봇은 처음 보는 분야입니다. 이런 상황에서 신입의 가장 큰 어려움은 내가 뭘 모르는지를 모른다는 것입니다. 그래서 판단부터 하지 않고, AI에게 "이걸 검토하려면 뭘 확인해야 하냐"를 먼저 물어 <strong>검토 체크리스트</strong>를 받습니다. 실습 5에서 분류 전에 기준부터 세운 것과 같은 순서입니다 — 검증도 기준이 먼저입니다.</p>
 <h2 id="직접-시켜보세요">직접 시켜보세요<a class="headerlink" href="#직접-시켜보세요" title="Permanent link">&para;</a></h2>
-<p>여러분 문장으로 AI에게 시킵니다. 아래 두 체크리스트를 먼저 읽고, 빠진 규칙이 없도록 프롬프트에 담으세요.</p>
+<p>여러분 문장으로 AI에게 시킵니다. 아래 두 체크리스트를 먼저 읽고 빠진 규칙이 없도록 프롬프트에 담으세요.</p>
 <h2 id="프롬프트에-꼭-담을-것-">프롬프트에 꼭 담을 것 ✅<a class="headerlink" href="#프롬프트에-꼭-담을-것-" title="Permanent link">&para;</a></h2>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>줄 자료</strong> — 제안서 초안·사양서·고객 요구사항 세 파일 전부</li>
@@ -114,10 +116,11 @@
 <p>여러분 문장을 먼저 보낸 뒤에 열어보세요.</p>
 <details class="example">
 <summary>이렇게 물어볼 수 있습니다</summary>
-<pre class="highlight"><code>나는 이 분야를 잘 모르는 신입이야. 첨부한 세 파일(영업제안서_초안·제품사양서·고객사_요구사항)을 놓고,
+<div class="highlight"><pre><span></span><code>나는 이 분야를 잘 모르는 신입이야. 첨부한 세 파일(영업제안서_초안·제품사양서·고객사_요구사항)을 놓고,
 이 제안서를 제대로 검토하려면 무엇을 어떤 순서로 확인해야 하는지 체크리스트로 만들어줘.
 고객 요구사항 부합, 제품 사양값 일치, 과장·법적 위험 표현 같은 관점이 빠지지 않게 해줘.
-지금은 판단하지 말고, 확인할 항목만 정리해줘.</code></pre>
+지금은 판단하지 말고, 확인할 항목만 정리해줘.
+</code></pre></div>
 </details>
 <h2 id="실행-예시">실행 예시<a class="headerlink" href="#실행-예시" title="Permanent link">&para;</a></h2>
 <div class="admonition example">

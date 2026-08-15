@@ -20,6 +20,8 @@
         <span style="color:var(--muted)">강의 진행 중</span><span class="clock mono" id="clock">--:--</span></div>
     </div>
     <nav><div class="nav-h">// 홈</div>
+<a class="nav-a" href="../index.html#overview"><span class="g">◆</span> 오늘의 지도</a>
+<a class="nav-a" href="../index.html#timetable"><span class="g">◷</span> 시간표</a>
 <a class="nav-a" href="../index.html#materials"><span class="g">▤</span> 강의 자료 내려받기</a>
 <div class="nav-h">// 실습 준비</div><div class="tree">
 <a class="nav-a" href="../start/setup/index.html"><span class="g">◆</span> 개요</a>
@@ -96,9 +98,9 @@
       <article class="doc md rise">
         <div class="kicker mono"><b>//</b> 실습 3 · 쿠폰 성과 집계·인사이트</div>
 <h1 id="1--한-파일로-모으기">1 · 한 파일로 모으기<a class="headerlink" href="#1--한-파일로-모으기" title="Permanent link">&para;</a></h1>
-<p>채널 5곳에 따로 온 주문 기록을 하나의 엑셀 파일로 모읍니다. 어느 값이 어느 채널에서 왔는지도 함께 기록합니다.</p>
+<p>집계에 들어가기 전에 재료부터 만듭니다. 주문 기록이 채널 다섯 곳에 흩어져 있으니, 실습 1에서 한 것처럼 엑셀 한 파일로 모으는 게 첫 일입니다. 다만 이번에는 지키는 것이 둘 있습니다 — 각 줄이 어느 채널에서 왔는지 태그를 남기는 것(없으면 4단계 채널 비교가 막힙니다)과, 취소 건도 지금은 그대로 두는 것. 거르고 요약하는 건 다음 단계의 일이고, 모으는 단계에서는 원본을 보존합니다.</p>
 <h2 id="직접-시켜보세요">직접 시켜보세요<a class="headerlink" href="#직접-시켜보세요" title="Permanent link">&para;</a></h2>
-<p>아래 두 체크리스트를 먼저 읽고, 빠진 규칙이 없도록 프롬프트에 담아보세요.</p>
+<p>아래 두 체크리스트를 먼저 읽고 빠진 규칙이 없도록 프롬프트에 담아보세요.</p>
 <h2 id="프롬프트에-꼭-담을-것-">프롬프트에 꼭 담을 것 ✅<a class="headerlink" href="#프롬프트에-꼭-담을-것-" title="Permanent link">&para;</a></h2>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>읽을 대상</strong> — 채널 5곳 원본 <code>1~5.주문기록_*</code> 전부</li>
@@ -109,17 +111,18 @@
 <h2 id="이런-건-빼세요-">이런 건 빼세요 ❌<a class="headerlink" href="#이런-건-빼세요-" title="Permanent link">&para;</a></h2>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>판매채널</code> 태그 없이 <strong>그냥 이어붙이기</strong> (4단계 채널 비교가 막힙니다)</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 채널별 <strong>합계·요약</strong> 내기 </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 채널별 <strong>합계·요약</strong> 내기</li>
 </ul>
 <h2 id="예시-프롬프트">예시 프롬프트<a class="headerlink" href="#예시-프롬프트" title="Permanent link">&para;</a></h2>
 <p>여러분 문장을 먼저 보낸 뒤에 열어보세요.</p>
 <details class="example">
 <summary>이렇게 시킬 수 있습니다</summary>
-<pre class="highlight"><code>이 폴더의 주문기록 파일 다섯 개(11번가·네이버·이마트·G마켓·쿠팡)를 하나로 모아줘.
+<div class="highlight"><pre><span></span><code>이 폴더의 주문기록 파일 다섯 개(11번가·네이버·이마트·G마켓·쿠팡)를 하나로 모아줘.
 각 줄에 어느 채널에서 왔는지 판매채널 칸을 새로 만들어 적어줘.
 취소된 주문도 빼지 말고 그대로 담아 (거르는 건 다음 단계에서 할 거야).
 결과는 주문종합.xlsx 한 파일로 저장해줘.
-다 되면 채널별 건수와 전체 합계 줄 수를 알려줘.</code></pre>
+다 되면 채널별 건수와 전체 합계 줄 수를 알려줘.
+</code></pre></div>
 </details>
 <h2 id="실행-예시">실행 예시<a class="headerlink" href="#실행-예시" title="Permanent link">&para;</a></h2>
 <div class="admonition example">

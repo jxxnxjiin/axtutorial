@@ -20,6 +20,8 @@
         <span style="color:var(--muted)">강의 진행 중</span><span class="clock mono" id="clock">--:--</span></div>
     </div>
     <nav><div class="nav-h">// 홈</div>
+<a class="nav-a" href="../index.html#overview"><span class="g">◆</span> 오늘의 지도</a>
+<a class="nav-a" href="../index.html#timetable"><span class="g">◷</span> 시간표</a>
 <a class="nav-a" href="../index.html#materials"><span class="g">▤</span> 강의 자료 내려받기</a>
 <div class="nav-h">// 실습 준비</div><div class="tree">
 <a class="nav-a" href="../start/setup/index.html"><span class="g">◆</span> 개요</a>
@@ -96,9 +98,14 @@
       <article class="doc md rise">
         <div class="kicker mono"><b>//</b> 실습 4 · 임원용 1페이지 보고서</div>
 <h1 id="2--보고서-검산">2 · 보고서 검산<a class="headerlink" href="#2--보고서-검산" title="Permanent link">&para;</a></h1>
-<p>초안이 그럴듯하게 나올수록 위험합니다. 대표이사는 <strong>숫자 하나가 안 맞으면 뒤 내용 전체를 의심</strong>합니다. 문장을 다듬는 건 사람이 하되, <strong>사실은 AI가 못 지어내게</strong> 검산합니다.</p>
+<p>1단계에서 첫 세 줄에 결론이 있는 그럴듯한 초안이 나왔습니다. 그런데 이대로 올리면 안 됩니다. AI는 보고서를 참 잘 쓰고, 너무 잘 써서 위험합니다 — 그럴듯한 숫자가 원자료와 다를 수 있고, "업계 최고 수준" 같은 자료에 없는 표현이 슬쩍 끼어들기도 합니다. 그래서 검산은 두 갈래로 시킵니다.</p>
+<ul>
+<li><strong>숫자는 출처로</strong> — 보고서의 모든 숫자를 원자료의 어느 값에서 나왔는지 표로 대조</li>
+<li><strong>표현은 근거로</strong> — 근거 없는 형용사·단정을 AI 스스로 자수하게</li>
+</ul>
+<p>둘 다 통과하지 못한 문장은 뺍니다. 상사가 이 문서로 결정을 내리는 만큼, 보고서는 검산까지가 한 세트입니다.</p>
 <h2 id="직접-시켜보세요">직접 시켜보세요<a class="headerlink" href="#직접-시켜보세요" title="Permanent link">&para;</a></h2>
-<p>1단계 초안을 성과표와 놓고, 아래 내용을 AI에게 검증시킵니다.</p>
+<p>1단계 초안을 성과표와 놓고 아래 내용을 검증시킵니다.</p>
 <h2 id="검증에-포함해볼-것-">검증에 포함해볼 것 ✅<a class="headerlink" href="#검증에-포함해볼-것-" title="Permanent link">&para;</a></h2>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>근거 자수</strong> — 문장마다 성과표의 어느 셀에서 나왔는지, 출처 없는 문장 전부 신고</li>
@@ -115,11 +122,12 @@
 <p>여러분 문장을 먼저 보낸 뒤에 열어보세요.</p>
 <details class="example">
 <summary>이렇게 물어볼 수 있습니다</summary>
-<pre class="highlight"><code>이 보고서 초안을 쿠폰별성과표.xlsx와 대조해서 스스로 검산해줘.
+<div class="highlight"><pre><span></span><code>이 보고서 초안을 쿠폰별성과표.xlsx와 대조해서 스스로 검산해줘.
 1) 문장마다 그 숫자가 성과표의 어느 셀에서 나왔는지 짚고, 출처를 못 대는 문장은 전부 신고해줘.
 2) 본문 숫자(적자 쿠폰 수·적자 규모·순이익률 등)가 성과표 값과 정확히 같은지 대조해줘.
-3) 근거 없는 형용사나 최상급('압도적'·'최고' 등)을 찾아 숫자 표현으로 바꿀 안을 제시해줘.
-맞다고 단정하지 말고, 자료에서 확인 안 되는 표현은 그대로 짚어줘.</code></pre>
+3) 근거 없는 형용사나 최상급(&#39;압도적&#39;·&#39;최고&#39; 등)을 찾아 숫자 표현으로 바꿀 안을 제시해줘.
+맞다고 단정하지 말고, 자료에서 확인 안 되는 표현은 그대로 짚어줘.
+</code></pre></div>
 </details>
 <h2 id="실행-예시">실행 예시<a class="headerlink" href="#실행-예시" title="Permanent link">&para;</a></h2>
 <div class="admonition example">

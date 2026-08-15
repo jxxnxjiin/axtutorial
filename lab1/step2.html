@@ -20,6 +20,8 @@
         <span style="color:var(--muted)">강의 진행 중</span><span class="clock mono" id="clock">--:--</span></div>
     </div>
     <nav><div class="nav-h">// 홈</div>
+<a class="nav-a" href="../index.html#overview"><span class="g">◆</span> 오늘의 지도</a>
+<a class="nav-a" href="../index.html#timetable"><span class="g">◷</span> 시간표</a>
 <a class="nav-a" href="../index.html#materials"><span class="g">▤</span> 강의 자료 내려받기</a>
 <div class="nav-h">// 실습 준비</div><div class="tree">
 <a class="nav-a" href="../start/setup/index.html"><span class="g">◆</span> 개요</a>
@@ -96,9 +98,9 @@
       <article class="doc md rise">
         <div class="kicker mono"><b>//</b> 실습 1 · 흩어진 주문 한 표로 모으기</div>
 <h1 id="2--원본-대조검산">2 · 원본 대조·검산<a class="headerlink" href="#2--원본-대조검산" title="Permanent link">&para;</a></h1>
-<p>합쳐진 표가 그럴듯해 보여도 그대로 믿으면 안 됩니다. <strong>한 건이라도 빠지거나 겹쳐 남으면 뒤 작업이 전부 어긋납니다.</strong> 사람이 410건을 일일이 못 보니, AI에게 <strong>결과를 스스로 검산</strong>하게 하여 빠지거나 겹친 줄을 잡습니다.</p>
+<p>1단계에서 그럴듯한 통합표가 나왔습니다. 그런데 AI가 작업을 마쳤다고 무조건 믿으면 안 됩니다 — 한 건만 빠지거나 겹쳐도 뒤 작업이 전부 어긋나는데, 사람이 410건을 다 눈으로 볼 수는 없습니다. 그래서 AI에게 원본과 대조해 <strong>스스로 검산</strong>하게 시켜, 숫자로 증명을 받아냅니다. 빠지거나 겹친 줄은 "맞아요"라는 대답이 아니라 등식으로 잡습니다.</p>
 <h2 id="직접-시켜보세요">직접 시켜보세요<a class="headerlink" href="#직접-시켜보세요" title="Permanent link">&para;</a></h2>
-<p>1단계에서 만든 결과 엑셀 파일을 놓고, 아래 내용을 AI에게 검증시킵니다.</p>
+<p>1단계 결과 엑셀 파일을 놓고 아래 내용을 AI에게 검증시킵니다.</p>
 <h2 id="검증에-포함해볼-것-">검증에 포함해볼 것 ✅<a class="headerlink" href="#검증에-포함해볼-것-" title="Permanent link">&para;</a></h2>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>건수 대조</strong> — <code>합친 줄 수 = 웹150 + 전화140 + 제휴120 − 겹쳐서 합쳐진 건수</code>가 맞는지</li>
@@ -112,17 +114,18 @@
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 그냥 <strong>"잘 합쳐졌어?"</strong>라고만 묻기 (AI는 "네"라고 답하기 쉽습니다)</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 위에서 <strong>몇 줄만</strong> 눈으로 보고 넘어가기 (틀린 건 안 본 곳에 숨어 있습니다)</li>
 </ul>
-<h2 id="모범-프롬프트">모범 프롬프트<a class="headerlink" href="#모범-프롬프트" title="Permanent link">&para;</a></h2>
+<h2 id="예시-프롬프트">예시 프롬프트<a class="headerlink" href="#예시-프롬프트" title="Permanent link">&para;</a></h2>
 <p>여러분 문장을 먼저 보낸 뒤에 열어보세요.</p>
 <details class="example">
 <summary>이렇게 물어볼 수 있습니다</summary>
-<pre class="highlight"><code>주문종합.xlsx를 세 원본 파일과 대조해서 스스로 검산해줘.
+<div class="highlight"><pre><span></span><code>주문종합.xlsx를 세 원본 파일과 대조해서 스스로 검산해줘.
 1) 합친 줄 수가 원본 세 파일 건수 합에서 겹쳐 합쳐진 건수를 뺀 값과 맞는지 숫자로 보여줘.
 2) 세 원본의 주문번호 중 종합에 빠진 게 하나라도 있으면 전부 알려줘.
 3) 같은 주문번호가 두 줄로 남은 게 있으면 알려주고, 채널칸에 온 채널이 다 적혔는지 확인해줘.
 4) 주문일이 YYYY-MM-DD가 아닌 줄을 전부 찾아줘.
 5) 원본에서 금액이 비어 있던 줄이 종합에서도 빈칸인지 확인해줘.
-맞다고 단정하지 말고, 어긋난 줄은 번호로 짚어줘.</code></pre>
+맞다고 단정하지 말고, 어긋난 줄은 번호로 짚어줘.
+</code></pre></div>
 </details>
 <h2 id="실행-예시">실행 예시<a class="headerlink" href="#실행-예시" title="Permanent link">&para;</a></h2>
 <div class="admonition example">
@@ -149,7 +152,7 @@
 <a href="#직접-시켜보세요">직접 시켜보세요</a>
 <a href="#검증에-포함해볼-것-">검증에 포함해볼 것 ✅</a>
 <a href="#이런-건-빼세요-">이런 건 빼세요 ❌</a>
-<a href="#모범-프롬프트">모범 프롬프트</a>
+<a href="#예시-프롬프트">예시 프롬프트</a>
 <a href="#실행-예시">실행 예시</a>
 <a href="#체크포인트">체크포인트</a></aside>
     </div>

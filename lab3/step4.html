@@ -20,6 +20,8 @@
         <span style="color:var(--muted)">강의 진행 중</span><span class="clock mono" id="clock">--:--</span></div>
     </div>
     <nav><div class="nav-h">// 홈</div>
+<a class="nav-a" href="../index.html#overview"><span class="g">◆</span> 오늘의 지도</a>
+<a class="nav-a" href="../index.html#timetable"><span class="g">◷</span> 시간표</a>
 <a class="nav-a" href="../index.html#materials"><span class="g">▤</span> 강의 자료 내려받기</a>
 <div class="nav-h">// 실습 준비</div><div class="tree">
 <a class="nav-a" href="../start/setup/index.html"><span class="g">◆</span> 개요</a>
@@ -96,9 +98,9 @@
       <article class="doc md rise">
         <div class="kicker mono"><b>//</b> 실습 3 · 쿠폰 성과 집계·인사이트</div>
 <h1 id="4--인사이트검산">4 · 인사이트·검산<a class="headerlink" href="#4--인사이트검산" title="Permanent link">&para;</a></h1>
-<p>표는 끝이 아닙니다. 사수가 원한 건 "그래서 <strong>어떤 쿠폰을 접고 뭘 밀지</strong>"입니다. 단, 표에 없는 이유를 그럴듯하게 지어내면 안 됩니다. <strong>숫자에 묶인 인사이트만</strong> 남깁니다.</p>
+<p>검산 마친 표를 들고 가면 사수가 묻습니다 — "그래서 이 쿠폰들, 왜 적자야?" 표만 보면 할 말이 없습니다. 숫자는 '무엇'을 보여줄 뿐 '왜'는 안 알려주니, 이 단계에서 표를 해석해 "어떤 쿠폰을 접고 뭘 밀지"까지 뽑습니다. 조심할 것은 하나 — 생성형 AI는 그럴듯한 원인을 지어내는 걸 상당히 잘합니다. 그래서 자료 안에서만 근거를 찾게 못 박고, <strong>숫자에 묶인 인사이트만</strong> 남깁니다.</p>
 <h2 id="직접-시켜보세요">직접 시켜보세요<a class="headerlink" href="#직접-시켜보세요" title="Permanent link">&para;</a></h2>
-<p>3단계까지 검산한 성과표를 놓고, 아래 두 체크리스트를 담아 인사이트를 뽑게 시킵니다.</p>
+<p>3단계까지 검산한 성과표를 놓고 아래 두 체크리스트를 담아 인사이트를 뽑게 시킵니다.</p>
 <h2 id="프롬프트에-꼭-담을-것-">프롬프트에 꼭 담을 것 ✅<a class="headerlink" href="#프롬프트에-꼭-담을-것-" title="Permanent link">&para;</a></h2>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>근거 있는 인사이트</strong> — 문장마다 근거 숫자 (어느 쿠폰·몇 %·몇 원)</li>
@@ -107,7 +109,7 @@
 </ul>
 <h2 id="이런-건-빼세요-">이런 건 빼세요 ❌<a class="headerlink" href="#이런-건-빼세요-" title="Permanent link">&para;</a></h2>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 데이터에 없는 <strong>인과 지어내기</strong> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 데이터에 없는 <strong>인과 지어내기</strong></li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>과장 형용사</strong> ("압도적으로" → "순이익률 20%p 높음"처럼 숫자로)</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 근거 숫자 없이 <strong>뭉뚱그린 총평</strong> ("전반적으로 좋음")</li>
 </ul>
@@ -115,12 +117,13 @@
 <p>여러분 문장을 먼저 보낸 뒤에 열어보세요.</p>
 <details class="example">
 <summary>이렇게 시킬 수 있습니다</summary>
-<pre class="highlight"><code>검산까지 끝낸 쿠폰별성과표만 근거로 인사이트를 뽑아줘.
+<div class="highlight"><pre><span></span><code>검산까지 끝낸 쿠폰별성과표만 근거로 인사이트를 뽑아줘.
 적자 쿠폰, 순이익 상위 쿠폰, 채널 간 편차를 다뤄줘.
 문장마다 근거 숫자(쿠폰코드·순이익률·금액)를 괄호로 붙이고,
 표에 없는 이유(왜 인기인지 등)는 추측하지 말고 쓰지 마.
-'압도적' 같은 형용사 대신 수치 차이로 표현해.
-각 인사이트 끝에 그래서 무엇을 할지 한 줄 제안을 붙여줘.</code></pre>
+&#39;압도적&#39; 같은 형용사 대신 수치 차이로 표현해.
+각 인사이트 끝에 그래서 무엇을 할지 한 줄 제안을 붙여줘.
+</code></pre></div>
 </details>
 <h2 id="실행-예시">실행 예시<a class="headerlink" href="#실행-예시" title="Permanent link">&para;</a></h2>
 <div class="admonition example">

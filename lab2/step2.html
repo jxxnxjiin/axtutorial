@@ -20,6 +20,8 @@
         <span style="color:var(--muted)">강의 진행 중</span><span class="clock mono" id="clock">--:--</span></div>
     </div>
     <nav><div class="nav-h">// 홈</div>
+<a class="nav-a" href="../index.html#overview"><span class="g">◆</span> 오늘의 지도</a>
+<a class="nav-a" href="../index.html#timetable"><span class="g">◷</span> 시간표</a>
 <a class="nav-a" href="../index.html#materials"><span class="g">▤</span> 강의 자료 내려받기</a>
 <div class="nav-h">// 실습 준비</div><div class="tree">
 <a class="nav-a" href="../start/setup/index.html"><span class="g">◆</span> 개요</a>
@@ -96,30 +98,31 @@
       <article class="doc md rise">
         <div class="kicker mono"><b>//</b> 실습 2 · 계약서에서 계약종합 만들기</div>
 <h1 id="2--원본-대조검산">2 · 원본 대조·검산<a class="headerlink" href="#2--원본-대조검산" title="Permanent link">&para;</a></h1>
-<p>표가 그럴듯해 보여도 그대로 믿으면 안 됩니다. <strong>그럴듯한 게 가장 위험합니다.</strong> 사람이 8건을 일일이 못 보니, AI에게 <strong>자기 답을 스스로 검산</strong>하게 시켜 지어낸 값을 잡습니다.</p>
+<p>1단계에서 줄글 8건이 깔끔한 표로 바뀌었습니다. 그런데 실습 1의 통합과 달리 이번엔 건수 등식만으로는 못 잡는 오류가 있습니다 — 원문에 없는 값이 그럴듯하게 채워지는 것으로, <strong>그럴듯한 게 가장 위험합니다.</strong> 그래서 이번 검산은 숫자 세기가 아니라 근거 대조입니다. AI에게 칸마다 원문의 근거 문장을 대게 시켜, 못 대는 칸을 자수하게 만듭니다.</p>
 <h2 id="직접-시켜보세요">직접 시켜보세요<a class="headerlink" href="#직접-시켜보세요" title="Permanent link">&para;</a></h2>
-<p>1단계에서 만든 엑셀 파일을 놓고, 아래와 같은 내용들을 AI에게 검증합니다.</p>
+<p>1단계에서 만든 엑셀 파일을 놓고 아래와 같은 내용을 AI에게 검증시킵니다.</p>
 <h2 id="검증에-포함해볼-것-">검증에 포함해볼 것 ✅<a class="headerlink" href="#검증에-포함해볼-것-" title="Permanent link">&para;</a></h2>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>내용의 근거 물어보기</strong> — 원문에서 근거 문장을 찾을 수 없는 칸을 정리하도록 합니다.</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>금액 빈칸 유지 확인</strong> — 금액이 없던 계약의 칸이 빈칸인지, 0이나 다른 임의 숫자로 채워지지는 않았는지 확인합니다. </li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>경계 계약 확인</strong> — <code>CT-2026-004</code>(재계약 필요 → 자동갱신 <strong>아니오</strong>) / <code>CT-2026-005</code>(해지 통보 없으면 자동연장 → <strong>예</strong>)가 반대로 되어 있지 않은지 확인합니다.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>내용의 근거</strong> — 원문에서 근거 문장을 찾을 수 없는 칸을 전부 신고하게 하기</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>금액 빈칸 유지</strong> — 금액이 없던 계약의 칸이 빈칸인지, 0이나 다른 임의 숫자로 채워지지 않았는지</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>경계 계약</strong> — <code>CT-2026-004</code>(재계약 필요 → 자동갱신 <strong>아니오</strong>) / <code>CT-2026-005</code>(해지 통보 없으면 자동연장 → <strong>예</strong>)가 반대로 되어 있지 않은지</li>
 </ul>
 <h2 id="이런-건-빼세요-">이런 건 빼세요 ❌<a class="headerlink" href="#이런-건-빼세요-" title="Permanent link">&para;</a></h2>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 그냥 <strong>"맞아?"</strong> 라고만 묻기 (AI는 "맞다"고 답하기 쉽습니다)</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 표본 <strong>한두 건만</strong> 보고 넘어가기 (틀린 건 안 본 곳에 숨어 있습니다)</li>
 </ul>
-<h2 id="모범-프롬프트">모범 프롬프트<a class="headerlink" href="#모범-프롬프트" title="Permanent link">&para;</a></h2>
+<h2 id="예시-프롬프트">예시 프롬프트<a class="headerlink" href="#예시-프롬프트" title="Permanent link">&para;</a></h2>
 <p>여러분 문장을 먼저 보낸 뒤에 열어보세요.</p>
 <details class="example">
 <summary>이렇게 물어볼 수 있습니다</summary>
-<pre class="highlight"><code>계약종합.xlsx를 계약서 원본 8건과 대조해서 스스로 검산해줘.
+<div class="highlight"><pre><span></span><code>계약종합.xlsx를 계약서 원본 8건과 대조해서 스스로 검산해줘.
 1) 각 칸의 값을 원문에서 근거 문장으로 찾을 수 없는 칸을 전부 정리해줘.
 2) 금액 조항이 없던 계약의 금액 칸이 빈칸인지, 0이나 임의 숫자로 채워지지 않았는지 확인해줘.
 3) CT-2026-004(재계약 필요 → 자동갱신 아니오), CT-2026-005(해지 통보 없으면 자동연장 → 예)의
    자동갱신 여부가 근거대로 맞는지 원문과 대조해줘.
-맞다고 단정하지 말고, 어긋난 칸은 계약번호로 짚어줘.</code></pre>
+맞다고 단정하지 말고, 어긋난 칸은 계약번호로 짚어줘.
+</code></pre></div>
 </details>
 <h2 id="실행-예시">실행 예시<a class="headerlink" href="#실행-예시" title="Permanent link">&para;</a></h2>
 <div class="admonition example">
@@ -145,7 +148,7 @@
 <a href="#직접-시켜보세요">직접 시켜보세요</a>
 <a href="#검증에-포함해볼-것-">검증에 포함해볼 것 ✅</a>
 <a href="#이런-건-빼세요-">이런 건 빼세요 ❌</a>
-<a href="#모범-프롬프트">모범 프롬프트</a>
+<a href="#예시-프롬프트">예시 프롬프트</a>
 <a href="#실행-예시">실행 예시</a>
 <a href="#체크포인트">체크포인트</a></aside>
     </div>

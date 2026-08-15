@@ -20,6 +20,8 @@
         <span style="color:var(--muted)">강의 진행 중</span><span class="clock mono" id="clock">--:--</span></div>
     </div>
     <nav><div class="nav-h">// 홈</div>
+<a class="nav-a" href="../index.html#overview"><span class="g">◆</span> 오늘의 지도</a>
+<a class="nav-a" href="../index.html#timetable"><span class="g">◷</span> 시간표</a>
 <a class="nav-a" href="../index.html#materials"><span class="g">▤</span> 강의 자료 내려받기</a>
 <div class="nav-h">// 실습 준비</div><div class="tree">
 <a class="nav-a" href="../start/setup/index.html"><span class="g">◆</span> 개요</a>
@@ -96,15 +98,17 @@
       <article class="doc md rise">
         <div class="kicker mono"><b>//</b> 실습 7 · 반복작업을 재사용 스킬로 만들기</div>
 <h1 id="3--동료에게-넘기기">3 · 동료에게 넘기기<a class="headerlink" href="#3--동료에게-넘기기" title="Permanent link">&para;</a></h1>
-<p>스킬이 내 폴더에서만 돌면 반쪽입니다. 옆 팀 동료가 받아서 바로 쓸 수 있어야 진짜 도구입니다. 넘기기 전에 <strong>내 폴더에만 맞는 흔적</strong>(특정 파일명·경로)이 <code>.claude/skills/데이터통합/SKILL.md</code>에 남아 있지 않은지 AI에게 점검시키고, 스킬 폴더째 전달할 형태로 정리합니다.</p>
+<p>주문에서 만들고 견적으로 증명했습니다. 이제 마지막 갈래, 동료에게 넘기기입니다. 방법은 허무할 만큼 간단합니다. 스킬 폴더를 zip으로 압축해 메신저로 보내면 끝 — 코드도 설치도 아니고 그냥 폴더 하나입니다. 받은 동료는 자기 작업 폴더의 <code>.claude/skills/</code>에 압축을 풀고 "데이터통합 스킬로 합쳐줘" 한 줄이면 됩니다. 내가 일주일 고민한 절차를 동료는 30초 만에 자기 것으로 쓰는 순간, 내 도구가 팀의 도구가 됩니다.</p>
+<p>다만 넘기기 전에 점검이 하나 필요합니다. 특정 파일명이나 내 폴더 경로 같은 <strong>내 폴더에만 맞는 흔적</strong>이 <code>SKILL.md</code>에 남아 있으면 동료 폴더에서 멈춥니다. 그래서 다른 사람 폴더에서 열었다고 가정하고 걸릴 만한 곳을 AI에게 자수시킨 뒤, 폴더째 전달할 형태로 정리합니다.</p>
+<p>동료가 Claude Code가 아니라 다른 도구를 쓴다면? 우리가 나누는 것은 결국 절차가 적힌 파일 하나이니 <code>SKILL.md</code>의 내용을 동료 도구의 지침 파일(예: Codex의 <code>AGENTS.md</code>)에 붙여 넣으면 같은 효과가 납니다. 어느 도구냐보다 절차를 파일로 남겼냐가 핵심입니다.</p>
 <h2 id="직접-시켜보세요">직접 시켜보세요<a class="headerlink" href="#직접-시켜보세요" title="Permanent link">&para;</a></h2>
-<p>전달 전 마지막 점검입니다. 스킬을 다른 사람 폴더에서 열었다고 가정하고, 걸릴 만한 곳을 자수하게 합니다.</p>
+<p>전달 전 마지막 점검입니다. 스킬을 다른 사람 폴더에서 열었다고 가정하고 걸릴 만한 곳을 자수하게 합니다.</p>
 <h2 id="프롬프트에-꼭-담을-것-">프롬프트에 꼭 담을 것 ✅<a class="headerlink" href="#프롬프트에-꼭-담을-것-" title="Permanent link">&para;</a></h2>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>점검 관점</strong> — 다른 사람 폴더에서 열었을 때 안 돌아갈 부분 찾기</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>하드코딩 자수</strong> — 특정 파일명·열 이름·내 폴더 경로가 남은 곳을 표로 신고</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>사용법 한 줄</strong> — 비개발자 동료가 따라 할 수 있는 실행 방법 명시</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>전달 형태</strong> — <code>.claude/skills/데이터통합/</code> 폴더를 그대로 압축(zip)해 넘길 수 있게 정리</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>사용법 한 줄</strong> — 비개발자 동료가 따라 할 수 있는 실행 방법 명시 (받는 사람은 만드는 과정을 못 봤습니다)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>전달 형태</strong> — <code>.claude/skills/데이터통합/</code> 폴더를 그대로 압축(zip)해 넘길 수 있게 정리 (설치가 아니라 폴더 하나를 건네는 것)</li>
 </ul>
 <h2 id="이런-건-빼세요-">이런 건 빼세요 ❌<a class="headerlink" href="#이런-건-빼세요-" title="Permanent link">&para;</a></h2>
 <ul class="task-list">
@@ -112,13 +116,15 @@
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 내 파일명이 섞인 <strong>예시를 규칙처럼</strong> 남겨두기</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 사용법 없이 <strong>파일만</strong> 전달하기</li>
 </ul>
-<h2 id="모범-프롬프트">모범 프롬프트<a class="headerlink" href="#모범-프롬프트" title="Permanent link">&para;</a></h2>
+<h2 id="예시-프롬프트">예시 프롬프트<a class="headerlink" href="#예시-프롬프트" title="Permanent link">&para;</a></h2>
+<p>여러분 문장을 먼저 보낸 뒤에 열어보세요.</p>
 <details class="example">
 <summary>이렇게 시킬 수 있습니다</summary>
-<pre class="highlight"><code>.claude/skills/데이터통합 스킬을 옆 팀 동료에게 넘기려고 해.
+<div class="highlight"><pre><span></span><code>.claude/skills/데이터통합 스킬을 옆 팀 동료에게 넘기려고 해.
 다른 사람 폴더에서 열었을 때 안 돌아갈 부분 — 특정 파일명이나 열 이름, 내 폴더 경로가
 SKILL.md에 남아 있는 곳을 표로 정리해서 알려줘. 걸리는 곳은 범용 표현으로 고쳐줘.
-마지막에 비개발자가 따라 할 수 있는 사용법 한 줄을 넣고, 그 스킬 폴더를 압축해서 전달할 수 있게 정리해줘.</code></pre>
+마지막에 비개발자가 따라 할 수 있는 사용법 한 줄을 넣고, 그 스킬 폴더를 압축해서 전달할 수 있게 정리해줘.
+</code></pre></div>
 </details>
 <h2 id="실행-예시">실행 예시<a class="headerlink" href="#실행-예시" title="Permanent link">&para;</a></h2>
 <div class="admonition example">
@@ -144,7 +150,7 @@ SKILL.md에 남아 있는 곳을 표로 정리해서 알려줘. 걸리는 곳은
 <a href="#직접-시켜보세요">직접 시켜보세요</a>
 <a href="#프롬프트에-꼭-담을-것-">프롬프트에 꼭 담을 것 ✅</a>
 <a href="#이런-건-빼세요-">이런 건 빼세요 ❌</a>
-<a href="#모범-프롬프트">모범 프롬프트</a>
+<a href="#예시-프롬프트">예시 프롬프트</a>
 <a href="#실행-예시">실행 예시</a>
 <a href="#체크포인트">체크포인트</a></aside>
     </div>
