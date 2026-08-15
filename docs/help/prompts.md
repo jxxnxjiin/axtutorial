@@ -16,46 +16,72 @@
 
 ---
 
-## 실습 1 — 물류비 마감
+## 실습 1 — 흩어진 주문 한 표로 모으기
 
 | 단계 | 처음 친 문장 | 고쳐서 다시 친 문장 |
 |---|---|---|
-| 1단계 사진 → 요금표 | <span class="blank-line">___________________</span> | <span class="blank-line">___________________</span> |
-| 2단계 청구서 합치기 | <span class="blank-line">___________________</span> | <span class="blank-line">___________________</span> |
-| 3단계 재계산·판정 | <span class="blank-line">___________________</span> | <span class="blank-line">___________________</span> |
-| 4단계 검증 항목 | <span class="blank-line">___________________</span> | <span class="blank-line">___________________</span> |
+| 1단계 한 표로 모으기 | <span class="blank-line">___________________</span> | <span class="blank-line">___________________</span> |
+| 2단계 원본 대조·검산 | <span class="blank-line">___________________</span> | <span class="blank-line">___________________</span> |
 
 ---
 
-## 실습 2 — 계약·입찰 레이더
+## 실습 2 — 계약서에서 계약종합 만들기
 
 | 단계 | 처음 친 문장 | 고쳐서 다시 친 문장 |
 |---|---|---|
-| 1단계 계약서 1건 | <span class="blank-line">___________________</span> | <span class="blank-line">___________________</span> |
-| 2단계 12건 확장 | <span class="blank-line">___________________</span> | <span class="blank-line">___________________</span> |
-| 4단계 공고 나누기 | <span class="blank-line">___________________</span> | <span class="blank-line">___________________</span> |
-
-3단계에서 쓴 것은 문장이 아니라 문단입니다. `회사소개.md` 파일 자체가 그 자리의 기록입니다.
+| 1단계 계약서 내용 종합하기 | <span class="blank-line">___________________</span> | <span class="blank-line">___________________</span> |
+| 2단계 원본 대조·검산 | <span class="blank-line">___________________</span> | <span class="blank-line">___________________</span> |
 
 ---
 
-## 실습 3 — 근거 붙인 보고문
+## 실습 3 — 쿠폰 성과 집계·인사이트
 
 | 단계 | 처음 친 문장 | 고쳐서 다시 친 문장 |
 |---|---|---|
-| 1단계 일단 써보기 | <span class="blank-line">___________________</span> | <span class="blank-line">___________________</span> |
-| 2단계 출처 붙이기 | <span class="blank-line">___________________</span> | <span class="blank-line">___________________</span> |
-| 3단계 틀린 곳 고치기 | <span class="blank-line">___________________</span> | <span class="blank-line">___________________</span> |
+| 1단계 한 파일로 모으기 | <span class="blank-line">___________________</span> | <span class="blank-line">___________________</span> |
+| 2단계 성과표 채우기 | <span class="blank-line">___________________</span> | <span class="blank-line">___________________</span> |
+| 3단계 집계 검산 | <span class="blank-line">___________________</span> | <span class="blank-line">___________________</span> |
+| 4단계 인사이트·검산 | <span class="blank-line">___________________</span> | <span class="blank-line">___________________</span> |
 
 ---
 
-## 실습 4 — 대시보드 + 디자인
+## 실습 4 — 임원용 1페이지 보고서
 
 | 단계 | 처음 친 문장 | 고쳐서 다시 친 문장 |
 |---|---|---|
-| 2단계 화면 만들기 | <span class="blank-line">___________________</span> | <span class="blank-line">___________________</span> |
-| 4단계 무드 바꾸기 | <span class="blank-line">___________________</span> | <span class="blank-line">___________________</span> |
-| 7단계 재검산 | <span class="blank-line">___________________</span> | <span class="blank-line">___________________</span> |
+| 1단계 보고서 초안 쓰기 | <span class="blank-line">___________________</span> | <span class="blank-line">___________________</span> |
+| 2단계 보고서 검산 | <span class="blank-line">___________________</span> | <span class="blank-line">___________________</span> |
+
+---
+
+## 실습 5 — 고객 문의에 딱지 붙이기
+
+| 단계 | 처음 친 문장 | 고쳐서 다시 친 문장 |
+|---|---|---|
+| 1단계 기준 확인·한 건 분류 | <span class="blank-line">___________________</span> | <span class="blank-line">___________________</span> |
+| 2단계 520건 일괄 분류 | <span class="blank-line">___________________</span> | <span class="blank-line">___________________</span> |
+| 3단계 분류 검산 | <span class="blank-line">___________________</span> | <span class="blank-line">___________________</span> |
+
+---
+
+## 실습 6 — 부풀려진 제안서 사실로 되돌리기
+
+| 단계 | 처음 친 문장 | 고쳐서 다시 친 문장 |
+|---|---|---|
+| 1단계 확인할 것 묻기 | <span class="blank-line">___________________</span> | <span class="blank-line">___________________</span> |
+| 2단계 관점별 검증 | <span class="blank-line">___________________</span> | <span class="blank-line">___________________</span> |
+| 3단계 사실로 재작성 | <span class="blank-line">___________________</span> | <span class="blank-line">___________________</span> |
+| 4단계 재검증·검사표 | <span class="blank-line">___________________</span> | <span class="blank-line">___________________</span> |
+
+---
+
+## 실습 7 — 반복작업을 재사용 스킬로 만들기
+
+| 단계 | 처음 친 문장 | 고쳐서 다시 친 문장 |
+|---|---|---|
+| 1단계 범용 스킬 만들기 | <span class="blank-line">___________________</span> | <span class="blank-line">___________________</span> |
+| 2단계 견적 통합에 응용 | <span class="blank-line">___________________</span> | <span class="blank-line">___________________</span> |
+| 3단계 동료에게 넘기기 | <span class="blank-line">___________________</span> | <span class="blank-line">___________________</span> |
 
 ---
 
@@ -82,7 +108,7 @@
 
 - 처음 친 문장과 고쳐 친 문장의 **길이 차이**
 - 고쳐 친 문장에 다섯 줄 중 **몇 개**가 들어 있는지
-- 네 실습을 지나면서 **처음 문장이 길어졌는지**
+- 일곱 실습을 지나면서 **처음 문장이 길어졌는지**
 
 세 번째가 오늘의 결과입니다. 몇 개였든 상관없습니다. 오늘 아침보다 늘어난 상태입니다.
 

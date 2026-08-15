@@ -48,7 +48,7 @@
 
     ``bash     claude --version     ``
 
-    `Installation complete!` 가 떴는데도 버전이 안 나오면, 명령 프롬프트를 닫았다가 다시 열어 `claude --version` 을 입력해보세요.
+    `Installation complete!`가 떴는데도 버전이 안 나오면, 명령 프롬프트를 닫았다가 다시 열어 `claude --version`을 입력해보세요.
 
 ## 3. 확인 창 미리 꺼두기 (자동 승인)
 
@@ -60,7 +60,7 @@ AI가 파일을 고칠 때마다 *"이 파일을 수정해도 될까요?"* 하�
 ## 다 됐는지 스스로 확인하기
 
 - [ ] VS Code에서 Claude Code 패널이 뜨고, **로그인 화면 없이** 말을 걸 수 있다
-- [ ] 터미널에서 `python --version` · `node --version` 이 숫자를 답한다
+- [ ] 터미널에서 `python --version` · `node --version`이 숫자를 답한다
 - [ ] Claude Code 패널 아래에 `Edit automatically` 라벨이 보인다
 
 여기까지 됐으면 도구 설치는 끝입니다. 이제 실습 데이터를 준비합니다.

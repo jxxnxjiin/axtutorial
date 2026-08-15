@@ -2,7 +2,7 @@
 
 !!! abstract "이 페이지에서 하는 일"
     - 데이터 처리·분석에 쓰는 **Python**을 설치합니다
-    - 터미널에서 `python --version` 이 숫자를 답하면 통과입니다
+    - 터미널에서 `python --version`이 숫자를 답하면 통과입니다
 
 - **파이썬(Python)**은 데이터 처리, 분석, AI 서버 구축에 강점이 있는 언어입니다.
 - 실습에서는 PDF나 이미지를 **전처리·분석**하고, 데이터를 **취합·정리**하는 데 씁니다.
@@ -35,7 +35,7 @@ python --version
 ```
 
 !!! success "이렇게 나오면 정상입니다"
-    `Python 3.10` 이상 숫자가 출력됩니다. (macOS에서는 `python3 --version` 으로 확인하세요.)
+    `Python 3.10` 이상 숫자가 출력됩니다. (macOS에서는 `python3 --version`으로 확인하세요.)
 
 !!! warning "이렇게 나왔다면"
     - `python`을 쳤더니 **Microsoft Store가 열린다** → `Add Python to PATH`를 켜지 않고 설치한 경우입니다. 설치 파일을 다시 실행해 고치세요.

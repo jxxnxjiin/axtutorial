@@ -2,7 +2,7 @@
 
 !!! abstract "이 페이지에서 하는 일"
     - 웹 서버를 구동하는 런타임 **Node.js**를 설치합니다
-    - 터미널에서 `node --version` · `npm --version` 이 숫자를 답하면 통과입니다
+    - 터미널에서 `node --version` · `npm --version`이 숫자를 답하면 통과입니다
 
 - **Node.js**는 자바스크립트를 브라우저 밖에서 실행할 수 있게 해주는 런타임 환경입니다.
 - 실습에서는 **프론트엔드**(화면을 그려주는 서버)와 **백엔드**(데이터를 보내주는 서버)를 만드는 데 씁니다.
@@ -69,7 +69,7 @@ npm --version
 
 버전 번호가 출력되면 npm도 정상 설치된 것입니다.
 
-!!! warning "`Installation complete!` 가 떴는데 버전이 안 나온다면"
+!!! warning "`Installation complete!`가 떴는데 버전이 안 나온다면"
     창을 완전히 닫았다가 **새 창**을 열어 같은 명령을 다시 입력하세요. PATH는 새 창부터 반영됩니다.
 
 <div class="stage-nav" markdown>

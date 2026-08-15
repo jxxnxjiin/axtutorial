@@ -80,6 +80,7 @@
 <a class="nav-a" href="../help/errors.html">에러가 났어요</a>
 <a class="nav-a" href="../help/glossary.html">이 말이 무슨 뜻이죠</a>
 <a class="nav-a" href="../help/how-to-ask.html">AI에게 잘 시키는 법</a>
+<a class="nav-a" href="../help/prompts.html">오늘 내가 친 문장</a>
 <a class="nav-a" href="../help/next.html">강의 끝나고 뭘 해볼까</a>
 </div></nav>
     <div class="side__foot">
@@ -98,7 +99,8 @@
       <article class="doc md rise">
         <div class="kicker mono"><b>//</b> 실습 1 · 흩어진 주문 한 표로 모으기</div>
 <h1 id="1--한-표로-모으기">1 · 한 표로 모으기<a class="headerlink" href="#1--한-표로-모으기" title="Permanent link">&para;</a></h1>
-<p>폴더를 열면 주문 파일 세 개가 있습니다. 웹주문 첫 칸은 '주문번호', 전화주문의 같은 자리는 'order_id', 제휴주문은 '협력사주문ID' — 사람은 눈으로 보면 같은 뜻인 걸 바로 알지만, AI에게는 그걸 규칙으로 넘겨줘야 합니다. 함정은 더 있습니다. 날짜 표기가 파일마다 다르고, 같은 주문이 두 채널에 동시에 잡혀 있기도 합니다. 그래서 이 단계에서는 <code>작업방법참고.xlsx</code>의 대조표를 근거로 <strong>같은 뜻이면 같은 칸</strong> 규칙을 프롬프트에 담아 엑셀 한 파일로 합칩니다.</p>
+<p>폴더를 열면 주문 파일 세 개가 있습니다. 웹주문 첫 칸은 '주문번호', 전화주문의 같은 자리는 'order_id', 제휴주문은 '협력사주문ID'. 사람은 눈으로 보면 같은 뜻인 걸 바로 알지만, AI에게는 그걸 규칙으로 넘겨줘야 합니다.</p>
+<p>함정은 더 있습니다. 날짜 표기가 파일마다 다르고, 같은 주문이 두 채널에 동시에 잡혀 있기도 합니다. 그래서 이 단계에서는 <code>작업방법참고.xlsx</code>의 대조표를 근거로 <strong>같은 뜻이면 같은 칸</strong> 규칙을 프롬프트에 담아 엑셀 한 파일로 합칩니다.</p>
 <h2 id="직접-시켜보세요">직접 시켜보세요<a class="headerlink" href="#직접-시켜보세요" title="Permanent link">&para;</a></h2>
 <p>아래 두 체크리스트를 읽고 빠진 규칙 없이 프롬프트에 담아보세요. 열 이름 대조표는 <code>작업방법참고.xlsx</code>에 있습니다.</p>
 <h2 id="프롬프트에-꼭-담을-것-">프롬프트에 꼭 담을 것 ✅<a class="headerlink" href="#프롬프트에-꼭-담을-것-" title="Permanent link">&para;</a></h2>
@@ -143,7 +145,7 @@
 <h2 id="체크포인트">체크포인트<a class="headerlink" href="#체크포인트" title="Permanent link">&para;</a></h2>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 결과 엑셀 파일에 표준 <strong>7칸</strong>이 그대로 있다</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 세 원본 건수 합(150 + 140 + 120 = <strong>410건</strong>)이 모두 들어있다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 세 원본 건수 합(150 + 140 + 120 = <strong>410건</strong>)이 모두 들어 있다</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 합친 뒤 줄 수와 <strong>겹쳐서 합쳐진 건수</strong>를 AI에게 숫자로 받았다</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>주문채널</code> 내 임의의 줄이 실제 원본 파일과 맞는다</li>
 </ul>

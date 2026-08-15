@@ -80,6 +80,7 @@
 <a class="nav-a" href="../help/errors.html">에러가 났어요</a>
 <a class="nav-a" href="../help/glossary.html">이 말이 무슨 뜻이죠</a>
 <a class="nav-a" href="../help/how-to-ask.html">AI에게 잘 시키는 법</a>
+<a class="nav-a" href="../help/prompts.html">오늘 내가 친 문장</a>
 <a class="nav-a" href="../help/next.html">강의 끝나고 뭘 해볼까</a>
 </div></nav>
     <div class="side__foot">
@@ -98,7 +99,9 @@
       <article class="doc md rise">
         <div class="kicker mono"><b>//</b> 실습 7 · 반복작업을 재사용 스킬로 만들기</div>
 <h1 id="1--범용-스킬-만들기">1 · 범용 스킬 만들기<a class="headerlink" href="#1--범용-스킬-만들기" title="Permanent link">&para;</a></h1>
-<p>먼저 주문통합 폴더의 작업지침 파일을 열어 보세요. 지난달에 세 채널 주문을 합치려고 만들어 둔 지침으로, 표준 7칸·날짜 통일·빈칸 유지·행 수 검산까지 규칙 자체는 아주 잘 만들어져 있습니다. 그런데 <code>웹주문.xlsx</code>, <code>order_id</code>, <code>협력사주문ID</code>… 파일명과 열 이름이 그대로 박혀 있어 딱 이 세 파일 전용입니다 — 다음 달에 파일 이름이 바뀌면 다시 손봐야 하는, 일회성 지침의 한계입니다. 고치는 방향은 하나, "파일명을 고정" 대신 <strong>"내용을 보고 표준 칸에 맞춘다"</strong>로 바꾸면 재료가 무엇이든 통합니다. 이 단계에서는 지침을 그렇게 범용 규칙으로 고쳐 <code>.claude/skills/데이터통합/SKILL.md</code>에 실제 스킬로 저장하고, 주문 3파일이 지난달과 똑같이 통합되는지 확인합니다 — 절차가 머릿속이 아니라 파일로 남는 순간입니다.</p>
+<p>먼저 주문통합 폴더의 작업지침 파일을 열어 보세요. 지난달에 세 채널 주문을 합치려고 만들어 둔 지침으로, 표준 7칸·날짜 통일·빈칸 유지·행 수 검산까지 규칙 자체는 아주 잘 만들어져 있습니다.</p>
+<p>그런데 <code>웹주문.xlsx</code>, <code>order_id</code>, <code>협력사주문ID</code>… 파일명과 열 이름이 그대로 박혀 있어 딱 이 세 파일 전용입니다. 다음 달에 파일 이름이 바뀌면 다시 손봐야 하는, 일회성 지침의 한계입니다.</p>
+<p>고치는 방향은 하나입니다. "파일명을 고정" 대신 <strong>"내용을 보고 표준 칸에 맞춘다"</strong>로 바꾸면 재료가 무엇이든 통합니다. 이 단계에서는 지침을 그렇게 범용 규칙으로 고쳐 <code>.claude/skills/데이터통합/SKILL.md</code>에 실제 스킬로 저장하고, 주문 3파일이 지난달과 똑같이 통합되는지 확인합니다. 절차가 머릿속이 아니라 파일로 남는 순간입니다.</p>
 <h2 id="직접-시켜보세요">직접 시켜보세요<a class="headerlink" href="#직접-시켜보세요" title="Permanent link">&para;</a></h2>
 <p>여러분 문장으로 AI에게 시킵니다. 아래 두 체크리스트를 먼저 읽고 빠진 규칙이 없도록 프롬프트에 담으세요.</p>
 <h2 id="프롬프트에-꼭-담을-것-">프롬프트에 꼭 담을 것 ✅<a class="headerlink" href="#프롬프트에-꼭-담을-것-" title="Permanent link">&para;</a></h2>

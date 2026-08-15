@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="ko" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>오늘 내가 친 문장 · ax-tutor</title>
+<meta name="description" content="도움말 — 오늘 내가 친 문장 · ax-tutor 실습 위키">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<div class="shell">
+  <aside class="side" id="side">
+    <div class="brand">
+      <a class="brand__row" href="../index.html" style="text-decoration:none">
+        <span class="ast mono">✻</span>
+        <div><div class="brand__name">ax<b>-</b>tutor</div></div>
+      </a>
+      <div class="brand__sub">Claude Code · 실습 위키</div>
+      <div class="session"><span class="dot"></span><span class="live">LIVE</span>
+        <span style="color:var(--muted)">강의 진행 중</span><span class="clock mono" id="clock">--:--</span></div>
+    </div>
+    <nav><div class="nav-h">// 홈</div>
+<a class="nav-a" href="../index.html#overview"><span class="g">◆</span> 오늘의 지도</a>
+<a class="nav-a" href="../index.html#timetable"><span class="g">◷</span> 시간표</a>
+<a class="nav-a" href="../index.html#materials"><span class="g">▤</span> 강의 자료 내려받기</a>
+<div class="nav-h">// 실습 준비</div><div class="tree">
+<a class="nav-a" href="../start/setup/index.html"><span class="g">◆</span> 개요</a>
+<a class="nav-a" href="../start/setup/vscode.html">1 · VS Code 설치</a>
+<a class="nav-a" href="../start/setup/python.html">2 · Python 설치</a>
+<a class="nav-a" href="../start/setup/nodejs.html">3 · Node.js 설치</a>
+<a class="nav-a" href="../start/setup/agent.html">4 · Claude Code 설치</a>
+<a class="nav-a" href="../start/setup/data.html">5 · 실습 데이터 준비</a>
+<a class="nav-a" href="../start/setup/autoapprove.html"><span class="g">◇</span> 부록 · 자동 허가 모드</a>
+</div>
+<div class="nav-h">// 들어가기</div><div class="tree">
+<a class="nav-a" href="../types/index.html">여섯 가지 업무 유형</a>
+</div>
+<div class="nav-h">// 실습 1 · 흩어진 주문 한 표로 모으기</div><div class="tree">
+<a class="nav-a" href="../lab1/index.html"><span class="g">◆</span> 개요</a>
+<a class="nav-a" href="../lab1/step1.html">1 · 한 표로 모으기</a>
+<a class="nav-a" href="../lab1/step2.html">2 · 원본 대조·검산</a>
+</div>
+<div class="nav-h">// 실습 2 · 계약서에서 계약종합 만들기</div><div class="tree">
+<a class="nav-a" href="../lab2/index.html"><span class="g">◆</span> 개요</a>
+<a class="nav-a" href="../lab2/step1.html">1 · 계약서 내용 종합하기</a>
+<a class="nav-a" href="../lab2/step2.html">2 · 원본 대조·검산</a>
+</div>
+<div class="nav-h">// 실습 3 · 쿠폰 성과 집계·인사이트</div><div class="tree">
+<a class="nav-a" href="../lab3/index.html"><span class="g">◆</span> 개요</a>
+<a class="nav-a" href="../lab3/step1.html">1 · 한 파일로 모으기</a>
+<a class="nav-a" href="../lab3/step2.html">2 · 성과표 채우기</a>
+<a class="nav-a" href="../lab3/step3.html">3 · 집계 검산</a>
+<a class="nav-a" href="../lab3/step4.html">4 · 인사이트·검산</a>
+</div>
+<div class="nav-h">// 실습 4 · 임원용 1페이지 보고서</div><div class="tree">
+<a class="nav-a" href="../lab4/index.html"><span class="g">◆</span> 개요</a>
+<a class="nav-a" href="../lab4/step1.html">1 · 보고서 초안 쓰기</a>
+<a class="nav-a" href="../lab4/step2.html">2 · 보고서 검산</a>
+</div>
+<div class="nav-h">// 실습 5 · 고객 문의에 딱지 붙이기</div><div class="tree">
+<a class="nav-a" href="../lab5/index.html"><span class="g">◆</span> 개요</a>
+<a class="nav-a" href="../lab5/step1.html">1 · 기준 확인·한 건 분류</a>
+<a class="nav-a" href="../lab5/step2.html">2 · 520건 일괄 분류</a>
+<a class="nav-a" href="../lab5/step3.html">3 · 분류 검산</a>
+</div>
+<div class="nav-h">// 실습 6 · 제안서 내용 검증하기</div><div class="tree">
+<a class="nav-a" href="../lab6/index.html"><span class="g">◆</span> 개요</a>
+<a class="nav-a" href="../lab6/step1.html">1 · 확인할 것 묻기</a>
+<a class="nav-a" href="../lab6/step2.html">2 · 관점별 검증</a>
+<a class="nav-a" href="../lab6/step3.html">3 · 사실로 재작성</a>
+<a class="nav-a" href="../lab6/step4.html">4 · 재검증·검사표</a>
+</div>
+<div class="nav-h">// 실습 7 · 반복작업을 재사용 스킬로 만들기</div><div class="tree">
+<a class="nav-a" href="../lab7/index.html"><span class="g">◆</span> 개요</a>
+<a class="nav-a" href="../lab7/step1.html">1 · 범용 스킬 만들기</a>
+<a class="nav-a" href="../lab7/step2.html">2 · 견적 통합에 응용</a>
+<a class="nav-a" href="../lab7/step3.html">3 · 동료에게 넘기기</a>
+</div>
+<div class="nav-h">// 도움말</div><div class="tree">
+<a class="nav-a" href="../help/errors.html">에러가 났어요</a>
+<a class="nav-a" href="../help/glossary.html">이 말이 무슨 뜻이죠</a>
+<a class="nav-a" href="../help/how-to-ask.html">AI에게 잘 시키는 법</a>
+<a class="nav-a active" href="../help/prompts.html">오늘 내가 친 문장</a>
+<a class="nav-a" href="../help/next.html">강의 끝나고 뭘 해볼까</a>
+</div></nav>
+    <div class="side__foot">
+      <button class="iconbtn" id="themeBtn" title="테마 전환"><span id="themeIc">◐</span> <span id="themeLbl">light</span></button>
+      <a class="iconbtn" href="../index.html" title="홈">↖ home</a>
+    </div>
+  </aside>
+  <main class="main">
+    <div class="cmdbar mono">
+      <button class="burger" id="burger" aria-label="메뉴">≡</button>
+      <span class="path"><b>~/ax-tutor</b> <span class="full">$ cat</span> <span class="cur">help/prompts.md</span></span>
+      <span class="caret"></span><span class="spacer"></span>
+      <span class="stat">도움말</span>
+    </div>
+    <div class="wrap">
+      <article class="doc md rise">
+        <div class="kicker mono"><b>//</b> 도움말</div>
+<h1 id="오늘-내가-친-문장">오늘 내가 친 문장<a class="headerlink" href="#오늘-내가-친-문장" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">이 페이지가 하는 일</p>
+<ul>
+<li><strong>여러분이 오늘 직접 친 문장</strong>을 여기에 옮겨 적습니다</li>
+<li>강사가 채워주지 않습니다. 완성 문장 창고가 아닙니다</li>
+</ul>
+</div>
+<p>집에 가져가는 물건은 이 페이지입니다. <strong>내일 처음 보는 일 앞에서 열 페이지</strong>니까요.</p>
+<hr />
+<h2 id="옮겨-적는-법">옮겨 적는 법<a class="headerlink" href="#옮겨-적는-법" title="Permanent link">&para;</a></h2>
+<p>각 실습을 끝낼 때마다, Claude Code 화면을 위로 올려 <strong>여러분이 친 문장</strong>을 찾아 여기에 옮겨 적으세요. 종이에 적어도 되고, 이 페이지를 복사해 메모장에 붙여넣고 채워도 됩니다.</p>
+<p><strong>AI가 답한 것은 적지 않습니다. 여러분이 친 것만 적습니다.</strong></p>
+<hr />
+<h2 id="실습-1--흩어진-주문-한-표로-모으기">실습 1 — 흩어진 주문 한 표로 모으기<a class="headerlink" href="#실습-1--흩어진-주문-한-표로-모으기" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>단계</th>
+<th>처음 친 문장</th>
+<th>고쳐서 다시 친 문장</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1단계 한 표로 모으기</td>
+<td><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong>_____</span></td>
+<td><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong>_____</span></td>
+</tr>
+<tr>
+<td>2단계 원본 대조·검산</td>
+<td><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong>_____</span></td>
+<td><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong>_____</span></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="실습-2--계약서에서-계약종합-만들기">실습 2 — 계약서에서 계약종합 만들기<a class="headerlink" href="#실습-2--계약서에서-계약종합-만들기" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>단계</th>
+<th>처음 친 문장</th>
+<th>고쳐서 다시 친 문장</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1단계 계약서 내용 종합하기</td>
+<td><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong>_____</span></td>
+<td><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong>_____</span></td>
+</tr>
+<tr>
+<td>2단계 원본 대조·검산</td>
+<td><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong>_____</span></td>
+<td><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong>_____</span></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="실습-3--쿠폰-성과-집계인사이트">실습 3 — 쿠폰 성과 집계·인사이트<a class="headerlink" href="#실습-3--쿠폰-성과-집계인사이트" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>단계</th>
+<th>처음 친 문장</th>
+<th>고쳐서 다시 친 문장</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1단계 한 파일로 모으기</td>
+<td><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong>_____</span></td>
+<td><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong>_____</span></td>
+</tr>
+<tr>
+<td>2단계 성과표 채우기</td>
+<td><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong>_____</span></td>
+<td><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong>_____</span></td>
+</tr>
+<tr>
+<td>3단계 집계 검산</td>
+<td><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong>_____</span></td>
+<td><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong>_____</span></td>
+</tr>
+<tr>
+<td>4단계 인사이트·검산</td>
+<td><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong>_____</span></td>
+<td><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong>_____</span></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="실습-4--임원용-1페이지-보고서">실습 4 — 임원용 1페이지 보고서<a class="headerlink" href="#실습-4--임원용-1페이지-보고서" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>단계</th>
+<th>처음 친 문장</th>
+<th>고쳐서 다시 친 문장</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1단계 보고서 초안 쓰기</td>
+<td><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong>_____</span></td>
+<td><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong>_____</span></td>
+</tr>
+<tr>
+<td>2단계 보고서 검산</td>
+<td><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong>_____</span></td>
+<td><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong>_____</span></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="실습-5--고객-문의에-딱지-붙이기">실습 5 — 고객 문의에 딱지 붙이기<a class="headerlink" href="#실습-5--고객-문의에-딱지-붙이기" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>단계</th>
+<th>처음 친 문장</th>
+<th>고쳐서 다시 친 문장</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1단계 기준 확인·한 건 분류</td>
+<td><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong>_____</span></td>
+<td><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong>_____</span></td>
+</tr>
+<tr>
+<td>2단계 520건 일괄 분류</td>
+<td><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong>_____</span></td>
+<td><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong>_____</span></td>
+</tr>
+<tr>
+<td>3단계 분류 검산</td>
+<td><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong>_____</span></td>
+<td><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong>_____</span></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="실습-6--부풀려진-제안서-사실로-되돌리기">실습 6 — 부풀려진 제안서 사실로 되돌리기<a class="headerlink" href="#실습-6--부풀려진-제안서-사실로-되돌리기" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>단계</th>
+<th>처음 친 문장</th>
+<th>고쳐서 다시 친 문장</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1단계 확인할 것 묻기</td>
+<td><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong>_____</span></td>
+<td><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong>_____</span></td>
+</tr>
+<tr>
+<td>2단계 관점별 검증</td>
+<td><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong>_____</span></td>
+<td><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong>_____</span></td>
+</tr>
+<tr>
+<td>3단계 사실로 재작성</td>
+<td><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong>_____</span></td>
+<td><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong>_____</span></td>
+</tr>
+<tr>
+<td>4단계 재검증·검사표</td>
+<td><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong>_____</span></td>
+<td><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong>_____</span></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="실습-7--반복작업을-재사용-스킬로-만들기">실습 7 — 반복작업을 재사용 스킬로 만들기<a class="headerlink" href="#실습-7--반복작업을-재사용-스킬로-만들기" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>단계</th>
+<th>처음 친 문장</th>
+<th>고쳐서 다시 친 문장</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1단계 범용 스킬 만들기</td>
+<td><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong>_____</span></td>
+<td><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong>_____</span></td>
+</tr>
+<tr>
+<td>2단계 견적 통합에 응용</td>
+<td><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong>_____</span></td>
+<td><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong>_____</span></td>
+</tr>
+<tr>
+<td>3단계 동료에게 넘기기</td>
+<td><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong>_____</span></td>
+<td><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong>_____</span></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="오늘-채운-다섯-줄">오늘 채운 다섯 줄<a class="headerlink" href="#오늘-채운-다섯-줄" title="Permanent link">&para;</a></h2>
+<p>마지막에 여기로 옮겨 적으세요.</p>
+<div class="admonition quote">
+<p class="admonition-title">내 문장에 이게 있나</p>
+<ol>
+<li><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong></span></li>
+<li><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong></span></li>
+<li><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong></span></li>
+<li><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong></span></li>
+<li><span class="blank-line"><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong></span></li>
+</ol>
+</div>
+<p><strong>그리고 오늘 제일 자주 빠뜨린 줄 하나에 동그라미를 치세요.</strong></p>
+<p>내일 처음 보는 일을 시킬 때, <strong>그 줄부터</strong> 확인하면 됩니다.</p>
+<hr />
+<h2 id="옮겨-적으면서-보게-되는-것">옮겨 적으면서 보게 되는 것<a class="headerlink" href="#옮겨-적으면서-보게-되는-것" title="Permanent link">&para;</a></h2>
+<p>세 가지를 세어보세요.</p>
+<ul>
+<li>처음 친 문장과 고쳐 친 문장의 <strong>길이 차이</strong></li>
+<li>고쳐 친 문장에 다섯 줄 중 <strong>몇 개</strong>가 들어 있는지</li>
+<li>일곱 실습을 지나면서 <strong>처음 문장이 길어졌는지</strong></li>
+</ul>
+<p>세 번째가 오늘의 결과입니다. 몇 개였든 상관없습니다. 오늘 아침보다 늘어난 상태입니다.</p>
+
+<nav class="pager">
+<a class="prev" href="../help/how-to-ask.html"><span class="lbl">← 이전</span><span class="ttl">AI에게 잘 시키는 법</span></a>
+<a class="next" href="../help/next.html"><span class="lbl">다음 →</span><span class="ttl">강의 끝나고 뭘 해볼까</span></a>
+</nav>
+      </article>
+      <aside class="toc mono"><h4>On this page</h4>
+<a href="#오늘-내가-친-문장">오늘 내가 친 문장</a>
+<a href="#옮겨-적는-법">옮겨 적는 법</a>
+<a href="#실습-1--흩어진-주문-한-표로-모으기">실습 1 — 흩어진 주문 한 표로 모으기</a>
+<a href="#실습-2--계약서에서-계약종합-만들기">실습 2 — 계약서에서 계약종합 만들기</a>
+<a href="#실습-3--쿠폰-성과-집계인사이트">실습 3 — 쿠폰 성과 집계·인사이트</a>
+<a href="#실습-4--임원용-1페이지-보고서">실습 4 — 임원용 1페이지 보고서</a>
+<a href="#실습-5--고객-문의에-딱지-붙이기">실습 5 — 고객 문의에 딱지 붙이기</a>
+<a href="#실습-6--부풀려진-제안서-사실로-되돌리기">실습 6 — 부풀려진 제안서 사실로 되돌리기</a>
+<a href="#실습-7--반복작업을-재사용-스킬로-만들기">실습 7 — 반복작업을 재사용 스킬로 만들기</a>
+<a href="#오늘-채운-다섯-줄">오늘 채운 다섯 줄</a>
+<a href="#옮겨-적으면서-보게-되는-것">옮겨 적으면서 보게 되는 것</a></aside>
+    </div>
+  </main>
+</div>
+<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';mermaid.initialize({startOnLoad:true,securityLevel:'loose'});</script>
+<script src="../assets/site.js"></script>
+</body>
+</html>
