@@ -3,3 +3,6 @@ __pycache__/
 .DS_Store
 .omc/
 .gstack/
+
+# Python 가상환경 (uv sync 가 생성)
+.venv/

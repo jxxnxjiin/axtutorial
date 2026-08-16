@@ -22,7 +22,7 @@ axtutorial/
 
 1. `docs/`에 Markdown 원본을 작성합니다.
 2. `nav.yml`에 페이지를 등록합니다.
-3. `python3 build_wiki.py`를 실행합니다.
+3. `uv run python build_wiki.py`를 실행합니다.
 4. `build_wiki.py`가 `docs/**/*.md`를 읽어 같은 경로의 `.html` 파일을 생성합니다.
 5. 홈과 일부 정적 페이지의 사이드바/목차도 `nav.yml` 기준으로 다시 동기화됩니다.
 
@@ -71,10 +71,11 @@ mkdir -p docs/lab4
     - { label: "1 · 첫 단계", path: "lab4/step1.md" }
 ```
 
-3. 빌드합니다.
+3. 빌드합니다. 의존성은 `pyproject.toml`/`uv.lock`에 고정되어 있으며, [uv](https://docs.astral.sh/uv/)가 `.venv`를 자동으로 만들고 관리합니다.
 
 ```bash
-python3 build_wiki.py
+uv sync             # 최초 1회 (또는 의존성이 바뀌었을 때)
+uv run python build_wiki.py
 ```
 
 4. 생성된 HTML을 브라우저에서 확인합니다.
@@ -90,7 +91,7 @@ python3 -m http.server 8000
 HTML을 직접 고치기보다 `docs/`의 Markdown 원본을 수정한 뒤 다시 빌드합니다.
 
 ```bash
-python3 build_wiki.py
+uv run python build_wiki.py
 ```
 
 빌드 스크립트가 다시 생성하는 HTML 파일은 산출물이므로, 본문 수정은 `docs/`에서 하는 것을 원칙으로 합니다.

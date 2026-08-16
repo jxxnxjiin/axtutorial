@@ -1,0 +1,10 @@
+[project]
+name = "ax-wiki-builder"
+version = "0.1.0"
+description = "ax-tutor 위키 빌더 (build_wiki.py) 의존성"
+requires-python = ">=3.10"
+dependencies = [
+    "markdown==3.10.3",
+    "pymdown-extensions==11.0.1",
+    "pyyaml==6.0.3",
+]
