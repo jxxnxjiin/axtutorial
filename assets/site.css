@@ -280,7 +280,7 @@ section{scroll-margin-top:64px}
 .tags{margin-left:auto;display:flex;gap:5px;flex-wrap:wrap;justify-content:flex-end}
 .tag{font-family:"JetBrains Mono",monospace;font-size:10px;color:var(--ink-dim);border:1px solid var(--line);border-radius:20px;padding:2px 8px;font-style:normal;white-space:nowrap}
 .card__d{padding:0 18px 14px;font-size:14px;color:var(--muted);line-height:1.62}
-.files{border-top:1px solid var(--line-soft);padding:8px;margin-top:auto;background:rgba(0,0,0,.08)}
+.files{border-top:1px solid var(--line-soft);padding:8px;flex:1 0 auto;background:rgba(0,0,0,.08)}
 [data-theme="light"] .files{background:rgba(0,0,0,.02)}
 .sub{font-family:"JetBrains Mono",monospace;font-size:10.5px;color:var(--faint);padding:8px 8px 4px;letter-spacing:.03em}
 .file{

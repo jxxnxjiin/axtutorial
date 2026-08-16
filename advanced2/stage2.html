@@ -119,7 +119,7 @@
 <p>실행 중에 어떤 도구에 설치할지 물으면 <strong>Claude Code</strong>를, 범위를 물으면 <strong>현재 프로젝트</strong>를 고르세요. 끝나면 설치된 경로가 출력됩니다. 명령이 실패하거나 사내망이라 막히면 방법 2로 진행하면 됩니다.</p>
 <p><strong>방법 2 · 파일 복사 (실습 7에서 zip을 받았을 때와 같은 방식)</strong></p>
 <p>GitHub 저장소의 <code>skills/taste-skill/SKILL.md</code> 파일을 열어 <strong>Raw</strong> 버튼으로 내려받습니다. 그리고 내 작업 폴더에 아래 폴더를 만들어 그 안에 <code>SKILL.md</code>로 저장합니다. 실습 7에서 배운 대로, <strong>폴더 이름이 곧 스킬 이름</strong>이 됩니다.</p>
-<pre class="highlight"><code>심화실습/
+<pre class="highlight"><code>lab8_advanced/
 └─ .claude/
     └─ skills/
         └─ design-taste-frontend/
@@ -130,7 +130,9 @@
 </div>
 <div class="admonition info">
 <p class="admonition-title">실습 7과 부르는 방식이 다릅니다</p>
-<p>실습 7에서는 "데이터통합 스킬로 합쳐줘"처럼 <strong>이름을 불러</strong> 썼습니다. 이번 스킬은 웹페이지를 만드는 작업이 오면 AI가 <strong>스스로 찾아 읽도록</strong> 만들어져 있어, 이름을 부르지 않아도 됩니다. 스킬마다 발동 방식이 조금씩 다르고, 그건 스킬을 만든 사람이 정해 둔 것입니다.</p>
+<p>실습 7에서는 "데이터통합 스킬로 합쳐줘"처럼 문장 안에서 <strong>이름을 불러</strong> 썼습니다. 이번에는 프롬프트 맨 앞에 <strong>슬래시 커맨드</strong> 한 줄을 붙여 스킬을 직접 켭니다.</p>
+<pre class="highlight"><code>/design-taste-frontend</code></pre>
+<p>입력창에 <code>/</code>를 치면 설치된 스킬 목록이 뜨고, 거기서 골라도 됩니다. 이 스킬은 웹페이지 작업이 오면 AI가 스스로 찾아 읽도록도 만들어져 있지만, 수업에서는 확실하게 켜지는 슬래시 커맨드 방식으로 갑니다. 스킬마다 발동 방식이 조금씩 다르고, 그건 스킬을 만든 사람이 정해 둔 것입니다.</p>
 </div>
 <h2 id="설치한-스킬-구경하기">설치한 스킬 구경하기<a class="headerlink" href="#설치한-스킬-구경하기" title="Permanent link">&para;</a></h2>
 <p>다시 만들기 전에, 방금 넣은 <code>SKILL.md</code>를 한번 열어 스크롤해 보세요. 세 군데만 보면 됩니다.</p>
@@ -142,7 +144,10 @@
 <p>읽다 보면 알게 됩니다. 이 파일은 코드가 아니라 <strong>잘 정리된 잔소리</strong>입니다. 여러분이 실습 7에서 주문 통합 규칙을 적었듯, 어느 디자이너가 자기 기준을 적어둔 것뿐입니다.</p>
 <h2 id="같은-프롬프트로-다시-시키기">같은 프롬프트로 다시 시키기<a class="headerlink" href="#같은-프롬프트로-다시-시키기" title="Permanent link">&para;</a></h2>
 <p><strong>반드시 새 대화를 시작한 뒤</strong> 보내세요. 스킬 목록은 대화를 시작할 때 읽히기 때문에, 1단계 대화에 이어서 보내면 새로 설치한 스킬이 반영되지 않을 수 있습니다.</p>
-<p>1단계 프롬프트를 그대로 복사해 보내되, 저장 위치만 <code>2.비교용/after/</code>로 바꿉니다. 바뀌는 건 그 한 줄뿐입니다.</p>
+<p>1단계 프롬프트를 그대로 복사해 보내되, <strong>맨 앞에 <code>/design-taste-frontend</code> 한 줄을 붙이고</strong>, 저장 위치만 <code>2.비교용/after/</code>로 바꿉니다. 본문에서 바뀌는 건 그 두 가지뿐입니다.</p>
+<pre class="highlight"><code>/design-taste-frontend 2.제품사양서.xlsx를 참고해서, 우리 회사(한울로보틱스)의
+산업용 협동로봇 제품 소개 페이지를 만들어줘.
+(…이하 1단계 프롬프트 그대로, 저장 위치만 2.비교용/after/…)</code></pre>
 <div class="admonition info">
 <p class="admonition-title">결과보다 먼저 눈여겨볼 것</p>
 <p>스킬이 제대로 걸렸다면, 페이지를 만들기 전에 AI가 <strong>무엇을 만들지 먼저 선언합니다.</strong> 이 페이지를 어떤 성격의 페이지로 읽었는지 말하고, 다이얼 세 개의 값을 정하고 시작합니다.</p>
