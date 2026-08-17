@@ -80,7 +80,6 @@
 <a class="nav-a" href="../lab7/index.html"><span class="g">◆</span> 개요</a>
 <a class="nav-a" href="../lab7/step1.html">1 · 범용 스킬 만들기</a>
 <a class="nav-a" href="../lab7/step2.html">2 · 견적 통합에 응용</a>
-<a class="nav-a" href="../lab7/step3.html">3 · 동료에게 넘기기</a>
 </div>
 <div class="nav-h">// 심화 실습 · 남의 스킬로 웹페이지 만들기</div><div class="tree">
 <a class="nav-a" href="../advanced2/index.html"><span class="g">★</span> 개요</a>
@@ -111,7 +110,7 @@
         <div class="kicker mono"><b>//</b> 실습 1 · 흩어진 주문 한 표로 모으기</div>
 <h1 id="1--한-표로-모으기">1 · 한 표로 모으기<a class="headerlink" href="#1--한-표로-모으기" title="Permanent link">&para;</a></h1>
 <p>lab1 폴더에는 주문 파일 세 개가 있습니다. 웹주문 첫 칸은 '주문번호', 전화주문의 같은 자리는 'order_id', 제휴주문은 '협력사주문ID'. 사람은 눈으로 보면 같은 뜻인 걸 바로 알지만, AI에게는 그걸 규칙으로 넘겨줘야 합니다.</p>
-<p>함정은 더 있습니다. 날짜 표기가 파일마다 다르고, 같은 주문이 두 채널에 동시에 잡혀 있기도 합니다. 그래서 이 단계에서는 <code>작업방법참고.xlsx</code>의 대조표를 근거로 <strong>같은 뜻이면 같은 칸</strong> 규칙을 프롬프트에 담아 엑셀 한 파일로 합칩니다.</p>
+<p>함정은 더 있습니다. 날짜 표기가 파일마다 다르고, 같은 주문이 두 채널에 동시에 잡혀 있기도 합니다. 그래서 이 단계에서는 <code>작업방법참고.xlsx</code>의 대조표를 근거로 <strong>같은 뜻이면 같은 칸</strong>이라는 규칙을 프롬프트에 담아 엑셀 한 파일로 합칩니다.</p>
 <h2 id="직접-시켜보세요">직접 시켜보세요<a class="headerlink" href="#직접-시켜보세요" title="Permanent link">&para;</a></h2>
 <p>아래 두 체크리스트를 읽고 빠진 규칙 없이 프롬프트에 담아보세요. 열 이름 대조표는 <code>작업방법참고.xlsx</code>에 있습니다.</p>
 <h2 id="프롬프트에-꼭-담을-것-">프롬프트에 꼭 담을 것 ✅<a class="headerlink" href="#프롬프트에-꼭-담을-것-" title="Permanent link">&para;</a></h2>
@@ -119,9 +118,9 @@
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>읽을 대상</strong> — 세 파일 <code>웹주문</code>·<code>전화주문</code>·<code>제휴주문</code> 전부</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>결과 파일</strong> — 하나의 엑셀 파일, 파일명 지정 (예: <code>주문종합.xlsx</code>)</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>엑셀에 들어갈 칸</strong> — 표준 7칸 (주문번호·고객명·상품명·수량·금액_원·주문일·주문채널)</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>열 이름 매핑</strong> — 제목이 달라도 뜻이 같으면 같은 칸 (<code>order_id</code>·<code>협력사주문ID</code> → 주문번호)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>열 이름 대조</strong> — 제목이 달라도 뜻이 같으면 같은 칸 (<code>order_id</code>·<code>협력사주문ID</code> → 주문번호)</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>출처 표시</strong> — 어느 파일에서 왔는지 <code>주문채널</code>에 (웹/전화/제휴)</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>중복 처리</strong> — 같은 주문번호는 한 줄로 합치고, 온 채널은 채널칸에 모두</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>중복 처리</strong> — 같은 주문번호는 한 줄로 합치고, 들어온 채널은 채널칸에 모두</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>날짜 형식</strong> — <code>YYYY-MM-DD</code>로 통일 (제휴는 <code>01/12/2026</code>처럼 월/일 순서라 주의)</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>빈 금액 처리</strong> — 0이 아니라 빈칸 (없는 값 지어내지 않기)</li>
 </ul>
@@ -139,9 +138,9 @@
 주문종합.xlsx의 표준 7칸(주문번호·고객명·상품명·수량·금액_원·주문일·주문채널)에 맞춰 합쳐줘.
 파일마다 열 제목이 다른데, 작업방법참고.xlsx의 대조표대로 같은 뜻이면 같은 칸으로 옮겨.
 각 줄이 어느 파일에서 왔는지 주문채널에 웹/전화/제휴로 적어줘.
-같은 주문번호가 여러 파일에 겹치면 한 줄로 합치고, 온 채널을 채널칸에 모두 남겨줘.
+같은 주문번호가 여러 파일에 겹치면 한 줄로 합치고, 들어온 채널을 채널칸에 모두 남겨줘.
 주문일은 YYYY-MM-DD로 통일해. 제휴 파일 날짜는 월/일 순서니까 주의해.
-금액이 원본에 비어 있으면 0을 넣지 말고 빈칸으로 둬.
+혹시 금액이 원본에 비어 있는 건이 있으면 0을 넣지 말고 빈칸으로 둬.
 다 되면 원본 세 파일 건수 합과, 합친 뒤 줄 수와, 겹쳐서 합쳐진 건수를 숫자로 알려줘.</code></pre>
 </details>
 <h2 id="실행-예시">실행 예시<a class="headerlink" href="#실행-예시" title="Permanent link">&para;</a></h2>
@@ -155,9 +154,9 @@
 <h2 id="체크포인트">체크포인트<a class="headerlink" href="#체크포인트" title="Permanent link">&para;</a></h2>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 결과 엑셀 파일에 표준 <strong>7칸</strong>이 그대로 있다</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 세 원본 건수 합(150 + 140 + 120 = <strong>410건</strong>)이 모두 들어 있다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 세 원본의 주문 <strong>410건</strong>(150+140+120)이 하나도 빠짐없이 반영되어 있다 (겹친 건은 한 줄로 합쳐져 행 수는 410보다 적을 수 있습니다)</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 합친 뒤 줄 수와 <strong>겹쳐서 합쳐진 건수</strong>를 AI에게 숫자로 받았다</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>주문채널</code> 내 임의의 줄이 실제 원본 파일과 맞는다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 아무 행이나 골라 <code>주문채널</code> 값이 그 행이 실제로 들어 있는 원본 파일과 일치한다</li>
 </ul>
 <nav class="pager">
 <a class="prev" href="../lab1/index.html"><span class="lbl">← 이전</span><span class="ttl">개요</span></a>

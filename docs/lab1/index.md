@@ -2,6 +2,8 @@
 
 > **한 줄 목표**: 웹·전화·제휴 세 경로로 따로 들어온 주문 파일을, 양식이 제각각인데도 표준 7칸짜리 엑셀 한 장으로 합치되 한 건도 빠뜨리거나 지어내지 않는다.
 
+이 실습에서 쓰는 업무 유형 — `모으기`(취합·통합) `검사하기`(검증·검수) · [여섯 가지 유형 다시 보기](../types/index.md)
+
 ## 오늘 받은 일
 
 > 입사 3주차. 영업지원팀 사수가 말합니다.
@@ -10,7 +12,7 @@
 
 웹은 '주문번호', 전화는 'order_id', 제휴는 '협력사주문ID'. 같은 뜻인데 이름이 제각각인 파일이 채널마다 쌓이는 건 어느 회사에서나 벌어지는 일입니다. 몇백 건이면 손으로도 되지만 실제 업무에서 수만 건이 되면 몇 시간짜리 일이 됩니다.
 
-이 첫 실습에서는 그 일을 AI에게 통째로 맡기는 법을 배웁니다. 빠뜨리지 않는다, 맘대로 바꾸지 않는다, 없는 건 지어내지 않는다. 이 세 원칙을 규칙으로 넘기면 됩니다. 끝나면 표준 7칸짜리 주문종합 한 장이 나오고, 새거나 겹친 건이 없는지 **검산**까지 마칩니다.
+이 첫 실습에서는 그 일을 AI에게 통째로 맡기는 법을 배웁니다. 빠뜨리지 않는다, 맘대로 바꾸지 않는다, 없는 건 지어내지 않는다. 이 세 원칙을 규칙으로 넘기면 됩니다. 끝나면 표준 7칸짜리 주문종합 한 장이 나오고, 빠지거나 겹친 건이 없는지 **검산**까지 마칩니다.
 
 ## 폴더에 있는 것
 
@@ -22,7 +24,7 @@
 | `작업방법참고.xlsx` | 작업 방법, 세 파일 열 이름 대조표 |
 | `주문종합.xlsx` | 채워 넣을 빈 템플릿 |
 
-<div style="display:flex;gap:12px;flex-wrap:wrap">
+<div style="display:flex;flex-direction:column;gap:18px">
   <figure style="flex:1 1 0;min-width:180px;margin:0">
     <img src="../images/lab1/orders_example_1.png" alt="orders_example_1.png" style="width:100%;height:320px;object-fit:cover;object-position:top;display:block">
     <figcaption style="text-align:center;font-size:0.85em;color:#888;margin-top:6px">웹주문</figcaption>

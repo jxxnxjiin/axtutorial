@@ -70,7 +70,6 @@ nav:
       - { label: "개요", path: "lab7/index.md", icon: "◆" }
       - { label: "1 · 범용 스킬 만들기", path: "lab7/step1.md" }
       - { label: "2 · 견적 통합에 응용", path: "lab7/step2.md" }
-      - { label: "3 · 동료에게 넘기기", path: "lab7/step3.md" }
 
   - group: "심화 실습 · 남의 스킬로 웹페이지 만들기"
     children:

@@ -1,11 +1,11 @@
 # 3. Node.js 설치하기
 
 !!! abstract "이 페이지에서 하는 일"
-    - 웹 서버를 구동하는 런타임 **Node.js**를 설치합니다
+    - 실습 도구를 실행해 주는 프로그램 **Node.js**를 설치합니다
     - 터미널에서 `node --version` · `npm --version`이 숫자를 답하면 통과입니다
 
-- **Node.js**는 자바스크립트를 브라우저 밖에서 실행할 수 있게 해주는 런타임 환경입니다.
-- 실습에서는 **프론트엔드**(화면을 그려주는 서버)와 **백엔드**(데이터를 보내주는 서버)를 만드는 데 씁니다.
+- **Node.js**는 자바스크립트로 만든 도구를 여러분 컴퓨터에서 직접 실행할 수 있게 해주는 프로그램입니다.
+- 실습에서는 AI 도구 설치 명령(심화 실습의 스킬 설치 등)이 이걸 사용합니다. 직접 다룰 일은 없습니다.
 
 
 ## Windows에서 설치하기
@@ -20,7 +20,7 @@ Node.js 공식 사이트에 접속합니다.
 https://nodejs.org
 ```
 
-x64 아키텍처의 Windows용으로 미리 빌드된 버전을 받습니다. 하단의 **Windows 설치 프로그램(.msi)** 버튼을 눌러 다운로드하세요.
+페이지 하단의 **Windows 설치 프로그램(.msi)** 버튼을 눌러 받습니다.
 
 ![nodejs.org 다운로드 화면 — Windows 설치 프로그램(.msi) 버튼](../../images/setup/nodejs_download.png)
 
@@ -40,7 +40,7 @@ x64 아키텍처의 Windows용으로 미리 빌드된 버전을 받습니다. �
 
 ### 3. Tools for Native Modules
 
-*"Automatically install the necessary tools"*를 체크하면 C++ 빌드 도구가 함께 설치됩니다. 일부 npm 패키지(예: `bcrypt`, `sharp`)는 네이티브 모듈을 컴파일해야 하므로 **체크를 권장**합니다.
+*"Automatically install the necessary tools"*를 체크하면 C++ 빌드 도구가 함께 설치됩니다. 나중에 일부 도구를 설치할 때 이 구성 요소가 필요할 수 있으니 **체크를 권장**합니다.
 
 `Install` 버튼을 눌러 설치를 완료합니다.
 

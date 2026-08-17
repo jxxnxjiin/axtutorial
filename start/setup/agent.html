@@ -80,7 +80,6 @@
 <a class="nav-a" href="../../lab7/index.html"><span class="g">◆</span> 개요</a>
 <a class="nav-a" href="../../lab7/step1.html">1 · 범용 스킬 만들기</a>
 <a class="nav-a" href="../../lab7/step2.html">2 · 견적 통합에 응용</a>
-<a class="nav-a" href="../../lab7/step3.html">3 · 동료에게 넘기기</a>
 </div>
 <div class="nav-h">// 심화 실습 · 남의 스킬로 웹페이지 만들기</div><div class="tree">
 <a class="nav-a" href="../../advanced2/index.html"><span class="g">★</span> 개요</a>
@@ -117,7 +116,7 @@
 <li>파일을 고칠 때마다 뜨는 확인 창을 미리 꺼둡니다 <strong>(자동 승인)</strong></li>
 </ul>
 </div>
-<p>오늘 말을 걸 상대인 <strong>AI 코딩 에이전트</strong>를 설치합니다. VS Code 확장 프로그램으로 설치하면 친숙한 채팅 UI로 바로 시작할 수 있습니다.</p>
+<p>오늘 말을 걸 상대인 <strong>AI 코딩 에이전트</strong>를 설치합니다. VS Code 확장 프로그램으로 설치하면 친숙한 채팅 화면으로 바로 시작할 수 있습니다.</p>
 <h2 id="1-claude-code-확장-설치">1. Claude Code 확장 설치<a class="headerlink" href="#1-claude-code-확장-설치" title="Permanent link">&para;</a></h2>
 <ol>
 <li>아래 링크에서 Claude Code 확장 페이지를 엽니다.</li>
@@ -149,22 +148,21 @@
 <p>VS Code 확장으로 설치한 Claude Code는 <strong>VS Code 안에서만</strong> 쓸 수 있습니다. 터미널에서 좀 더 자유롭게 쓰고 싶다면 CLI 모드를 추가로 설치합니다.</p>
 <p><strong>1단계.</strong> 검색 창에 <code>명령 프롬프트</code>를 입력해 실행합니다.</p>
 <p><strong>2단계.</strong> 아래 명령을 입력하고 <kbd>Enter</kbd> (Windows 기준).</p>
-<p><code>bash     curl -fsSL https://claude.ai/install.cmd -o install.cmd &amp;&amp; install.cmd &amp;&amp; del install.cmd</code></p>
+<pre class="highlight"><code class="language-bash">curl -fsSL https://claude.ai/install.cmd -o install.cmd &amp;&amp; install.cmd &amp;&amp; del install.cmd</code></pre>
 <p><strong>3단계.</strong> 아래 명령으로 버전이 출력되면 설치 완료입니다.</p>
-<p><code>bash     claude --version</code></p>
+<pre class="highlight"><code class="language-bash">claude --version</code></pre>
 <p><code>Installation complete!</code>가 떴는데도 버전이 안 나오면, 명령 프롬프트를 닫았다가 다시 열어 <code>claude --version</code>을 입력해보세요.</p>
 </details>
 <h2 id="3-확인-창-미리-꺼두기-자동-승인">3. 확인 창 미리 꺼두기 (자동 승인)<a class="headerlink" href="#3-확인-창-미리-꺼두기-자동-승인" title="Permanent link">&para;</a></h2>
 <p>AI가 파일을 고칠 때마다 <em>"이 파일을 수정해도 될까요?"</em> 하고 물어봅니다. 오늘 하루는 파일을 수백 번 고치므로, 미리 꺼두면 실습 흐름이 끊기지 않습니다.</p>
-<div class="admonition tip">
-<p class="admonition-title">설정 방법은 부록에서</p>
-<p>Claude Code 모드 드롭다운에서 <code>Edit automatically</code>를 고르면 됩니다. 명령 실행까지 자동으로 넘기는 방법과 되돌리는 법은 <a href="autoapprove.html"><strong>부록 · 자동 허가 모드 설정</strong></a>에 정리해뒀습니다.</p>
-</div>
+<p>Claude Code 패널 입력줄 <strong>오른쪽 아래의 모드 버튼</strong>을 눌러 <code>Auto</code>를 고르세요. 안전 검사를 통과한 작업은 자동으로 진행하고, 위험한 것만 멈춰서 물어봅니다. 이것 하나면 오늘 실습에는 충분합니다.</p>
+<p><img alt="Claude Code 모드 목록에서 Auto를 고른 화면 — 안전 검사를 통과한 작업은 자동 승인" src="../../images/setup/autoapprove_claude_auto.png" /></p>
+<p>!!! tip "더 세게 풀거나 되돌리는 법은 부록에서" 명령 실행까지 자동으로 넘기는 방법과 되돌리는 법은 <a href="autoapprove.html"><strong>부록 · 자동 허가 모드 설정</strong></a>에 정리해뒀습니다.</p>
 <h2 id="다-됐는지-스스로-확인하기">다 됐는지 스스로 확인하기<a class="headerlink" href="#다-됐는지-스스로-확인하기" title="Permanent link">&para;</a></h2>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> VS Code에서 Claude Code 패널이 뜨고, <strong>로그인 화면 없이</strong> 말을 걸 수 있다</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 터미널에서 <code>python --version</code> · <code>node --version</code>이 숫자를 답한다</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Claude Code 패널 아래에 <code>Edit automatically</code> 라벨이 보인다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 터미널에서 <code>python --version</code>(맥은 <code>python3 --version</code>) · <code>node --version</code>이 숫자를 답한다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Claude Code 입력창 오른쪽 아래에 <code>Auto</code> 라벨이 보인다</li>
 </ul>
 <p>여기까지 됐으면 도구 설치는 끝입니다. 이제 실습 데이터를 준비합니다.</p>
 

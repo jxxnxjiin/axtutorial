@@ -11,7 +11,26 @@
   var el=document.getElementById('typed');
   if(el){
     var target=el.getAttribute('data-text')||'오늘 배울 것을 한 눈에 보여줘',i=0;
-    (function type(){ if(i<=target.length){el.textContent=target.slice(0,i++);setTimeout(type,55);} })();
+    (function type(){ if(i<=target.length){el.textContent=target.slice(0,i++);setTimeout(type,55);} 
+  // ---- 코드블록 복사 버튼: .md 안 모든 pre(예시 프롬프트 포함) 우상단 ----
+  [].slice.call(document.querySelectorAll('.md pre')).forEach(function(pre){
+    if(pre.closest('.codewrap'))return;
+    var wrap=document.createElement('div');wrap.className='codewrap';
+    pre.parentNode.insertBefore(wrap,pre);wrap.appendChild(pre);
+    var btn=document.createElement('button');
+    btn.type='button';btn.className='copybtn mono';btn.textContent='⧉ 복사';
+    btn.addEventListener('click',function(){
+      var text=(pre.querySelector('code')||pre).innerText.replace(/\n$/,'');
+      var done=function(){btn.textContent='✓ 복사됨';btn.classList.add('ok');
+        setTimeout(function(){btn.textContent='⧉ 복사';btn.classList.remove('ok');},1600);};
+      var fallback=function(){var ta=document.createElement('textarea');ta.value=text;document.body.appendChild(ta);
+        ta.select();document.execCommand('copy');document.body.removeChild(ta);done();};
+      if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(text).then(done).catch(fallback);}
+      else{fallback();}
+    });
+    wrap.appendChild(btn);
+  });
+})();
   }
 
   // ---- theme toggle ----
@@ -72,4 +91,23 @@
     },{rootMargin:'-12% 0px -72% 0px',threshold:0});
     ids.forEach(function(id){io.observe(document.getElementById(id));});
   }
+
+  // ---- 코드블록 복사 버튼: .md 안 모든 pre(예시 프롬프트 포함) 우상단 ----
+  [].slice.call(document.querySelectorAll('.md pre')).forEach(function(pre){
+    if(pre.closest('.codewrap'))return;
+    var wrap=document.createElement('div');wrap.className='codewrap';
+    pre.parentNode.insertBefore(wrap,pre);wrap.appendChild(pre);
+    var btn=document.createElement('button');
+    btn.type='button';btn.className='copybtn mono';btn.textContent='⧉ 복사';
+    btn.addEventListener('click',function(){
+      var text=(pre.querySelector('code')||pre).innerText.replace(/\n$/,'');
+      var done=function(){btn.textContent='✓ 복사됨';btn.classList.add('ok');
+        setTimeout(function(){btn.textContent='⧉ 복사';btn.classList.remove('ok');},1600);};
+      var fallback=function(){var ta=document.createElement('textarea');ta.value=text;document.body.appendChild(ta);
+        ta.select();document.execCommand('copy');document.body.removeChild(ta);done();};
+      if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(text).then(done).catch(fallback);}
+      else{fallback();}
+    });
+    wrap.appendChild(btn);
+  });
 })();

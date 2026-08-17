@@ -2,6 +2,8 @@
 
 > **한 줄 목표**: 동료가 쓴 영업 제안서 초안을 사양서·고객 요구사항과 대조해, 과장·불일치·누락을 잡아 **사실대로 고치고** 요구사항 충족 여부를 검사표로 마무리한다.
 
+이 실습에서 쓰는 업무 유형 — `검사하기`(검증·검수) `쓰기`(초안 작성) · [여섯 가지 유형 다시 보기](../types/index.md)
+
 ## 오늘 받은 일
 
 > 당신은 로봇 제조사 '한울로보틱스' 신입입니다. 팀장님이 말합니다.
@@ -19,6 +21,17 @@
 | `1.영업제안서_초안.pdf` | 동료가 만든 로봇 판매 제안서 (과장·불일치·누락이 섞여 있음)  |
 | `2.제품사양서.xlsx`     | 자사 로봇 실제 사양 (모델별 가반하중·가격·유지비, 인증 현황) |
 | `3.고객사_요구사항.pdf` | 고객사 미팅 메모 — 요구사항 6개                               |
+
+<div style="display:flex;flex-direction:column;gap:18px">
+  <figure style="margin:0">
+    <img src="../images/lab6/proposal_draft_example.png" alt="proposal_draft_example.png" style="width:100%;height:auto;display:block">
+    <figcaption style="text-align:center;font-size:0.85em;color:#888;margin-top:6px">검토할 제안서 초안</figcaption>
+  </figure>
+  <figure style="margin:0">
+    <img src="../images/lab6/spec_sheet_example.png" alt="spec_sheet_example.png" style="width:100%;height:auto;display:block">
+    <figcaption style="text-align:center;font-size:0.85em;color:#888;margin-top:6px">대조 기준이 되는 제품 사양서</figcaption>
+  </figure>
+</div>
 
 ## 실습에서 할 일
 

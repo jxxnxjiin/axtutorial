@@ -5,7 +5,7 @@
     - 터미널에서 `python --version`이 숫자를 답하면 통과입니다
 
 - **파이썬(Python)**은 데이터 처리, 분석, AI 서버 구축에 강점이 있는 언어입니다.
-- 실습에서는 PDF나 이미지를 **전처리·분석**하고, 데이터를 **취합·정리**하는 데 씁니다.
+- 실습에서는 AI가 엑셀·PDF 자료를 읽고 정리할 때 **뒤에서 조용히** 이걸 씁니다. 여러분이 직접 다룰 일은 없습니다.
 
 
 ## 다운로드와 설치
@@ -16,19 +16,31 @@ Python 공식 사이트에서 최신 버전(3.10 이상)을 받습니다.
 https://www.python.org/downloads/
 ```
 
-- **Windows** → 노란 `Download Python 3.x.x` 버튼으로 설치 파일을 받아 실행합니다.
-- **macOS** → 같은 버튼으로 받은 `.pkg` 파일을 실행해 안내대로 설치합니다.
+**1단계.** 페이지를 아래로 내려 **Active Python releases** 표에서 설치할 버전의 `Download`를 누릅니다.
+
+![python.org 다운로드 페이지의 Active Python releases 표 — 설치할 버전의 Download 링크](../../images/setup/python_add_to_path.png)
+
+**2단계.** 열린 페이지 맨 아래 **Files** 표에서 받을 파일을 고릅니다.
+
+- **Windows** → `Windows installer (64-bit)` (**Recommended** 표시가 붙어 있습니다)
+- **macOS** → `macOS installer` (`.pkg` 파일을 실행해 안내대로 설치합니다)
+
+![Files 표에서 Windows installer (64-bit) Recommended 항목 선택](../../images/setup/python_install_1.png)
+
+**3단계.** 받은 설치 파일을 실행합니다.
 
 !!! danger "Windows에서는 이 체크박스가 가장 중요합니다"
-    설치 **첫 화면 아래쪽**의 **`Add Python to PATH`** 체크박스를 **반드시 켜세요.** 이걸 놓치면 뒤에서 `python` 명령이 동작하지 않습니다.
+    설치 **첫 화면 아래쪽**의 **`Add python.exe to PATH`** 체크박스를 **반드시 켜세요.** 이걸 놓치면 뒤에서 `python` 명령이 동작하지 않습니다.
 
-    이미 안 켜고 설치했다면, 설치 파일을 다시 실행해`Modify`로 고칠 수 있습니다.
+    이미 안 켜고 설치했다면, 설치 파일을 다시 실행해 `Modify`로 고칠 수 있습니다.
+
+![Python 설치 첫 화면 — 아래쪽 Add python.exe to PATH 체크박스가 켜져 있는 상태](../../images/setup/python_install_2.png)
 
 체크한 뒤 `Install Now`를 눌러 설치를 완료합니다.
 
 ## 설치 확인
 
-설치가 끝나면 **새 명령 프롬프트(또는 터미널) 창**을 열고 아래를 입력합니다.
+설치가 끝나면 **새 명령 프롬프트 창**을 열고(윈도우 키 → `cmd` 입력 → Enter, 맥은 Spotlight에서 '터미널' 검색) 아래를 입력합니다.
 
 ```bash
 python --version

@@ -80,7 +80,6 @@
 <a class="nav-a" href="../lab7/index.html"><span class="g">◆</span> 개요</a>
 <a class="nav-a" href="../lab7/step1.html">1 · 범용 스킬 만들기</a>
 <a class="nav-a" href="../lab7/step2.html">2 · 견적 통합에 응용</a>
-<a class="nav-a" href="../lab7/step3.html">3 · 동료에게 넘기기</a>
 </div>
 <div class="nav-h">// 심화 실습 · 남의 스킬로 웹페이지 만들기</div><div class="tree">
 <a class="nav-a" href="../advanced2/index.html"><span class="g">★</span> 개요</a>
@@ -113,13 +112,14 @@
 <blockquote>
 <p><strong>한 줄 목표</strong>: 웹·전화·제휴 세 경로로 따로 들어온 주문 파일을, 양식이 제각각인데도 표준 7칸짜리 엑셀 한 장으로 합치되 한 건도 빠뜨리거나 지어내지 않는다.</p>
 </blockquote>
+<p>이 실습에서 쓰는 업무 유형 — <code>모으기</code>(취합·통합) <code>검사하기</code>(검증·검수) · <a href="../types/index.html">여섯 가지 유형 다시 보기</a></p>
 <h2 id="오늘-받은-일">오늘 받은 일<a class="headerlink" href="#오늘-받은-일" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p>입사 3주차. 영업지원팀 사수가 말합니다.</p>
 <p>"주문이 웹·전화·제휴 세 군데로 따로 들어와요. 파일이 세 개인데 양식이 다 달라요. 어떤 건 제목이 한글, 어떤 건 영어예요. 이걸 하나의 주문종합 표로 합쳐줘요. 한 건도 빠지면 안 되고, 없는 값을 지어내도 안 됩니다."</p>
 </blockquote>
 <p>웹은 '주문번호', 전화는 'order_id', 제휴는 '협력사주문ID'. 같은 뜻인데 이름이 제각각인 파일이 채널마다 쌓이는 건 어느 회사에서나 벌어지는 일입니다. 몇백 건이면 손으로도 되지만 실제 업무에서 수만 건이 되면 몇 시간짜리 일이 됩니다.</p>
-<p>이 첫 실습에서는 그 일을 AI에게 통째로 맡기는 법을 배웁니다. 빠뜨리지 않는다, 맘대로 바꾸지 않는다, 없는 건 지어내지 않는다. 이 세 원칙을 규칙으로 넘기면 됩니다. 끝나면 표준 7칸짜리 주문종합 한 장이 나오고, 새거나 겹친 건이 없는지 <strong>검산</strong>까지 마칩니다.</p>
+<p>이 첫 실습에서는 그 일을 AI에게 통째로 맡기는 법을 배웁니다. 빠뜨리지 않는다, 맘대로 바꾸지 않는다, 없는 건 지어내지 않는다. 이 세 원칙을 규칙으로 넘기면 됩니다. 끝나면 표준 7칸짜리 주문종합 한 장이 나오고, 빠지거나 겹친 건이 없는지 <strong>검산</strong>까지 마칩니다.</p>
 <h2 id="폴더에-있는-것">폴더에 있는 것<a class="headerlink" href="#폴더에-있는-것" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -151,7 +151,7 @@
 </tr>
 </tbody>
 </table>
-<div style="display:flex;gap:12px;flex-wrap:wrap">
+<div style="display:flex;flex-direction:column;gap:18px">
   <figure style="flex:1 1 0;min-width:180px;margin:0">
     <img src="../images/lab1/orders_example_1.png" alt="orders_example_1.png" style="width:100%;height:320px;object-fit:cover;object-position:top;display:block">
     <figcaption style="text-align:center;font-size:0.85em;color:#888;margin-top:6px">웹주문</figcaption>

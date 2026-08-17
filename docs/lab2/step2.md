@@ -1,6 +1,6 @@
 # 2단계 · 원본과 대조해 검산
 
-1단계에서 줄글 8건이 깔끔한 표로 바뀌었습니다. 그런데 실습 1의 통합과 달리 이번엔 건수 등식만으로는 못 잡는 오류가 있습니다. 원문에 없는 값이 그럴듯하게 채워지는 것으로, **그럴듯한 게 가장 위험합니다.**
+1단계에서 줄글 8건이 깔끔한 표로 바뀌었습니다. 그런데 실습 1의 통합과 달리 이번엔 건수 등식만으로는 못 잡는 오류가 있습니다. 원문에 없는 값이 그럴듯하게 채워지는 오류인데, **그럴듯한 게 가장 위험합니다.**
 
 그래서 이번 검산은 숫자 세기가 아니라 근거 대조입니다. AI에게 칸마다 원문의 근거 문장을 대게 시켜, 못 대는 칸을 자수하게 만듭니다.
 
@@ -35,7 +35,7 @@
 
 ## 실행 예시
 
-!!! example "다음과 같이 물어볼 수 있습니다"
+!!! example "질문 예시 화면"
     <figure style="margin:0">
       <img src="../images/lab2/step2-verify.png" alt="step2-verify.png" style="width:100%;height:auto;display:block">
       <figcaption style="text-align:center;font-size:0.85em;color:#888;margin-top:6px">검산 질문 예시</figcaption>

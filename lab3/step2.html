@@ -80,7 +80,6 @@
 <a class="nav-a" href="../lab7/index.html"><span class="g">◆</span> 개요</a>
 <a class="nav-a" href="../lab7/step1.html">1 · 범용 스킬 만들기</a>
 <a class="nav-a" href="../lab7/step2.html">2 · 견적 통합에 응용</a>
-<a class="nav-a" href="../lab7/step3.html">3 · 동료에게 넘기기</a>
 </div>
 <div class="nav-h">// 심화 실습 · 남의 스킬로 웹페이지 만들기</div><div class="tree">
 <a class="nav-a" href="../advanced2/index.html"><span class="g">★</span> 개요</a>
@@ -113,11 +112,16 @@
 <p>1단계에서 9천여 건이 한 파일로 모였습니다. 이제 이걸 쿠폰 44줄로 줄입니다. 9천 줄이 44줄이 되는 것, 이게 자료 요약입니다.</p>
 <p>함정은 계산 규칙에 있습니다. 취소 주문을 섞으면 밑지는 쿠폰이 남는 쿠폰으로 둔갑하고, 마진율을 빼먹으면 순이익이 통째로 틀립니다. 그래서 아래 계산 규칙을 그대로 프롬프트에 못 박아 빈 성과표를 채웁니다. 한 쿠폰이 한 줄입니다.</p>
 <h2 id="채울-칸과-계산-규칙">채울 칸과 계산 규칙<a class="headerlink" href="#채울-칸과-계산-규칙" title="Permanent link">&para;</a></h2>
-<blockquote>
-<p>매출합계 = 결제완료 <code>매출액_원</code> 합 · 할인합계 = 결제완료 <code>할인액_원</code> 합</p>
-<p><strong>매출이익 = 매출합계 × 30%</strong> · 순이익 = 매출이익 − 할인합계</p>
-<p>매출순이익률 = 순이익 ÷ 매출합계 · 사용건수 = 결제완료 건수 · 적자여부 = 순이익 &lt; 0 이면 <code>적자</code></p>
-</blockquote>
+<p>집계 대상은 <strong>결제완료 건만</strong>입니다. 쿠폰마다 아래 일곱 칸을 채웁니다.</p>
+<ul>
+<li><strong>매출합계</strong> = <code>매출액_원</code> 합</li>
+<li><strong>할인합계</strong> = <code>할인액_원</code> 합</li>
+<li><strong>매출이익</strong> = 매출합계 × 30%</li>
+<li><strong>순이익</strong> = 매출이익 − 할인합계</li>
+<li><strong>매출순이익률</strong> = 순이익 ÷ 매출합계</li>
+<li><strong>사용건수</strong> = 결제완료 건수</li>
+<li><strong>적자여부</strong> = 순이익이 0보다 작으면 <code>적자</code></li>
+</ul>
 <h2 id="직접-시켜보세요">직접 시켜보세요<a class="headerlink" href="#직접-시켜보세요" title="Permanent link">&para;</a></h2>
 <p>아래 두 체크리스트를 먼저 읽고 빠진 규칙이 없도록 프롬프트에 담아보세요.</p>
 <h2 id="프롬프트에-꼭-담을-것-">프롬프트에 꼭 담을 것 ✅<a class="headerlink" href="#프롬프트에-꼭-담을-것-" title="Permanent link">&para;</a></h2>
@@ -125,7 +129,7 @@
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>집계 대상</strong> — 1단계에서 만든 통합 파일을 <code>쿠폰코드</code>로 묶기 (쿠폰 44개)</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>거를 것</strong> — <code>주문상태</code>가 취소인 건 빼고 <strong>결제완료만</strong></li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>채울 칸</strong> — 위 7칸, 계산식 그대로 (마진율은 <strong>매출의 30%</strong>)</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>결과 파일</strong> — 채운 집계표, 파일명 지정 (예: <code>쿠폰별성과표.xlsx</code>)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>결과 파일</strong> — 새 파일이 아니라 제공된 <code>7.쿠폰별성과표.xlsx</code>의 빈칸을 채웁니다</li>
 </ul>
 <h2 id="이런-건-빼세요-">이런 건 빼세요 ❌<a class="headerlink" href="#이런-건-빼세요-" title="Permanent link">&para;</a></h2>
 <ul class="task-list">
@@ -139,10 +143,14 @@
 <summary>이렇게 시킬 수 있습니다</summary>
 <pre class="highlight"><code>1단계에서 만든 주문종합.xlsx를 쿠폰코드로 묶어서 lab3 폴더의 7.쿠폰별성과표.xlsx 각 칸을 채워줘.
 주문상태가 '취소'인 건 빼고 '결제완료'만 집계해.
-쿠폰마다: 매출합계=매출액_원 합, 할인합계=할인액_원 합,
-매출이익=매출합계×0.3, 순이익=매출이익−할인합계,
-매출순이익률=순이익÷매출합계, 사용건수=결제완료 건수,
-순이익이 마이너스면 적자여부에 '적자'라고 적어줘.
+쿠폰마다 이렇게 채워줘:
+- 매출합계 = 매출액_원 합
+- 할인합계 = 할인액_원 합
+- 매출이익 = 매출합계 × 0.3
+- 순이익 = 매출이익 − 할인합계
+- 매출순이익률 = 순이익 ÷ 매출합계
+- 사용건수 = 결제완료 건수
+- 적자여부 = 순이익이 마이너스면 '적자'
 다 되면 채운 줄 수와, 결제완료로 집계한 총 건수를 알려줘.</code></pre>
 </details>
 <h2 id="실행-예시">실행 예시<a class="headerlink" href="#실행-예시" title="Permanent link">&para;</a></h2>

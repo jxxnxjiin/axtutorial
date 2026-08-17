@@ -4,7 +4,7 @@
     - VS Code에 **Claude Code**를 설치하고 로그인합니다
     - 파일을 고칠 때마다 뜨는 확인 창을 미리 꺼둡니다 **(자동 승인)**
 
-오늘 말을 걸 상대인 **AI 코딩 에이전트**를 설치합니다. VS Code 확장 프로그램으로 설치하면 친숙한 채팅 UI로 바로 시작할 수 있습니다.
+오늘 말을 걸 상대인 **AI 코딩 에이전트**를 설치합니다. VS Code 확장 프로그램으로 설치하면 친숙한 채팅 화면으로 바로 시작할 수 있습니다.
 
 ## 1. Claude Code 확장 설치
 
@@ -42,11 +42,15 @@
 
     **2단계.** 아래 명령을 입력하고 <kbd>Enter</kbd> (Windows 기준).
 
-    ``bash     curl -fsSL https://claude.ai/install.cmd -o install.cmd && install.cmd && del install.cmd     ``
+    ```bash
+    curl -fsSL https://claude.ai/install.cmd -o install.cmd && install.cmd && del install.cmd
+    ```
 
     **3단계.** 아래 명령으로 버전이 출력되면 설치 완료입니다.
 
-    ``bash     claude --version     ``
+    ```bash
+    claude --version
+    ```
 
     `Installation complete!`가 떴는데도 버전이 안 나오면, 명령 프롬프트를 닫았다가 다시 열어 `claude --version`을 입력해보세요.
 
@@ -54,14 +58,17 @@
 
 AI가 파일을 고칠 때마다 *"이 파일을 수정해도 될까요?"* 하고 물어봅니다. 오늘 하루는 파일을 수백 번 고치므로, 미리 꺼두면 실습 흐름이 끊기지 않습니다.
 
-!!! tip "설정 방법은 부록에서"
-    Claude Code 모드 드롭다운에서 `Edit automatically`를 고르면 됩니다. 명령 실행까지 자동으로 넘기는 방법과 되돌리는 법은 [**부록 · 자동 허가 모드 설정**](autoapprove.md)에 정리해뒀습니다.
+Claude Code 패널 입력줄 **오른쪽 아래의 모드 버튼**을 눌러 `Auto`를 고르세요. 안전 검사를 통과한 작업은 자동으로 진행하고, 위험한 것만 멈춰서 물어봅니다. 이것 하나면 오늘 실습에는 충분합니다.
+
+![Claude Code 모드 목록에서 Auto를 고른 화면 — 안전 검사를 통과한 작업은 자동 승인](../../images/setup/autoapprove_claude_auto.png)
+
+!!! tip "더 세게 풀거나 되돌리는 법은 부록에서" 명령 실행까지 자동으로 넘기는 방법과 되돌리는 법은 [**부록 · 자동 허가 모드 설정**](autoapprove.md)에 정리해뒀습니다.
 
 ## 다 됐는지 스스로 확인하기
 
 - [ ] VS Code에서 Claude Code 패널이 뜨고, **로그인 화면 없이** 말을 걸 수 있다
-- [ ] 터미널에서 `python --version` · `node --version`이 숫자를 답한다
-- [ ] Claude Code 패널 아래에 `Edit automatically` 라벨이 보인다
+- [ ] 터미널에서 `python --version`(맥은 `python3 --version`) · `node --version`이 숫자를 답한다
+- [ ] Claude Code 입력창 오른쪽 아래에 `Auto` 라벨이 보인다
 
 여기까지 됐으면 도구 설치는 끝입니다. 이제 실습 데이터를 준비합니다.
 

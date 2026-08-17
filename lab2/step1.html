@@ -80,7 +80,6 @@
 <a class="nav-a" href="../lab7/index.html"><span class="g">◆</span> 개요</a>
 <a class="nav-a" href="../lab7/step1.html">1 · 범용 스킬 만들기</a>
 <a class="nav-a" href="../lab7/step2.html">2 · 견적 통합에 응용</a>
-<a class="nav-a" href="../lab7/step3.html">3 · 동료에게 넘기기</a>
 </div>
 <div class="nav-h">// 심화 실습 · 남의 스킬로 웹페이지 만들기</div><div class="tree">
 <a class="nav-a" href="../advanced2/index.html"><span class="g">★</span> 개요</a>
@@ -111,10 +110,10 @@
         <div class="kicker mono"><b>//</b> 실습 2 · 계약서에서 계약종합 만들기</div>
 <h1 id="1--계약서-내용-종합하기">1 · 계약서 내용 종합하기<a class="headerlink" href="#1--계약서-내용-종합하기" title="Permanent link">&para;</a></h1>
 <p>계약서 PDF를 하나 열어 보세요. 어디에도 표가 없는 줄글이고, 같은 금액도 '₩9,000,000'과 '금 구백만원정'처럼 문서마다 다르게 적혀 있습니다. AI는 이런 문서에서 항목을 뽑아 표로 만드는 일을 생각보다 빨리 해냅니다.</p>
-<p>다만 함정이 있습니다. 안 적힌 항목을 그럴듯하게 채워 넣는 것입니다. 그래서 뽑을 항목 6개를 못 박고 "없으면 비워둬"를 함께 넘겨, 계약서 8건을 한 계약 한 줄의 엑셀로 정리합니다.</p>
+<p>다만 함정이 있습니다. 안 적힌 항목을 그럴듯하게 채워 넣는 것입니다. 그래서 뽑을 항목 6개를 못 박고 "없으면 비워둬"를 함께 넘겨, 계약서 8건을 계약 한 건당 한 줄인 엑셀로 정리합니다.</p>
 <h2 id="뽑을-항목-여섯-개">뽑을 항목 여섯 개<a class="headerlink" href="#뽑을-항목-여섯-개" title="Permanent link">&para;</a></h2>
 <blockquote>
-<p>계약번호 / 계약명 / 상대방 / 계약기간 / 금액 / 자동갱신 여부</p>
+<p>계약번호 / 계약명 / 계약 상대 / 계약기간 / 금액 / 자동갱신 여부</p>
 </blockquote>
 <h2 id="직접-시켜보세요">직접 시켜보세요<a class="headerlink" href="#직접-시켜보세요" title="Permanent link">&para;</a></h2>
 <p>여러분 문장으로 AI에게 시킵니다. 아래 두 체크리스트를 먼저 읽고 빠진 규칙이 없도록 프롬프트에 담으세요.</p>
@@ -129,7 +128,7 @@
 <h2 id="이런-건-빼세요-">이런 건 빼세요 ❌<a class="headerlink" href="#이런-건-빼세요-" title="Permanent link">&para;</a></h2>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> "알아서 잘 정리해줘"처럼 <strong>규칙 없는 지시</strong> (없는 값이 채워집니다)</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 빈칸을 <code>0</code>으로 채우기 (금액 0원과 "금액 모름"은 다른 사건)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 빈칸을 <code>0</code>으로 채우기 (금액 0원과 "금액 모름"은 다른 의미)</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 항목을 마음대로 더하거나 바꾸기</li>
 </ul>
 <h2 id="예시-프롬프트">예시 프롬프트<a class="headerlink" href="#예시-프롬프트" title="Permanent link">&para;</a></h2>
@@ -154,7 +153,7 @@
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 계약종합이 <strong>8행</strong>(계약 8건)으로 나왔다</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>금액이 없는 계약이 빈칸</strong>으로 남아 있다 (0이 아님)</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 6개 항목이 모두 채워졌고, 없는 값을 지어내지 않았다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 계약서에 적힌 항목은 모두 채워졌고, 원문에 없는 항목만 빈칸이다 (지어낸 값 없음)</li>
 </ul>
 <nav class="pager">
 <a class="prev" href="../lab2/index.html"><span class="lbl">← 이전</span><span class="ttl">개요</span></a>

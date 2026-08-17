@@ -80,7 +80,6 @@
 <a class="nav-a" href="../lab7/index.html"><span class="g">◆</span> 개요</a>
 <a class="nav-a" href="../lab7/step1.html">1 · 범용 스킬 만들기</a>
 <a class="nav-a" href="../lab7/step2.html">2 · 견적 통합에 응용</a>
-<a class="nav-a" href="../lab7/step3.html">3 · 동료에게 넘기기</a>
 </div>
 <div class="nav-h">// 심화 실습 · 남의 스킬로 웹페이지 만들기</div><div class="tree">
 <a class="nav-a active" href="../advanced2/index.html"><span class="g">★</span> 개요</a>
@@ -118,8 +117,8 @@
 <p>실습 6에서 제안서를 사실대로 고쳐 드렸더니, 영업팀장이 다시 부릅니다.</p>
 <p>"그 제안서 좋았어요. 이번엔 고객사에 링크로 보낼 <strong>제품 소개 웹페이지</strong>를 하나 만들어줘요. 우리 아직 홈페이지가 없어서 PDF만 돌리고 있거든. 사양서 값 그대로 쓰고, 요즘 회사들 페이지처럼 세련되게."</p>
 </blockquote>
-<p><a href="../lab7/index.html">실습 7</a>에서 여러분은 스킬을 <strong>만들어서 넘기는</strong> 쪽이었습니다. 주문 통합 절차를 <code>SKILL.md</code>로 굳혀 스킬 폴더째 zip으로 동료에게 보냈습니다.</p>
-<p>그 동료가 여러분만 있는 게 아닙니다. 전 세계 전문가들이 자기 노하우를 똑같은 방식으로 GitHub에 올려두고 있습니다.</p>
+<p><a href="../lab7/index.html">실습 7</a>에서 여러분은 스킬을 <strong>만드는</strong> 쪽이었습니다. 주문 통합 절차를 <code>SKILL.md</code>로 굳혔고, 스킬 폴더째 zip으로 압축해 보내면 동료에게 그대로 넘어간다는 것도 봤습니다.</p>
+<p>이렇게 스킬을 만들어 나누는 사람이 여러분만은 아닙니다. 전 세계 전문가들이 자기 노하우를 똑같은 방식으로 GitHub에 올려두고 있습니다.</p>
 <p>이번 심화 실습에서는 <strong>받는 쪽</strong>이 되어 봅니다. 남이 만든 디자인 스킬을 내 폴더에 설치하고, 스킬 없이 만든 결과와 나란히 비교합니다. 본문 프롬프트는 그대로 두고, 맨 앞에 스킬을 켜는 슬래시 커맨드 <code>/design-taste-frontend</code> 한 줄만 붙입니다. 바뀌는 건 그것 하나뿐입니다.</p>
 <h2 id="오늘-가져다-쓸-스킬--taste-skill">오늘 가져다 쓸 스킬 · taste-skill<a class="headerlink" href="#오늘-가져다-쓸-스킬--taste-skill" title="Permanent link">&para;</a></h2>
 <p>이번에 설치할 것은 <a href="https://github.com/Leonxlnx/taste-skill">taste-skill</a>이라는 공개 스킬 모음입니다. 그중 웹페이지 디자인용 <code>design-taste-frontend</code> 스킬을 씁니다.</p>
@@ -152,7 +151,7 @@
 <p>어느 디자이너가 "요즘 AI가 만드는 웹페이지는 왜 다 똑같이 생겼나"를 참다못해, 그 '똑같은 것'의 목록을 전부 적어 금지시킨 파일입니다. 보라색 그라데이션 쓰지 마라, 카드 세 개를 나란히 놓지 마라, 가짜 인물 후기를 넣지 마라 같은 항목이 1,200줄에 걸쳐 이어집니다.</p>
 <div class="admonition tip">
 <p class="admonition-title">1,200줄을 여러분이 읽어야 하나요?</p>
-<p>아니요. <strong>읽는 건 AI 몫입니다.</strong> 여러분은 폴더에 넣기만 하면 됩니다. 실습 7에서 동료가 여러분의 스킬을 받아서 한 일이 정확히 그것이었습니다.</p>
+<p>아니요. <strong>읽는 건 AI 몫입니다.</strong> 여러분은 폴더에 넣기만 하면 됩니다. 실습 7 마무리에서 본 스킬 공유가 정확히 그것이었습니다.</p>
 </div>
 <h2 id="폴더에-있는-것">폴더에 있는 것<a class="headerlink" href="#폴더에-있는-것" title="Permanent link">&para;</a></h2>
 <p><a href="../index.html">홈 화면의 내려받기 표</a>에서 <strong>심화 실습 자료 zip</strong>을 받아 압축을 풉니다. 안에는 이것들이 들어 있습니다.</p>
@@ -179,7 +178,7 @@
 └─ 2.비교용/
     ├─ before/
     └─ after/</code></pre>
-<p>zip을 못 받는 상황이면 직접 만들어도 됩니다. 실습 6 폴더의 <code>2.제품사양서.xlsx</code>를 새 폴더에 복사하고, <code>2.비교용/before</code>·<code>2.비교용/after</code> 폴더를 만들면 같은 상태가 됩니다.</p>
+<p>zip을 못 받는 상황이면 직접 만들어도 됩니다. 실습 6 폴더의 <code>2.제품사양서.xlsx</code>를 <code>전체자료</code> 안에 새로 만든 <code>lab8_advanced</code> 폴더에 복사하고, <code>2.비교용/before</code>·<code>2.비교용/after</code> 폴더를 만들면 같은 상태가 됩니다.</p>
 <p>핵심은 <strong>페이지의 숫자를 지어내지 않고 사양서에서 가져온다</strong>는 실습 6의 원칙을 여기서도 지키는 것입니다.</p>
 <h2 id="실습에서-할-일">실습에서 할 일<a class="headerlink" href="#실습에서-할-일" title="Permanent link">&para;</a></h2>
 <table>
@@ -204,7 +203,7 @@
 <p>실습 1~7이 "AI에게 일을 잘 시키는 법"이었다면, 이 실습은 <strong>"남이 잘 시켜둔 것을 가져다 쓰는 법"</strong>입니다.</p>
 <p>내 스킬을 만들 줄 알고(실습 7), 남의 스킬을 가져올 줄 알면(이 실습), 처음 보는 업무 앞에서 맨손으로 시작할 일이 없어집니다. 찾아보면 누군가 이미 절차를 적어뒀을 가능성이 높기 때문입니다.</p>
 <nav class="pager">
-<a class="prev" href="../lab7/step3.html"><span class="lbl">← 이전</span><span class="ttl">3 · 동료에게 넘기기</span></a>
+<a class="prev" href="../lab7/step2.html"><span class="lbl">← 이전</span><span class="ttl">2 · 견적 통합에 응용</span></a>
 <a class="next" href="../advanced2/stage1.html"><span class="lbl">다음 →</span><span class="ttl">1 · 스킬 없이 먼저 만들기</span></a>
 </nav>
       </article>

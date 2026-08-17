@@ -16,6 +16,8 @@ VS Code 공식 사이트에 접속해 본인 OS용 설치 파일을 받습니다
 https://code.visualstudio.com/download
 ```
 
+![VS Code 공식 다운로드 페이지 — Windows / macOS 다운로드 버튼이 나란히 보이는 화면](../../images/setup/vscode_download.png)
+
 - **Windows** → `Windows` 버튼으로 `.exe` 설치 파일을 받아 실행합니다.
 - **macOS** → `macOS` 버튼으로 받은 뒤, 압축을 풀어 나온 앱을 `응용 프로그램` 폴더로 옮깁니다.
 

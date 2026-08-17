@@ -80,7 +80,6 @@
 <a class="nav-a active" href="../lab7/index.html"><span class="g">◆</span> 개요</a>
 <a class="nav-a" href="../lab7/step1.html">1 · 범용 스킬 만들기</a>
 <a class="nav-a" href="../lab7/step2.html">2 · 견적 통합에 응용</a>
-<a class="nav-a" href="../lab7/step3.html">3 · 동료에게 넘기기</a>
 </div>
 <div class="nav-h">// 심화 실습 · 남의 스킬로 웹페이지 만들기</div><div class="tree">
 <a class="nav-a" href="../advanced2/index.html"><span class="g">★</span> 개요</a>
@@ -111,15 +110,16 @@
         <div class="kicker mono"><b>//</b> 실습 7 · 반복작업을 재사용 스킬로 만들기</div>
 <h1 id="개요">개요<a class="headerlink" href="#개요" title="Permanent link">&para;</a></h1>
 <blockquote>
-<p><strong>한 줄 목표</strong>: 지난달에 한 번 한 주문 통합을, 파일명·열 이름에 묶이지 않는 재사용 스킬로 굳혀 다른 업무(견적)에도 쓰고 동료에게 그대로 넘긴다.</p>
+<p><strong>한 줄 목표</strong>: 지난달에 했던 주문 통합을, 파일명·열 이름에 묶이지 않는 재사용 스킬로 굳혀 다른 업무(견적)에도 그대로 쓴다.</p>
 </blockquote>
+<p>이 실습에서 쓰는 업무 유형 — <code>모으기</code>(취합·통합) — 이번엔 절차를 스킬로 굳힙니다 · <a href="../types/index.html">여섯 가지 유형 다시 보기</a></p>
 <h2 id="오늘-받은-일">오늘 받은 일<a class="headerlink" href="#오늘-받은-일" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p>입사 3주차. 사수가 말합니다.</p>
 <p>"지난번 주문 합치기, 이번 달에 또 해야 해요. 그리고 옆 팀은 견적서를 합치고 싶대요. 매번 새로 시키지 말고, 누구 폴더에서든 돌아가는 도구로 만들어 둡시다. 그 도구를 옆 팀에도 그대로 넘길 수 있게요."</p>
 </blockquote>
 <p><a href="../lab6/index.html">실습 6</a>까지 데이터를 모으고 집계하고 보고하고 검증하는 한 사이클을 다 돌았습니다. 업무가 끝나면 보통 폴더를 닫고, 다음 달에 같은 일이 오면 처음부터 또 합니다. 이 마지막 실습이 바꾸려는 게 그 부분입니다.</p>
-<p>오늘 만드는 것은 결과물이 아니라 <strong>자산</strong>입니다. 한 번의 30분 투자로 매달 반복되는 몇 시간을 통째로 없앨 수 있습니다. 재사용은 같은 일에 또 돌리기, 비슷한 업무에 응용하기, 동료에게 공유하기 세 갈래인데 이 실습에서 모두 해 봅니다. 여기까지 마치면 AI에게 질문하는 사람이 아니라 AI와 함께 일하는 사람이 됩니다.</p>
+<p>오늘 만드는 것은 결과물이 아니라 <strong>자산</strong>입니다. 한 번의 30분 투자로 매달 반복되는 몇 시간을 통째로 없앨 수 있습니다. 재사용은 같은 일에 또 돌리기, 비슷한 업무에 응용하기, 동료에게 공유하기 세 갈래인데, 앞의 둘을 이 실습에서 해 봅니다. 마지막 공유는 허무할 만큼 간단해서 따로 단계가 필요 없습니다 — 스킬 폴더를 zip으로 압축해 보내면 끝입니다. 여기까지 마치면 AI에게 질문하는 사람이 아니라 AI와 함께 일하는 사람이 됩니다.</p>
 <h2 id="폴더에-있는-것">폴더에 있는 것<a class="headerlink" href="#폴더에-있는-것" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -147,6 +147,17 @@
 </tr>
 </tbody>
 </table>
+<div style="display:flex;flex-direction:column;gap:18px">
+  <figure style="margin:0">
+    <img src="../images/lab7/hardcoded_guide_example.png" alt="hardcoded_guide_example.png" style="width:100%;height:auto;display:block">
+    <figcaption style="text-align:center;font-size:0.85em;color:#888;margin-top:6px">파일명·열 이름이 박혀 있는 작업지침</figcaption>
+  </figure>
+  <figure style="margin:0">
+    <img src="../images/lab7/skill_example.png" alt="skill_example.png" style="width:100%;height:auto;display:block">
+    <figcaption style="text-align:center;font-size:0.85em;color:#888;margin-top:6px">완성된 재사용 스킬 예시(SKILL.md)</figcaption>
+  </figure>
+</div>
+
 <blockquote>
 <p><strong>스킬이란?</strong> Claude Code에서 반복 업무를 이름 붙여 저장해 둔 도구입니다. <code>.claude/skills/&lt;스킬이름&gt;/SKILL.md</code>에 저장해 두면, 다음부터는 그 절차를 새로 설명하지 않고 <strong>불러와서</strong> 쓸 수 있고, 폴더째 동료에게 넘길 수도 있습니다.</p>
 </blockquote>
@@ -161,15 +172,11 @@
 <tbody>
 <tr>
 <td><a href="step1.html">1단계</a></td>
-<td>박혀 있는 작업지침을 범용화해 <strong>실제 스킬(<code>.claude/skills/데이터통합/</code>)로 저장</strong>하고, 그 스킬로 주문이 통합되는지 확인한다</td>
+<td>박혀 있는 작업지침을 <strong>범용으로 고치고</strong>, 고친 지침으로 주문을 <strong>실제 통합해 확인</strong>한 뒤, 그 절차를 <strong>스킬(<code>.claude/skills/데이터통합/</code>)로 저장</strong>한다</td>
 </tr>
 <tr>
 <td><a href="step2.html">2단계</a></td>
 <td>저장한 <strong>같은 스킬을 불러와 견적 통합</strong>에 응용하고 통합을 <strong>검산</strong>한다</td>
-</tr>
-<tr>
-<td><a href="step3.html">3단계</a></td>
-<td>스킬 폴더를 <strong>동료에게 넘길 수 있게</strong> 점검·전달한다</td>
 </tr>
 </tbody>
 </table>

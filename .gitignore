@@ -6,3 +6,4 @@ __pycache__/
 
 # Python 가상환경 (uv sync 가 생성)
 .venv/
+.omx/

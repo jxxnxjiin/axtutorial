@@ -2,9 +2,11 @@
 
 > **한 줄 목표**: 쿠폰 성과 분석 결과를 대표이사가 5분 안에 읽는 **한 페이지 보고서**로, 지어낸 표현 없이 숫자마다 출처를 붙여 만든다.
 
+이 실습에서 쓰는 업무 유형 — `쓰기`(초안 작성) `검사하기`(검증·검수) · [여섯 가지 유형 다시 보기](../types/index.md)
+
 ## 오늘 받은 일
 
-> 당신은 쿠폰 성과 분석을 마쳤습니다. 마케팅팀 사수가 말합니다.
+> 여러분은 쿠폰 성과 분석을 마쳤습니다. 마케팅팀 사수가 말합니다.
 >
 > "분석 잘했어요. 이제 이걸 대표님께 올릴 **한 페이지 분량의 보고서**로 만들어줘요. 대표님은 **숫자와 결론부터** 보고, 서론 길면 넘겨버려요. 근거 없는 형용사를 싫어하고, 숫자마다 **어느 파일·시트에서 나왔는지** 출처를 물어요. 분석만 하고 끝내지 말고 **건의사항**까지 넣어야 완성이에요. 대표님 성향 메모랑 보고서 양식 줄게요."
 
@@ -20,6 +22,17 @@
 | `6.GA5_주문종합.xlsx` | 성과표의 원자료 (주문 종합) |
 | `8.보고대상_프로필.md` | 대표이사 성향 — 두괄식·1페이지·형용사 싫어함·출처 필수·건의 필수 |
 | `9.보고서_양식.md` | 5블록 양식 — 결론요약·핵심지표표·원인분석·건의·출처 |
+
+<div style="display:flex;flex-direction:column;gap:18px">
+  <figure style="margin:0">
+    <img src="../images/lab4/ceo_profile_example.png" alt="ceo_profile_example.png" style="width:100%;height:auto;display:block">
+    <figcaption style="text-align:center;font-size:0.85em;color:#888;margin-top:6px">대표이사 성향 메모</figcaption>
+  </figure>
+  <figure style="margin:0">
+    <img src="../images/lab4/report_template_example.png" alt="report_template_example.png" style="width:100%;height:auto;display:block">
+    <figcaption style="text-align:center;font-size:0.85em;color:#888;margin-top:6px">5블록 보고서 양식</figcaption>
+  </figure>
+</div>
 
 ## 실습에서 할 일
 

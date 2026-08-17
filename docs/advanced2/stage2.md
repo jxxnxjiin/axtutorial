@@ -4,29 +4,37 @@
 
 ## 스킬 설치하기
 
-실습 7에서 여러분의 스킬을 받은 동료가 한 일을 떠올려 보세요. zip을 풀어 `.claude/skills/` 폴더에 넣는 것이 전부였습니다. 남의 스킬을 가져올 때도 똑같습니다. 방법은 두 가지인데 결과는 같습니다.
+실습 7 마무리에서 본 스킬 공유를 떠올려 보세요. 받은 zip을 풀어 `.claude/skills/` 폴더에 넣는 것이 전부였습니다. 남의 스킬을 가져올 때도 똑같습니다. 방법은 두 가지인데 결과는 같습니다.
 
 **방법 1 · 명령어 한 줄 (인터넷이 되는 경우)**
 
-터미널에 아래를 입력합니다.
+VS Code 위 메뉴 `터미널 > 새 터미널`로 연 창(Claude Code 대화창이 아닙니다)에 아래를 입력합니다.
 
 ```bash
 npx skills add https://github.com/Leonxlnx/taste-skill --skill "design-taste-frontend"
 ```
 
-실행 중에 어떤 도구에 설치할지 물으면 **Claude Code**를, 범위를 물으면 **현재 프로젝트**를 고르세요. 끝나면 설치된 경로가 출력됩니다. 명령이 실패하거나 사내망이라 막히면 방법 2로 진행하면 됩니다.
+실행 중에 어떤 도구에 설치할지 물으면 **Claude Code**를, 범위를 물으면 **현재 프로젝트**를 고르세요. 끝나면 설치된 경로가 출력됩니다. 
+
+!!! example "이렇게 나오면 됩니다"
+    <figure style="margin:0">
+      <img src="../images/advanced2/stage2-npx-install.png" alt="터미널에서 npx skills add 명령을 실행해 Claude Code·현재 프로젝트를 선택하고, 마지막에 설치된 경로가 출력된 화면" style="width:100%;height:auto;display:block">
+      <figcaption style="text-align:center;font-size:0.85em;color:#888;margin-top:6px">npx 설치 진행 화면: 도구·범위를 고르면 마지막 줄에 설치 경로가 찍힙니다</figcaption>
+    </figure>
 
 **방법 2 · 파일 복사 (실습 7에서 zip을 받았을 때와 같은 방식)**
 
-GitHub 저장소의 `skills/taste-skill/SKILL.md` 파일을 열어 **Raw** 버튼으로 내려받습니다. 그리고 내 작업 폴더에 아래 폴더를 만들어 그 안에 `SKILL.md`로 저장합니다. 실습 7에서 배운 대로, **폴더 이름이 곧 스킬 이름**이 됩니다.
+GitHub 저장소의 `skills/taste-skill/SKILL.md` 파일을 열어 **Raw** 버튼을 누르면 브라우저에 글 내용이 열립니다. 전체 선택(Ctrl+A)·복사해서, 지금 VS Code로 열어 둔 `전체자료` 폴더에 아래 구조로 새 파일을 만들어 붙여 넣고 저장합니다. 실습 7에서 배운 대로, **폴더 이름이 곧 스킬 이름**이 됩니다. (저장소 쪽 폴더명이 taste-skill이어도 괜찮습니다 — 폴더 구조만 아래처럼 만들면 됩니다.)
 
 ```
-lab8_advanced/
+전체자료/           ← 지금 VS Code로 열어 둔 폴더
 └─ .claude/
     └─ skills/
         └─ design-taste-frontend/
             └─ SKILL.md
 ```
+
+실습 7에서 만든 데이터통합 스킬이 있는 바로 그 `.claude/skills/` 폴더입니다.
 
 !!! success "설치가 됐는지 확인"
     위 경로(방법 1이라면 명령이 출력한 경로)에 `SKILL.md`가 있으면 끝입니다. 별도의 실행이나 등록은 없습니다.
@@ -37,6 +45,11 @@ lab8_advanced/
     ```
     /design-taste-frontend
     ```
+
+    <figure style="margin:0">
+      <img src="../images/advanced2/stage2-slash-menu.png" alt="Claude Code 입력창에 /를 입력하자 설치된 스킬 목록 패널이 떠 있고, 그 안에 design-taste-frontend가 보이는 화면" style="width:100%;height:auto;display:block">
+      <figcaption style="text-align:center;font-size:0.85em;color:#888;margin-top:6px">입력창에 /를 치면 뜨는 스킬 목록 — 여기에 design-taste-frontend가 보이면 설치 성공입니다</figcaption>
+    </figure>
 
     입력창에 `/`를 치면 설치된 스킬 목록이 뜨고, 거기서 골라도 됩니다. 이 스킬은 웹페이지 작업이 오면 AI가 스스로 찾아 읽도록도 만들어져 있지만, 수업에서는 확실하게 켜지는 슬래시 커맨드 방식으로 갑니다. 스킬마다 발동 방식이 조금씩 다르고, 그건 스킬을 만든 사람이 정해 둔 것입니다.
 
@@ -59,7 +72,16 @@ lab8_advanced/
 ```
 /design-taste-frontend lab8_advanced 폴더의 2.제품사양서.xlsx를 참고해서, 우리 회사(한울로보틱스)의
 산업용 협동로봇 제품 소개 페이지를 만들어줘.
-(…이하 1단계 프롬프트 그대로, 저장 위치만 lab8_advanced/2.비교용/after/…)
+고객사 담당자에게 링크로 보낼 페이지야. 요즘 스타일로 세련되게, 테크 기업 느낌으로.
+
+섹션은 이 정도로: 히어로, 제품 라인업, 도입 효과,
+도입 절차, 고객 사례, 자주 묻는 질문, 문의.
+숫자는 사양서에 있는 값만 쓰고, 없는 값은 지어내지 마.
+
+만드는 방법:
+- lab8_advanced/2.비교용/after/ 폴더에 HTML 파일 하나로. CSS와 JS를 그 파일 안에 넣어서,
+  설치나 빌드 없이 더블클릭하면 바로 열리게.
+- 데스크톱 1440px 기준으로 만들고, 모바일에서도 안 깨지게.
 ```
 
 !!! info "결과보다 먼저 눈여겨볼 것"

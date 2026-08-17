@@ -80,7 +80,6 @@
 <a class="nav-a" href="../lab7/index.html"><span class="g">◆</span> 개요</a>
 <a class="nav-a active" href="../lab7/step1.html">1 · 범용 스킬 만들기</a>
 <a class="nav-a" href="../lab7/step2.html">2 · 견적 통합에 응용</a>
-<a class="nav-a" href="../lab7/step3.html">3 · 동료에게 넘기기</a>
 </div>
 <div class="nav-h">// 심화 실습 · 남의 스킬로 웹페이지 만들기</div><div class="tree">
 <a class="nav-a" href="../advanced2/index.html"><span class="g">★</span> 개요</a>
@@ -110,41 +109,61 @@
       <article class="doc md rise">
         <div class="kicker mono"><b>//</b> 실습 7 · 반복작업을 재사용 스킬로 만들기</div>
 <h1 id="1--범용-스킬-만들기">1 · 범용 스킬 만들기<a class="headerlink" href="#1--범용-스킬-만들기" title="Permanent link">&para;</a></h1>
+<p>이 단계는 세 토막입니다. <strong>지침 고치기 → 고친 지침으로 돌려보기 → 스킬로 굳히기.</strong> 하나씩 갑니다.</p>
+<h2 id="①-박혀-있는-지침을-범용으로-고치기">① 박혀 있는 지침을 범용으로 고치기<a class="headerlink" href="#①-박혀-있는-지침을-범용으로-고치기" title="Permanent link">&para;</a></h2>
 <p>먼저 주문통합 폴더의 작업지침 파일을 열어 보세요. 지난달에 세 채널 주문을 합치려고 만들어 둔 지침으로, 표준 7칸·날짜 통일·빈칸 유지·행 수 검산까지 규칙 자체는 아주 잘 만들어져 있습니다.</p>
-<p>그런데 <code>웹주문.xlsx</code>, <code>order_id</code>, <code>협력사주문ID</code>… 파일명과 열 이름이 그대로 박혀 있어 딱 이 세 파일 전용입니다. 다음 달에 파일 이름이 바뀌면 다시 손봐야 하는, 일회성 지침의 한계입니다.</p>
-<p>고치는 방향은 하나입니다. "파일명을 고정" 대신 <strong>"내용을 보고 표준 칸에 맞춘다"</strong>로 바꾸면 재료가 무엇이든 통합니다. 이 단계에서는 지침을 그렇게 범용 규칙으로 고쳐 <code>.claude/skills/데이터통합/SKILL.md</code>에 실제 스킬로 저장하고, 주문 3파일이 지난달과 똑같이 통합되는지 확인합니다. 절차가 머릿속이 아니라 파일로 남는 순간입니다.</p>
-<h2 id="직접-시켜보세요">직접 시켜보세요<a class="headerlink" href="#직접-시켜보세요" title="Permanent link">&para;</a></h2>
-<p>여러분 문장으로 AI에게 시킵니다. 아래 두 체크리스트를 먼저 읽고 빠진 규칙이 없도록 프롬프트에 담으세요.</p>
-<h2 id="프롬프트에-꼭-담을-것-">프롬프트에 꼭 담을 것 ✅<a class="headerlink" href="#프롬프트에-꼭-담을-것-" title="Permanent link">&para;</a></h2>
+<p>그런데 <code>웹주문.xlsx</code>, <code>order_id</code>, <code>협력사주문ID</code>… 파일명과 열 이름이 그대로 박혀 있어 딱 이 세 파일 전용입니다. 다음 달에 파일 이름이 바뀌면 다시 손봐야 하고, 동료에게 넘기기도 어렵습니다.</p>
+<p>고치는 방향은 하나입니다. "파일명을 고정" 대신 <strong>"내용을 보고 표준 칸에 맞춘다"</strong>로 바꾸면 재료가 무엇이든 통합니다. 이 범용화를 여러분이 직접 고쳐 쓰는 게 아니라 <strong>AI에게 시킵니다.</strong></p>
+<h3 id="프롬프트에-꼭-담을-것-">프롬프트에 꼭 담을 것 ✅<a class="headerlink" href="#프롬프트에-꼭-담을-것-" title="Permanent link">&para;</a></h3>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>고칠 대상</strong> — 지금 있는 작업지침을 재사용 가능한 범용 규칙으로</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>하드코딩 제거</strong> — 특정 파일명·열 이름에 묶지 말고, 열의 <strong>뜻</strong>으로 매핑하도록 (박혀 있으면 그 파일 전용이 됩니다)</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>애매하면 질문</strong> — 뜻이 불분명한 열은 넘겨짚지 말고 나에게 되묻게 (열 하나 잘못 짝지으면 결과가 통째로 틀립니다)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>고칠 대상</strong> — 지금 있는 작업지침을 재사용 가능한 범용 규칙으로 다시 쓰기</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>박힌 이름 제거</strong> — 특정 파일명·열 이름을 미리 정해 두지 말고, 각 열의 <strong>뜻</strong>을 보고 표준 칸에 연결하도록 (이름이 박혀 있으면 그 파일 전용이 됩니다)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>기존 규칙 유지</strong> — 표준 7칸·날짜 형식·빈칸 유지·행 수 검산은 그대로</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>중복은 조건부로</strong> — 고유키(예: 주문번호)가 있을 때만 중복 제거, 그런 키가 없으면 모든 행을 남기도록</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>검산 내장</strong> — 통합 후 행 수 = 각 파일 행 수 합 − 중복 제거 건수를 스킬이 스스로 확인하도록</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>실제 스킬로 저장</strong> — 범용화한 규칙을 <code>.claude/skills/데이터통합/SKILL.md</code>에 이름 <code>데이터통합</code>으로 저장 (절차가 머릿속이 아니라 파일로 남습니다)</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>바로 검증</strong> — 그 스킬로 지금 주문 3파일을 실제로 통합해 결과 파일 만들기 (지난달과 같은 결과가 나와야 범용화가 성공)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>애매하면 질문</strong> — 뜻이 불분명한 열은 넘겨짚지 말고 나에게 되묻게 (열 하나 잘못 짝지으면 결과가 통째로 틀립니다)</li>
 </ul>
-<h2 id="이런-건-빼세요-">이런 건 빼세요 ❌<a class="headerlink" href="#이런-건-빼세요-" title="Permanent link">&para;</a></h2>
+<h3 id="이런-건-빼세요-">이런 건 빼세요 ❌<a class="headerlink" href="#이런-건-빼세요-" title="Permanent link">&para;</a></h3>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>웹주문.xlsx</code>·<code>전화주문.csv</code> 같은 <strong>파일명을 규칙에 그대로 남기기</strong> (다음 달에 못 씀)</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> "알아서 범용으로 해줘"처럼 <strong>범용의 기준 없는 지시</strong></li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 뜻 모르는 열을 <strong>임의로 매핑</strong>하기</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 중복 제거를 <strong>항상 켜 두기</strong> (키가 없는 데이터에서는 멀쩡한 행을 지웁니다 — 2단계에서 문제됨)</li>
 </ul>
-<h2 id="예시-프롬프트">예시 프롬프트<a class="headerlink" href="#예시-프롬프트" title="Permanent link">&para;</a></h2>
-<p>여러분 문장을 먼저 보낸 뒤에 열어보세요.</p>
 <details class="example">
 <summary>이렇게 시킬 수 있습니다</summary>
-<pre class="highlight"><code>lab7/1.주문통합 폴더의 '주문통합_작업지침.md'를 재사용 가능한 범용 규칙으로 고쳐서
-'.claude/skills/데이터통합/SKILL.md'에 이름 '데이터통합' 스킬로 저장해줘.
-특정 파일명이나 열 이름에 묶지 말고, 열이 무슨 뜻인지로 표준 칸에 매핑하도록 범용화해줘.
-뜻이 애매한 열은 넘겨짚지 말고 나에게 먼저 물어봐.
-중복 제거는 고유키(예: 주문번호)가 있을 때만 하고, 그런 키가 없으면 모든 행을 남기도록 해줘.
-통합 후에는 '통합 행 수 = 각 파일 행 수 합 − 중복 제거 건수'가 맞는지 스스로 검산하는 규칙도 넣어줘.
-그런 다음 그 스킬대로 그 폴더의 주문 3파일을 실제로 통합해서 결과 파일을 만들어줘.</code></pre>
-<p><code>3.스킬예시/SKILL.md</code>가 이렇게 만들어진 스킬의 완성 예시입니다. 내 스킬과 비교해 보세요.</p>
+<pre class="highlight"><code>이 @lab7/1.주문통합/주문통합_작업지침.md 는 지금 특정 파일명과 특정 열 이름에 맞춰져 있어. 이걸 어떤 파일이 와도 쓸 수 있도록 범용 절차로 다시 써줘.
+- 파일명을 고정하지 말고 '폴더 안의 표 파일을 전부 찾는다'로, 열 이름도 고정하지 말고 '각 열이 주문번호인지·고객명인지·금액인지 내용을 보고 표준 칸에 맞춘다'로 바꿔줘.
+- 표준 7칸(주문번호·고객명·상품명·수량·금액_원·주문일·출처채널), 날짜 `YYYY-MM-DD`, 금액 콤마 제거, 빈칸은 비워두기, 행 수 검산 — 이 규칙은 그대로 유지해.
+- 중복 제거는 주문번호 같은 고유키가 있을 때만 하고, 없으면 모든 행을 남기도록 조건을 달아줘.
+- 열 이름이 애매해서 어느 칸에 넣을지 모르겠으면 지어내지 말고 나한테 물어봐.</code></pre>
 </details>
+<p>고쳐진 지침을 열어 보면 아까보다 단계가 나뉘고 훨씬 세세해졌을 겁니다. 마지막에 "모르면 물어보고 실행"이라는 규칙이 붙은 것도 확인해 보세요.</p>
+<h2 id="②-고친-지침으로-실제-통합해-보기">② 고친 지침으로 실제 통합해 보기<a class="headerlink" href="#②-고친-지침으로-실제-통합해-보기" title="Permanent link">&para;</a></h2>
+<p>지침이 세세해졌으니 이제 시키는 말은 짧아도 됩니다. 규칙을 다시 설명하지 않고 지침만 가리킵니다.</p>
+<details class="example">
+<summary>이렇게 시킬 수 있습니다</summary>
+<pre class="highlight"><code>방금 고친 lab7/1.주문통합/주문통합_작업지침.md 를 따라서 1.주문통합 폴더의 주문 파일들을 하나로 합쳐줘.
+결과는 같은 폴더에 주문통합_결과.xlsx 로 저장하고, 행 수 검산표를 같이 보여줘.</code></pre>
+</details>
+<p><code>주문통합_결과.xlsx</code>가 새로 만들어지고, 행 수 검산(3파일 합 − 중복 제거 = 통합 행 수)이 맞으면 범용화 성공입니다. 완성 예시는 예시답안 폴더의 <code>lab7/주문통합_결과.xlsx</code>와 비교해 볼 수 있습니다.</p>
+<h2 id="③-이-절차를-스킬로-굳히기">③ 이 절차를 스킬로 굳히기<a class="headerlink" href="#③-이-절차를-스킬로-굳히기" title="Permanent link">&para;</a></h2>
+<p>지금부터가 이 실습의 핵심입니다. 방금 검증된 범용 지침을 따라 일하는 절차에 <strong>이름을 붙여 도구로 저장</strong>합니다. Claude Code에서는 이것을 <strong>스킬</strong>이라고 부릅니다.</p>
+<div class="admonition info">
+<p class="admonition-title">스킬이 뭐고, 어떻게 동작하나요?</p>
+<p>스킬의 실체는 코드가 아니라 <strong>폴더 하나에 든 <code>SKILL.md</code> 글 파일 하나</strong>입니다. 파일은 두 부분으로 되어 있습니다.</p>
+<ul>
+<li><strong>맨 위 몇 줄</strong> — 스킬의 이름과 "언제 쓰는 도구인지" 한 줄 설명</li>
+<li><strong>그 아래 본문</strong> — 실제로 따를 절차 (여러분이 방금 만든 범용 지침 같은 것)</li>
+</ul>
+<p>동작 방식이 재밌습니다. AI는 대화를 시작할 때 스킬들의 <strong>이름과 설명만</strong> 훑어 둡니다. 그러다 관련된 일이 들어오면 — "파일 여러 개를 합쳐줘" 같은 — 그제서야 해당 스킬의 본문을 펼쳐 읽고 그 절차대로 일합니다. 매번 지침을 다시 설명할 필요가 없는 이유입니다. 알아서 꺼내 쓰기를 기다리지 않고 <code>/스킬이름</code>으로 직접 켤 수도 있습니다.</p>
+<p>같은 대화창에 붙여넣는 것과 뭐가 다르냐면, 붙여넣기는 그 대화에서만 유효하지만 스킬은 <strong>파일로 남아 다음 대화에서도, 다른 폴더에서도, 동료의 컴퓨터에서도</strong> 쓸 수 있다는 점입니다. 반복해서 설명하게 되는 절차가 있다면 그게 스킬로 만들 신호입니다.</p>
+</div>
+<details class="example">
+<summary>이렇게 시킬 수 있습니다</summary>
+<pre class="highlight"><code>/skill-creator:skill-creator  방금 검증한 범용 통합 절차를 데이터통합이라는 이름의 스킬로 만들어줘.
+현재 폴더의 .claude 폴더 하위에 저장해줘.</code></pre>
+</details>
+<p>잠시 기다리면 <code>.claude</code>라는 폴더가 생기고, 그 안 <code>skills/데이터통합/SKILL.md</code>에 지금까지 이야기한 규칙이 전부 담겨 있을 겁니다. 이제 채팅창에서 이름만 부르면 자동으로 불러와지는 도구가 된 것입니다. 절차가 머릿속이 아니라 파일로 남는 순간입니다.</p>
+<p><code>3.스킬예시/SKILL.md</code>가 이렇게 만들어진 스킬의 완성 예시입니다. 내 스킬과 비교해 보세요.</p>
 <h2 id="실행-예시">실행 예시<a class="headerlink" href="#실행-예시" title="Permanent link">&para;</a></h2>
 <div class="admonition example">
 <p class="admonition-title">이렇게 나오면 됩니다</p>
@@ -155,10 +174,10 @@
 </div>
 <h2 id="체크포인트">체크포인트<a class="headerlink" href="#체크포인트" title="Permanent link">&para;</a></h2>
 <ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 작업지침이 <strong>특정 파일명·열 이름 없이</strong> 범용 규칙으로 다시 써졌다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 지침에 <strong>애매하면 되묻기</strong>·<strong>조건부 중복 제거</strong>·<strong>검산</strong> 규칙이 들어 있다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 고친 지침으로 통합한 <code>주문통합_결과.xlsx</code>의 <strong>행 수가 검산과 맞는다</strong> (3파일 합 − 중복 제거 = 통합 행 수)</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>.claude/skills/데이터통합/SKILL.md</code>에 스킬이 <strong>실제로 저장</strong>됐다</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 스킬에 <strong>특정 파일명·열 이름이 박혀 있지 않다</strong> (열의 뜻으로 매핑)</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 스킬에 <strong>애매하면 되묻기</strong>·<strong>조건부 중복 제거</strong>·<strong>검산</strong> 규칙이 들어 있다</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 그 스킬로 통합한 주문 결과의 <strong>행 수가 검산과 맞는다</strong> (3파일 합 − 중복 제거 = 통합 행 수)</li>
 </ul>
 <nav class="pager">
 <a class="prev" href="../lab7/index.html"><span class="lbl">← 이전</span><span class="ttl">개요</span></a>
@@ -167,10 +186,11 @@
       </article>
       <aside class="toc mono"><h4>On this page</h4>
 <a href="#1--범용-스킬-만들기">1 · 범용 스킬 만들기</a>
-<a href="#직접-시켜보세요">직접 시켜보세요</a>
-<a href="#프롬프트에-꼭-담을-것-">프롬프트에 꼭 담을 것 ✅</a>
-<a href="#이런-건-빼세요-">이런 건 빼세요 ❌</a>
-<a href="#예시-프롬프트">예시 프롬프트</a>
+<a href="#①-박혀-있는-지침을-범용으로-고치기">① 박혀 있는 지침을 범용으로 고치기</a>
+<a href="#프롬프트에-꼭-담을-것-" class="t3">프롬프트에 꼭 담을 것 ✅</a>
+<a href="#이런-건-빼세요-" class="t3">이런 건 빼세요 ❌</a>
+<a href="#②-고친-지침으로-실제-통합해-보기">② 고친 지침으로 실제 통합해 보기</a>
+<a href="#③-이-절차를-스킬로-굳히기">③ 이 절차를 스킬로 굳히기</a>
 <a href="#실행-예시">실행 예시</a>
 <a href="#체크포인트">체크포인트</a></aside>
     </div>

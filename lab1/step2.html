@@ -80,7 +80,6 @@
 <a class="nav-a" href="../lab7/index.html"><span class="g">◆</span> 개요</a>
 <a class="nav-a" href="../lab7/step1.html">1 · 범용 스킬 만들기</a>
 <a class="nav-a" href="../lab7/step2.html">2 · 견적 통합에 응용</a>
-<a class="nav-a" href="../lab7/step3.html">3 · 동료에게 넘기기</a>
 </div>
 <div class="nav-h">// 심화 실습 · 남의 스킬로 웹페이지 만들기</div><div class="tree">
 <a class="nav-a" href="../advanced2/index.html"><span class="g">★</span> 개요</a>
@@ -118,7 +117,7 @@
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>건수 대조</strong> — <code>합친 줄 수 = 웹150 + 전화140 + 제휴120 − 겹쳐서 합쳐진 건수</code>가 맞는지</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>빠진 주문 없음</strong> — 세 원본의 주문번호가 종합에 하나도 빠짐없이 있는지</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>겹친 주문 처리</strong> — 같은 주문번호가 두 줄로 남지 않았는지, 채널칸에 온 채널이 모두 적혔는지</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>겹친 주문 처리</strong> — 같은 주문번호가 두 줄로 남지 않았는지, 채널칸에 들어온 채널이 모두 적혔는지</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>날짜 형식</strong> — 모든 <code>주문일</code>이 <code>YYYY-MM-DD</code>인지 (특히 제휴의 월/일 뒤바뀜)</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>빈칸 유지</strong> — 원본에서 비어 있던 금액이 0이나 임의값으로 채워지지 않았는지</li>
 </ul>
@@ -134,9 +133,9 @@
 <pre class="highlight"><code>lab1 폴더의 주문종합.xlsx를 세 원본 파일과 대조해서 스스로 검산해줘.
 1) 합친 줄 수가 원본 세 파일 건수 합에서 겹쳐 합쳐진 건수를 뺀 값과 맞는지 숫자로 보여줘.
 2) 세 원본의 주문번호 중 종합에 빠진 게 하나라도 있으면 전부 알려줘.
-3) 같은 주문번호가 두 줄로 남은 게 있으면 알려주고, 채널칸에 온 채널이 다 적혔는지 확인해줘.
+3) 같은 주문번호가 두 줄로 남은 게 있으면 알려주고, 채널칸에 들어온 채널이 다 적혔는지 확인해줘.
 4) 주문일이 YYYY-MM-DD가 아닌 줄을 전부 찾아줘.
-5) 원본에서 금액이 비어 있던 줄이 종합에서도 빈칸인지 확인해줘.
+5) 원본에서 금액이 비어 있던 줄이 있다면 종합에서도 빈칸인지 확인해줘 (없으면 '해당 없음'이라고 답해줘).
 맞다고 단정하지 말고, 어긋난 줄은 번호로 짚어줘.</code></pre>
 </details>
 <h2 id="실행-예시">실행 예시<a class="headerlink" href="#실행-예시" title="Permanent link">&para;</a></h2>
@@ -151,7 +150,7 @@
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>합친 줄 수 = 410 − 겹친 건수</code> 등식이 맞다</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 세 원본의 주문번호가 <strong>하나도 빠지지 않았다</strong></li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 겹친 주문번호가 <strong>한 줄로</strong> 모였고 채널칸에 온 채널이 다 적혔다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 겹친 주문번호가 <strong>한 줄로</strong> 모였고 채널칸에 들어온 채널이 다 적혔다</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 모든 <code>주문일</code>이 <code>YYYY-MM-DD</code>이고, 빈 금액이 <strong>여전히 빈칸</strong>이다</li>
 </ul>
 <nav class="pager">

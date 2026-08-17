@@ -80,7 +80,6 @@
 <a class="nav-a" href="../../lab7/index.html"><span class="g">◆</span> 개요</a>
 <a class="nav-a" href="../../lab7/step1.html">1 · 범용 스킬 만들기</a>
 <a class="nav-a" href="../../lab7/step2.html">2 · 견적 통합에 응용</a>
-<a class="nav-a" href="../../lab7/step3.html">3 · 동료에게 넘기기</a>
 </div>
 <div class="nav-h">// 심화 실습 · 남의 스킬로 웹페이지 만들기</div><div class="tree">
 <a class="nav-a" href="../../advanced2/index.html"><span class="g">★</span> 개요</a>
@@ -111,11 +110,11 @@
         <div class="kicker mono"><b>//</b> 실습 준비</div>
 <h1 id="부록--자동-허가-모드">부록 · 자동 허가 모드<a class="headerlink" href="#부록--자동-허가-모드" title="Permanent link">&para;</a></h1>
 <blockquote>
-<p>코딩 에이전트는 안전을 위해 액션 실행 전 <em>"이 파일을 수정해도 될까요?", "이 명령어를 실행해도 괜찮을까요?"</em> 하고 매번 확인을 요청합니다. 실습 중에는 파일을 수백 번 고치므로, <strong>매번 승인하는 번거로움을 줄이도록</strong> 미리 자동 허가 모드로 바꿔둡니다.</p>
+<p>코딩 에이전트는 안전을 위해 작업 실행 전 <em>"이 파일을 수정해도 될까요?", "이 명령어를 실행해도 괜찮을까요?"</em> 하고 매번 확인을 요청합니다. 실습 중에는 파일을 수백 번 고치므로, <strong>매번 승인하는 번거로움을 줄이도록</strong> 미리 자동 허가 모드로 바꿔둡니다.</p>
 </blockquote>
 <div class="admonition warning">
 <p class="admonition-title">시작 전에 이것만 기억하세요</p>
-<p>이 설정은 <strong>실습 폴더에서만</strong> 편의를 위해 씁니다. <strong>실제 업무 폴더</strong>나 <strong>민감한 파일이 있는 폴더</strong>에서는 기본 승인 모드로 돌아가 쓰시길 권합니다. 실수로 지운 파일을 되살릴 방법이 없는 경우가 있습니다.</p>
+<p>이 설정은 <strong>실습 폴더에서만</strong> 편의를 위해 씁니다. <strong>실제 업무 폴더</strong>나 <strong>민감한 파일이 있는 폴더</strong>에서는 기본 승인 모드로 되돌려 쓰시길 권합니다. 실수로 지운 파일을 되살릴 방법이 없는 경우가 있습니다.</p>
 </div>
 <p>Claude Code는 자유도에 따라 <strong>두 단계</strong>로 설정할 수 있습니다.</p>
 <table>
@@ -128,20 +127,20 @@
 </thead>
 <tbody>
 <tr>
-<td>자유도 中 — <strong>Edit automatically</strong></td>
-<td>파일 편집만 자동 승인</td>
-<td>코드만 고쳐보는 실습</td>
+<td>자유도 中 — <strong>Auto</strong></td>
+<td>안전 검사를 통과한 작업은 자동 승인, 위험한 것만 확인</td>
+<td>오늘 실습 (권장)</td>
 </tr>
 <tr>
 <td>자유도 上 — <strong>Bypass permissions</strong></td>
-<td>편집 + 명령어 실행까지 자동 승인</td>
+<td>검사 없이 모두 자동 승인</td>
 <td>서버 실행·설치·테스트까지 자동화</td>
 </tr>
 </tbody>
 </table>
-<h2 id="자유도-中--edit-automatically">자유도 中 · Edit automatically<a class="headerlink" href="#자유도-中--edit-automatically" title="Permanent link">&para;</a></h2>
-<p>VS Code 오른쪽 Claude Code 패널 <strong>하단의 모드 드롭다운</strong>에서 <code>Edit automatically</code>를 고릅니다.</p>
-<p><img alt="Claude Code 모드 드롭다운에서 Edit automatically 선택" src="../../images/setup/autoapprove_claude_edit.png" /></p>
+<h2 id="자유도-中--auto">자유도 中 · Auto<a class="headerlink" href="#자유도-中--auto" title="Permanent link">&para;</a></h2>
+<p>VS Code 오른쪽 Claude Code 패널 <strong>입력창 오른쪽 아래의 모드 버튼</strong>을 눌러 <code>Auto</code>를 고릅니다.</p>
+<p><img alt="Claude Code 모드 목록에서 Auto 선택 — 안전 검사를 통과한 작업은 자동 승인" src="../../images/setup/autoapprove_claude_auto.png" /></p>
 <table>
 <thead>
 <tr>
@@ -151,20 +150,28 @@
 </thead>
 <tbody>
 <tr>
-<td><code>Ask before edits</code></td>
-<td>고칠 때마다 물어봅니다 (기본값)</td>
+<td><code>Manual</code></td>
+<td>편집할 때마다 물어봅니다</td>
 </tr>
 <tr>
 <td><code>Edit automatically</code></td>
 <td>파일 편집은 자동, 터미널 명령은 여전히 확인</td>
 </tr>
 <tr>
-<td><code>Plan mode</code></td>
+<td><code>Plan</code></td>
 <td>고치기 전에 계획을 먼저 보여줍니다</td>
+</tr>
+<tr>
+<td><code>Auto</code></td>
+<td>안전 검사를 통과한 작업은 자동, 위험한 것만 멈춰서 확인 <strong>(오늘 권장)</strong></td>
+</tr>
+<tr>
+<td><code>Bypass permissions</code></td>
+<td>검사 없이 모두 자동 (아래 자유도 上)</td>
 </tr>
 </tbody>
 </table>
-<p>고르고 나면 입력창 오른쪽 아래에 <code>Edit automatically</code> 라벨이 뜹니다.</p>
+<p>고르고 나면 입력창 오른쪽 아래에 <code>Auto</code> 라벨이 뜹니다.</p>
 <h2 id="자유도-上--bypass-permissions">자유도 上 · Bypass permissions<a class="headerlink" href="#자유도-上--bypass-permissions" title="Permanent link">&para;</a></h2>
 <p>파일 편집뿐 아니라 <strong>터미널 명령 실행까지 확인 없이</strong> 진행합니다. 먼저 VS Code 설정에서 이 모드를 허용한 뒤, Claude Code 하단에서 모드를 켭니다.</p>
 <p><strong>1단계.</strong> VS Code 왼쪽 아래 톱니바퀴(⚙️) → <code>Settings</code> (<kbd>Ctrl</kbd>+<kbd>,</kbd>)</p>
@@ -210,7 +217,7 @@
       </article>
       <aside class="toc mono"><h4>On this page</h4>
 <a href="#부록--자동-허가-모드">부록 · 자동 허가 모드</a>
-<a href="#자유도-中--edit-automatically">자유도 中 · Edit automatically</a>
+<a href="#자유도-中--auto">자유도 中 · Auto</a>
 <a href="#자유도-上--bypass-permissions">자유도 上 · Bypass permissions</a>
 <a href="#되돌리는-방법">되돌리는 방법</a></aside>
     </div>
