@@ -111,6 +111,28 @@
 <blockquote>
 <p><strong>한 줄 목표</strong>: 전 세계 전문가가 공개해 둔 디자인 스킬을 내 폴더에 설치해, 같은 프롬프트로도 결과물의 수준이 달라지는 것을 직접 확인한다.</p>
 </blockquote>
+<h2 id="시작-전에--git-bash-설치">시작 전에 · Git Bash 설치<a class="headerlink" href="#시작-전에--git-bash-설치" title="Permanent link">&para;</a></h2>
+<p>이번 실습 2단계에서 스킬을 설치할 때 쓰는 명령이 내부적으로 Git을 사용합니다. 아직 설치돼 있지 않다면 먼저 설치해 둡니다. (이미 설치돼 있다면 이 절은 건너뛰어도 됩니다.)</p>
+<h3 id="1-설치-프로그램-다운로드">1. 설치 프로그램 다운로드<a class="headerlink" href="#1-설치-프로그램-다운로드" title="Permanent link">&para;</a></h3>
+<p>Git 공식 사이트에 접속합니다.</p>
+<div class="highlight"><pre><span></span><code>https://git-scm.com/
+</code></pre></div>
+<p>다운로드 페이지에서 자신의 운영체제에 맞는 설치 프로그램을 받습니다.</p>
+<figure style="margin:0">
+  <img src="../images/advanced2/gitbash-download-page.png" alt="git-scm.com 다운로드 페이지" style="width:100%;height:auto;display:block">
+  <figcaption style="text-align:center;font-size:0.85em;color:#888;margin-top:6px">git-scm.com 다운로드 페이지</figcaption>
+</figure>
+
+<h3 id="2-설치-진행">2. 설치 진행<a class="headerlink" href="#2-설치-진행" title="Permanent link">&para;</a></h3>
+<p>받은 설치 파일을 실행하고, 모든 화면에서 <strong>기본 옵션을 그대로 유지</strong>한 채 <code>Next</code>를 눌러 설치를 완료합니다.</p>
+<h3 id="설치-확인">설치 확인<a class="headerlink" href="#설치-확인" title="Permanent link">&para;</a></h3>
+<p>설치가 끝나면 <strong>새 터미널(또는 명령 프롬프트) 창</strong>을 열고 아래 명령을 입력합니다.</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>--version
+</code></pre></div>
+<div class="admonition success">
+<p class="admonition-title">이렇게 나오면 정상입니다</p>
+<p><code>git version 2.x.x</code> 형태의 버전이 출력됩니다.</p>
+</div>
 <h2 id="오늘-받은-일">오늘 받은 일<a class="headerlink" href="#오늘-받은-일" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p>실습 6에서 제안서를 사실대로 고쳐 드렸더니, 영업팀장이 다시 부릅니다.</p>
@@ -172,11 +194,12 @@
 </tr>
 </tbody>
 </table>
-<pre class="highlight"><code>lab8_advanced/
+<div class="highlight"><pre><span></span><code>lab8_advanced/
 ├─ 2.제품사양서.xlsx
 └─ 2.비교용/
     ├─ before/
-    └─ after/</code></pre>
+    └─ after/
+</code></pre></div>
 <p>zip을 못 받는 상황이면 직접 만들어도 됩니다. 실습 6 폴더의 <code>2.제품사양서.xlsx</code>를 <code>전체자료</code> 안에 새로 만든 <code>lab8_advanced</code> 폴더에 복사하고, <code>2.비교용/before</code>·<code>2.비교용/after</code> 폴더를 만들면 같은 상태가 됩니다.</p>
 <p>핵심은 <strong>페이지의 숫자를 지어내지 않고 사양서에서 가져온다</strong>는 실습 6의 원칙을 여기서도 지키는 것입니다.</p>
 <h2 id="실습에서-할-일">실습에서 할 일<a class="headerlink" href="#실습에서-할-일" title="Permanent link">&para;</a></h2>
@@ -208,6 +231,10 @@
       </article>
       <aside class="toc mono"><h4>On this page</h4>
 <a href="#개요">개요</a>
+<a href="#시작-전에--git-bash-설치">시작 전에 · Git Bash 설치</a>
+<a href="#1-설치-프로그램-다운로드" class="t3">1. 설치 프로그램 다운로드</a>
+<a href="#2-설치-진행" class="t3">2. 설치 진행</a>
+<a href="#설치-확인" class="t3">설치 확인</a>
 <a href="#오늘-받은-일">오늘 받은 일</a>
 <a href="#오늘-가져다-쓸-스킬--taste-skill">오늘 가져다 쓸 스킬 · taste-skill</a>
 <a href="#폴더에-있는-것">폴더에 있는 것</a>

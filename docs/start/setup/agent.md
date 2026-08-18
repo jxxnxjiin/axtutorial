@@ -112,7 +112,7 @@ https://marketplace.visualstudio.com/items?itemName=Anthropic.claude-code
 
 ## 6. 확인 창이 뜨면
 
-AI는 파일을 고칠 때마다 *"이 파일을 수정해도 될까요?"* 하고 물어봅니다. 오늘은 처음에 저장한 설정 파일(`settings.json`)에서 자동 승인 모드(`Auto`)를 세팅하였기 때문에 매번 묻지는 않지만, 파일에 따라 아래처럼 개별 확인 창이 뜰 수 있습니다.
+AI는 파일을 고칠 때마다 *"이 파일을 수정해도 될까요?"* 하고 물어봅니다. 오늘은 처음에 저장한 설정 파일(`settings.json`)에서 자동 승인 모드(`Auto`)로 세팅하였기 때문에 매번 묻지는 않지만, 파일에 따라 아래처럼 개별 확인 창이 뜰 수 있습니다.
 
 ![파일 수정 확인 창](../../images/setup/allo_all_edits.png)
 

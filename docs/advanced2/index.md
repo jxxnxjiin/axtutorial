@@ -2,6 +2,40 @@
 
 > **한 줄 목표**: 전 세계 전문가가 공개해 둔 디자인 스킬을 내 폴더에 설치해, 같은 프롬프트로도 결과물의 수준이 달라지는 것을 직접 확인한다.
 
+## 시작 전에 · Git Bash 설치
+
+이번 실습 2단계에서 스킬을 설치할 때 쓰는 명령이 내부적으로 Git을 사용합니다. 아직 설치돼 있지 않다면 먼저 설치해 둡니다. (이미 설치돼 있다면 이 절은 건너뛰어도 됩니다.)
+
+### 1. 설치 프로그램 다운로드
+
+Git 공식 사이트에 접속합니다.
+
+```
+https://git-scm.com/
+```
+
+다운로드 페이지에서 자신의 운영체제에 맞는 설치 프로그램을 받습니다.
+
+<figure style="margin:0">
+  <img src="../images/advanced2/gitbash-download-page.png" alt="git-scm.com 다운로드 페이지" style="width:100%;height:auto;display:block">
+  <figcaption style="text-align:center;font-size:0.85em;color:#888;margin-top:6px">git-scm.com 다운로드 페이지</figcaption>
+</figure>
+
+### 2. 설치 진행
+
+받은 설치 파일을 실행하고, 모든 화면에서 **기본 옵션을 그대로 유지**한 채 `Next`를 눌러 설치를 완료합니다.
+
+### 설치 확인
+
+설치가 끝나면 **새 터미널(또는 명령 프롬프트) 창**을 열고 아래 명령을 입력합니다.
+
+```bash
+git --version
+```
+
+!!! success "이렇게 나오면 정상입니다"
+    `git version 2.x.x` 형태의 버전이 출력됩니다.
+
 ## 오늘 받은 일
 
 > 실습 6에서 제안서를 사실대로 고쳐 드렸더니, 영업팀장이 다시 부릅니다.
