@@ -28,7 +28,15 @@ https://code.visualstudio.com/download
 ## 설치 확인
 
 - **VS Code 프로그램이 실행되면 통과**입니다.
-- 처음 켜면 테마·언어 안내가 나올 수 있습니다. 지금은 그냥 넘어가도 됩니다.
+- 처음 켜면 테마·언어 안내 또는 로그인 화면이 나올 수 있습니다. 지금은 그냥 넘어가도 됩니다.
+
+## 선택 · Office Viewer 확장 설치
+
+실습 중 엑셀 파일을 VSCode 안에서 바로 확인하고 싶다면 **Office Viewer** 확장을 설치합니다.
+
+왼쪽 확장 메뉴에서 `Office Viewer`를 검색하고 `Install`을 누르면 됩니다.
+
+![Office Viewer 확장 설치 화면](../../images/setup/install_office_viewer.png)
 
 <div class="stage-nav" markdown>
 **← 이전** [환경 세팅 개요](index.md) · **다음 →** [② Python 설치](python.md)

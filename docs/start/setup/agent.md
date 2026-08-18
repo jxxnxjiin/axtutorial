@@ -31,7 +31,7 @@ claude
 
 ![.claude 초기 세팅 화면](../../images/setup/claude_initial_setting.png)
 
-위와 같은 화면이 나오면 설치 완료입니다. 설치가 확인되었다면 우선 아무 것도 설정하지 말고, 다음 단계로 넘어갑니다. 
+위와 같은 화면이 나오면 설치 완료입니다. 설치가 확인되었다면 우선 아무것도 설정하지 말고, 다음 단계로 넘어갑니다. 
 
 ## 2. 설정 파일(settings.json) 넣기
 
@@ -72,7 +72,7 @@ claude
 
 !!! warning "이렇게 나왔다면"
     - API 키 안내가 안 뜨고 **로그인 화면**이 뜬다 → 2번의 settings.json이 제 위치에 없는 것입니다. 경로를 다시 확인하세요.
-    - `Invalid API key` 등 오류가 뜬다 → 운영진에게 연락하세요. 당일 예비 키를 받을 수 있습니다.
+    - `Invalid API key` 등 오류가 뜬다 → 운영진에게 문의하세요. 당일 예비 키를 받을 수 있습니다.
 
 ## 4. VS Code 확장 설치
 
@@ -107,7 +107,7 @@ https://marketplace.visualstudio.com/items?itemName=Anthropic.claude-code
 
 !!! warning "이렇게 나왔다면"
     - 패널에 **로그인 화면**이 뜬다 → 3번의 터미널 연결 확인을 건너뛴 것입니다. 3번을 먼저 마치고 VS Code를 재시작하세요.
-    - 그래도 안 된다 → 운영진에게 연락하세요.
+    - 그래도 안 된다 → 운영진에게 문의하세요.
 
 !!! tip "실습 폴더 여는 법"
     실습을 시작할 때는 VS Code 왼쪽 상단 **`Open Folder`**로 실습 자료가 있는 폴더를 열고, 그 상태에서 Claude Code에 질문하면 됩니다.
