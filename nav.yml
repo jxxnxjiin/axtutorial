@@ -30,16 +30,16 @@ nav:
       - { label: "1 · 한 표로 모으기", path: "lab1/step1.md" }
       - { label: "2 · 원본 대조·검산", path: "lab1/step2.md" }
 
-  - group: "실습 2 · 계약서에서 계약종합 만들기"
+  - group: "실습 2 · 계약서 내용 종합하기"
     children:
       - { label: "개요", path: "lab2/index.md", icon: "◆" }
-      - { label: "1 · 계약서 내용 종합하기", path: "lab2/step1.md" }
+      - { label: "1 · 한 표로 모으기", path: "lab2/step1.md" }
       - { label: "2 · 원본 대조·검산", path: "lab2/step2.md" }
 
   - group: "실습 3 · 쿠폰 성과 집계·인사이트"
     children:
       - { label: "개요", path: "lab3/index.md", icon: "◆" }
-      - { label: "1 · 한 파일로 모으기", path: "lab3/step1.md" }
+      - { label: "1 · 한 표로 모으기", path: "lab3/step1.md" }
       - { label: "2 · 성과표 채우기", path: "lab3/step2.md" }
       - { label: "3 · 집계 검산", path: "lab3/step3.md" }
       - { label: "4 · 인사이트·검산", path: "lab3/step4.md" }
