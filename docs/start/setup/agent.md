@@ -98,8 +98,6 @@ https://marketplace.visualstudio.com/items?itemName=Anthropic.claude-code
 
 앞에서 API 키를 이미 등록했기 때문에 **로그인 화면 없이 바로 입력줄이 떠야 정상**입니다.
 
-![.claude 세팅 완료 화면](../../images/setup/claude_setting_completed.png)
-
 <!-- TODO 이미지: VS Code 오른쪽 Claude Code 패널이 로그인 화면 없이 입력줄 상태로 뜬 화면 -->
 
 !!! success "이렇게 나오면 정상입니다"
@@ -112,15 +110,19 @@ https://marketplace.visualstudio.com/items?itemName=Anthropic.claude-code
 !!! tip "실습 폴더 여는 법"
     실습을 시작할 때는 VS Code 왼쪽 상단 **`Open Folder`**로 실습 자료가 있는 폴더를 열고, 그 상태에서 Claude Code에 질문하면 됩니다.
 
-## 6. 확인 창 미리 꺼두기 (자동 승인)
+## 6. 확인 창이 뜨면
 
-AI가 파일을 고칠 때마다 *"이 파일을 수정해도 될까요?"* 하고 물어봅니다. 오늘 하루는 파일을 수백 번 고치므로, 미리 꺼두면 실습 흐름이 끊기지 않습니다.
+AI는 파일을 고칠 때마다 *"이 파일을 수정해도 될까요?"* 하고 물어봅니다. 오늘은 처음에 저장한 설정 파일(`settings.json`)에서 자동 승인 모드(`Auto`)를 세팅하였기 때문에 매번 묻지는 않지만, 파일에 따라 아래처럼 개별 확인 창이 뜰 수 있습니다.
 
-Claude Code 패널 입력줄 **오른쪽 아래의 모드 버튼**을 눌러 `Auto`를 고르세요. 안전 검사를 통과한 작업은 자동으로 진행하고, 위험한 것만 멈춰서 물어봅니다. 이것 하나면 오늘 실습에는 충분합니다.
+![파일 수정 확인 창](../../images/setup/allo_all_edits.png)
 
-![Claude Code 모드 목록에서 Auto를 고른 화면 — 안전 검사를 통과한 작업은 자동 승인](../../images/setup/autoapprove_claude_auto.png)
+- **1. Yes** — 이번 한 번만 허용합니다.
+- **2. Yes, allow access to ...** — 같은 종류의 요청을 앞으로 이 폴더 또는 모든 프로젝트에서 다시 묻지 않고 허용합니다.
+- **3. No** — 거절합니다.
 
-!!! tip "더 세게 풀거나 되돌리는 법은 부록에서" 명령 실행까지 자동으로 넘기는 방법과 되돌리는 법은 [**부록 · 자동 허가 모드 설정**](autoapprove.md)에 정리해뒀습니다.
+매번 승인 버튼을 누르는 것이 귀찮다면 **2**를 눌러 다시 묻지 않도록 할 수 있습니다.
+
+> 자동 승인을 직접 켜고 끄는 방법은 [**부록 · 자동 허가 모드 설정**](autoapprove.md)에 정리해뒀습니다.
 
 ## 다 됐는지 스스로 확인하기
 
@@ -128,7 +130,6 @@ Claude Code 패널 입력줄 **오른쪽 아래의 모드 버튼**을 눌러 `Au
 - [ ] `사용자 폴더\.claude\settings.json`이 제자리에 있다
 - [ ] VS Code에서 Claude Code 패널이 뜨고, **로그인 화면 없이** 말을 걸 수 있다
 - [ ] 터미널에서 `python --version`(맥은 `python3 --version`) · `node --version`이 숫자를 답한다
-- [ ] Claude Code 입력창 오른쪽 아래에 `Auto` 라벨이 보인다
 
 여기까지 됐으면 도구 설치는 끝입니다. 이제 실습 데이터를 준비합니다.
 
