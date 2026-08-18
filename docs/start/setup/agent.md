@@ -23,13 +23,15 @@ npm install -g @anthropic-ai/claude-code
 
 진행 표시가 지나가고 1~2분 안에 끝납니다.
 
-**3.** 설치가 끝나면 PowerShell 창을 **닫았다가 다시 열고**, 아래 명령으로 버전이 출력되는지 확인합니다.
+**3.** 설치가 끝나면 PowerShell 창을 **닫았다가 다시 열고**, 아래 명령을 입력합니다.
 
 ```powershell
-claude --version
+claude
 ```
 
-숫자(예: `2.x.x`)가 나오면 설치 완료입니다.
+![.claude 초기 세팅 화면](../../images/setup/claude_initial_setting.png)
+
+위와 같은 화면이 나오면 설치 완료입니다. 설치가 확인되었다면 우선 아무 것도 설정하지 말고, 다음 단계로 넘어갑니다. 
 
 ## 2. 설정 파일(settings.json) 넣기
 
@@ -95,6 +97,8 @@ https://marketplace.visualstudio.com/items?itemName=Anthropic.claude-code
 설치가 끝나면 <kbd>Ctrl</kbd>+<kbd>L</kbd> (맥은 <kbd>Cmd</kbd>+<kbd>L</kbd>)을 누릅니다. 오른쪽 패널에 Claude Code 화면이 뜹니다.
 
 앞에서 API 키를 이미 등록했기 때문에 **로그인 화면 없이 바로 입력줄이 떠야 정상**입니다.
+
+![.claude 세팅 완료 화면](../../images/setup/claude_setting_completed.png)
 
 <!-- TODO 이미지: VS Code 오른쪽 Claude Code 패널이 로그인 화면 없이 입력줄 상태로 뜬 화면 -->
 
