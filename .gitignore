@@ -7,3 +7,5 @@ __pycache__/
 # Python 가상환경 (uv sync 가 생성)
 .venv/
 .omx/
+# 배포용 API 키 설정 파일 (절대 커밋 금지)
+settings.json
