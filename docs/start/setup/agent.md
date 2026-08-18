@@ -50,7 +50,7 @@ claude
 %USERPROFILE%\.claude
 ```
 
-<!-- TODO 이미지: 탐색기 주소창에 %USERPROFILE%\.claude 를 입력한 화면 -->
+![탐색기 주소창에 %USERPROFILE%\.claude 입력](../../images/setup/settings_addressbar.png)
 
 **3.** 다운로드 폴더에 있는 `settings.json`을 이 폴더로 **마우스로 끌어다 놓습니다.** (창 두 개를 나란히 띄우면 편합니다) 폴더에 이미 `settings.json`이 있다는 안내가 뜨면 **"덮어쓰기(파일 바꾸기)"**를 선택하면 됩니다.
 
