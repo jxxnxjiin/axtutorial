@@ -700,6 +700,16 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 [data-theme="light"] .highlight .vi { color: #BB60D5 } /* Name.Variable.Instance */
 [data-theme="light"] .highlight .vm { color: #BB60D5 } /* Name.Variable.Magic */
 [data-theme="light"] .highlight .il { color: #40A070 } /* Literal.Number.Integer.Long */
+[data-theme="light"] .highlight .esc { color: #333 } /* Escape */
+[data-theme="light"] .highlight .g { color: #333 } /* Generic */
+[data-theme="light"] .highlight .l { color: #40A070 } /* Literal */
+[data-theme="light"] .highlight .n { color: #333 } /* Name */
+[data-theme="light"] .highlight .x { color: #333 } /* Other */
+[data-theme="light"] .highlight .p { color: #333 } /* Punctuation */
+[data-theme="light"] .highlight .ld { color: #4070A0 } /* Literal.Date */
+[data-theme="light"] .highlight .nx { color: #4070A0 } /* Name.Other */
+[data-theme="light"] .highlight .py { color: #333 } /* Name.Property */
+[data-theme="light"] .highlight .pm { color: #333 } /* Punctuation.Marker */
 
 /* ---- zip download buttons ---- */
 .zipall{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin:16px 0 4px}
