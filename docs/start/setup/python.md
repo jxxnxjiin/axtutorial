@@ -34,7 +34,7 @@ https://www.python.org/downloads/
 
     이미 안 켜고 설치했다면, 설치 파일을 다시 실행해 `Modify`로 고칠 수 있습니다.
 
-![Python 설치 첫 화면 — 아래쪽 Add python.exe to PATH 체크박스가 켜져 있는 상태](../../images/setup/python_install_2.png)
+![Python 설치 첫 화면 — 아래쪽 Add python.exe to PATH(`PATH에 추가`) 체크박스가 켜져 있는 상태](../../images/setup/python_install_2.png)
 
 체크한 뒤 `Install Now`를 눌러 설치를 완료합니다.
 

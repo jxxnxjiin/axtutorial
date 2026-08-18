@@ -145,7 +145,7 @@
 <p><em>"Automatically install the necessary tools"</em>를 체크하면 C++ 빌드 도구가 함께 설치됩니다. 나중에 일부 도구를 설치할 때 이 구성 요소가 필요할 수 있으니 <strong>체크를 권장</strong>합니다.</p>
 <p><code>Install</code> 버튼을 눌러 설치를 완료합니다.</p>
 <h2 id="macos에서-설치하기">macOS에서 설치하기<a class="headerlink" href="#macos에서-설치하기" title="Permanent link">&para;</a></h2>
-<p><a href="https://nodejs.org">Node.js 공식 사이트</a>에서 <strong>macOS Installer(.pkg)</strong>를 받아 실행하고, 안내대로 설치합니다. (<code>Add to PATH</code>에 해당하는 설정은 자동으로 처리됩니다.)</p>
+<p><a href="https://nodejs.org/ko/download/">Node.js 공식 사이트</a>에서 <strong>macOS Installer(.pkg)</strong>를 받아 실행하고, 안내대로 설치합니다. (<code>Add to PATH</code>에 해당하는 설정은 자동으로 처리됩니다.)</p>
 <h2 id="설치-확인">설치 확인<a class="headerlink" href="#설치-확인" title="Permanent link">&para;</a></h2>
 <p>설치가 끝나면 <strong>새 명령 프롬프트(또는 터미널) 창</strong>을 엽니다. 기존에 열려 있던 창은 PATH가 업데이트되지 않았을 수 있습니다.</p>
 <div class="highlight"><pre><span></span><code>node<span class="w"> </span>--version
@@ -161,6 +161,15 @@
 <div class="admonition warning">
 <p class="admonition-title"><code>Installation complete!</code>가 떴는데 버전이 안 나온다면</p>
 <p>창을 완전히 닫았다가 <strong>새 창</strong>을 열어 같은 명령을 다시 입력하세요. PATH는 새 창부터 반영됩니다.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title"><code>npm</code> 실행 시 보안 오류가 뜬다면 (Windows)</p>
+<p>터미널(PowerShell 계열)에서 아래와 같은 오류가 뜰 수 있습니다.</p>
+<p><img alt="PowerShell에서 npm 실행 시 뜨는 PSSecurityException 오류" src="../../images/setup/pssecurity_exception.png" /></p>
+<p>Windows가 기본적으로 스크립트 실행을 막아둔 것입니다. PowerShell을 열고 아래 명령을 입력한 뒤, 확인 창이 뜨면 <code>Y</code>를 누르세요.</p>
+<div class="highlight"><pre><span></span><code><span class="nb">Set-ExecutionPolicy</span> <span class="n">RemoteSigned</span> <span class="n">-Scope</span> <span class="n">CurrentUser</span>
+</code></pre></div>
+<p>이후 <strong>새 터미널 창</strong>을 열어 <code>npm --version</code>을 다시 실행해보세요.</p>
 </div>
 
 <nav class="pager">

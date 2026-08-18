@@ -47,7 +47,7 @@ https://nodejs.org
 
 ## macOS에서 설치하기
 
-[Node.js 공식 사이트](https://nodejs.org)에서 **macOS Installer(.pkg)**를 받아 실행하고, 안내대로 설치합니다. (`Add to PATH`에 해당하는 설정은 자동으로 처리됩니다.)
+[Node.js 공식 사이트](https://nodejs.org/ko/download/)에서 **macOS Installer(.pkg)**를 받아 실행하고, 안내대로 설치합니다. (`Add to PATH`에 해당하는 설정은 자동으로 처리됩니다.)
 
 
 ## 설치 확인
@@ -71,6 +71,19 @@ npm --version
 
 !!! warning "`Installation complete!`가 떴는데 버전이 안 나온다면"
     창을 완전히 닫았다가 **새 창**을 열어 같은 명령을 다시 입력하세요. PATH는 새 창부터 반영됩니다.
+
+!!! warning "`npm` 실행 시 보안 오류가 뜬다면 (Windows)"
+    터미널(PowerShell 계열)에서 아래와 같은 오류가 뜰 수 있습니다.
+
+    ![PowerShell에서 npm 실행 시 뜨는 PSSecurityException 오류](../../images/setup/pssecurity_exception.png)
+
+    Windows가 기본적으로 스크립트 실행을 막아둔 것입니다. PowerShell을 열고 아래 명령을 입력한 뒤, 확인 창이 뜨면 `Y`를 누르세요.
+
+    ```powershell
+    Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+    ```
+
+    이후 **새 터미널 창**을 열어 `npm --version`을 다시 실행해보세요.
 
 <div class="stage-nav" markdown>
 **← 이전** [② Python 설치](python.md) · **다음 →** [④ AI 에이전트 설치](agent.md)
