@@ -89,5 +89,4 @@ nav:
       - { label: "에러가 났어요", path: "help/errors.md" }
       - { label: "이 말이 무슨 뜻이죠", path: "help/glossary.md" }
       - { label: "AI에게 잘 시키는 법", path: "help/how-to-ask.md" }
-      - { label: "오늘 내가 친 문장", path: "help/prompts.md" }
       - { label: "강의 끝나고 뭘 해볼까", path: "help/next.md" }

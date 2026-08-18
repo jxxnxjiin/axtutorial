@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>1 · 계약서 내용 종합하기 · ax-tutor</title>
-<meta name="description" content="실습 2 · 계약서에서 계약종합 만들기 — 1 · 계약서 내용 종합하기 · ax-tutor 실습 위키">
+<title>1 · 한 표로 모으기 · ax-tutor</title>
+<meta name="description" content="실습 2 · 계약서 내용 종합하기 — 1 · 한 표로 모으기 · ax-tutor 실습 위키">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
@@ -46,14 +46,14 @@
 <a class="nav-a" href="../lab1/step1.html">1 · 한 표로 모으기</a>
 <a class="nav-a" href="../lab1/step2.html">2 · 원본 대조·검산</a>
 </div>
-<div class="nav-h">// 실습 2 · 계약서에서 계약종합 만들기</div><div class="tree">
+<div class="nav-h">// 실습 2 · 계약서 내용 종합하기</div><div class="tree">
 <a class="nav-a" href="../lab2/index.html"><span class="g">◆</span> 개요</a>
-<a class="nav-a active" href="../lab2/step1.html">1 · 계약서 내용 종합하기</a>
+<a class="nav-a active" href="../lab2/step1.html">1 · 한 표로 모으기</a>
 <a class="nav-a" href="../lab2/step2.html">2 · 원본 대조·검산</a>
 </div>
 <div class="nav-h">// 실습 3 · 쿠폰 성과 집계·인사이트</div><div class="tree">
 <a class="nav-a" href="../lab3/index.html"><span class="g">◆</span> 개요</a>
-<a class="nav-a" href="../lab3/step1.html">1 · 한 파일로 모으기</a>
+<a class="nav-a" href="../lab3/step1.html">1 · 한 표로 모으기</a>
 <a class="nav-a" href="../lab3/step2.html">2 · 성과표 채우기</a>
 <a class="nav-a" href="../lab3/step3.html">3 · 집계 검산</a>
 <a class="nav-a" href="../lab3/step4.html">4 · 인사이트·검산</a>
@@ -90,7 +90,6 @@
 <a class="nav-a" href="../help/errors.html">에러가 났어요</a>
 <a class="nav-a" href="../help/glossary.html">이 말이 무슨 뜻이죠</a>
 <a class="nav-a" href="../help/how-to-ask.html">AI에게 잘 시키는 법</a>
-<a class="nav-a" href="../help/prompts.html">오늘 내가 친 문장</a>
 <a class="nav-a" href="../help/next.html">강의 끝나고 뭘 해볼까</a>
 </div></nav>
     <div class="side__foot">
@@ -103,14 +102,14 @@
       <button class="burger" id="burger" aria-label="메뉴">≡</button>
       <span class="path"><b>~/ax-tutor</b> <span class="full">$ cat</span> <span class="cur">lab2/step1.md</span></span>
       <span class="caret"></span><span class="spacer"></span>
-      <span class="stat">실습 2 · 계약서에서 계약종합 만들기</span>
+      <span class="stat">실습 2 · 계약서 내용 종합하기</span>
     </div>
     <div class="wrap">
       <article class="doc md rise">
-        <div class="kicker mono"><b>//</b> 실습 2 · 계약서에서 계약종합 만들기</div>
-<h1 id="1--계약서-내용-종합하기">1 · 계약서 내용 종합하기<a class="headerlink" href="#1--계약서-내용-종합하기" title="Permanent link">&para;</a></h1>
+        <div class="kicker mono"><b>//</b> 실습 2 · 계약서 내용 종합하기</div>
+<h1 id="1--한-표로-모으기">1 · 한 표로 모으기<a class="headerlink" href="#1--한-표로-모으기" title="Permanent link">&para;</a></h1>
 <p>계약서 PDF를 하나 열어 보세요. 어디에도 표가 없는 줄글이고, 같은 금액도 '₩9,000,000'과 '금 구백만원정'처럼 문서마다 다르게 적혀 있습니다. AI는 이런 문서에서 항목을 뽑아 표로 만드는 일을 생각보다 빨리 해냅니다.</p>
-<p>다만 함정이 있습니다. 안 적힌 항목을 그럴듯하게 채워 넣는 것입니다. 그래서 뽑을 항목 6개를 못 박고 "없으면 비워둬"를 함께 넘겨, 계약서 8건을 계약 한 건당 한 줄인 엑셀로 정리합니다.</p>
+<p>다만 아무런 지침 없이 작업을 시키면 AI는 문서에 없는 항목도 그럴듯하게 채워 넣기도 합니다. 따라서 계약서에서 뽑아낼 항목 6개를 못 박고, "없으면 비워둘 것"을 지침에 포함하는 것이 중요합니다.</p>
 <h2 id="뽑을-항목-여섯-개">뽑을 항목 여섯 개<a class="headerlink" href="#뽑을-항목-여섯-개" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p>계약번호 / 계약명 / 계약 상대 / 계약기간 / 금액 / 자동갱신 여부</p>
@@ -151,7 +150,7 @@
 </div>
 <h2 id="체크포인트">체크포인트<a class="headerlink" href="#체크포인트" title="Permanent link">&para;</a></h2>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 계약종합이 <strong>8행</strong>(계약 8건)으로 나왔다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 결과 파일이 <strong>8행</strong>(계약 8건, 한 건당 한 줄)으로 나왔다</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>금액이 없는 계약이 빈칸</strong>으로 남아 있다 (0이 아님)</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 계약서에 적힌 항목은 모두 채워졌고, 원문에 없는 항목만 빈칸이다 (지어낸 값 없음)</li>
 </ul>
@@ -161,7 +160,7 @@
 </nav>
       </article>
       <aside class="toc mono"><h4>On this page</h4>
-<a href="#1--계약서-내용-종합하기">1 · 계약서 내용 종합하기</a>
+<a href="#1--한-표로-모으기">1 · 한 표로 모으기</a>
 <a href="#뽑을-항목-여섯-개">뽑을 항목 여섯 개</a>
 <a href="#직접-시켜보세요">직접 시켜보세요</a>
 <a href="#프롬프트에-꼭-담을-것-">프롬프트에 꼭 담을 것 ✅</a>

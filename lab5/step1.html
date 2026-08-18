@@ -46,14 +46,14 @@
 <a class="nav-a" href="../lab1/step1.html">1 · 한 표로 모으기</a>
 <a class="nav-a" href="../lab1/step2.html">2 · 원본 대조·검산</a>
 </div>
-<div class="nav-h">// 실습 2 · 계약서에서 계약종합 만들기</div><div class="tree">
+<div class="nav-h">// 실습 2 · 계약서 내용 종합하기</div><div class="tree">
 <a class="nav-a" href="../lab2/index.html"><span class="g">◆</span> 개요</a>
-<a class="nav-a" href="../lab2/step1.html">1 · 계약서 내용 종합하기</a>
+<a class="nav-a" href="../lab2/step1.html">1 · 한 표로 모으기</a>
 <a class="nav-a" href="../lab2/step2.html">2 · 원본 대조·검산</a>
 </div>
 <div class="nav-h">// 실습 3 · 쿠폰 성과 집계·인사이트</div><div class="tree">
 <a class="nav-a" href="../lab3/index.html"><span class="g">◆</span> 개요</a>
-<a class="nav-a" href="../lab3/step1.html">1 · 한 파일로 모으기</a>
+<a class="nav-a" href="../lab3/step1.html">1 · 한 표로 모으기</a>
 <a class="nav-a" href="../lab3/step2.html">2 · 성과표 채우기</a>
 <a class="nav-a" href="../lab3/step3.html">3 · 집계 검산</a>
 <a class="nav-a" href="../lab3/step4.html">4 · 인사이트·검산</a>
@@ -90,7 +90,6 @@
 <a class="nav-a" href="../help/errors.html">에러가 났어요</a>
 <a class="nav-a" href="../help/glossary.html">이 말이 무슨 뜻이죠</a>
 <a class="nav-a" href="../help/how-to-ask.html">AI에게 잘 시키는 법</a>
-<a class="nav-a" href="../help/prompts.html">오늘 내가 친 문장</a>
 <a class="nav-a" href="../help/next.html">강의 끝나고 뭘 해볼까</a>
 </div></nav>
     <div class="side__foot">
@@ -109,9 +108,9 @@
       <article class="doc md rise">
         <div class="kicker mono"><b>//</b> 실습 5 · 고객 문의에 딱지 붙이기</div>
 <h1 id="1--기준-확인한-건-분류">1 · 기준 확인·한 건 분류<a class="headerlink" href="#1--기준-확인한-건-분류" title="Permanent link">&para;</a></h1>
-<p>이번 일은 앞선 실습들과 결이 다릅니다. 고객이 남긴 문장을 읽고 유형·감성·위험을 판단해 칸을 채우는, 정답이 모호한 일입니다.</p>
-<p>이 모호함을 없애는 도구가 규칙입니다. 어려운 게 아닙니다. "환불·취소·반품 같은 말이 들어 있으면 환불 문의로 본다." 이렇게 어떤 말이 들어 있나로 정하면 됩니다. 기준 문서를 AI에게 읽히면 모호한 일이 <strong>누가 해도 같은 답이 나오는 일</strong>로 바뀝니다.</p>
-<p>그래서 520건을 돌리기 전에 딱 한 건만 분류시켜 봅니다. 기준을 제대로 이해했는지, 세 축을 따로따로 판단하는지를 가장 싸게 확인하는 방법입니다.</p>
+<p>이번 일은 앞선 실습들과 결이 다릅니다. 고객이 남긴 문장을 읽고 유형별로 분류하는, 정답이 명확하게 정해지지 않은 일입니다.</p>
+<p>이 모호함을 없애기 위해서 명확한 기준이 필요합니다. 예를 들어, "환불, 취소, 반품 같은 말이 들어 있으면 <strong>환불 문의</strong>", "불량, 파손, 고장과 같은 말이 들어 있으면 <strong>제품 하자</strong>"와 같이 특정 단어의 포함 여부를 기준으로 삼을 수 있습니다. 이와 같은 기준을 AI에게 제시하면 모호한 일이 <strong>결정적인 일</strong>로 바뀝니다.</p>
+<p>그래서 520건을 돌리기 전에 딱 한 건만 분류시켜 봅니다. 기준을 제대로 이해했는지, 세 축을 따로따로 판단하는지를 먼저 빠르게 확인해보는 방법입니다.</p>
 <h2 id="세-개의-분류-축">세 개의 분류 축<a class="headerlink" href="#세-개의-분류-축" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p><strong>문의유형</strong> (1건당 1개) — 환불취소 · 배송지연 · 제품하자 · 사용문의 · 칭찬감사 · 기타</p>
@@ -123,9 +122,9 @@
 <h2 id="프롬프트에-꼭-담을-것-">프롬프트에 꼭 담을 것 ✅<a class="headerlink" href="#프롬프트에-꼭-담을-것-" title="Permanent link">&para;</a></h2>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>읽을 대상</strong> — 기준 문서(<code>2. VOC_분류기준.pdf</code>)를 먼저 읽고 그대로 따르기 (AI는 규칙을 준 만큼만 정확합니다)</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>세 축 독립 판단</strong> — 유형·감성·위험을 <strong>따로</strong> 판단 (감성이 좋아도 위험 신호 있으면 <code>Y</code>)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>세 축 독립 판단</strong> — 유형·감성·위험을 각각 <strong>따로</strong> 판단 (감성이 좋아도 위험 신호 있으면 <code>Y</code>)</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>없는 값 처리</strong> — 애매하면 지어내지 말고 기타·중립으로, 판정 근거를 한 줄로 (근거가 있어야 기준을 따랐는지 검증 가능)</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>먼저 한 건만</strong> — VOC 첫 문의 1건으로 세 칸을 채워 보이기 (520건 돌리기 전에 기준 이해를 싸게 확인)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>먼저 한 건만</strong> — VOC 첫 문의 1건으로 세 칸을 채워 보기 (520건 돌리기 전에 기준 이해를 빠르게 확인)</li>
 </ul>
 <h2 id="이런-건-빼세요-">이런 건 빼세요 ❌<a class="headerlink" href="#이런-건-빼세요-" title="Permanent link">&para;</a></h2>
 <ul class="task-list">

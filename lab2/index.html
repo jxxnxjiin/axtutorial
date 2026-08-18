@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>개요 · ax-tutor</title>
-<meta name="description" content="실습 2 · 계약서에서 계약종합 만들기 — 개요 · ax-tutor 실습 위키">
+<meta name="description" content="실습 2 · 계약서 내용 종합하기 — 개요 · ax-tutor 실습 위키">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
@@ -46,14 +46,14 @@
 <a class="nav-a" href="../lab1/step1.html">1 · 한 표로 모으기</a>
 <a class="nav-a" href="../lab1/step2.html">2 · 원본 대조·검산</a>
 </div>
-<div class="nav-h">// 실습 2 · 계약서에서 계약종합 만들기</div><div class="tree">
+<div class="nav-h">// 실습 2 · 계약서 내용 종합하기</div><div class="tree">
 <a class="nav-a active" href="../lab2/index.html"><span class="g">◆</span> 개요</a>
-<a class="nav-a" href="../lab2/step1.html">1 · 계약서 내용 종합하기</a>
+<a class="nav-a" href="../lab2/step1.html">1 · 한 표로 모으기</a>
 <a class="nav-a" href="../lab2/step2.html">2 · 원본 대조·검산</a>
 </div>
 <div class="nav-h">// 실습 3 · 쿠폰 성과 집계·인사이트</div><div class="tree">
 <a class="nav-a" href="../lab3/index.html"><span class="g">◆</span> 개요</a>
-<a class="nav-a" href="../lab3/step1.html">1 · 한 파일로 모으기</a>
+<a class="nav-a" href="../lab3/step1.html">1 · 한 표로 모으기</a>
 <a class="nav-a" href="../lab3/step2.html">2 · 성과표 채우기</a>
 <a class="nav-a" href="../lab3/step3.html">3 · 집계 검산</a>
 <a class="nav-a" href="../lab3/step4.html">4 · 인사이트·검산</a>
@@ -90,7 +90,6 @@
 <a class="nav-a" href="../help/errors.html">에러가 났어요</a>
 <a class="nav-a" href="../help/glossary.html">이 말이 무슨 뜻이죠</a>
 <a class="nav-a" href="../help/how-to-ask.html">AI에게 잘 시키는 법</a>
-<a class="nav-a" href="../help/prompts.html">오늘 내가 친 문장</a>
 <a class="nav-a" href="../help/next.html">강의 끝나고 뭘 해볼까</a>
 </div></nav>
     <div class="side__foot">
@@ -103,11 +102,11 @@
       <button class="burger" id="burger" aria-label="메뉴">≡</button>
       <span class="path"><b>~/ax-tutor</b> <span class="full">$ cat</span> <span class="cur">lab2/index.md</span></span>
       <span class="caret"></span><span class="spacer"></span>
-      <span class="stat">실습 2 · 계약서에서 계약종합 만들기</span>
+      <span class="stat">실습 2 · 계약서 내용 종합하기</span>
     </div>
     <div class="wrap">
       <article class="doc md rise">
-        <div class="kicker mono"><b>//</b> 실습 2 · 계약서에서 계약종합 만들기</div>
+        <div class="kicker mono"><b>//</b> 실습 2 · 계약서 내용 종합하기</div>
 <h1 id="개요">개요<a class="headerlink" href="#개요" title="Permanent link">&para;</a></h1>
 <blockquote>
 <p><strong>한 줄 목표</strong>: 양식이 제각각인 계약서 PDF 8건에서 같은 항목을 뽑아 계약종합 엑셀 한 장으로 만들되, 문서에 없는 값은 지어내지 않는다.</p>
@@ -119,7 +118,7 @@
 <p>"계약서가 폴더에 PDF로 쌓여 있어요. 계약서마다 형식과 내용이 제각각인데, 하나의 엑셀 파일로 정리해줘요. 계약번호, 계약명, 계약기간, 금액, 자동 갱신 여부, 그리고 계약 상대에 대한 정보는 반드시 포함되어야 해요. 단, 없는 항목을 그럴듯하게 채우면 절대 안 됩니다."</p>
 </blockquote>
 <p><a href="../lab1/index.html">실습 1</a>에서는 이미 표였던 것들을 합쳤지만, 이번에는 표가 아예 없는 줄글 계약서에서 데이터를 뽑아 표로 만듭니다. 계약서·공문·회의록처럼 문서 더미에서 항목을 추려 표로 만드는 일은 어느 부서에나 있고, 사람이 하면 파일을 하나씩 열어 "계약 끝나는 날이 언제지, 금액이 얼마지" 찾아야 합니다.</p>
-<p>위험한 지점은 하나입니다. 문서에 없는 값을 AI가 그럴듯하게 지어내는 것이죠. 뽑을 항목과 빈칸 규칙을 정해 AI에게 맡기고, 결과가 믿을 만한지 <strong>검증</strong>까지 마치면 계약종합 엑셀 한 장이 남습니다.</p>
+<p>주의해야 할 지점은 문서에 없는 값을 AI가 그럴듯하게 지어낼 수 있다는 것입니다. PDF에서 뽑을 항목과 그 규칙을 정해 AI에게 맡기고, 결과가 믿을 만한지 <strong>검증</strong>까지 마치면 흩어져 있던 계약서의 내용을 하나로 종합한 엑셀 파일이 완성됩니다.</p>
 <h2 id="폴더에-있는-것">폴더에 있는 것<a class="headerlink" href="#폴더에-있는-것" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -157,17 +156,17 @@
 <tbody>
 <tr>
 <td><a href="step1.html">1단계</a></td>
-<td>계약서 8건에서 6개 항목을 뽑아 <strong>하나의 파일</strong>로 정리한다</td>
+<td>계약서 8건에서 6개 항목을 뽑아 <strong>하나의 표</strong>로 정리한다</td>
 </tr>
 <tr>
 <td><a href="step2.html">2단계</a></td>
-<td>계약종합을 원본과 대조하며 <strong>검산</strong>한다</td>
+<td>종합된 결과를 원본과 대조하며 <strong>검산</strong>한다</td>
 </tr>
 </tbody>
 </table>
 <nav class="pager">
 <a class="prev" href="../lab1/step2.html"><span class="lbl">← 이전</span><span class="ttl">2 · 원본 대조·검산</span></a>
-<a class="next" href="../lab2/step1.html"><span class="lbl">다음 →</span><span class="ttl">1 · 계약서 내용 종합하기</span></a>
+<a class="next" href="../lab2/step1.html"><span class="lbl">다음 →</span><span class="ttl">1 · 한 표로 모으기</span></a>
 </nav>
       </article>
       <aside class="toc mono"><h4>On this page</h4>
