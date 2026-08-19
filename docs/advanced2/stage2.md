@@ -8,7 +8,7 @@
 
 **방법 1 · 명령어 한 줄 (인터넷이 되는 경우)**
 
-VS Code 위 메뉴 `터미널 > 새 터미널`로 연 창(Claude Code 대화창이 아닙니다)에 아래를 입력합니다.
+VS Code 상단 메뉴에서 `터미널 > 새 터미널`로 연 창(Claude Code 대화창이 아닙니다)에 아래를 입력합니다.
 
 ```bash
 npx skills add https://github.com/Leonxlnx/taste-skill --skill "design-taste-frontend"
