@@ -20,39 +20,26 @@ Node.js 공식 사이트에 접속합니다.
 https://nodejs.org
 ```
 
-페이지 하단의 **Windows 설치 프로그램(.msi)** 버튼을 눌러 받습니다.
+**Standalone Binary(.gz)**를 받고, 압축 파일을 해제합니다. 압축 해제된 폴더의 경로를 복사해둡니다. 
 
-![nodejs.org 다운로드 화면 — Windows 설치 프로그램(.msi) 버튼](../../images/setup/nodejs_download.png)
+### 2. 시스템 환경 변수 설정 
 
-### 2. 설치 진행
+1. 윈도우 검색창에서 "시스템 환경 변수 편집"을 선택합니다. 
+![node1](../../images/setup/node_1.png)
 
-다운로드한 `.msi` 파일을 실행합니다.
+2. 고급 > 환경변수
+![node2](../../images/setup/node_2.png)
 
-- **라이선스 동의** — *"I accept the terms in the License Agreement"*를 체크하고 `Next`.
-- **설치 경로** — 기본 경로(`C:\Program Files\nodejs\`)를 유지하고 `Next`.
-- **설치 항목 선택** — 기본 설정을 유지합니다. 다음이 함께 설치됩니다.
-  - Node.js runtime
-  - npm package manager
-  - Add to PATH
+3. Path 부분을 누르고 편집을 누릅니다. 
+![node3](../../images/setup/node_3.png)
 
-!!! danger "`Add to PATH`는 반드시 체크되어 있어야 합니다"
-    이 옵션이 있어야 터미널에서 `node` 명령을 쓸 수 있습니다. 기본값이 체크이니 건드리지 마세요.
-
-### 3. Tools for Native Modules
-
-*"Automatically install the necessary tools"*를 체크하면 C++ 빌드 도구가 함께 설치됩니다. 나중에 일부 도구를 설치할 때 이 구성 요소가 필요할 수 있으니 **체크를 권장**합니다.
-
-`Install` 버튼을 눌러 설치를 완료합니다.
-
-
-## macOS에서 설치하기
-
-[Node.js 공식 사이트](https://nodejs.org/ko/download/)에서 **macOS Installer(.pkg)**를 받아 실행하고, 안내대로 설치합니다. (`Add to PATH`에 해당하는 설정은 자동으로 처리됩니다.)
+4. 환경변수 편집 부분에서 새로 만들기를 누르고, 아까 복사했던 폴더의 경로를 입력 후 저장합니다.
+![node4](../../images/setup/node_4.png)
 
 
 ## 설치 확인
 
-설치가 끝나면 **새 명령 프롬프트(또는 터미널) 창**을 엽니다. 기존에 열려 있던 창은 PATH가 업데이트되지 않았을 수 있습니다.
+설치가 끝나면 **새 명령 프롬프트(또는 터미널) 창**을 엽니다. 기존에 열려 있던 창은 PATH가 업데이트되지 않았을 수 있습니다. 
 
 ```bash
 node --version
