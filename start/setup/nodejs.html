@@ -119,34 +119,32 @@
 <li><strong>Node.js</strong>는 자바스크립트로 만든 도구를 여러분 컴퓨터에서 직접 실행할 수 있게 해주는 프로그램입니다.</li>
 <li>실습에서는 AI 도구 설치 명령(심화 실습의 스킬 설치 등)이 이걸 사용합니다. 직접 다룰 일은 없습니다.</li>
 </ul>
-<h2 id="windows에서-설치하기">Windows에서 설치하기<a class="headerlink" href="#windows에서-설치하기" title="Permanent link">&para;</a></h2>
-<p>Windows에서 가장 간단한 방법은 공식 설치 프로그램을 쓰는 것입니다.</p>
-<h3 id="방법-1-설치-프로그램-다운받기">방법 1: 설치 프로그램 다운받기<a class="headerlink" href="#방법-1-설치-프로그램-다운받기" title="Permanent link">&para;</a></h3>
+<h2 id="다운로드와-설치">다운로드와 설치<a class="headerlink" href="#다운로드와-설치" title="Permanent link">&para;</a></h2>
 <p>Node.js 공식 사이트에 접속합니다.</p>
-<p><pre class="highlight"><code>https://nodejs.org</code></pre>
-<strong>Windows 설치 프로그램(.msi)</strong>을 받고, 안내 순서에 따라 프로그램을 설치합니다. 만약 설치가 되지 않는다면 아래 방법에 따라 설치를 진행할 수 있습니다. </p>
-<h3 id="방법-2-binary-파일-다운받기">방법 2: binary 파일 다운받기<a class="headerlink" href="#방법-2-binary-파일-다운받기" title="Permanent link">&para;</a></h3>
-<p><strong>Standalone Binary(.gz)</strong>를 받고, 압축 파일을 해제합니다. 압축 해제된 폴더의 경로를 복사해둡니다. </p>
-<ol>
-<li>
-<p>윈도우 검색창에서 "시스템 환경 변수 편집"을 선택합니다. 
-<img alt="node1" src="../../images/setup/node_1.png" /></p>
-</li>
-<li>
-<p>고급 &gt; 환경변수
-<img alt="node2" src="../../images/setup/node_2.png" /></p>
-</li>
-<li>
-<p>Path 부분을 누르고 편집을 누릅니다. 
-<img alt="node3" src="../../images/setup/node_3.png" /></p>
-</li>
-<li>
-<p>환경변수 편집 부분에서 새로 만들기를 누르고, 아까 복사했던 폴더의 경로를 입력 후 저장합니다.
-<img alt="node4" src="../../images/setup/node_4.png" /></p>
-</li>
-</ol>
+<pre class="highlight"><code>https://nodejs.org</code></pre>
+<p><strong>1단계.</strong> 운영체제에 맞는 설치 프로그램을 받아 안내 순서대로 설치합니다.</p>
+<ul>
+<li><strong>Windows</strong> → <code>Windows Installer (.msi)</code></li>
+<li><strong>macOS</strong> → <code>macOS Installer (.pkg)</code></li>
+</ul>
+<p>설치가 끝나면 아래 <a href="#설치-확인">설치 확인</a>으로 넘어가세요.</p>
+<div class="admonition tip">
+<p class="admonition-title">설치 프로그램이 실행되지 않는다면 (Windows)</p>
+<p>회사 보안 정책 등으로 <code>.msi</code> 설치가 막히는 경우가 있습니다. 이때는 아래 <strong>압축 파일로 설치하기</strong>를 따라 하세요.</p>
+</div>
+<h2 id="압축-파일로-설치하기-windows-선택">압축 파일로 설치하기 (Windows, 선택)<a class="headerlink" href="#압축-파일로-설치하기-windows-선택" title="Permanent link">&para;</a></h2>
+<p>설치 프로그램이 동작하지 않을 때만 진행하면 됩니다.</p>
+<p><strong>1단계.</strong> 공식 사이트에서 <strong>Standalone Binary (.zip / .gz)</strong>를 받아 압축을 풉니다. 압축이 풀린 <strong>폴더 경로를 복사</strong>해 둡니다.</p>
+<p><strong>2단계.</strong> 윈도우 검색창에 <code>시스템 환경 변수 편집</code>을 입력해 실행합니다.</p>
+<p><img alt="윈도우 검색창에서 '시스템 환경 변수 편집'을 검색한 화면" src="../../images/setup/node_1.png" /></p>
+<p><strong>3단계.</strong> <code>고급</code> 탭에서 <strong>환경 변수</strong> 버튼을 누릅니다.</p>
+<p><img alt="시스템 속성 창의 고급 탭 — 아래쪽 환경 변수 버튼" src="../../images/setup/node_2.png" /></p>
+<p><strong>4단계.</strong> 목록에서 <code>Path</code>를 선택하고 <strong>편집</strong>을 누릅니다.</p>
+<p><img alt="환경 변수 창에서 Path 항목을 선택하고 편집을 누르는 화면" src="../../images/setup/node_3.png" /></p>
+<p><strong>5단계.</strong> <strong>새로 만들기</strong>를 눌러 1단계에서 복사한 폴더 경로를 붙여넣고 <strong>확인</strong>으로 저장합니다.</p>
+<p><img alt="환경 변수 편집 창에서 새로 만들기로 폴더 경로를 추가한 화면" src="../../images/setup/node_4.png" /></p>
 <h2 id="설치-확인">설치 확인<a class="headerlink" href="#설치-확인" title="Permanent link">&para;</a></h2>
-<p>설치가 끝나면 <strong>새 명령 프롬프트(또는 터미널) 창</strong>을 엽니다. 기존에 열려 있던 창은 PATH가 업데이트되지 않았을 수 있습니다. </p>
+<p>설치가 끝나면 <strong>새 명령 프롬프트(또는 터미널) 창</strong>을 엽니다. 기존에 열려 있던 창은 PATH가 업데이트되지 않았을 수 있습니다.</p>
 <pre class="highlight"><code class="language-bash">node --version</code></pre>
 <div class="admonition success">
 <p class="admonition-title">이렇게 나오면 정상입니다</p>
@@ -175,9 +173,8 @@
       </article>
       <aside class="toc mono"><h4>On this page</h4>
 <a href="#3--nodejs-설치">3 · Node.js 설치</a>
-<a href="#windows에서-설치하기">Windows에서 설치하기</a>
-<a href="#방법-1-설치-프로그램-다운받기" class="t3">방법 1: 설치 프로그램 다운받기</a>
-<a href="#방법-2-binary-파일-다운받기" class="t3">방법 2: binary 파일 다운받기</a>
+<a href="#다운로드와-설치">다운로드와 설치</a>
+<a href="#압축-파일로-설치하기-windows-선택">압축 파일로 설치하기 (Windows, 선택)</a>
 <a href="#설치-확인">설치 확인</a></aside>
     </div>
   </main>
